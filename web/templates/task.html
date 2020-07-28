@@ -14,7 +14,7 @@
       src="https://kit.fontawesome.com/d494f7bb71.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       type="text/javascript"
@@ -37,27 +37,89 @@
 
     <!-- Main contents of the page, includes sideNavs and page contents -->
     <main id="index">
+      {% if version[0] == "a" and interface[1] == "1" %}
       <h1>Task 1</h1>
-      <ul>
-        <li>
-          {% if version[0] == "a" %}
-          <div> 
-              Which creative type has the highest average IMDB Rating?<br>
-              Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question.
-        </div>
-          {% else %}
-          <div>BirdStrikes Question</div>
-          {% endif %}
-        </li>
-      &nbsp;&nbsp;
-      <a class="btn btn-outline-dark" href="/{{ version }}/p1" role="button">Go to Interface</a>
-      
+      <div>
+        Which creative type has the highest average IMDB Rating?<br />
+        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+        think that could answer the question.
+      </div>
+      {% elif version[0] == "a" and interface[1] == "2" %}
+      <h1>Task 2</h1>
+      <div>
+        Which genre has higher average rotten tomatoes rating, Adventure, or
+        Horror? <br />
+        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+        think that could answer the question.
+      </div>
+      {% elif version[0] == "a" and interface[1] == "3" %}
+      <h1>Task 3</h1>
+      <div>
+        What kinds of movies will be the most successful movies based on your
+        observations of the data? Summarize the 2-3 characteristics that you
+        believe are most important in predicting their success. <br />
+        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+        think that could answer the question.
+      </div>
+      {% elif version[0] == "a" and interface[1] == "4" %}
+      <h1>Task 4</h1>
+      <div>
+        Feel free to explore any and all aspects of the data for [15 mins]. Use
+        the bookmark features to save any interesting patterns, trends or other
+        insights worth sharing with colleagues. Note the top 3 bookmarks that
+        you found most interesting from your exploration. <br />
+        Please <b>bookmark charts</b> you think that could answer the question.
+      </div>
+      {% elif version[0] == "b" and interface[1] == "1" %}
+      <h1>Task 1</h1>
+      <div>
+        BirdStrikes Question 1 <br />
+        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+        think that could answer the question.
+      </div>
+      {% elif version[0] == "b" and interface[1] == "2" %}
+      <h1>Task 2</h1>
+      <div>
+        BirdStrikes Question 2 <br />
+        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+        think that could answer the question.
+      </div>
+      {% elif version[0] == "b" and interface[1] == "3" %}
+      <h1>Task 3</h1>
+      <div>
+        BirdStrikes Question 3 <br />
+        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+        think that could answer the question.
+      </div>
+      {% elif version[0] == "b" and interface[1] == "4" %}
+      <h1>Task 4</h1>
+      <div>
+        BirdStrikes Question 4 <br />
+        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+        think that could answer the question.
+      </div>
+      {% endif %}
+      <br />
+      <br />
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        onclick="goInterface();"
+      >
+        Go to Interface
+      </button>
     </main>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      function goInterface() {
+        let hrefSplit = window.location.href.split("/");
+        let hrefSplitLen = hrefSplit.length;
+        let username = hrefSplit[hrefSplitLen - 3];
+        let version = hrefSplit[hrefSplitLen - 2];
+        let interface = hrefSplit[hrefSplitLen - 1];
+        window.location =
+          "/" + username + "/" + version + "/" + "p" + interface[1];
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

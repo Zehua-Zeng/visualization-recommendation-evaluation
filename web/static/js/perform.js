@@ -157,5 +157,28 @@ function refreshBookmark() {
 
 function displayTask() {
   taskContent.innerHTML =
-    "<div><b>Question:</b> Which creative type has the highest average IMDB Rating?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t1-answer'><br> <input type='checkbox' id='complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which could answer the quesion.</label><br><a class='btn btn-outline-dark' href='/{{ version }}/t2' role='button'>Submit, then go to next task.</a></div>";
+    "<div><b>Question:</b> Which creative type has the highest average IMDB Rating?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t1-answer'><br> <input type='checkbox' id='t1-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next task.</button></div>";
+}
+
+function goPostTaskQuest() {
+  console.log(window.location.href);
+  let hrefSplit = window.location.href.split("/");
+  let hrefSplitLen = hrefSplit.length;
+  let username = hrefSplit[hrefSplitLen - 3];
+  let version = hrefSplit[hrefSplitLen - 2];
+  let interface = hrefSplit[hrefSplitLen - 1];
+
+  console.log(document.getElementById("t1-answer").value);
+  console.log(document.getElementById("t1-complete-bm").checked);
+
+  let answer = document.getElementById("t1-answer").value;
+  let cmplBMChecked = document.getElementById("t1-complete-bm").checked;
+  // check if bookmarked list empty or not
+
+  // check answer and checkbox
+  if (answer === "" || cmplBMChecked == false) {
+    alert("Please answer the question and tick the checkbox.");
+  } else {
+    window.location = "/" + username + "/" + version + "/" + "q" + interface[1];
+  }
 }

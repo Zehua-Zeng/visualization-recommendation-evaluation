@@ -14,13 +14,9 @@
       src="https://kit.fontawesome.com/d494f7bb71.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"
       type="text/javascript"
     ></script>
   </head>
@@ -72,38 +68,11 @@
       </video>
       <br />
       <br />
-      <a class="btn btn-outline-dark" href="/demo" role="button">
+      <a class="btn btn-outline-dark" href="/proc/demo" role="button">
         Try Demo
       </a>
       {% endif %}
-      <!-- <ul>
-      <button
-        type="button"
-        class="btn btn-outline-dark"
-        onclick="studyBegins();"
-      >
-        Begin the Study!
-      </button> -->
     </main>
-    <script>
-      function studyBegins() {
-        if (document.getElementById("complete_procedure").checked) {
-          dataset = _.sample(["a", "b"]);
-          oracle = _.sample(["c", "d"]);
-          traversal = _.sample(["e", "f"]);
-          window.location = dataset + oracle + traversal + "/t1";
-        } else {
-          alert(
-            "You need to complete above procedures and tick the checkbox to go to the study."
-          );
-        }
-      }
-    </script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

@@ -17,26 +17,39 @@ app = Flask(__name__, static_folder='web/static',
 def send_data(filename):
     return send_from_directory('web/static/data', filename)
 
-# render index at route /
+@app.route('/css/<path:filename>')
+def send_css(filename):
+    return send_from_directory('web/static/css', filename)
+
+@app.route('/js/<path:filename>')
+def send_js(filename):
+    return send_from_directory('web/static/js', filename)
+
+# online consent form at / or /proc/online-consent-form
+# pre-study survey at /proc/pre-study-survey
+# tutorial at /proc/tutorial
+# demo at /proc/demo
 @app.route('/')
 @app.route('/proc/')
 @app.route('/proc/<pid>')
 def index(pid = None):
+    if pid == "demo":
+        return render_template("demo.html")
     return render_template("index.html", pid=pid)
 
-@app.route('/demo')
-def demo():
-    return render_template("demo.html")
-
-@app.route('/<version>/<interface>')
-def study(version, interface):
+@app.route('/<username>/<version>/<interface>')
+def study(username, version, interface):
     if interface.startswith("t"):
-        return render_template("task.html", version = version, interface = interface)
+        return render_template("task.html", username = username, version = version, interface = interface)
     elif interface.startswith("p"):
-        return render_template("perform.html", version = version, interface = interface)
+        return render_template("perform.html", username = username, version = version, interface = interface)
+    elif interface.startswith("q"):
+        return render_template("post-task-quest.html", username = username, version = version, interface = interface)
+    elif interface.startswith("intv"):
+        return render_template("post-study-intv.html", username = username, version = version, interface = interface)
 
 
-## reading files
+## dziban:
 # movies = pd.read_json('./web/static/data/movies/movies.json')
 # movies_base = Chart(movies)
 # movies_fields = movies_base.get_fields()
@@ -44,6 +57,87 @@ def study(version, interface):
 # birdstrikes = pd.read_json('./web/static/data/birdstrikes/birdstrikes.json')
 # birdstrikes_base = Chart(birdstrikes)
 # birdstrikes_fields = birdstrikes_base.get_fields()
+
+# cars = pd.read_json('./web/static/data/cars/cars.json')
+# cars_base = Chart(cars)
+# cars_fields = cars_base.get_fields()
+
+# temp:
+cars_fields = ["Cylinders", "Name", "Origin", "Year", "Acceleration", "Displacement", "Horsepower", "Miles_per_Gallon", "Weight_in_lbs"]
+
+## read dataset:
+read_cars_flds_to_vglstr = open('./web/static/data/cars/fields_to_vglstr.json', 'r')
+cars_flds_to_vglstr = json.load(read_cars_flds_to_vglstr)
+
+read_cars_results = open('./web/static/data/cars/results.json', 'r')
+cars_results = json.load(read_cars_results)
+
+
+## communicate with demo
+@app.route('/demo_snd_flds', methods=['POST'])
+def demo_snd_flds():
+    received_data = json.loads(request.form.get('data'))
+    fields = received_data["fields"]
+
+    # init:
+    if len(fields) == 0:
+        initCharts = []
+        for fld in cars_fields:
+            temp = {}
+            vstr = cars_flds_to_vglstr[fld]
+            temp[vstr] = get_vgl_from_vglstr(vstr, "cars")
+            initCharts.append(temp)
+        return jsonify(status="success", recVegalite=initCharts)
+    
+    # if empty chart:
+    fields.sort()
+    fields_str = "+".join(fields)
+    actual_vgl = {}
+    if cars_flds_to_vglstr[fields_str] == "":
+        return jsonify(status="empty")
+    
+    # if not empty chart:
+    vglstr = cars_flds_to_vglstr[fields_str]
+    actual_vgl[vglstr] = get_vgl_from_vglstr(vglstr, "cars")
+    # get recomendation:
+    rec_vgl = cars_results[vglstr]
+    # print (bfs_vl)
+    rec_ranked = sorted(rec_vgl, key=rec_vgl.get)
+    # print (bfsRanked)
+    rec_ranked_final = []
+    for vstr in rec_ranked:
+        temp = {}
+        temp[vstr] = get_vgl_from_vglstr(vstr, "cars")
+        rec_ranked_final.append(temp)
+    return jsonify(status="success", actualVegalite=actual_vgl, recVegalite=rec_ranked_final)
+
+
+@app.route('/demo_snd_spcs', methods=['POST'])
+def demo_snd_spcs():
+    received_data = json.loads(request.form.get('data'))
+    vgl = received_data["vgl"]
+    vglstr = get_vglstr_from_vgl(vgl)
+
+    if vglstr in cars_results:
+        print ("bfs vglstr exists.")
+        rec_vgl = cars_results[vglstr]
+    else:
+        print ("bfs vglstr does not exist.")
+        fields = get_fields_from_vglstr(vglstr)
+        new_vglstr = cars_flds_to_vglstr["+".join(fields)]
+        rec_vgl = cars_results[new_vglstr]
+    
+    rec_ranked = sorted(rec_vgl, key=rec_vgl.get)
+    rec_ranked_final = []
+    
+    for vstr in rec_ranked:
+        temp = {}
+        temp[vstr] = get_vgl_from_vglstr(vstr, "cars")
+        rec_ranked_final.append(temp)
+    
+    return jsonify(status="success", recVegalite=rec_ranked_final)
+
+## communicate with main
 
 # helper methods:
 def get_vglstr_from_vgl(vgl):
@@ -76,7 +170,7 @@ def get_vgl_from_vglstr(vglstr, dataset):
     vgl = {}
     vgl["$schema"] = "https://vega.github.io/schema/vega-lite/v3.json"
     # vgl["data"] = {"url": "data/movies.json"}
-    vgl["data"] = {"url": "data/" + dataset + ".json"}
+    vgl["data"] = {"url": "/data/" + dataset + "/" + dataset +".json"}
     mark = vglstr.split(';')[0]
     encoding = vglstr.split(';')[1]
     vgl["mark"] = mark.split(':')[1]
