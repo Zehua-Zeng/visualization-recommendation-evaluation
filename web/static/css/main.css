@@ -2,6 +2,11 @@ body {
   background-color: #eaeaea;
 }
 
+div.task {
+  max-width: 70vw;
+  margin: auto;
+}
+
 /* table */
 table {
   font-family: arial, sans-serif;

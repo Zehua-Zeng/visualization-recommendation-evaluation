@@ -526,7 +526,7 @@ function refreshBookmark() {
 
 function displayTask() {
   taskContent.innerHTML =
-    "<div><b>Question:</b> The current question would be described here. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t1-answer'><br><a class='btn btn-outline-dark' href='#' role='button'>Submit, then go to next step.</a></div>";
+    "<div><b>Question:</b> The current question would be described here. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text'><br><a class='btn btn-outline-dark' href='#' role='button'>Submit, then go to next step.</a></div>";
 }
 
 function displayGstdy() {

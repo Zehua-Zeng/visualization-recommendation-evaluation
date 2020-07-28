@@ -2,12 +2,6 @@ from flask import Flask, render_template, request, jsonify, send_from_directory,
 import os
 import json
 
-## dziban
-# from dziban.mkiv import Chart
-# from vega_datasets import data
-# from vega import VegaLite
-# import pandas as pd
-
 ## flask
 app = Flask(__name__, static_folder='web/static',
             template_folder='web/templates')
@@ -49,29 +43,40 @@ def study(username, version, interface):
         return render_template("post-study-intv.html", username = username, version = version, interface = interface)
 
 
-## dziban:
-# movies = pd.read_json('./web/static/data/movies/movies.json')
-# movies_base = Chart(movies)
-# movies_fields = movies_base.get_fields()
+## fields
+movies_fields = ['Title', 'US_Gross', 'Worldwide_Gross', 'US_DVD_Sales', 'Production_Budget', 'Release_Date', 'MPAA_Rating', 'Running_Time_min', 'Distributor', 'Source', 'Major_Genre', 'Creative_Type', 'Director', 'Rotten_Tomatoes_Rating', 'IMDB_Rating', 'IMDB_Votes']
 
-# birdstrikes = pd.read_json('./web/static/data/birdstrikes/birdstrikes.json')
-# birdstrikes_base = Chart(birdstrikes)
-# birdstrikes_fields = birdstrikes_base.get_fields()
+bs_fields = ['Airport_Name', 'Aircraft_Make_Model', 'Effect_Amount_of_damage', 'Flight_Date', 'Aircraft_Airline_Operator', 'Origin_State', 'When_Phase_of_flight', 'Wildlife_Size', 'Wildlife_Species', 'When_Time_of_day', 'Cost_Other', 'Cost_Repair', 'Cost_Total', 'Speed_IAS_in_knots']
 
-# cars = pd.read_json('./web/static/data/cars/cars.json')
-# cars_base = Chart(cars)
-# cars_fields = cars_base.get_fields()
-
-# temp:
 cars_fields = ["Cylinders", "Name", "Origin", "Year", "Acceleration", "Displacement", "Horsepower", "Miles_per_Gallon", "Weight_in_lbs"]
 
 ## read dataset:
+## demo - car
 read_cars_flds_to_vglstr = open('./web/static/data/cars/fields_to_vglstr.json', 'r')
 cars_flds_to_vglstr = json.load(read_cars_flds_to_vglstr)
 
 read_cars_results = open('./web/static/data/cars/results.json', 'r')
 cars_results = json.load(read_cars_results)
 
+## movies
+read_movies_flds_to_vglstr = open('./web/static/data/movies/fields_to_vglstr.json', 'r')
+movies_flds_to_vglstr = json.load(read_movies_flds_to_vglstr)
+
+read_movies_dziban_bfs_results = open('./web/static/data/movies/dziban_bfs_results.json', 'r')
+movies_dziban_bfs_results = json.load(read_movies_dziban_bfs_results)
+
+read_movies_dziban_dfs_results = open('./web/static/data/movies/dziban_dfs_results.json', 'r')
+movies_dziban_dfs_results = json.load(read_movies_dziban_dfs_results)
+
+## birdstrikes
+read_bs_flds_to_vglstr = open('./web/static/data/birdstrikes/fields_to_vglstr.json', 'r')
+bs_flds_to_vglstr = json.load(read_bs_flds_to_vglstr)
+
+read_bs_dziban_bfs_results = open('./web/static/data/birdstrikes/dziban_bfs_results.json', 'r')
+bs_dziban_bfs_results = json.load(read_bs_dziban_bfs_results)
+
+read_bs_dziban_dfs_results = open('./web/static/data/birdstrikes/dziban_dfs_results.json', 'r')
+bs_dziban_dfs_results = json.load(read_bs_dziban_dfs_results)
 
 ## communicate with demo
 @app.route('/demo_snd_flds', methods=['POST'])
@@ -92,11 +97,11 @@ def demo_snd_flds():
     # if empty chart:
     fields.sort()
     fields_str = "+".join(fields)
-    actual_vgl = {}
     if cars_flds_to_vglstr[fields_str] == "":
         return jsonify(status="empty")
     
     # if not empty chart:
+    actual_vgl = {}
     vglstr = cars_flds_to_vglstr[fields_str]
     actual_vgl[vglstr] = get_vgl_from_vglstr(vglstr, "cars")
     # get recomendation:
@@ -137,7 +142,117 @@ def demo_snd_spcs():
     
     return jsonify(status="success", recVegalite=rec_ranked_final)
 
-## communicate with main
+## communicate with perform
+## a - movies, b - birdstrikes, c - compassql, d - dziban, e - bfs, f - dfs
+@app.route('/perform_snd_flds', methods=['POST'])
+def perform_snd_flds():
+    received_data = json.loads(request.form.get('data'))
+    fields = received_data["fields"]
+    version = received_data["version"]
+    print (version)
+
+    cur_fields = []
+    cur_flds_to_vglstr = {}
+    cur_results = {}
+    cur_dataset = ""
+
+    if version[0] == "a":
+        cur_fields = movies_fields
+        cur_flds_to_vglstr = movies_flds_to_vglstr
+        cur_dataset = "movies"
+        if version[1] == "d" and version[2] == "e":
+            cur_results = movies_dziban_bfs_results
+        elif version[1] == "d" and version[2] == "f":
+            cur_results = movies_dziban_dfs_results
+    elif version[0] == "b":
+        cur_fields = bs_fields
+        cur_flds_to_vglstr = bs_flds_to_vglstr
+        cur_dataset = "birdstrikes"
+        if version[1] == "d" and version[2] == "e":
+            cur_results = bs_dziban_bfs_results
+        elif version[1] == "d" and version[2] == "f":
+            cur_results = bs_dziban_dfs_results
+
+    # init:
+    if len(fields) == 0:
+        initCharts = []
+        for fld in cur_fields:
+            temp = {}
+            vstr = cur_flds_to_vglstr[fld]
+            temp[vstr] = get_vgl_from_vglstr(vstr, cur_dataset)
+            initCharts.append(temp)
+        return jsonify(status="success", recVegalite=initCharts)
+    
+    # if empty chart:
+    fields.sort()
+    fields_str = "+".join(fields)
+    if cur_flds_to_vglstr[fields_str] == "":
+        return jsonify(status="empty")
+    
+    # if not empty chart:
+    actual_vgl = {}
+    vglstr = cur_flds_to_vglstr[fields_str]
+    actual_vgl[vglstr] = get_vgl_from_vglstr(vglstr, cur_dataset)
+    # get recomendation:
+    rec_vgl = cur_results[vglstr]
+    # print (bfs_vl)
+    rec_ranked = sorted(rec_vgl, key=rec_vgl.get)
+    # print (bfsRanked)
+    rec_ranked_final = []
+    for vstr in rec_ranked:
+        temp = {}
+        temp[vstr] = get_vgl_from_vglstr(vstr, cur_dataset)
+        rec_ranked_final.append(temp)
+    return jsonify(status="success", actualVegalite=actual_vgl, recVegalite=rec_ranked_final)
+
+@app.route('/perform_snd_spcs', methods=['POST'])
+def perform_snd_spcs():
+    received_data = json.loads(request.form.get('data'))
+    vgl = received_data["vgl"]
+    version = received_data["version"]
+    vglstr = get_vglstr_from_vgl(vgl)
+
+    cur_fields = []
+    cur_flds_to_vglstr = {}
+    cur_results = {}
+    cur_dataset = ""
+
+    if version[0] == "a":
+        cur_fields = movies_fields
+        cur_flds_to_vglstr = movies_flds_to_vglstr
+        cur_dataset = "movies"
+        if version[1] == "d" and version[2] == "e":
+            cur_results = movies_dziban_bfs_results
+        elif version[1] == "d" and version[2] == "f":
+            cur_results = movies_dziban_dfs_results
+    elif version[0] == "b":
+        cur_fields = bs_fields
+        cur_flds_to_vglstr = bs_flds_to_vglstr
+        cur_dataset = "birdstrikes"
+        if version[1] == "d" and version[2] == "e":
+            cur_results = bs_dziban_bfs_results
+        elif version[1] == "d" and version[2] == "f":
+            cur_results = bs_dziban_dfs_results
+
+    if vglstr in cur_results:
+        print ("bfs vglstr exists.")
+        rec_vgl = cur_results[vglstr]
+    else:
+        print ("bfs vglstr does not exist.")
+        fields = get_fields_from_vglstr(vglstr)
+        new_vglstr = cur_flds_to_vglstr["+".join(fields)]
+        rec_vgl = cur_results[new_vglstr]
+    
+    rec_ranked = sorted(rec_vgl, key=rec_vgl.get)
+    rec_ranked_final = []
+    
+    for vstr in rec_ranked:
+        temp = {}
+        temp[vstr] = get_vgl_from_vglstr(vstr, cur_dataset)
+        rec_ranked_final.append(temp)
+    
+    return jsonify(status="success", recVegalite=rec_ranked_final)
+
 
 # helper methods:
 def get_vglstr_from_vgl(vgl):
