@@ -253,6 +253,29 @@ def perform_snd_spcs():
     
     return jsonify(status="success", recVegalite=rec_ranked_final)
 
+## get username-version:
+@app.route('/snd_uname_version', methods=['POST'])
+def snd_uname_version():
+    received_data = json.loads(request.form.get('data'))
+    username = received_data["username"]
+    version = received_data["version"]
+    uv_file = open("username-version.txt", "a")  # append mode 
+    uv_file.write(username + ',' + version + '\n') 
+    uv_file.close()
+    return jsonify(status="success")
+
+## get post-task quest ans:
+@app.route('/post_snd_ans', methods=['POST'])
+def ptsk_snd_ans():
+    received_data = json.loads(request.form.get('data'))
+    questAns = received_data["questAns"]
+    username = received_data["username"]
+    version = received_data["version"]
+    interface = received_data["interface"]
+
+    with open('./logs/' + username + '_' + version + '_' + interface + '.json', 'w') as out:
+        json.dump(questAns, out, indent=2)
+    return jsonify(status="success")
 
 # helper methods:
 def get_vglstr_from_vgl(vgl):

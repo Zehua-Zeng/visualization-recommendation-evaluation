@@ -544,15 +544,37 @@ function goStudy() {
   // console.log(mat);
   if (mat.length == 1 && mat[0].length == inputText.length) {
     dataset = _.sample(["a", "b"]);
-    oracle = _.sample(["c", "d"]);
+    oracle = "d";
+    // oracle = _.sample(["c", "d"]);
     traversal = _.sample(["e", "f"]);
-    window.location =
-      "/" + inputText + "/" + dataset + oracle + traversal + "/t1";
+    version = dataset + oracle + traversal;
+    sendUnameVersion(inputText, version);
+    window.location = "/" + inputText + "/" + version + "/t1";
   } else {
     alert(
       "Please input a valid username. (The username can only consists of alphabets or numbers.)"
     );
   }
+}
+
+function sendUnameVersion(username, version) {
+  var data = {
+    data: JSON.stringify({
+      username: username,
+      version: version,
+    }),
+  };
+  $.ajax({
+    async: false,
+    type: "POST",
+    url: "/snd_uname_version",
+    currentType: "application/json",
+    data: data,
+    dataType: "json",
+    success: function (response) {
+      console.log(response);
+    },
+  });
 }
 
 function getFieldsFromVgl(vgl) {

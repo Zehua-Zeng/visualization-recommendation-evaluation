@@ -57,11 +57,45 @@
     </main>
     <script>
       function submitFunc() {
+        sendInvAns();
         alert(
           "Thank you so much for partipating in the study! Have a nice day!"
         );
         window.location = "/";
         return false;
+      }
+      function sendInvAns() {
+        let hrefSplit = window.location.href.split("/");
+        let hrefSplitLen = hrefSplit.length;
+        let username = hrefSplit[hrefSplitLen - 3];
+        let version = hrefSplit[hrefSplitLen - 2];
+        let interface = hrefSplit[hrefSplitLen - 1];
+        let questAns = {};
+
+        var allText = document.getElementsByTagName("textarea");
+        for (i = 0; i < allText.length; i++) {
+          questAns[allText[i].name] = allText[i].value;
+        }
+
+        var data = {
+          data: JSON.stringify({
+            questAns: questAns,
+            username: username,
+            version: version,
+            interface: interface,
+          }),
+        };
+        $.ajax({
+          async: false,
+          type: "POST",
+          url: "/post_snd_ans",
+          currentType: "application/json",
+          data: data,
+          dataType: "json",
+          success: function (response) {
+            console.log(response);
+          },
+        });
       }
     </script>
     <script
