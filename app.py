@@ -42,6 +42,10 @@ def study(username, version, interface):
     elif interface.startswith("intv"):
         return render_template("post-study-intv.html", username = username, version = version, interface = interface)
 
+@app.route('/test')
+def test():
+    return render_template("test.html")
+
 
 ## fields
 movies_fields = ['Title', 'US_Gross', 'Worldwide_Gross', 'US_DVD_Sales', 'Production_Budget', 'Release_Date', 'MPAA_Rating', 'Running_Time_min', 'Distributor', 'Source', 'Major_Genre', 'Creative_Type', 'Director', 'Rotten_Tomatoes_Rating', 'IMDB_Rating', 'IMDB_Votes']
@@ -198,6 +202,8 @@ def perform_snd_flds():
     # print (bfs_vl)
     rec_ranked = sorted(rec_vgl, key=rec_vgl.get)
     # print (bfsRanked)
+    if len(rec_ranked) > 20:
+        rec_ranked = rec_ranked[:20]
     rec_ranked_final = []
     for vstr in rec_ranked:
         temp = {}
@@ -244,6 +250,8 @@ def perform_snd_spcs():
         rec_vgl = cur_results[new_vglstr]
     
     rec_ranked = sorted(rec_vgl, key=rec_vgl.get)
+    if len(rec_ranked) > 20:
+        rec_ranked = rec_ranked[:20]
     rec_ranked_final = []
     
     for vstr in rec_ranked:
@@ -264,7 +272,32 @@ def snd_uname_version():
     uv_file.close()
     return jsonify(status="success")
 
-## get post-task quest ans:
+## get study interaction log:
+@app.route('/snd_interaction_logs', methods=['POST'])
+def snd_interaction_logs():
+    received_data = json.loads(request.form.get('data'))
+    interaction_logs = received_data["interactionLogs"]
+    username = received_data["username"]
+    version = received_data["version"]
+    interface = received_data["interface"]
+    bookmarked = received_data["bookmarked"]
+
+    with open('./logs/' + username + '_' + version + '_' + interface + '.json', 'w') as out:
+        json.dump(interaction_logs, out, indent=2)
+
+    with open('./logs/' + username + '_' + version + '_' + interface + '_bookmarked.json', 'w') as out:
+        json.dump(bookmarked, out, indent=2)
+
+    if "answer" in received_data:
+        answer = received_data["answer"]
+        ans_file = open('./logs/' + username + '_' + version + '_' + interface + '_answer.json', "w")
+        ans_file.write(answer)
+        ans_file.close()
+
+    return jsonify(status="success")
+
+
+## get post-task quest / post-study interview ans:
 @app.route('/post_snd_ans', methods=['POST'])
 def ptsk_snd_ans():
     received_data = json.loads(request.form.get('data'))
@@ -361,6 +394,20 @@ def get_vgl_from_vglstr(vglstr, dataset):
             else:
                 print ("something wrong:")
                 print (vglstr)
+            
+            ## for bs Flight_Date
+            if encode == "Flight_Date-nominal-row":
+                if "-x" not in vglstr:
+                    encoding_type = "x"
+                elif "-y" not in vglstr:
+                    encoding_type = "y"
+                elif "-color" not in vglstr:
+                    encoding_type = "color"
+                else:
+                    encoding_type = "shape"
+                
+            if "Flight_Date-nominal" in encode:
+                one_encoding["timeUnit"] = "month"
             
             encodings[encoding_type] = one_encoding
     

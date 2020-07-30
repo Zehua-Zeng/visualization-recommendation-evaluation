@@ -35,7 +35,7 @@ var bsFields = {
     "Wildlife_Species",
   ],
   date: ["Flight_Date"],
-  quant: ["Cost_Other", "Cost_Repair", "Cost_Total_$", "Speed_IAS_in_knots"],
+  quant: ["Cost_Other", "Cost_Repair", "Cost_Total", "Speed_IAS_in_knots"],
 };
 
 // global vars
@@ -51,6 +51,7 @@ var curRecLen = 0;
 
 var checkedFields = [];
 var propVglMap = {};
+var propVglstrMap = {};
 var bookmarked = {};
 
 var curFields;
@@ -65,14 +66,22 @@ var interface = hrefSplit[hrefSplitLen - 1];
 //save cur answer
 var curAns = "";
 
-init();
+// interaction logs:
+// {interaction: I1, time: T1}
+// interaction type:
+// open / close bookmark popup
+// open / close task popup
+// type in answer
+//
+var interactionLogs = [];
 
-console.log(window.screen.height, window.screen.width);
+init();
 
 function init() {
   initFields();
   initBtns();
   generateInitRecPlots();
+  storeInteractionLogs("study begins", "page loaded", new Date());
 }
 
 function initBtns() {
@@ -87,35 +96,41 @@ function initBtns() {
   bmBtn.addEventListener("click", () => {
     if (bmModal.style.display == "block") {
       bmModal.style.display = "none";
+      storeInteractionLogs("closed window", "bookmark popup", new Date());
     } else {
       bmModal.style.display = "block";
       refreshBookmark();
+      storeInteractionLogs("opened window", "bookmark popup", new Date());
     }
   });
 
   bmClose.addEventListener("click", () => {
     bmModal.style.display = "none";
+    storeInteractionLogs("closed window", "bookmark popup", new Date());
   });
 
   tskBtn.addEventListener("click", () => {
     if (tskModal.style.display == "block") {
       tskModal.style.display = "none";
+      storeInteractionLogs("closed window", "task popup", new Date());
       if (interface[1] !== "4") {
         let tskId = "t" + interface[1] + "-answer";
         curAns = document.getElementById(tskId).value;
       }
     } else {
       tskModal.style.display = "block";
+      storeInteractionLogs("opened window", "task popup", new Date());
       displayTask();
       if (interface[1] !== "4") {
         let tskId = "t" + interface[1] + "-answer";
-        curAns = document.getElementById(tskId).value;
+        document.getElementById(tskId).value = curAns;
       }
     }
   });
 
   tskClose.addEventListener("click", () => {
     tskModal.style.display = "none";
+    storeInteractionLogs("closed window", "task popup", new Date());
     if (interface[1] !== "4") {
       let tskId = "t" + interface[1] + "-answer";
       curAns = document.getElementById(tskId).value;
@@ -125,9 +140,11 @@ function initBtns() {
   window.addEventListener("click", (event) => {
     if (event.target == bmModal) {
       bmModal.style.display = "none";
+      storeInteractionLogs("closed window", "bookmark popup", new Date());
     }
     if (event.target == tskModal) {
       tskModal.style.display = "none";
+      storeInteractionLogs("closed window", "task popup", new Date());
       if (interface[1] !== "4") {
         let tskId = "t" + interface[1] + "-answer";
         curAns = document.getElementById(tskId).value;
@@ -182,10 +199,16 @@ function initFields() {
                 </li>`;
   }
   fieldLst.innerHTML += res;
-  // click on fields
+  // add click on fields event
   let fldCheckboxes = document.querySelectorAll("form .enabled div");
   for (fldcb of fldCheckboxes) {
     fldcb.addEventListener("click", clickOnField);
+  }
+
+  // make sure all boxes are unchecked
+  let all_boxes = document.querySelectorAll(".form-check-input");
+  for (box of all_boxes) {
+    box.checked = false;
   }
 }
 
@@ -199,8 +222,20 @@ function clickOnField(e) {
       // also add its parsed name to the list.
       if (checkedFields.length < 3) {
         checkedFields.push(clickedField);
+        storeInteractionLogs(
+          "clicked on a field",
+          "add " + clickedField,
+          new Date()
+        );
         // if we can not check more fields, alert it.
       } else {
+        storeInteractionLogs(
+          "clicked on a field",
+          "tried to add " +
+            clickedField +
+            ", but failed because already selected 3 fields",
+          new Date()
+        );
         alert(`You have selected more than 3 fields!`);
         box.checked = false;
         return;
@@ -209,6 +244,11 @@ function clickOnField(e) {
       // if a box is unchecked after the click,
       // also remove its parsed name from the list.
     } else {
+      storeInteractionLogs(
+        "clicked on a field",
+        "removed " + clickedField,
+        new Date()
+      );
       checkedFields = checkedFields.filter(function (value, index, arr) {
         return value.localeCompare(clickedField) != 0;
       });
@@ -218,7 +258,7 @@ function clickOnField(e) {
         return;
       }
     }
-    generatePlot(checkedFields, clickedField, box);
+    generatePlot(clickedField, box);
   }
 }
 
@@ -257,12 +297,31 @@ function generateInitRecPlots() {
             if (curFields.date.includes(fld)) {
               added_str += `<i class="fas fa-calendar-alt show_fld"> ${fld} </i>`;
             }
-            console.log(added_str);
+            // console.log(added_str);
           }
           relatedImg.innerHTML += `<div class='view_wrapper ${prop_str}_wrapper'> ${added_str} <i class='fas fa-bookmark add_bm' added="false"></i><i class="fas fa-list-alt specify_chart"></i><div class="views" id='${prop_str}'></div></div>`;
 
           vegaEmbed(`#${prop_str}`, vglSpec);
+          $(`#${prop_str}`).ready(function () {
+            let canvas = document
+              .getElementById(prop_str)
+              .getElementsByTagName("canvas")[0];
+            setTimeout(function () {
+              if (canvas.height > 25000 && canvas.width > 5000) {
+                vglSpec["height"] = 25000;
+                vglSpec["width"] = 5000;
+                vegaEmbed(`#${prop_str}`, vglSpec);
+              } else if (canvas.height > 25000) {
+                vglSpec["height"] = 25000;
+                vegaEmbed(`#${prop_str}`, vglSpec);
+              } else if (canvas.width > 5000) {
+                vglSpec["width"] = 5000;
+                vegaEmbed(`#${prop_str}`, vglSpec);
+              }
+            }, 500);
+          });
           propVglMap[prop_str] = vglSpec;
+          propVglstrMap[prop_str] = prop;
         }
       }
       document.querySelector(".loadmoreDiv").style.display = "none";
@@ -271,7 +330,7 @@ function generateInitRecPlots() {
   });
 }
 
-function generatePlot(checkedFields, clickedField, box) {
+function generatePlot(clickedField, box) {
   console.log(checkedFields);
   var data = {
     data: JSON.stringify({
@@ -310,10 +369,34 @@ function generatePlot(checkedFields, clickedField, box) {
           mainImg.innerHTML = `<div id="main_wrapper" class="view_wrapper ${prop_str}_wrapper"> ${added_str} <i class="fas fa-bookmark add_bm" added="false"></i><div class="views ${prop_str}" id="main"></div></div>`;
           let vglSpec = vglDict[prop];
           vegaEmbed("#main", vglSpec);
+          $("#main").ready(function () {
+            let canvas = document
+              .getElementById("main")
+              .getElementsByTagName("canvas")[0];
+            setTimeout(function () {
+              if (canvas.height > 25000 && canvas.width > 5000) {
+                vglSpec["height"] = 25000;
+                vglSpec["width"] = 5000;
+                vegaEmbed(`#${prop_str}`, vglSpec);
+              } else if (canvas.height > 25000) {
+                vglSpec["height"] = 25000;
+                vegaEmbed(`#${prop_str}`, vglSpec);
+              } else if (canvas.width > 5000) {
+                vglSpec["width"] = 5000;
+                vegaEmbed(`#${prop_str}`, vglSpec);
+              }
+            }, 500);
+          });
           propVglMap[prop_str] = vglSpec;
+          propVglstrMap[prop_str] = prop;
         }
         generateRecPlots();
       } else if (response.status === "empty") {
+        storeInteractionLogs(
+          "triggered empty chart",
+          "removed " + clickedField,
+          new Date()
+        );
         // if empty chart
         alert(
           "Sorry, we cannot generate charts with the combination of selected fields."
@@ -341,8 +424,9 @@ function generateRecPlots() {
 
       let vglSpec = rec[i][prop];
       vegaEmbed(`#${prop_str}`, vglSpec);
+
       let sFields = getFieldsFromVgl(vglSpec);
-      console.log(sFields);
+      // console.log(sFields);
       let added_str = "";
       for (let fld of sFields) {
         if (curFields.categ.includes(fld)) {
@@ -359,9 +443,28 @@ function generateRecPlots() {
       relatedImg.innerHTML += `<div class='view_wrapper ${prop_str}_wrapper'> ${added_str} <i class='fas fa-bookmark add_bm' added="false"></i><i class="fas fa-list-alt specify_chart"></i><div class="views" id='${prop_str}'></div></div>`;
 
       propVglMap[prop_str] = vglSpec;
+      propVglstrMap[prop_str] = prop;
       if (i >= maxNum) {
         document.querySelector(`.${prop_str}_wrapper`).style.display = "none";
       }
+      $(`#${prop_str}`).ready(function () {
+        let canvas = document
+          .getElementById(prop_str)
+          .getElementsByTagName("canvas")[0];
+        setTimeout(function () {
+          if (canvas.height > 25000 && canvas.width > 5000) {
+            vglSpec["height"] = 25000;
+            vglSpec["width"] = 5000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          } else if (canvas.height > 25000) {
+            vglSpec["height"] = 25000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          } else if (canvas.width > 5000) {
+            vglSpec["width"] = 5000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          }
+        }, 500);
+      });
     }
   }
   addChartBtnsListener();
@@ -376,7 +479,7 @@ function generateRecPlots() {
 }
 
 function loadMoreRec() {
-  console.log("click loadmore.");
+  storeInteractionLogs("clicked load more button", "", new Date());
   let maxNum = curRecLen + 5;
   if (maxNum >= rec.length) {
     maxNum = rec.length;
@@ -388,7 +491,6 @@ function loadMoreRec() {
       document.querySelector(`.${prop_str}_wrapper`).style.display = "block";
     }
   }
-  // addChartBtnsListener();
   curRecLen = maxNum;
 }
 
@@ -396,6 +498,8 @@ function specifyChart(e) {
   let vis = e.target.parentElement;
   let prop_str = vis.classList.item(1).split("_wrapper")[0];
   let vglSpec = propVglMap[prop_str];
+
+  storeInteractionLogs("specified chart", propVglstrMap[prop_str], new Date());
 
   reassignFields(vglSpec);
 
@@ -434,6 +538,24 @@ function specifyChart(e) {
       mainImg.innerHTML = `<div id="main_wrapper" class="view_wrapper ${prop_str}_wrapper"> ${added_str} <i class="fas fa-bookmark add_bm" added="false"></i><div class="views ${prop_str}" id="main"></div></div>`;
 
       vegaEmbed("#main", vglSpec);
+      $("#main").ready(function () {
+        let canvas = document
+          .getElementById("main")
+          .getElementsByTagName("canvas")[0];
+        setTimeout(function () {
+          if (canvas.height > 25000 && canvas.width > 5000) {
+            vglSpec["height"] = 25000;
+            vglSpec["width"] = 5000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          } else if (canvas.height > 25000) {
+            vglSpec["height"] = 25000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          } else if (canvas.width > 5000) {
+            vglSpec["width"] = 5000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          }
+        }, 500);
+      });
       generateRecPlots();
     },
   });
@@ -442,7 +564,7 @@ function specifyChart(e) {
 function reassignFields(vgljson) {
   console.log(vgljson);
   let all_boxes = document.querySelectorAll(".form-check-input");
-  console.log(all_boxes);
+  // console.log(all_boxes);
 
   let fields = getFieldsFromVgl(vgljson);
 
@@ -475,8 +597,8 @@ function addChartBtnsListener() {
   for (wrapper of wrappers) {
     let item = `${wrapper.classList.item(1).split("_wrapper")[0]}`;
     if (item in bookmarked) {
-      wrapper.querySelector("i").style.color = "#ffa500";
-      wrapper.querySelector("i").setAttribute("added", "true");
+      wrapper.querySelector(".add_bm").style.color = "#ffa500";
+      wrapper.querySelector(".add_bm").setAttribute("added", "true");
     }
   }
 }
@@ -499,7 +621,13 @@ function toggleBookMark(e) {
         bookmarkContent.removeChild(n);
       }
     }
-    delete bookmarked[`${str.split("_wrapper")[0]}`];
+    let splittedStr = `${str.split("_wrapper")[0]}`;
+    delete bookmarked[splittedStr];
+    storeInteractionLogs(
+      "deleted chart from bookmark",
+      propVglstrMap[splittedStr],
+      new Date()
+    );
 
     // change color and state of the plot in views
     let mark = document.querySelector(`.${str.split("_bm")[0]} .add_bm`);
@@ -517,6 +645,12 @@ function toggleBookMark(e) {
     let splittedStr = `${str.split("_wrapper")[0]}`;
 
     bookmarked[splittedStr] = propVglMap[splittedStr];
+
+    storeInteractionLogs(
+      "added chart to bookmark",
+      propVglstrMap[splittedStr],
+      new Date()
+    );
     refreshBookmark();
   }
 }
@@ -554,6 +688,24 @@ function refreshBookmark() {
 
       // plot the recommandation
       vegaEmbed(`#${key}_bm`, value);
+      $(`#${key}_bm`).ready(function () {
+        let canvas = document
+          .getElementById(`${key}_bm`)
+          .getElementsByTagName("canvas")[0];
+        setTimeout(function () {
+          if (canvas.height > 25000 && canvas.width > 5000) {
+            vglSpec["height"] = 25000;
+            vglSpec["width"] = 5000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          } else if (canvas.height > 25000) {
+            vglSpec["height"] = 25000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          } else if (canvas.width > 5000) {
+            vglSpec["width"] = 5000;
+            vegaEmbed(`#${prop_str}`, vglSpec);
+          }
+        }, 500);
+      });
 
       btnstrs.push(`.${key}_wrapper_bm .add_bm`);
       let btn = document.querySelector(`.${key}_wrapper_bm .add_bm`);
@@ -581,6 +733,16 @@ function displayTask() {
   } else if (version[0] === "a" && interface[1] === "4") {
     taskContent.innerHTML =
       "<div><b>Question:</b> Feel free to explore any and all aspects of the data for <b>[15 mins]</b>. Use the bookmark features to save any interesting patterns, trends or other insights worth sharing with colleagues. Note the top 3 bookmarks that you found most interesting from your exploration.<br> Please <b>bookmark top 3 charts</b> you think that could answer the question. <br><br> <input type='checkbox' id='t4-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+  }
+  if (interface[1] !== "4") {
+    let ansId = "t" + interface[1] + "-answer";
+    document.getElementById(ansId).addEventListener("input", function () {
+      storeInteractionLogs(
+        "Type in answer",
+        document.getElementById(ansId).value,
+        new Date()
+      );
+    });
   }
 }
 
@@ -613,6 +775,26 @@ function goPostTaskQuest() {
       alert("Please tick the checkbox.");
       return;
     } else {
+      var data = {
+        data: JSON.stringify({
+          interactionLogs: interactionLogs,
+          username: username,
+          version: version,
+          interface: interface,
+          bookmarked: bookmarked,
+        }),
+      };
+      $.ajax({
+        async: false,
+        type: "POST",
+        url: "/snd_interaction_logs",
+        currentType: "application/json",
+        data: data,
+        dataType: "json",
+        success: function (response) {
+          console.log(response);
+        },
+      });
       window.location =
         "/" + username + "/" + version + "/" + "q" + interface[1];
     }
@@ -621,10 +803,40 @@ function goPostTaskQuest() {
       alert("Please answer the question and tick the checkbox.");
       return;
     } else {
+      var data = {
+        data: JSON.stringify({
+          interactionLogs: interactionLogs,
+          username: username,
+          version: version,
+          interface: interface,
+          answer: answer,
+          bookmarked: bookmarked,
+        }),
+      };
+      $.ajax({
+        async: false,
+        type: "POST",
+        url: "/snd_interaction_logs",
+        currentType: "application/json",
+        data: data,
+        dataType: "json",
+        success: function (response) {
+          console.log(response);
+        },
+      });
       window.location =
         "/" + username + "/" + version + "/" + "q" + interface[1];
     }
   }
+}
+
+function storeInteractionLogs(interaction, value, time) {
+  console.log({ Interaction: interaction, Value: value, Time: time.getTime() });
+  interactionLogs.push({
+    Interaction: interaction,
+    Value: value,
+    Time: time.getTime(),
+  });
 }
 
 function getFieldsFromVgl(vgl) {

@@ -149,6 +149,7 @@ function initFields() {
 }
 
 function clickOnField(e) {
+  console.log(checkedFields);
   let box = e.target;
   if (box != null) {
     let clickedField = box.value;
@@ -177,7 +178,7 @@ function clickOnField(e) {
         return;
       }
     }
-    generatePlot(checkedFields, clickedField, box);
+    generatePlot(clickedField, box);
   }
 }
 
@@ -229,7 +230,7 @@ function generateInitRecPlots() {
   });
 }
 
-function generatePlot(checkedFields, clickedField, box) {
+function generatePlot(clickedField, box) {
   console.log(checkedFields);
   var data = {
     data: JSON.stringify({
@@ -279,6 +280,7 @@ function generatePlot(checkedFields, clickedField, box) {
           return value.localeCompare(clickedField) != 0;
         });
         box.checked = false;
+        console.log(checkedFields);
       }
     },
   });
@@ -299,7 +301,7 @@ function generateRecPlots() {
       let vglSpec = rec[i][prop];
       vegaEmbed(`#${prop_str}`, vglSpec);
       let sFields = getFieldsFromVgl(vglSpec);
-      console.log(sFields);
+      // console.log(sFields);
       let added_str = "";
       for (let fld of sFields) {
         if (carFields.categ.includes(fld)) {
@@ -431,8 +433,8 @@ function addChartBtnsListener() {
   for (wrapper of wrappers) {
     let item = `${wrapper.classList.item(1).split("_wrapper")[0]}`;
     if (item in bookmarked) {
-      wrapper.querySelector("i").style.color = "#ffa500";
-      wrapper.querySelector("i").setAttribute("added", "true");
+      wrapper.querySelector(".add_bm").style.color = "#ffa500";
+      wrapper.querySelector(".add_bm").setAttribute("added", "true");
     }
   }
 }
