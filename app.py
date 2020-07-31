@@ -404,7 +404,7 @@ def get_vgl_from_vglstr(vglstr, dataset):
                 elif "-color" not in vglstr:
                     encoding_type = "color"
                 else:
-                    encoding_type = "shape"
+                    encoding_type = "size"
                 
             if "Flight_Date-nominal" in encode:
                 one_encoding["timeUnit"] = "month"

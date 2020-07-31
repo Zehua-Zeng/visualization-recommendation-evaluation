@@ -27,6 +27,9 @@ var checkedFields = [];
 var propVglMap = {};
 var bookmarked = {};
 
+//save cur answer
+var curAns = "";
+
 init();
 
 function init() {
@@ -65,14 +68,20 @@ function initBtns() {
   tskBtn.addEventListener("click", () => {
     if (tskModal.style.display == "block") {
       tskModal.style.display = "none";
+      let tskId = "t-answer";
+      curAns = document.getElementById(tskId).value;
     } else {
       tskModal.style.display = "block";
       displayTask();
+      let tskId = "t-answer";
+      document.getElementById(tskId).value = curAns;
     }
   });
 
   tskClose.addEventListener("click", () => {
     tskModal.style.display = "none";
+    let tskId = "t-answer";
+    curAns = document.getElementById(tskId).value;
   });
 
   gstdyBtn.addEventListener("click", () => {
@@ -94,6 +103,8 @@ function initBtns() {
     }
     if (event.target == tskModal) {
       tskModal.style.display = "none";
+      let tskId = "t-answer";
+      curAns = document.getElementById(tskId).value;
     }
     if (event.target == gstdyModal) {
       gstdyModal.style.display = "none";
@@ -528,7 +539,7 @@ function refreshBookmark() {
 
 function displayTask() {
   taskContent.innerHTML =
-    "<div><b>Question:</b> The current question would be described here. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text'><br><a class='btn btn-outline-dark' href='#' role='button'>Submit, then go to next step.</a></div>";
+    "<div><b>Question:</b> The current question would be described here. <br> Example: Which origin has the most number of records? <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t-answer'><br><input type='checkbox' id='t4-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><a class='btn btn-outline-dark' href='#' role='button'>Submit, then go to next step.</a></div>";
 }
 
 function displayGstdy() {
@@ -547,8 +558,9 @@ function goStudy() {
   if (mat.length == 1 && mat[0].length == inputText.length) {
     dataset = _.sample(["a", "b"]);
     oracle = "d";
+    traversal = "e";
     // oracle = _.sample(["c", "d"]);
-    traversal = _.sample(["e", "f"]);
+    // traversal = _.sample(["e", "f"]);
     version = dataset + oracle + traversal;
     sendUnameVersion(inputText, version);
     window.location = "/" + inputText + "/" + version + "/t1";

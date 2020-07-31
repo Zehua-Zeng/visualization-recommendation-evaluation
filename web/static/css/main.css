@@ -25,7 +25,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.sdisagree {
+/* .sdisagree {
   background-color: rgba(255, 0, 0, 0.5);
 }
 
@@ -43,7 +43,7 @@ tr:nth-child(even) {
 
 .sagree {
   background-color: rgba(0, 255, 0, 0.5);
-}
+} */
 
 .nav {
   height: 5vh !important;
