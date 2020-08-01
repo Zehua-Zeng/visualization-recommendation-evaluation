@@ -723,36 +723,34 @@ function refreshBookmark() {
 function displayTask() {
   if (version[0] === "a" && interface[1] === "1") {
     taskContent.innerHTML =
-      "<div><b>Question:</b> Which creative type has the highest average IMDB Rating?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t1-answer'><br> <input type='checkbox' id='t1-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+      "<div><b>Question:</b> Which creative type has the highest number of movies based on Book/Short Story (Source)?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <select name='t1-answer' id='t1-answer'><option value='contemporary_fiction'>Contemporary Fiction</option><option value='dramatization'>Dramatization</option><option value='factual'>Factual</option><option value='fantasy'>Fantasy</option><option value='historical_fiction'>Historical Fiction</option><option value='kids_fiction'>Kids Fiction</option><option value='multiple_creative_types'>Multiple Creative Types</option><option value='science_fiction'>Science Fiction</option><option value='super_hero'>Super Hero</option><option value='null'>null</option></select><br> <input type='checkbox' id='t1-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   } else if (version[0] === "a" && interface[1] === "2") {
     taskContent.innerHTML =
-      "<div><b>Question:</b> Which genre has higher average rotten tomatoes rating, Adventure, or Horror?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t2-answer'><br> <input type='checkbox' id='t2-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+      "<div><b>Question:</b> Which major genre has higher average rotten tomatoes rating, Adventure, or Horror?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <select name='t2-answer' id='t2-answer'><option value='adventure'>Adventure</option><option value='horror'>Horror</option></select><br> <input type='checkbox' id='t2-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   } else if (version[0] === "a" && interface[1] === "3") {
     taskContent.innerHTML =
-      "<div><b>Question:</b> What kinds of movies will be the most successful movies based on your observations of the data? Summarize the 2-3 characteristics that you believe are most important in predicting their success.<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <textarea id='t3-answer' rows='2' cols='50'></textarea><br> <input type='checkbox' id='t3-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+      "<div><b>Question:</b> What kinds of movies will be the most successful movies based on your observations of the data? Summarize the 2-3 characteristics that you believe are most important in predicting their success.<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <textarea id='t3-answer' rows='4' cols='80'></textarea><br> <input type='checkbox' id='t3-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   } else if (version[0] === "b" && interface[1] === "1") {
     taskContent.innerHTML =
-      "<div><b>Question:</b> Which aircraft airline operator at GREATER PITTSBURGH airport has the highest number of bird strike records?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t1-answer'><br> <input type='checkbox' id='t1-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+      "<div><b>Question:</b> When phase of flight has the highest number of bird strike records in June (Flight_Date)?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <select name='t1-answer' id='t1-answer'><option value='approach'>Approach</option><option value='climb'>Climb</option><option value='descent'>Descent</option><option value='landing_roll'>Landing Roll</option><option value='parked'>Parked</option><option value='take-off_run'>Take-off run</option><option value='taxi'>Taxi</option></select><br> <input type='checkbox' id='t1-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   } else if (version[0] === "b" && interface[1] === "2") {
     taskContent.innerHTML =
-      "<div><b>Question:</b> Which wildlife species has the higher average speed IAS in knots, European starling or Rock pigeon?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t2-answer'><br> <input type='checkbox' id='t2-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+      "<div><b>Question:</b> Which wildlife species has the higher average speed IAS in knots, European starling or Rock pigeon?<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <select name='t2-answer' id='t2-answer'><option value='european_starling'>European starling</option><option value='rock_pigeon'>Rock pigeon</option></select><br> <input type='checkbox' id='t2-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   } else if (version[0] === "b" && interface[1] === "3") {
     taskContent.innerHTML =
-      "<div><b>Question:</b> What are the most common conditions for an animal strike? Note that any dataset columns that are interesting to you can be included. Summarize the 2-3 factors that you believe would cause bird strikes with highest chance.<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <textarea id='t3-answer' rows='2' cols='50'></textarea><br> <input type='checkbox' id='t3-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+      "<div><b>Question:</b> What are the most common conditions for an animal strike? Note that any dataset columns that are interesting to you can be included. Summarize the 2-3 factors that you believe would cause bird strikes with highest chance.<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <textarea id='t3-answer' rows='4' cols='80'></textarea><br> <input type='checkbox' id='t3-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   } else if (interface[1] === "4") {
     taskContent.innerHTML =
-      "<div><b>Question:</b> Feel free to explore any and all aspects of the data for <b>[15 mins]</b>. Use the bookmark features to save any interesting patterns, trends or other insights worth sharing with colleagues. Note the top 3 bookmarks that you found most interesting from your exploration.<br> Please <b>bookmark top 3 charts</b> you think that could answer the question. <br><br> <input type='checkbox' id='t4-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+      "<div><b>Question:</b> Feel free to explore any and all aspects of the data for <b>[15 mins]</b>. Use the bookmark features to save any interesting patterns, trends or other insights worth sharing with colleagues. Note the top 3 bookmarks that you found most interesting from your exploration.<br> Please <b>write down your insights</b> and also <b>bookmark top 3 charts</b> you think that could answer the question. <br><br> <label>Your insights:</label> &nbsp;&nbsp; <textarea id='t4-answer' rows='4' cols='80'></textarea><br> <input type='checkbox' id='t4-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   }
-  if (interface[1] !== "4") {
-    let ansId = "t" + interface[1] + "-answer";
-    document.getElementById(ansId).addEventListener("input", function () {
-      storeInteractionLogs(
-        "Type in answer",
-        document.getElementById(ansId).value,
-        new Date()
-      );
-    });
-  }
+  let ansId = "t" + interface[1] + "-answer";
+  document.getElementById(ansId).addEventListener("input", function () {
+    storeInteractionLogs(
+      "Type in answer",
+      document.getElementById(ansId).value,
+      new Date()
+    );
+  });
 }
 
 function goPostTaskQuest() {
@@ -779,63 +777,32 @@ function goPostTaskQuest() {
     }
   }
   // check answer and checkbox
-  if (interface[1] === "4") {
-    if (cmplBMChecked == false) {
-      alert("Please tick the checkbox.");
-      return;
-    } else {
-      var data = {
-        data: JSON.stringify({
-          interactionLogs: interactionLogs,
-          username: username,
-          version: version,
-          interface: interface,
-          bookmarked: bookmarked,
-        }),
-      };
-      $.ajax({
-        async: false,
-        type: "POST",
-        url: "/snd_interaction_logs",
-        currentType: "application/json",
-        data: data,
-        dataType: "json",
-        success: function (response) {
-          console.log(response);
-        },
-      });
-      window.location =
-        "/" + username + "/" + version + "/" + "q" + interface[1];
-    }
+  if (answer === "" || cmplBMChecked == false) {
+    alert("Please answer the question and tick the checkbox.");
+    return;
   } else {
-    if (answer === "" || cmplBMChecked == false) {
-      alert("Please answer the question and tick the checkbox.");
-      return;
-    } else {
-      var data = {
-        data: JSON.stringify({
-          interactionLogs: interactionLogs,
-          username: username,
-          version: version,
-          interface: interface,
-          answer: answer,
-          bookmarked: bookmarked,
-        }),
-      };
-      $.ajax({
-        async: false,
-        type: "POST",
-        url: "/snd_interaction_logs",
-        currentType: "application/json",
-        data: data,
-        dataType: "json",
-        success: function (response) {
-          console.log(response);
-        },
-      });
-      window.location =
-        "/" + username + "/" + version + "/" + "q" + interface[1];
-    }
+    var data = {
+      data: JSON.stringify({
+        interactionLogs: interactionLogs,
+        username: username,
+        version: version,
+        interface: interface,
+        answer: answer,
+        bookmarked: bookmarked,
+      }),
+    };
+    $.ajax({
+      async: false,
+      type: "POST",
+      url: "/snd_interaction_logs",
+      currentType: "application/json",
+      data: data,
+      dataType: "json",
+      success: function (response) {
+        console.log(response);
+      },
+    });
+    window.location = "/" + username + "/" + version + "/" + "q" + interface[1];
   }
 }
 

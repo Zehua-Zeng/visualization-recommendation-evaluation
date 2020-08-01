@@ -27,7 +27,7 @@
       class="main_nav navbar sticky-top navbar-expand-lg navbar-light bg-light"
     >
       <a class="navbar-brand mb-0 h1" href="#"
-        ><i class="fa fa-laptop"></i>&nbsp;Post-task Questionnaire</a
+        ><i class="fa fa-question-circle-o"></i>&nbsp;Post-task Questionnaire</a
       >
     </nav>
 
@@ -96,8 +96,7 @@
           </tr>
           <tr>
             <th>
-              I felt that the recommended charts made it easier to complete the
-              task.
+              I felt that the related views made it easier to complete the task.
             </th>
             <td class="sdisagree">
               <input
@@ -121,7 +120,7 @@
             </td>
           </tr>
           <tr>
-            <th>I felt that the recommended charts were easy to understand.</th>
+            <th>I felt that the related views were easy to understand.</th>
             <td class="sdisagree">
               <input
                 type="radio"
@@ -145,8 +144,7 @@
           </tr>
           <tr>
             <th>
-              I felt that the recommended charts were useful for completing the
-              task.
+              I felt that the related views were useful for completing the task.
             </th>
             <td class="sdisagree">
               <input type="radio" name="utility" value="sdisagree" required />
@@ -198,13 +196,8 @@
         let username = hrefSplit[hrefSplitLen - 3];
         let version = hrefSplit[hrefSplitLen - 2];
         let interface = hrefSplit[hrefSplitLen - 1];
-        let num = parseInt(interface[1]) + 1;
-        if (interface === "q4") {
-          window.location = "/" + username + "/" + version + "/intv";
-        } else {
-          window.location =
-            "/" + username + "/" + version + "/" + "t" + num.toString();
-        }
+        window.location =
+          "/" + username + "/" + version + "/" + "s" + interface[1];
         return false;
       }
       function sendQuestAns() {

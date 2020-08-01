@@ -37,6 +37,8 @@ def study(username, version, interface):
         return render_template("task.html", username = username, version = version, interface = interface)
     elif interface.startswith("p"):
         return render_template("perform.html", username = username, version = version, interface = interface)
+    elif interface.startswith("s"):
+        return render_template("stop.html", username = username, version = version, interface = interface)
     elif interface.startswith("q"):
         return render_template("post-task-quest.html", username = username, version = version, interface = interface)
     elif interface.startswith("intv"):
