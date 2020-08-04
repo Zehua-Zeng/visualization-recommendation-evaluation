@@ -411,6 +411,20 @@ def get_vgl_from_vglstr(vglstr, dataset):
             if "Flight_Date-nominal" in encode:
                 one_encoding["timeUnit"] = "month"
             
+            ## for movie Release_Date
+            if encode == "Release_Date-nominal-row":
+                if "-x" not in vglstr:
+                    encoding_type = "x"
+                elif "-y" not in vglstr:
+                    encoding_type = "y"
+                elif "-color" not in vglstr:
+                    encoding_type = "color"
+                else:
+                    encoding_type = "size"
+                
+            if "Release_Date-nominal" in encode:
+                one_encoding["timeUnit"] = "month"
+            
             encodings[encoding_type] = one_encoding
     
     vgl["encoding"] = encodings

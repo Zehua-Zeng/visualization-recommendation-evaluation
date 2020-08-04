@@ -74,6 +74,7 @@ var curAns = "";
 // type in answer
 //
 var interactionLogs = [];
+var scrollPos;
 
 init();
 
@@ -82,6 +83,56 @@ function init() {
   initBtns();
   generateInitRecPlots();
   storeInteractionLogs("study begins", "page loaded", new Date());
+  if (interface === "p4") {
+    setTimer(new Date());
+  }
+  scrollPos = document.querySelector(".page_content").scrollTop;
+
+  // adding scroll event
+  document
+    .querySelector(".page_content")
+    .addEventListener("scroll", function () {
+      // detects new state and compares it with the new one
+      // console.log(scrollPos, document.querySelector(".page_content").scrollTop);
+      if (document.querySelector(".page_content").scrollTop > scrollPos) {
+        // console.log("scroll up.");
+        storeInteractionLogs("scroll down", "", new Date());
+      } else {
+        // console.log("scroll down.");
+        storeInteractionLogs("scroll up", "", new Date());
+      }
+      // saves the new position for iteration.
+      scrollPos = document.querySelector(".page_content").scrollTop;
+    });
+}
+
+function setTimer(oldDate) {
+  let countDownDate = new Date(oldDate.getTime() + 15 * 60000 + 10 * 1000);
+  var x = setInterval(function () {
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("timer").innerHTML =
+      "Count Down: " + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("timer").innerHTML = "Time is up.";
+      document.getElementById("timer").style.color = "red";
+      alert(
+        "15 mins is up. You should submit your answer and then go to the next step."
+      );
+    }
+  }, 1000);
 }
 
 function initBtns() {
@@ -326,6 +377,7 @@ function generateInitRecPlots() {
       }
       document.querySelector(".loadmoreDiv").style.display = "none";
       addChartBtnsListener();
+      addChartsListener();
     },
   });
 }
@@ -377,13 +429,13 @@ function generatePlot(clickedField, box) {
               if (canvas.height > 25000 && canvas.width > 5000) {
                 vglSpec["height"] = 25000;
                 vglSpec["width"] = 5000;
-                vegaEmbed(`#${prop_str}`, vglSpec);
+                vegaEmbed("main", vglSpec);
               } else if (canvas.height > 25000) {
                 vglSpec["height"] = 25000;
-                vegaEmbed(`#${prop_str}`, vglSpec);
+                vegaEmbed("main", vglSpec);
               } else if (canvas.width > 5000) {
                 vglSpec["width"] = 5000;
-                vegaEmbed(`#${prop_str}`, vglSpec);
+                vegaEmbed("main", vglSpec);
               }
             }, 500);
           });
@@ -468,6 +520,7 @@ function generateRecPlots() {
     }
   }
   addChartBtnsListener();
+  addChartsListener();
 
   if (rec.length > 5) {
     curRecLen = 5;
@@ -546,13 +599,13 @@ function specifyChart(e) {
           if (canvas.height > 25000 && canvas.width > 5000) {
             vglSpec["height"] = 25000;
             vglSpec["width"] = 5000;
-            vegaEmbed(`#${prop_str}`, vglSpec);
+            vegaEmbed("#main", vglSpec);
           } else if (canvas.height > 25000) {
             vglSpec["height"] = 25000;
-            vegaEmbed(`#${prop_str}`, vglSpec);
+            vegaEmbed("#main", vglSpec);
           } else if (canvas.width > 5000) {
             vglSpec["width"] = 5000;
-            vegaEmbed(`#${prop_str}`, vglSpec);
+            vegaEmbed("#main", vglSpec);
           }
         }, 500);
       });
@@ -696,13 +749,13 @@ function refreshBookmark() {
           if (canvas.height > 25000 && canvas.width > 5000) {
             vglSpec["height"] = 25000;
             vglSpec["width"] = 5000;
-            vegaEmbed(`#${prop_str}`, vglSpec);
+            vegaEmbed(`#${key}_bm`, vglSpec);
           } else if (canvas.height > 25000) {
             vglSpec["height"] = 25000;
-            vegaEmbed(`#${prop_str}`, vglSpec);
+            vegaEmbed(`#${key}_bm`, vglSpec);
           } else if (canvas.width > 5000) {
             vglSpec["width"] = 5000;
-            vegaEmbed(`#${prop_str}`, vglSpec);
+            vegaEmbed(`#${key}_bm`, vglSpec);
           }
         }, 500);
       });
@@ -741,7 +794,7 @@ function displayTask() {
       "<div><b>Question:</b> What are the most common conditions for an animal strike? Note that any dataset columns that are interesting to you can be included. Summarize the 2-3 factors that you believe would cause bird strikes with highest chance.<br> Please <b>enter your answer</b> and also <b>bookmark charts</b> you think that could answer the question. <br><br><label>Your answer:</label> &nbsp;&nbsp; <textarea id='t3-answer' rows='4' cols='80'></textarea><br> <input type='checkbox' id='t3-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   } else if (interface[1] === "4") {
     taskContent.innerHTML =
-      "<div><b>Question:</b> Feel free to explore any and all aspects of the data for <b>[15 mins]</b>. Use the bookmark features to save any interesting patterns, trends or other insights worth sharing with colleagues. Note the top 3 bookmarks that you found most interesting from your exploration.<br> Please <b>write down your insights</b> and also <b>bookmark top 3 charts</b> you think that could answer the question. <br><br> <label>Your insights:</label> &nbsp;&nbsp; <textarea id='t4-answer' rows='4' cols='80'></textarea><br> <input type='checkbox' id='t4-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
+      "<div><b>Question:</b> Feel free to explore any and all aspects of the data for up to <b>[15 mins]</b>. Use the bookmark features to save any interesting patterns, trends or other insights worth sharing with colleagues. Note the top 3 bookmarks that you found most interesting from your exploration.<br> Please <b>write down your insights</b> and also <b>bookmark top 3 charts</b> you think that could answer the question. <br><br> <label>Your insights:</label> &nbsp;&nbsp; <textarea id='t4-answer' rows='4' cols='80'></textarea><br> <input type='checkbox' id='t4-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><button type='button' class='btn btn-sm btn-outline-dark' onclick='goPostTaskQuest()'> Submit, then go to next step.</button></div>";
   }
   let ansId = "t" + interface[1] + "-answer";
   document.getElementById(ansId).addEventListener("input", function () {
@@ -754,6 +807,7 @@ function displayTask() {
 }
 
 function goPostTaskQuest() {
+  storeInteractionLogs("Hit the submit button", "", new Date());
   let ansId, cmpBMId, answer, cmplBMChecked;
   if (interface[1] !== "4") {
     ansId = "t" + interface[1] + "-answer";
@@ -766,6 +820,11 @@ function goPostTaskQuest() {
   if (interface[1] == 4) {
     if (Object.keys(bookmarked).length != 3) {
       alert("You could only bookmark 3 charts for this task.");
+      storeInteractionLogs(
+        "Submit failed",
+        "Did not bookmark the correct number of charts",
+        new Date()
+      );
       return;
     }
   } else {
@@ -773,14 +832,29 @@ function goPostTaskQuest() {
       alert(
         "Please bookmark charts that you think they could answer the question."
       );
+      storeInteractionLogs(
+        "Submit failed",
+        "Did not bookmark charts",
+        new Date()
+      );
       return;
     }
   }
   // check answer and checkbox
-  if (answer === "" || cmplBMChecked == false) {
+  if (answer === "") {
+    storeInteractionLogs("Submit failed", "The answer is empty", new Date());
+    alert("Please answer the question and tick the checkbox.");
+    return;
+  } else if (cmplBMChecked == false) {
+    storeInteractionLogs(
+      "Submit failed",
+      "Did not check the bookmark complete button",
+      new Date()
+    );
     alert("Please answer the question and tick the checkbox.");
     return;
   } else {
+    storeInteractionLogs("Submitted successfully", "", new Date());
     var data = {
       data: JSON.stringify({
         interactionLogs: interactionLogs,
@@ -803,6 +877,35 @@ function goPostTaskQuest() {
       },
     });
     window.location = "/" + username + "/" + version + "/" + "q" + interface[1];
+  }
+}
+
+function addChartsListener() {
+  allCharts = document.getElementsByClassName("views");
+  // console.log(allCharts);
+  for (chart of allCharts) {
+    // console.log(chart);
+    chart.addEventListener("scroll", () => {
+      storeInteractionLogs(
+        "scroll on chart",
+        propVglstrMap[chart.id],
+        new Date()
+      );
+    });
+    chart.addEventListener("mouseover", () => {
+      storeInteractionLogs(
+        "mouseover on chart",
+        propVglstrMap[chart.id],
+        new Date()
+      );
+    });
+    chart.addEventListener("mouseout", () => {
+      storeInteractionLogs(
+        "mouseout on chart",
+        propVglstrMap[chart.id],
+        new Date()
+      );
+    });
   }
 }
 

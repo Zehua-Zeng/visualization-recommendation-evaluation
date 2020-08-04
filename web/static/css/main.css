@@ -21,6 +21,11 @@ th {
   padding: 8px;
 }
 
+p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 tr:nth-child(even) {
   background-color: #dddddd;
 }
@@ -55,7 +60,8 @@ tr:nth-child(even) {
 }
 
 #bookmark,
-#task {
+#task,
+#timer {
   margin: 15px 0 10px 20px;
 }
 
