@@ -65,8 +65,8 @@ read_cars_results = open('./web/static/data/cars/results.json', 'r')
 cars_results = json.load(read_cars_results)
 
 ## movies
-read_movies_flds_to_vglstr = open('./web/static/data/movies/fields_to_vglstr.json', 'r')
-movies_flds_to_vglstr = json.load(read_movies_flds_to_vglstr)
+read_movies_diban_flds_to_vglstr = open('./web/static/data/movies/dziban_fields_to_vglstr.json', 'r')
+movies_dziban_flds_to_vglstr = json.load(read_movies_diban_flds_to_vglstr)
 
 read_movies_dziban_bfs_results = open('./web/static/data/movies/dziban_bfs_results.json', 'r')
 movies_dziban_bfs_results = json.load(read_movies_dziban_bfs_results)
@@ -75,8 +75,8 @@ read_movies_dziban_dfs_results = open('./web/static/data/movies/dziban_dfs_resul
 movies_dziban_dfs_results = json.load(read_movies_dziban_dfs_results)
 
 ## birdstrikes
-read_bs_flds_to_vglstr = open('./web/static/data/birdstrikes/fields_to_vglstr.json', 'r')
-bs_flds_to_vglstr = json.load(read_bs_flds_to_vglstr)
+read_bs_dizban_flds_to_vglstr = open('./web/static/data/birdstrikes/dziban_fields_to_vglstr.json', 'r')
+bs_dziban_flds_to_vglstr = json.load(read_bs_dizban_flds_to_vglstr)
 
 read_bs_dziban_bfs_results = open('./web/static/data/birdstrikes/dziban_bfs_results.json', 'r')
 bs_dziban_bfs_results = json.load(read_bs_dziban_bfs_results)
@@ -164,20 +164,22 @@ def perform_snd_flds():
 
     if version[0] == "a":
         cur_fields = movies_fields
-        cur_flds_to_vglstr = movies_flds_to_vglstr
         cur_dataset = "movies"
-        if version[1] == "d" and version[2] == "e":
-            cur_results = movies_dziban_bfs_results
-        elif version[1] == "d" and version[2] == "f":
-            cur_results = movies_dziban_dfs_results
+        if version[1] == "d":
+            cur_flds_to_vglstr = movies_dziban_flds_to_vglstr
+            if version[2] == "e":
+                cur_results = movies_dziban_bfs_results
+            elif version[2] == "f":
+                cur_results = movies_dziban_dfs_results
     elif version[0] == "b":
         cur_fields = bs_fields
-        cur_flds_to_vglstr = bs_flds_to_vglstr
         cur_dataset = "birdstrikes"
-        if version[1] == "d" and version[2] == "e":
-            cur_results = bs_dziban_bfs_results
-        elif version[1] == "d" and version[2] == "f":
-            cur_results = bs_dziban_dfs_results
+        if version[1] == "d":
+            cur_flds_to_vglstr = bs_dziban_flds_to_vglstr
+            if version[2] == "e":
+                cur_results = bs_dziban_bfs_results
+            elif version[2] == "f":
+                cur_results = bs_dziban_dfs_results
 
     # init:
     if len(fields) == 0:
@@ -227,20 +229,22 @@ def perform_snd_spcs():
 
     if version[0] == "a":
         cur_fields = movies_fields
-        cur_flds_to_vglstr = movies_flds_to_vglstr
         cur_dataset = "movies"
-        if version[1] == "d" and version[2] == "e":
-            cur_results = movies_dziban_bfs_results
-        elif version[1] == "d" and version[2] == "f":
-            cur_results = movies_dziban_dfs_results
+        if version[1] == "d":
+            cur_flds_to_vglstr = movies_dziban_flds_to_vglstr
+            if version[2] == "e":
+                cur_results = movies_dziban_bfs_results
+            elif version[2] == "f":
+                cur_results = movies_dziban_dfs_results
     elif version[0] == "b":
         cur_fields = bs_fields
-        cur_flds_to_vglstr = bs_flds_to_vglstr
         cur_dataset = "birdstrikes"
-        if version[1] == "d" and version[2] == "e":
-            cur_results = bs_dziban_bfs_results
-        elif version[1] == "d" and version[2] == "f":
-            cur_results = bs_dziban_dfs_results
+        if version[1] == "d":
+            cur_flds_to_vglstr = bs_dziban_flds_to_vglstr
+            if version[2] == "e":
+                cur_results = bs_dziban_bfs_results
+            elif version[2] == "f":
+                cur_results = bs_dziban_dfs_results
 
     if vglstr in cur_results:
         print ("bfs vglstr exists.")
