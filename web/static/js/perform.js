@@ -59,6 +59,7 @@ var curFields;
 // window.href
 var hrefSplit = window.location.href.split("/");
 var hrefSplitLen = hrefSplit.length;
+var status = hrefSplit[hrefSplitLen - 4];
 var username = hrefSplit[hrefSplitLen - 3];
 var version = hrefSplit[hrefSplitLen - 2];
 var interface = hrefSplit[hrefSplitLen - 1];
@@ -164,28 +165,22 @@ function initBtns() {
     if (tskModal.style.display == "block") {
       tskModal.style.display = "none";
       storeInteractionLogs("closed window", "task popup", new Date());
-      if (interface[1] !== "4") {
-        let tskId = "t" + interface[1] + "-answer";
-        curAns = document.getElementById(tskId).value;
-      }
+      let tskId = "t" + interface[1] + "-answer";
+      curAns = document.getElementById(tskId).value;
     } else {
       tskModal.style.display = "block";
       storeInteractionLogs("opened window", "task popup", new Date());
       displayTask();
-      if (interface[1] !== "4") {
-        let tskId = "t" + interface[1] + "-answer";
-        document.getElementById(tskId).value = curAns;
-      }
+      let tskId = "t" + interface[1] + "-answer";
+      document.getElementById(tskId).value = curAns;
     }
   });
 
   tskClose.addEventListener("click", () => {
     tskModal.style.display = "none";
     storeInteractionLogs("closed window", "task popup", new Date());
-    if (interface[1] !== "4") {
-      let tskId = "t" + interface[1] + "-answer";
-      curAns = document.getElementById(tskId).value;
-    }
+    let tskId = "t" + interface[1] + "-answer";
+    curAns = document.getElementById(tskId).value;
   });
 
   window.addEventListener("click", (event) => {
@@ -196,10 +191,8 @@ function initBtns() {
     if (event.target == tskModal) {
       tskModal.style.display = "none";
       storeInteractionLogs("closed window", "task popup", new Date());
-      if (interface[1] !== "4") {
-        let tskId = "t" + interface[1] + "-answer";
-        curAns = document.getElementById(tskId).value;
-      }
+      let tskId = "t" + interface[1] + "-answer";
+      curAns = document.getElementById(tskId).value;
     }
   });
 }
@@ -429,18 +422,24 @@ function generatePlot(clickedField, box) {
               if (canvas.height > 25000 && canvas.width > 5000) {
                 vglSpec["height"] = 25000;
                 vglSpec["width"] = 5000;
-                vegaEmbed("main", vglSpec);
+                vegaEmbed("#main", vglSpec);
               } else if (canvas.height > 25000) {
                 vglSpec["height"] = 25000;
-                vegaEmbed("main", vglSpec);
+                vegaEmbed("#main", vglSpec);
               } else if (canvas.width > 5000) {
                 vglSpec["width"] = 5000;
-                vegaEmbed("main", vglSpec);
+                vegaEmbed("#main", vglSpec);
               }
             }, 500);
           });
           propVglMap[prop_str] = vglSpec;
           propVglstrMap[prop_str] = prop;
+
+          storeInteractionLogs(
+            "main chart changed because of clicking a field",
+            prop,
+            new Date()
+          );
         }
         generateRecPlots();
       } else if (response.status === "empty") {
@@ -475,7 +474,6 @@ function generateRecPlots() {
       let prop_str = JSON.stringify(prop).replace(/\W/g, "");
 
       let vglSpec = rec[i][prop];
-      vegaEmbed(`#${prop_str}`, vglSpec);
 
       let sFields = getFieldsFromVgl(vglSpec);
       // console.log(sFields);
@@ -493,6 +491,7 @@ function generateRecPlots() {
       }
 
       relatedImg.innerHTML += `<div class='view_wrapper ${prop_str}_wrapper'> ${added_str} <i class='fas fa-bookmark add_bm' added="false"></i><i class="fas fa-list-alt specify_chart"></i><div class="views" id='${prop_str}'></div></div>`;
+      vegaEmbed(`#${prop_str}`, vglSpec);
 
       propVglMap[prop_str] = vglSpec;
       propVglstrMap[prop_str] = prop;
@@ -799,7 +798,7 @@ function displayTask() {
   let ansId = "t" + interface[1] + "-answer";
   document.getElementById(ansId).addEventListener("input", function () {
     storeInteractionLogs(
-      "Type in answer",
+      "typed in answer",
       document.getElementById(ansId).value,
       new Date()
     );
@@ -807,7 +806,7 @@ function displayTask() {
 }
 
 function goPostTaskQuest() {
-  storeInteractionLogs("Hit the submit button", "", new Date());
+  storeInteractionLogs("hit the submit button", "", new Date());
   let ansId, cmpBMId, answer, cmplBMChecked;
   if (interface[1] !== "4") {
     ansId = "t" + interface[1] + "-answer";
@@ -821,8 +820,8 @@ function goPostTaskQuest() {
     if (Object.keys(bookmarked).length != 3) {
       alert("You could only bookmark 3 charts for this task.");
       storeInteractionLogs(
-        "Submit failed",
-        "Did not bookmark the correct number of charts",
+        "submission failed",
+        "did not bookmark the correct number of charts",
         new Date()
       );
       return;
@@ -833,8 +832,8 @@ function goPostTaskQuest() {
         "Please bookmark charts that you think they could answer the question."
       );
       storeInteractionLogs(
-        "Submit failed",
-        "Did not bookmark charts",
+        "submission failed",
+        "did not bookmark charts",
         new Date()
       );
       return;
@@ -842,22 +841,27 @@ function goPostTaskQuest() {
   }
   // check answer and checkbox
   if (answer === "") {
-    storeInteractionLogs("Submit failed", "The answer is empty", new Date());
+    storeInteractionLogs(
+      "submission failed",
+      "the answer is empty",
+      new Date()
+    );
     alert("Please answer the question and tick the checkbox.");
     return;
   } else if (cmplBMChecked == false) {
     storeInteractionLogs(
-      "Submit failed",
-      "Did not check the bookmark complete button",
+      "submission failed",
+      "did not check the bookmark complete button",
       new Date()
     );
     alert("Please answer the question and tick the checkbox.");
     return;
   } else {
-    storeInteractionLogs("Submitted successfully", "", new Date());
+    storeInteractionLogs("submitted successfully", "", new Date());
     var data = {
       data: JSON.stringify({
         interactionLogs: interactionLogs,
+        status: status,
         username: username,
         version: version,
         interface: interface,
@@ -876,32 +880,33 @@ function goPostTaskQuest() {
         console.log(response);
       },
     });
-    window.location = "/" + username + "/" + version + "/" + "q" + interface[1];
+    window.location =
+      "/" + status + "/" + username + "/" + version + "/q" + interface[1];
   }
 }
 
 function addChartsListener() {
   allCharts = document.getElementsByClassName("views");
   // console.log(allCharts);
-  for (chart of allCharts) {
+  for (let chart of allCharts) {
     // console.log(chart);
     chart.addEventListener("scroll", () => {
       storeInteractionLogs(
-        "scroll on chart",
+        "scroll on a chart",
         propVglstrMap[chart.id],
         new Date()
       );
     });
     chart.addEventListener("mouseover", () => {
       storeInteractionLogs(
-        "mouseover on chart",
+        "mouseover a chart",
         propVglstrMap[chart.id],
         new Date()
       );
     });
     chart.addEventListener("mouseout", () => {
       storeInteractionLogs(
-        "mouseout on chart",
+        "mouseout a chart",
         propVglstrMap[chart.id],
         new Date()
       );

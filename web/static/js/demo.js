@@ -25,10 +25,18 @@ var curRecLen = 0;
 
 var checkedFields = [];
 var propVglMap = {};
+var propVglstrMap = {};
 var bookmarked = {};
 
 //save cur answer
 var curAns = "";
+
+var hrefSplit = window.location.href.split("/");
+var hrefSplitLen = hrefSplit.length;
+var status = hrefSplit[hrefSplitLen - 2];
+
+var interactionLogs = [];
+var scrollPos;
 
 init();
 
@@ -36,6 +44,25 @@ function init() {
   initFields();
   initBtns();
   generateInitRecPlots();
+  storeInteractionLogs("study begins (demo)", "page loaded", new Date());
+  scrollPos = document.querySelector(".page_content").scrollTop;
+
+  // adding scroll event
+  document
+    .querySelector(".page_content")
+    .addEventListener("scroll", function () {
+      // detects new state and compares it with the new one
+      // console.log(scrollPos, document.querySelector(".page_content").scrollTop);
+      if (document.querySelector(".page_content").scrollTop > scrollPos) {
+        // console.log("scroll up.");
+        storeInteractionLogs("scroll down", "", new Date());
+      } else {
+        // console.log("scroll down.");
+        storeInteractionLogs("scroll up", "", new Date());
+      }
+      // saves the new position for iteration.
+      scrollPos = document.querySelector(".page_content").scrollTop;
+    });
 }
 
 function initBtns() {
@@ -55,23 +82,28 @@ function initBtns() {
   bmBtn.addEventListener("click", () => {
     if (bmModal.style.display == "block") {
       bmModal.style.display = "none";
+      storeInteractionLogs("closed window", "bookmark popup", new Date());
     } else {
       bmModal.style.display = "block";
       refreshBookmark();
+      storeInteractionLogs("opened window", "bookmark popup", new Date());
     }
   });
 
   bmClose.addEventListener("click", () => {
     bmModal.style.display = "none";
+    storeInteractionLogs("closed window", "bookmark popup", new Date());
   });
 
   tskBtn.addEventListener("click", () => {
     if (tskModal.style.display == "block") {
       tskModal.style.display = "none";
+      storeInteractionLogs("closed window", "task popup", new Date());
       let tskId = "t-answer";
       curAns = document.getElementById(tskId).value;
     } else {
       tskModal.style.display = "block";
+      storeInteractionLogs("opened window", "task popup", new Date());
       displayTask();
       let tskId = "t-answer";
       document.getElementById(tskId).value = curAns;
@@ -80,6 +112,7 @@ function initBtns() {
 
   tskClose.addEventListener("click", () => {
     tskModal.style.display = "none";
+    storeInteractionLogs("closed window", "task popup", new Date());
     let tskId = "t-answer";
     curAns = document.getElementById(tskId).value;
   });
@@ -87,27 +120,33 @@ function initBtns() {
   gstdyBtn.addEventListener("click", () => {
     if (gstdyModal.style.display == "block") {
       gstdyModal.style.display = "none";
+      storeInteractionLogs("closed window", "go study popup", new Date());
     } else {
       gstdyModal.style.display = "block";
+      storeInteractionLogs("opened window", "go study popup", new Date());
       displayGstdy();
     }
   });
 
   gstdyClose.addEventListener("click", () => {
     gstdyModal.style.display = "none";
+    storeInteractionLogs("closed window", "go study popup", new Date());
   });
 
   window.addEventListener("click", (event) => {
     if (event.target == bmModal) {
       bmModal.style.display = "none";
+      storeInteractionLogs("closed window", "task popup", new Date());
     }
     if (event.target == tskModal) {
       tskModal.style.display = "none";
+      storeInteractionLogs("closed window", "task popup", new Date());
       let tskId = "t-answer";
       curAns = document.getElementById(tskId).value;
     }
     if (event.target == gstdyModal) {
       gstdyModal.style.display = "none";
+      storeInteractionLogs("closed window", "task popup", new Date());
     }
   });
 }
@@ -170,8 +209,20 @@ function clickOnField(e) {
       // also add its parsed name to the list.
       if (checkedFields.length < 3) {
         checkedFields.push(clickedField);
+        storeInteractionLogs(
+          "clicked on a field",
+          "add " + clickedField,
+          new Date()
+        );
         // if we can not check more fields, alert it.
       } else {
+        storeInteractionLogs(
+          "clicked on a field",
+          "tried to add " +
+            clickedField +
+            ", but failed because already selected 3 fields",
+          new Date()
+        );
         alert(`You have selected more than 3 fields!`);
         box.checked = false;
         return;
@@ -180,6 +231,11 @@ function clickOnField(e) {
       // if a box is unchecked after the click,
       // also remove its parsed name from the list.
     } else {
+      storeInteractionLogs(
+        "clicked on a field",
+        "removed " + clickedField,
+        new Date()
+      );
       checkedFields = checkedFields.filter(function (value, index, arr) {
         return value.localeCompare(clickedField) != 0;
       });
@@ -233,10 +289,12 @@ function generateInitRecPlots() {
 
           vegaEmbed(`#${prop_str}`, vglSpec);
           propVglMap[prop_str] = vglSpec;
+          propVglstrMap[prop_str] = prop;
         }
       }
       document.querySelector(".loadmoreDiv").style.display = "none";
       addChartBtnsListener();
+      addChartsListener();
     },
   });
 }
@@ -280,9 +338,20 @@ function generatePlot(clickedField, box) {
           let vglSpec = vglDict[prop];
           vegaEmbed("#main", vglSpec);
           propVglMap[prop_str] = vglSpec;
+          propVglstrMap[prop_str] = prop;
+          storeInteractionLogs(
+            "main chart changed because of clicking a field",
+            prop,
+            new Date()
+          );
         }
         generateRecPlots();
       } else if (response.status === "empty") {
+        storeInteractionLogs(
+          "triggered empty chart",
+          "removed " + clickedField,
+          new Date()
+        );
         // if empty chart
         alert(
           "Sorry, we cannot generate charts with the combination of selected fields."
@@ -329,12 +398,14 @@ function generateRecPlots() {
       relatedImg.innerHTML += `<div class='view_wrapper ${prop_str}_wrapper'> ${added_str} <i class='fas fa-bookmark add_bm' added="false"></i><i class="fas fa-list-alt specify_chart"></i><div class="views" id='${prop_str}'></div></div>`;
 
       propVglMap[prop_str] = vglSpec;
+      propVglstrMap[prop_str] = prop;
       if (i >= maxNum) {
         document.querySelector(`.${prop_str}_wrapper`).style.display = "none";
       }
     }
   }
   addChartBtnsListener();
+  addChartsListener();
 
   if (rec.length > 5) {
     curRecLen = 5;
@@ -346,7 +417,7 @@ function generateRecPlots() {
 }
 
 function loadMoreRec() {
-  console.log("click loadmore.");
+  storeInteractionLogs("clicked load more button", "", new Date());
   let maxNum = curRecLen + 5;
   if (maxNum >= rec.length) {
     maxNum = rec.length;
@@ -366,6 +437,8 @@ function specifyChart(e) {
   let vis = e.target.parentElement;
   let prop_str = vis.classList.item(1).split("_wrapper")[0];
   let vglSpec = propVglMap[prop_str];
+
+  storeInteractionLogs("specified chart", propVglstrMap[prop_str], new Date());
 
   reassignFields(vglSpec);
 
@@ -468,7 +541,13 @@ function toggleBookMark(e) {
         bookmarkContent.removeChild(n);
       }
     }
-    delete bookmarked[`${str.split("_wrapper")[0]}`];
+    let splittedStr = `${str.split("_wrapper")[0]}`;
+    delete bookmarked[splittedStr];
+    storeInteractionLogs(
+      "deleted chart from bookmark",
+      propVglstrMap[splittedStr],
+      new Date()
+    );
 
     // change color and state of the plot in views
     let mark = document.querySelector(`.${str.split("_bm")[0]} .add_bm`);
@@ -486,6 +565,12 @@ function toggleBookMark(e) {
     let splittedStr = `${str.split("_wrapper")[0]}`;
 
     bookmarked[splittedStr] = propVglMap[splittedStr];
+
+    storeInteractionLogs(
+      "added chart to bookmark",
+      propVglstrMap[splittedStr],
+      new Date()
+    );
     refreshBookmark();
   }
 }
@@ -539,55 +624,167 @@ function refreshBookmark() {
 
 function displayTask() {
   taskContent.innerHTML =
-    "<div><b>Question:</b> The current question would be described here. <br> Example: Which origin has the most number of records? <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t-answer'><br><input type='checkbox' id='t4-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><a class='btn btn-outline-dark' href='#' role='button'>Submit, then go to next step.</a></div>";
+    "<div><b>Question:</b> The current question would be described here. <br> Example: Which origin has the most number of records? <br><br><label>Your answer:</label> &nbsp;&nbsp; <input type='text' id='t-answer'><br><input type='checkbox' id='t-complete-bm' /> &nbsp;&nbsp; <label>I have also bookmarked the charts which I think they could answer the quesion.</label><br><a class='btn btn-outline-dark' href='#' role='button'>Submit, then go to next step.</a></div>";
+
+  let ansId = "t-answer";
+  document.getElementById(ansId).addEventListener("input", function () {
+    storeInteractionLogs(
+      "typed in answer",
+      document.getElementById(ansId).value,
+      new Date()
+    );
+  });
 }
 
 function displayGstdy() {
-  gstdyContent.innerHTML =
-    "<div><b>Please pick a username: </b> (The username is only for logging. The username can only consists of alphabets or numbers.) <br> <label for='username'>Username:</label>&nbsp; <input type='text' id='username'><br><br> <button type='button' class='btn btn-sm btn-outline-info' onclick='goStudy()'><i class='fa fa-sign-in'></i> &nbsp; Go to Study</button></div>";
+  if (status === "pilot") {
+    gstdyContent.innerHTML =
+      "<div>Please pick a <b>username</b>:  (The username is only for logging. The username can <b>only</b> consists of <b>alphabets</b> or <b>numbers</b>.) <br> <label for='username'>Username:</label>&nbsp; <input type='text' id='username'><br><br> <button type='button' class='btn btn-sm btn-outline-info' onclick='goStudy()'><i class='fa fa-sign-in'></i> &nbsp; Go to Study</button></div>";
+  } else if (status === "study") {
+    gstdyContent.innerHTML =
+      "<div>Please enter the <b>email address</b> you used for the study registration: <br> <label for='username'>Email:</label>&nbsp; <input type='text' id='username'><br><br> <button type='button' class='btn btn-sm btn-outline-info' onclick='goStudy()'><i class='fa fa-sign-in'></i> &nbsp; Go to Study</button></div>";
+  }
+  let unameId = "username";
+  document.getElementById(unameId).addEventListener("input", function () {
+    storeInteractionLogs(
+      "typed in username/email address",
+      document.getElementById(unameId).value,
+      new Date()
+    );
+  });
 }
 
 function goStudy() {
+  storeInteractionLogs("hit the go study button", "", new Date());
   let inputText = document.getElementById("username").value;
   const regex = /[a-zA-Z\d]+/g;
+
   if (inputText === "") {
     alert("Please input a username.");
-  }
-  let mat = inputText.match(regex);
-  // console.log(mat);
-  if (mat.length == 1 && mat[0].length == inputText.length) {
-    dataset = _.sample(["a", "b"]);
-    oracle = "d";
-    traversal = "e";
-    // oracle = _.sample(["c", "d"]);
-    // traversal = _.sample(["e", "f"]);
-    version = dataset + oracle + traversal;
-    sendUnameVersion(inputText, version);
-    window.location = "/" + inputText + "/" + version + "/t1";
-  } else {
-    alert(
-      "Please input a valid username. (The username can only consists of alphabets or numbers.)"
+    storeInteractionLogs(
+      "submission failed",
+      "did not enter username/email address",
+      new Date()
     );
+    return;
+  }
+  if (status === "pilot") {
+    let mat = inputText.match(regex);
+    if (mat.length == 1 && mat[0].length == inputText.length) {
+      sendUserInfo(inputText, status);
+    } else {
+      alert(
+        "Please input a valid username. (The username can only consists of alphabets or numbers.)"
+      );
+      storeInteractionLogs("submission failed", "invalid username", new Date());
+    }
+  } else if (status === "study") {
+    sendUserInfo(inputText, status);
   }
 }
 
-function sendUnameVersion(username, version) {
+function sendUserInfo(username, status) {
   var data = {
     data: JSON.stringify({
       username: username,
-      version: version,
+      status: status,
     }),
   };
   $.ajax({
     async: false,
     type: "POST",
-    url: "/snd_uname_version",
+    url: "/snd_user_info",
     currentType: "application/json",
     data: data,
     dataType: "json",
     success: function (response) {
-      console.log(response);
+      if (response.status === "success") {
+        let username = response.username;
+        let version = response.version;
+        storeInteractionLogs("submitted successfully", "", new Date());
+        var log = {
+          log: JSON.stringify({
+            interactionLogs: interactionLogs,
+            status: version,
+            username: username,
+            interface: "demo",
+            bookmarked: bookmarked,
+          }),
+        };
+        $.ajax({
+          async: false,
+          type: "POST",
+          url: "/snd_demo_interaction_logs",
+          currentType: "application/json",
+          data: log,
+          dataType: "json",
+          success: function (response) {
+            console.log(response);
+          },
+        });
+        if (version === "pilot") {
+          window.location = "/pilot/" + username + "/ace/t2";
+        } else {
+          window.location = "/study/" + username + "/" + version + "/t1";
+        }
+      } else if (response.status === "invalid") {
+        if (status === "pilot") {
+          alert("Sorry, the username has been taken. Please try another one.");
+          storeInteractionLogs(
+            "submission failed",
+            "username is taken",
+            new Date()
+          );
+        } else {
+          alert(
+            "The email address has not been registered for the user study."
+          );
+          storeInteractionLogs(
+            "submission failed",
+            "the email address has not been registered",
+            new Date()
+          );
+        }
+      }
     },
+  });
+}
+
+function addChartsListener() {
+  allCharts = document.getElementsByClassName("views");
+  // console.log(allCharts);
+  for (let chart of allCharts) {
+    // console.log(chart);
+    chart.addEventListener("scroll", () => {
+      storeInteractionLogs(
+        "scroll on a chart",
+        propVglstrMap[chart.id],
+        new Date()
+      );
+    });
+    chart.addEventListener("mouseover", () => {
+      storeInteractionLogs(
+        "mouseover a chart",
+        propVglstrMap[chart.id],
+        new Date()
+      );
+    });
+    chart.addEventListener("mouseout", () => {
+      storeInteractionLogs(
+        "mouseout a chart",
+        propVglstrMap[chart.id],
+        new Date()
+      );
+    });
+  }
+}
+
+function storeInteractionLogs(interaction, value, time) {
+  console.log({ Interaction: interaction, Value: value, Time: time.getTime() });
+  interactionLogs.push({
+    Interaction: interaction,
+    Value: value,
+    Time: time.getTime(),
   });
 }
 

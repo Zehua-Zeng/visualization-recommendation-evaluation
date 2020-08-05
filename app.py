@@ -23,15 +23,18 @@ def send_js(filename):
 # pre-study survey at /proc/pre-study-survey
 # tutorial at /proc/tutorial
 # demo at /proc/demo
-@app.route('/')
-@app.route('/proc/')
-@app.route('/proc/<pid>')
+## actual study
+@app.route('/pilot/')
+@app.route('/pilot/<pid>')
+@app.route('/study/')
+@app.route('/study/<pid>')
 def index(pid = None):
     if pid == "demo":
         return render_template("demo.html")
     return render_template("index.html", pid=pid)
 
-@app.route('/<username>/<version>/<interface>')
+@app.route('/pilot/<username>/<version>/<interface>')
+@app.route('/study/<username>/<version>/<interface>')
 def study(username, version, interface):
     if interface.startswith("t"):
         return render_template("task.html", username = username, version = version, interface = interface)
@@ -47,7 +50,6 @@ def study(username, version, interface):
 @app.route('/test')
 def test():
     return render_template("test.html")
-
 
 ## fields
 movies_fields = ['Title', 'US_Gross', 'Worldwide_Gross', 'US_DVD_Sales', 'Production_Budget', 'Release_Date', 'MPAA_Rating', 'Running_Time_min', 'Distributor', 'Source', 'Major_Genre', 'Creative_Type', 'Director', 'Rotten_Tomatoes_Rating', 'IMDB_Rating', 'IMDB_Votes']
@@ -65,6 +67,7 @@ read_cars_results = open('./web/static/data/cars/results.json', 'r')
 cars_results = json.load(read_cars_results)
 
 ## movies
+## dziban
 read_movies_diban_flds_to_vglstr = open('./web/static/data/movies/dziban_fields_to_vglstr.json', 'r')
 movies_dziban_flds_to_vglstr = json.load(read_movies_diban_flds_to_vglstr)
 
@@ -74,7 +77,18 @@ movies_dziban_bfs_results = json.load(read_movies_dziban_bfs_results)
 read_movies_dziban_dfs_results = open('./web/static/data/movies/dziban_dfs_results.json', 'r')
 movies_dziban_dfs_results = json.load(read_movies_dziban_dfs_results)
 
+## cql
+read_movies_cql_flds_to_vglstr = open('./web/static/data/movies/cql_fields_to_vglstr.json', 'r')
+movies_cql_flds_to_vglstr = json.load(read_movies_cql_flds_to_vglstr)
+
+read_movies_cql_bfs_results = open('./web/static/data/movies/cql_bfs_results.json', 'r')
+movies_cql_bfs_results = json.load(read_movies_cql_bfs_results)
+
+read_movies_cql_dfs_results = open('./web/static/data/movies/cql_dfs_results.json', 'r')
+movies_cql_dfs_results = json.load(read_movies_cql_dfs_results)
+
 ## birdstrikes
+## dziban
 read_bs_dizban_flds_to_vglstr = open('./web/static/data/birdstrikes/dziban_fields_to_vglstr.json', 'r')
 bs_dziban_flds_to_vglstr = json.load(read_bs_dizban_flds_to_vglstr)
 
@@ -83,6 +97,16 @@ bs_dziban_bfs_results = json.load(read_bs_dziban_bfs_results)
 
 read_bs_dziban_dfs_results = open('./web/static/data/birdstrikes/dziban_dfs_results.json', 'r')
 bs_dziban_dfs_results = json.load(read_bs_dziban_dfs_results)
+
+## cql
+read_bs_cql_flds_to_vglstr = open('./web/static/data/birdstrikes/cql_fields_to_vglstr.json', 'r')
+bs_cql_flds_to_vglstr = json.load(read_bs_cql_flds_to_vglstr)
+
+read_bs_cql_bfs_results = open('./web/static/data/birdstrikes/cql_bfs_results.json', 'r')
+bs_cql_bfs_results = json.load(read_bs_cql_bfs_results)
+
+read_bs_cql_dfs_results = open('./web/static/data/birdstrikes/cql_dfs_results.json', 'r')
+bs_cql_dfs_results = json.load(read_bs_cql_dfs_results)
 
 ## communicate with demo
 @app.route('/demo_snd_flds', methods=['POST'])
@@ -171,6 +195,12 @@ def perform_snd_flds():
                 cur_results = movies_dziban_bfs_results
             elif version[2] == "f":
                 cur_results = movies_dziban_dfs_results
+        elif version[1] == "c":
+            cur_flds_to_vglstr = movies_cql_flds_to_vglstr
+            if version[2] == "e":
+                cur_results = movies_cql_bfs_results
+            elif version[2] == "f":
+                cur_results = movies_cql_dfs_results
     elif version[0] == "b":
         cur_fields = bs_fields
         cur_dataset = "birdstrikes"
@@ -180,6 +210,12 @@ def perform_snd_flds():
                 cur_results = bs_dziban_bfs_results
             elif version[2] == "f":
                 cur_results = bs_dziban_dfs_results
+        elif version[1] == "c":
+            cur_flds_to_vglstr = bs_cql_flds_to_vglstr
+            if version[2] == "e":
+                cur_results = bs_cql_bfs_results
+            elif version[2] == "f":
+                cur_results = bs_cql_dfs_results
 
     # init:
     if len(fields) == 0:
@@ -201,18 +237,22 @@ def perform_snd_flds():
     actual_vgl = {}
     vglstr = cur_flds_to_vglstr[fields_str]
     actual_vgl[vglstr] = get_vgl_from_vglstr(vglstr, cur_dataset)
-    # get recomendation:
-    rec_vgl = cur_results[vglstr]
-    # print (bfs_vl)
+    ## if dziban:
+    if version[1] == "d":
+        rec_vgl = cur_results[vglstr]
+    
+    elif version[1] == "c":
+        rec_vgl = cur_results[fields_str]
+    
     rec_ranked = sorted(rec_vgl, key=rec_vgl.get)
-    # print (bfsRanked)
-    if len(rec_ranked) > 20:
-        rec_ranked = rec_ranked[:20]
+    if len(rec_ranked) > 25:
+        rec_ranked = rec_ranked[:25]
     rec_ranked_final = []
     for vstr in rec_ranked:
         temp = {}
         temp[vstr] = get_vgl_from_vglstr(vstr, cur_dataset)
         rec_ranked_final.append(temp)
+    
     return jsonify(status="success", actualVegalite=actual_vgl, recVegalite=rec_ranked_final)
 
 @app.route('/perform_snd_spcs', methods=['POST'])
@@ -236,6 +276,12 @@ def perform_snd_spcs():
                 cur_results = movies_dziban_bfs_results
             elif version[2] == "f":
                 cur_results = movies_dziban_dfs_results
+        elif version[1] == "c":
+            cur_flds_to_vglstr = movies_cql_flds_to_vglstr
+            if version[2] == "e":
+                cur_results = movies_cql_bfs_results
+            elif version[2] == "f":
+                cur_results = movies_cql_dfs_results
     elif version[0] == "b":
         cur_fields = bs_fields
         cur_dataset = "birdstrikes"
@@ -245,19 +291,31 @@ def perform_snd_spcs():
                 cur_results = bs_dziban_bfs_results
             elif version[2] == "f":
                 cur_results = bs_dziban_dfs_results
-
-    if vglstr in cur_results:
-        print ("bfs vglstr exists.")
-        rec_vgl = cur_results[vglstr]
-    else:
-        print ("bfs vglstr does not exist.")
+        elif version[1] == "c":
+            cur_flds_to_vglstr = bs_cql_flds_to_vglstr
+            if version[2] == "e":
+                cur_results = bs_cql_bfs_results
+            elif version[2] == "f":
+                cur_results = bs_cql_dfs_results
+    
+    if version[1] == "d":
+        if vglstr in cur_results:
+            print ("vglstr exists.")
+            rec_vgl = cur_results[vglstr]
+        else:
+            print ("vglstr does not exist.")
+            fields = get_fields_from_vglstr(vglstr)
+            new_vglstr = cur_flds_to_vglstr["+".join(fields)]
+            rec_vgl = cur_results[new_vglstr]
+    
+    elif version[1] == "c":
         fields = get_fields_from_vglstr(vglstr)
-        new_vglstr = cur_flds_to_vglstr["+".join(fields)]
-        rec_vgl = cur_results[new_vglstr]
+        fields_str = "+".join(fields)
+        rec_vgl = cur_results[fields_str]
     
     rec_ranked = sorted(rec_vgl, key=rec_vgl.get)
-    if len(rec_ranked) > 20:
-        rec_ranked = rec_ranked[:20]
+    if len(rec_ranked) > 25:
+        rec_ranked = rec_ranked[:25]
     rec_ranked_final = []
     
     for vstr in rec_ranked:
@@ -268,14 +326,48 @@ def perform_snd_spcs():
     return jsonify(status="success", recVegalite=rec_ranked_final)
 
 ## get username-version:
-@app.route('/snd_uname_version', methods=['POST'])
-def snd_uname_version():
+@app.route('/snd_user_info', methods=['POST'])
+def snd_user_info():
     received_data = json.loads(request.form.get('data'))
     username = received_data["username"]
-    version = received_data["version"]
-    uv_file = open("username-version.txt", "a")  # append mode 
-    uv_file.write(username + ',' + version + '\n') 
-    uv_file.close()
+    status = received_data["status"]
+    if status == "pilot":
+        read_pu = open("pilot_user_info.json", "r")
+        pu = json.load(read_pu)
+        if username in pu:
+            return jsonify(status="invalid")
+        else:
+            pu.append(username)
+            with open("pilot_user_info.json", "w") as out:
+                json.dump(pu, out)
+            return jsonify(status="success", username=username, version="pilot")
+    elif status == "study":
+        read_su = open('study_user_info.json', 'r')
+        su = json.load(read_su)
+        if username in su:
+            new_uname = su[username]["username"]
+            version = su[username]["version"]
+            return jsonify(status="success", username=new_uname, version=version)
+        else:
+            return jsonify(status="invalid")
+
+
+## get study interaction log:
+@app.route('/snd_demo_interaction_logs', methods=['POST'])
+def snd_demo_interaction_logs():
+    received_data = json.loads(request.form.get('log'))
+    interaction_logs = received_data["interactionLogs"]
+    status = received_data["status"]
+    username = received_data["username"]
+    interface = received_data["interface"]
+    bookmarked = received_data["bookmarked"]
+
+    with open('./logs/' + status + '/' + username + '_' + interface + '_logs.json', 'w') as out:
+        json.dump(interaction_logs, out, indent=2)
+
+    with open('./logs/' + status + '/' + username + '_' + interface + '_bookmarked.json', 'w') as out:
+        json.dump(bookmarked, out, indent=2)
+
     return jsonify(status="success")
 
 ## get study interaction log:
@@ -283,22 +375,21 @@ def snd_uname_version():
 def snd_interaction_logs():
     received_data = json.loads(request.form.get('data'))
     interaction_logs = received_data["interactionLogs"]
+    status = received_data["status"]
     username = received_data["username"]
     version = received_data["version"]
     interface = received_data["interface"]
     bookmarked = received_data["bookmarked"]
+    answer = received_data["answer"]
 
-    with open('./logs/' + username + '_' + version + '_' + interface + '.json', 'w') as out:
+    with open('./logs/' + status + '/' + username + '_' + version + '_' + interface + '_logs.json', 'w') as out:
         json.dump(interaction_logs, out, indent=2)
 
-    with open('./logs/' + username + '_' + version + '_' + interface + '_bookmarked.json', 'w') as out:
+    with open('./logs/' + status + '/' + username + '_' + version + '_' + interface + '_bookmarked.json', 'w') as out:
         json.dump(bookmarked, out, indent=2)
 
-    if "answer" in received_data:
-        answer = received_data["answer"]
-        ans_file = open('./logs/' + username + '_' + version + '_' + interface + '_answer.json', "w")
-        ans_file.write(answer)
-        ans_file.close()
+    with open('./logs/' + status + '/' + username + '_' + version + '_' + interface + '_answer.json', "w") as out:
+        json.dump({"answer": answer}, out, indent=2)
 
     return jsonify(status="success")
 
@@ -308,12 +399,21 @@ def snd_interaction_logs():
 def ptsk_snd_ans():
     received_data = json.loads(request.form.get('data'))
     questAns = received_data["questAns"]
+    status = received_data["status"]
     username = received_data["username"]
     version = received_data["version"]
     interface = received_data["interface"]
 
-    with open('./logs/' + username + '_' + version + '_' + interface + '.json', 'w') as out:
+    with open('./logs/' + status + '/' + username + '_' + version + '_' + interface + '.json', 'w') as out:
         json.dump(questAns, out, indent=2)
+    
+    if status == "study" and interface == "intv":
+        read_su = open('study_user_info.json', 'r')
+        su = json.load(read_su)
+        for email in su:
+            if su[email]["username"] == username:
+                return jsonify(status="success", code=su[email]["complete-code"])
+
     return jsonify(status="success")
 
 # helper methods:

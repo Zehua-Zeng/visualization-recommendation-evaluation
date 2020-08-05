@@ -37,88 +37,96 @@
 
     <!-- Main contents of the page, includes sideNavs and page contents -->
     <main id="index">
-      {% if version[0] == "a" and interface[1] == "1" %}
-      <h1>Task 1</h1>
       <div class="task">
-        Which creative type has the highest number of movies based on Book/Short
-        Story (Source)?<br />
-        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
-        think that could answer the question.
+        {% if version[0] == "a" and interface[1] == "1" %}
+        <h1>Task 1</h1>
+        <div>
+          Which creative type has the highest number of movies based on
+          Book/Short Story (Source)?<br />
+          Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+          think that could answer the question.
+        </div>
+        {% elif version[0] == "a" and interface[1] == "2" %}
+        <h1>Task 2</h1>
+        <div>
+          Which major genre has higher average rotten tomatoes rating,
+          Adventure, or Horror? <br />
+          Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+          think that could answer the question.
+        </div>
+        {% elif version[0] == "a" and interface[1] == "3" %}
+        <h1>Task 3</h1>
+        <div>
+          What kinds of movies will be the most successful movies based on your
+          observations of the data? Summarize the 2-3 characteristics that you
+          believe are most important in predicting their success. <br />
+          Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+          think that could answer the question.
+        </div>
+        {% elif version[0] == "b" and interface[1] == "1" %}
+        <h1>Task 1</h1>
+        <div>
+          Which aircraft airline operator at GREATER PITTSBURGH airport has the
+          highest number of bird strike records? <br />
+          Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+          think that could answer the question.
+        </div>
+        {% elif version[0] == "b" and interface[1] == "2" %}
+        <h1>Task 2</h1>
+        <div>
+          Which wildlife species has the higher average speed IAS in knots,
+          European starling or Rock pigeon? <br />
+          Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+          think that could answer the question.
+        </div>
+        {% elif version[0] == "b" and interface[1] == "3" %}
+        <h1>Task 3</h1>
+        <div>
+          What are the most common conditions for an animal strike? Note that
+          any dataset columns that are interesting to you can be included.
+          Summarize the 2-3 factors that you believe would cause bird strikes
+          with highest chance.<br />
+          Please <b>enter your answer</b> and also <b>bookmark charts</b> you
+          think that could answer the question.
+        </div>
+        {% elif interface[1] == "4" %}
+        <h1>Task 4</h1>
+        <div>
+          Feel free to explore any and all aspects of the data for up to
+          <b>[15 mins]</b>. Use the bookmark features to save any interesting
+          patterns, trends or other insights worth sharing with colleagues. Note
+          the top 3 bookmarks that you found most interesting from your
+          exploration. <br />
+          Please <b>write down your insights</b> and also
+          <b>bookmark top 3 charts</b> you think that could answer the question.
+        </div>
+        {% endif %}
+        <br />
+        <br />
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          onclick="goInterface();"
+        >
+          Go to Interface
+        </button>
       </div>
-      {% elif version[0] == "a" and interface[1] == "2" %}
-      <h1>Task 2</h1>
-      <div class="task">
-        Which major genre has higher average rotten tomatoes rating, Adventure,
-        or Horror? <br />
-        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
-        think that could answer the question.
-      </div>
-      {% elif version[0] == "a" and interface[1] == "3" %}
-      <h1>Task 3</h1>
-      <div class="task">
-        What kinds of movies will be the most successful movies based on your
-        observations of the data? Summarize the 2-3 characteristics that you
-        believe are most important in predicting their success. <br />
-        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
-        think that could answer the question.
-      </div>
-      {% elif version[0] == "b" and interface[1] == "1" %}
-      <h1>Task 1</h1>
-      <div class="task">
-        Which aircraft airline operator at GREATER PITTSBURGH airport has the
-        highest number of bird strike records? <br />
-        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
-        think that could answer the question.
-      </div>
-      {% elif version[0] == "b" and interface[1] == "2" %}
-      <h1>Task 2</h1>
-      <div class="task">
-        Which wildlife species has the higher average speed IAS in knots,
-        European starling or Rock pigeon? <br />
-        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
-        think that could answer the question.
-      </div>
-      {% elif version[0] == "b" and interface[1] == "3" %}
-      <h1>Task 3</h1>
-      <div class="task">
-        What are the most common conditions for an animal strike? Note that any
-        dataset columns that are interesting to you can be included. Summarize
-        the 2-3 factors that you believe would cause bird strikes with highest
-        chance.<br />
-        Please <b>enter your answer</b> and also <b>bookmark charts</b> you
-        think that could answer the question.
-      </div>
-      {% elif interface[1] == "4" %}
-      <h1>Task 4</h1>
-      <div class="task">
-        Feel free to explore any and all aspects of the data for up to
-        <b>[15 mins]</b>. Use the bookmark features to save any interesting
-        patterns, trends or other insights worth sharing with colleagues. Note
-        the top 3 bookmarks that you found most interesting from your
-        exploration. <br />
-        Please <b>write down your insights</b> and also
-        <b>bookmark top 3 charts</b> you think that could answer the question.
-      </div>
-      {% endif %}
-      <br />
-      <br />
-      <button
-        type="button"
-        class="btn btn-outline-dark"
-        onclick="goInterface();"
-      >
-        Go to Interface
-      </button>
     </main>
     <script>
       function goInterface() {
         let hrefSplit = window.location.href.split("/");
         let hrefSplitLen = hrefSplit.length;
+        let sversion = hrefSplit[hrefSplitLen - 4];
         let username = hrefSplit[hrefSplitLen - 3];
         let version = hrefSplit[hrefSplitLen - 2];
         let interface = hrefSplit[hrefSplitLen - 1];
-        window.location =
-          "/" + username + "/" + version + "/" + "p" + interface[1];
+        if (sversion == "pilot") {
+          window.location =
+            "/pilot/" + username + "/" + version + "/" + "p" + interface[1];
+        } else {
+          window.location =
+            "/" + username + "/" + version + "/" + "p" + interface[1];
+        }
       }
     </script>
     <script

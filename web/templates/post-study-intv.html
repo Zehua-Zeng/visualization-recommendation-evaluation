@@ -33,43 +33,39 @@
 
     <!-- Main contents of the page, includes sideNavs and page contents -->
     <main id="index">
-      <h1>
-        Please complete a short post-study interview before you leave.
-      </h1>
-      <br />
-      <form onsubmit="return submitFunc();">
-        <h3>1. What are the advantages and disadvantages of the tool?</h3>
-        <h4>Advantages (required):</h4>
-        <textarea id="adv" name="adv" rows="4" cols="50" required></textarea>
-        <h4>Disadvantages (required):</h4>
-        <textarea
-          id="disadv"
-          name="disadv"
-          rows="4"
-          cols="50"
-          required
-        ></textarea>
-        <h3>
-          2. Do you have any other comments on the recommendation system?
-          (optional)
-        </h3>
-        <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+      <div class="task">
+        <h1>
+          Please complete a short post-study interview before you leave.
+        </h1>
         <br />
-        <input type="submit" />
-      </form>
+        <form onsubmit="return submitFunc();">
+          <h3>1. What are the advantages and disadvantages of the tool?</h3>
+          <h4>Advantages (required):</h4>
+          <textarea id="adv" name="adv" rows="4" cols="50" required></textarea>
+          <h4>Disadvantages (required):</h4>
+          <textarea
+            id="disadv"
+            name="disadv"
+            rows="4"
+            cols="50"
+            required
+          ></textarea>
+          <h3>
+            2. Do you have any other comments on the recommendation system?
+            (optional)
+          </h3>
+          <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+          <br />
+          <input type="submit" />
+        </form>
+      </div>
     </main>
     <script>
       function submitFunc() {
-        sendInvAns();
-        alert(
-          "Thank you so much for partipating in the study! Have a nice day!"
-        );
-        window.location = "/";
-        return false;
-      }
-      function sendInvAns() {
+        //sendInvAns
         let hrefSplit = window.location.href.split("/");
         let hrefSplitLen = hrefSplit.length;
+        let status = hrefSplit[hrefSplitLen - 4];
         let username = hrefSplit[hrefSplitLen - 3];
         let version = hrefSplit[hrefSplitLen - 2];
         let interface = hrefSplit[hrefSplitLen - 1];
@@ -83,6 +79,7 @@
         var data = {
           data: JSON.stringify({
             questAns: questAns,
+            status: status,
             username: username,
             version: version,
             interface: interface,
@@ -96,9 +93,24 @@
           data: data,
           dataType: "json",
           success: function (response) {
-            console.log(response);
+            if (response.status === "success") {
+              if (status === "pilot") {
+                alert(
+                  "Thank you so much for partipating in the study! Have a nice day!"
+                );
+              } else {
+                let complete_code = response.code;
+                alert(
+                  "Thank you so much for partipating in the study!\nPlease send the following code to me (zzeng@cs.umd.edu) to get your compensation: " +
+                    complete_code +
+                    "\nHave a nice day!"
+                );
+              }
+              window.location = "/" + status + "/";
+            }
           },
         });
+        return false;
       }
     </script>
     <script

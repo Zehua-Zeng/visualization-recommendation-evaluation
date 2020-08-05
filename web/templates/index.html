@@ -33,59 +33,73 @@
 
     <!-- Main contents of the page, includes sideNavs and page contents -->
     <main id="index">
-      {% if not pid or pid == "online-consent-form"%}
-      <h1>Introduction</h1>
       <div class="task">
-        Thanks for participanting in our user study. During the study you would
-        use a visualization recommendation tool to complete <b>4</b> tasks, each
-        task takes about <b>5-15 mins</b> to complete.
+        {% if not pid or pid == "online-consent-form"%}
+        <h1>Introduction</h1>
+        <div>
+          Thanks for participanting in our user study. During the study you
+          would use a visualization recommendation tool to complete
+          <b>4</b> tasks, each task takes about <b>5-15 mins</b> to complete.
+          <br />
+          After each task, there would be a short
+          <b>post-task questionnaire</b>. <br />
+          This user study is very important for our research so please do not
+          leave during each task. There will be a
+          <b>stop page</b> after each post-task questionnaire. Feel free to use
+          the stop page to take a break if you need to.
+        </div>
         <br />
-        After each task, there would be a short
-        <b>post-task questionnaire</b>. <br />
-        This user study is very important for our research so please do not
-        leave during each task. There will be a
-        <b>stop page</b> after each post-task questionnaire. Feel free to use
-        the stop page to take a break if you need to.
+        <div>
+          Before the study begins, please sign the consent form first:
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fas fa-link"></i>
+        <a
+          href="https://umdsurvey.umd.edu/jfe/form/SV_9EUx2WgwZB2lerr"
+          target="_blank"
+        >
+          Online Consent Form</a
+        >
+        {% elif pid == "pre-study-survey" %}
+        <h1>Pre-study Procedures</h1>
+        <div>Welcome back! Now please complete the pre-study survey:</div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fas fa-link"></i>
+        <a
+          href="https://umdsurvey.umd.edu/jfe/form/SV_cD5T0YZ5G6GQ5Uh"
+          target="_blank"
+        >
+          Pre-Study Survey</a
+        >
+        {% elif pid == "tutorial" %}
+        <h1>Tutorial</h1>
+        <div>
+          Please watch the tutorial video to learn how to use the system:
+        </div>
+        <br />
+        <video width="800" controls>
+          <source src="/data/tutorial.mp4" type="video/mp4" />
+        </video>
+        <br />
+        <br />
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-dark"
+          onclick="tryDemo()"
+        >
+          <i class="fa fa-laptop"></i> &nbsp; Try Demo
+        </button>
+        {% endif %}
       </div>
-      <br />
-      <div>
-        Before the study begins, please sign the consent form first:
-      </div>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <i class="fas fa-link"></i>
-      <a
-        href="https://umdsurvey.umd.edu/jfe/form/SV_9EUx2WgwZB2lerr"
-        target="_blank"
-      >
-        Online Consent Form</a
-      >
-      {% elif pid == "pre-study-survey" %}
-      <h1>Pre-study Procedures</h1>
-      <div>Welcome back! Now please complete the pre-study survey:</div>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <i class="fas fa-link"></i>
-      <a
-        href="https://umdsurvey.umd.edu/jfe/form/SV_cD5T0YZ5G6GQ5Uh"
-        target="_blank"
-      >
-        Pre-Study Survey</a
-      >
-      {% elif pid == "tutorial" %}
-      <h1>Tutorial</h1>
-      <div>
-        Please watch the tutorial video to learn how to use the system:
-      </div>
-      <br />
-      <video width="800" controls>
-        <source src="/data/tutorial.mp4" type="video/mp4" />
-      </video>
-      <br />
-      <br />
-      <a class="btn btn-outline-dark" href="/proc/demo" role="button">
-        Try Demo
-      </a>
-      {% endif %}
     </main>
+    <script>
+      function tryDemo() {
+        let hrefSplit = window.location.href.split("/");
+        let hrefSplitLen = hrefSplit.length;
+        let status = hrefSplit[hrefSplitLen - 2];
+        window.location = "/" + status + "/demo";
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

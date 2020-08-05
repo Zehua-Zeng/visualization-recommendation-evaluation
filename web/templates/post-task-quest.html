@@ -33,176 +33,183 @@
 
     <!-- Main contents of the page, includes sideNavs and page contents -->
     <main id="index">
-      <h1>
-        Please complete a short post-task questionnaire before going to next
-        task.
-      </h1>
-      <br />
-      <form onsubmit="return submitFunc();">
-        <table>
-          <tr>
-            <th>Statements</th>
-            <td class="sdisagree">Strongly Disagree</td>
-            <td class="disagree">Disagree</td>
-            <td class="neutral">Neutral</td>
-            <td class="agree">Agree</td>
-            <td class="sagree">Strongly Agree</td>
-          </tr>
-          <tr>
-            <th>I am confident in understanding the dataset.</th>
-            <td class="sdisagree">
-              <input
-                type="radio"
-                name="confidence-udata"
-                value="sdisagree"
-                required
-              />
-            </td>
-            <td class="disagree">
-              <input type="radio" name="confidence-udata" value="disagree" />
-            </td>
-            <td class="neutral">
-              <input type="radio" name="confidence-udata" value="neutral" />
-            </td>
-            <td class="agree">
-              <input type="radio" name="confidence-udata" value="agree" />
-            </td>
-            <td class="sagree">
-              <input type="radio" name="confidence-udata" value="sagree" />
-            </td>
-          </tr>
-          <tr>
-            <th>I am confident in my answer to the task.</th>
-            <td class="sdisagree">
-              <input
-                type="radio"
-                name="confidence-ans"
-                value="sdisagree"
-                required
-              />
-            </td>
-            <td class="disagree">
-              <input type="radio" name="confidence-ans" value="disagree" />
-            </td>
-            <td class="neutral">
-              <input type="radio" name="confidence-ans" value="neutral" />
-            </td>
-            <td class="agree">
-              <input type="radio" name="confidence-ans" value="agree" />
-            </td>
-            <td class="sagree">
-              <input type="radio" name="confidence-ans" value="sagree" />
-            </td>
-          </tr>
-          <tr>
-            <th>
-              I felt that the related views made it easier to complete the task.
-            </th>
-            <td class="sdisagree">
-              <input
-                type="radio"
-                name="efficiency"
-                value="sdisagree"
-                required
-              />
-            </td>
-            <td class="disagree">
-              <input type="radio" name="efficiency" value="disagree" />
-            </td>
-            <td class="neutral">
-              <input type="radio" name="efficiency" value="neutral" />
-            </td>
-            <td class="agree">
-              <input type="radio" name="efficiency" value="agree" />
-            </td>
-            <td class="sagree">
-              <input type="radio" name="efficiency" value="sagree" />
-            </td>
-          </tr>
-          <tr>
-            <th>I felt that the related views were easy to understand.</th>
-            <td class="sdisagree">
-              <input
-                type="radio"
-                name="ease-of-use"
-                value="sdisagree"
-                required
-              />
-            </td>
-            <td class="disagree">
-              <input type="radio" name="ease-of-use" value="disagree" />
-            </td>
-            <td class="neutral">
-              <input type="radio" name="ease-of-use" value="neutral" />
-            </td>
-            <td class="agree">
-              <input type="radio" name="ease-of-use" value="agree" />
-            </td>
-            <td class="sagree">
-              <input type="radio" name="ease-of-use" value="sagree" />
-            </td>
-          </tr>
-          <tr>
-            <th>
-              I felt that the related views were useful for completing the task.
-            </th>
-            <td class="sdisagree">
-              <input type="radio" name="utility" value="sdisagree" required />
-            </td>
-            <td class="disagree">
-              <input type="radio" name="utility" value="disagree" />
-            </td>
-            <td class="neutral">
-              <input type="radio" name="utility" value="neutral" />
-            </td>
-            <td class="agree">
-              <input type="radio" name="utility" value="agree" />
-            </td>
-            <td class="sagree">
-              <input type="radio" name="utility" value="sagree" />
-            </td>
-          </tr>
-          <tr>
-            <th>
-              I would use this visualization recommendation tool for similar
-              tasks in the future.
-            </th>
-            <td class="sdisagree">
-              <input type="radio" name="overall" value="sdisagree" required />
-            </td>
-            <td class="disagree">
-              <input type="radio" name="overall" value="disagree" />
-            </td>
-            <td class="neutral">
-              <input type="radio" name="overall" value="neutral" />
-            </td>
-            <td class="agree">
-              <input type="radio" name="overall" value="agree" />
-            </td>
-            <td class="sagree">
-              <input type="radio" name="overall" value="sagree" />
-            </td>
-          </tr>
-        </table>
+      <div class="task">
+        <h1>
+          Please complete a short post-task questionnaire before going to next
+          task.
+        </h1>
         <br />
-        <input type="submit" />
-      </form>
+        <form onsubmit="return submitFunc();">
+          <table>
+            <tr>
+              <th>Statements</th>
+              <td class="sdisagree">Strongly Disagree</td>
+              <td class="disagree">Disagree</td>
+              <td class="neutral">Neutral</td>
+              <td class="agree">Agree</td>
+              <td class="sagree">Strongly Agree</td>
+            </tr>
+            <tr>
+              <th>I am confident in understanding the dataset.</th>
+              <td class="sdisagree">
+                <input
+                  type="radio"
+                  name="confidence-udata"
+                  value="sdisagree"
+                  required
+                />
+              </td>
+              <td class="disagree">
+                <input type="radio" name="confidence-udata" value="disagree" />
+              </td>
+              <td class="neutral">
+                <input type="radio" name="confidence-udata" value="neutral" />
+              </td>
+              <td class="agree">
+                <input type="radio" name="confidence-udata" value="agree" />
+              </td>
+              <td class="sagree">
+                <input type="radio" name="confidence-udata" value="sagree" />
+              </td>
+            </tr>
+            <tr>
+              <th>I am confident in my answer to the task.</th>
+              <td class="sdisagree">
+                <input
+                  type="radio"
+                  name="confidence-ans"
+                  value="sdisagree"
+                  required
+                />
+              </td>
+              <td class="disagree">
+                <input type="radio" name="confidence-ans" value="disagree" />
+              </td>
+              <td class="neutral">
+                <input type="radio" name="confidence-ans" value="neutral" />
+              </td>
+              <td class="agree">
+                <input type="radio" name="confidence-ans" value="agree" />
+              </td>
+              <td class="sagree">
+                <input type="radio" name="confidence-ans" value="sagree" />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                I felt that the related views made it easier to complete the
+                task.
+              </th>
+              <td class="sdisagree">
+                <input
+                  type="radio"
+                  name="efficiency"
+                  value="sdisagree"
+                  required
+                />
+              </td>
+              <td class="disagree">
+                <input type="radio" name="efficiency" value="disagree" />
+              </td>
+              <td class="neutral">
+                <input type="radio" name="efficiency" value="neutral" />
+              </td>
+              <td class="agree">
+                <input type="radio" name="efficiency" value="agree" />
+              </td>
+              <td class="sagree">
+                <input type="radio" name="efficiency" value="sagree" />
+              </td>
+            </tr>
+            <tr>
+              <th>I felt that the related views were easy to understand.</th>
+              <td class="sdisagree">
+                <input
+                  type="radio"
+                  name="ease-of-use"
+                  value="sdisagree"
+                  required
+                />
+              </td>
+              <td class="disagree">
+                <input type="radio" name="ease-of-use" value="disagree" />
+              </td>
+              <td class="neutral">
+                <input type="radio" name="ease-of-use" value="neutral" />
+              </td>
+              <td class="agree">
+                <input type="radio" name="ease-of-use" value="agree" />
+              </td>
+              <td class="sagree">
+                <input type="radio" name="ease-of-use" value="sagree" />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                I felt that the related views were useful for completing the
+                task.
+              </th>
+              <td class="sdisagree">
+                <input type="radio" name="utility" value="sdisagree" required />
+              </td>
+              <td class="disagree">
+                <input type="radio" name="utility" value="disagree" />
+              </td>
+              <td class="neutral">
+                <input type="radio" name="utility" value="neutral" />
+              </td>
+              <td class="agree">
+                <input type="radio" name="utility" value="agree" />
+              </td>
+              <td class="sagree">
+                <input type="radio" name="utility" value="sagree" />
+              </td>
+            </tr>
+            <tr>
+              <th>
+                I would use this visualization recommendation tool for similar
+                tasks in the future.
+              </th>
+              <td class="sdisagree">
+                <input type="radio" name="overall" value="sdisagree" required />
+              </td>
+              <td class="disagree">
+                <input type="radio" name="overall" value="disagree" />
+              </td>
+              <td class="neutral">
+                <input type="radio" name="overall" value="neutral" />
+              </td>
+              <td class="agree">
+                <input type="radio" name="overall" value="agree" />
+              </td>
+              <td class="sagree">
+                <input type="radio" name="overall" value="sagree" />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <input type="submit" />
+        </form>
+      </div>
     </main>
     <script>
       function submitFunc() {
         sendQuestAns();
         let hrefSplit = window.location.href.split("/");
         let hrefSplitLen = hrefSplit.length;
+        let status = hrefSplit[hrefSplitLen - 4];
         let username = hrefSplit[hrefSplitLen - 3];
         let version = hrefSplit[hrefSplitLen - 2];
         let interface = hrefSplit[hrefSplitLen - 1];
+
         window.location =
-          "/" + username + "/" + version + "/" + "s" + interface[1];
+          "/" + status + "/" + username + "/" + version + "/s" + interface[1];
         return false;
       }
       function sendQuestAns() {
         let hrefSplit = window.location.href.split("/");
         let hrefSplitLen = hrefSplit.length;
+        let status = hrefSplit[hrefSplitLen - 4];
         let username = hrefSplit[hrefSplitLen - 3];
         let version = hrefSplit[hrefSplitLen - 2];
         let interface = hrefSplit[hrefSplitLen - 1];
@@ -220,6 +227,7 @@
         var data = {
           data: JSON.stringify({
             questAns: questAns,
+            status: status,
             username: username,
             version: version,
             interface: interface,

@@ -47,15 +47,28 @@
       function goStudy() {
         let hrefSplit = window.location.href.split("/");
         let hrefSplitLen = hrefSplit.length;
+        let status = hrefSplit[hrefSplitLen - 4];
         let username = hrefSplit[hrefSplitLen - 3];
         let version = hrefSplit[hrefSplitLen - 2];
         let interface = hrefSplit[hrefSplitLen - 1];
         let num = parseInt(interface[1]) + 1;
-        if (interface === "s4") {
-          window.location = "/" + username + "/" + version + "/intv";
+        if (status === "pilot") {
+          if (version === "ace" && interface === "s2") {
+            window.location = "/pilot/" + username + "/ace/t3";
+          } else if (version === "ace" && interface === "s3") {
+            window.location = "/pilot/" + username + "/bcf/t2";
+          } else if (version === "bcf" && interface === "s2") {
+            window.location = "/pilot/" + username + "/bcf/t3";
+          } else if (version === "bcf" && interface === "s3") {
+            window.location = "/pilot/" + username + "/ade_bcf/intv";
+          }
         } else {
-          window.location =
-            "/" + username + "/" + version + "/" + "t" + num.toString();
+          if (interface === "s4") {
+            window.location = "/" + username + "/" + version + "/intv";
+          } else {
+            window.location =
+              "/" + username + "/" + version + "/t" + num.toString();
+          }
         }
         return false;
       }
