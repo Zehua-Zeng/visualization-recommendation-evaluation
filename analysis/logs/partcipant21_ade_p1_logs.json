@@ -1,0 +1,132 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1605307346630
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "remove undefined",
+    "Time": 1605307352760
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Creative_Type",
+    "Time": 1605307355736
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-y",
+    "Time": 1605307355761
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Source",
+    "Time": 1605307365940
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1605307366042
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1605307368581
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1605307368597
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1605307368598
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1605307378234
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1605307378234
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1605307378251
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "contemporary_fiction",
+    "Time": 1605307380143
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "agree",
+    "Time": 1605307384732
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "sagree",
+    "Time": 1605307386796
+  },
+  {
+    "Interaction": "changed ptask ans of efficiency",
+    "Value": "disagree",
+    "Time": 1605307390919
+  },
+  {
+    "Interaction": "changed ptask ans of ease-of-use",
+    "Value": "disagree",
+    "Time": 1605307397370
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "disagree",
+    "Time": 1605307400131
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1605307410965
+  },
+  {
+    "Interaction": "submission failed",
+    "Value": "did not bookmark charts",
+    "Time": 1605307412449
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1605307413575
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1605307414757
+  },
+  {
+    "Interaction": "submission failed",
+    "Value": "did not complete the post-task questionnaire",
+    "Time": 1605307415995
+  },
+  {
+    "Interaction": "changed ptask ans of overall",
+    "Value": "neutral",
+    "Time": 1605307420135
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1605307420480
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1605307420480
+  }
+]

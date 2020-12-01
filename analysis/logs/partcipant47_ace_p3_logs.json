@@ -1,0 +1,2387 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1604625573631
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625575340
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625578042
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625578359
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625578375
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625578375
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625579559
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625579560
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625579960
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594387
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594404
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594421
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594438
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594454
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594471
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594488
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594504
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594521
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594538
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594555
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594571
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594587
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594604
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594621
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594637
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625594654
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597273
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597290
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597306
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597323
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597340
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597356
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597373
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597390
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597406
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597423
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597440
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597456
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597473
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597490
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597507
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625597523
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598057
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598074
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598090
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598107
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598124
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598140
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598157
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598174
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598190
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598207
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Worldwide_Gross-quantitative-x",
+    "Time": 1604625598224
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598224
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598241
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598257
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Worldwide_Gross-quantitative-x",
+    "Time": 1604625598274
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Worldwide_Gross-quantitative-x",
+    "Time": 1604625598274
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598274
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625598290
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Worldwide_Gross-quantitative-x",
+    "Time": 1604625598307
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:US_Gross-quantitative-x",
+    "Time": 1604625598324
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:US_Gross-quantitative-x",
+    "Time": 1604625598357
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625598490
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625598624
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625598624
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625599724
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625599724
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625599791
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Rotten_Tomatoes_Rating",
+    "Time": 1604625602769
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625602964
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Production_Budget",
+    "Time": 1604625604497
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-y<aggregate>mean,Rotten_Tomatoes_Rating-quantitative-size<aggregate>mean",
+    "Time": 1604625604570
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Worldwide_Gross",
+    "Time": 1604625607473
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625607543
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "tried to add Running_Time_min, but failed because already selected 3 fields",
+    "Time": 1604625616665
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625619589
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625619606
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625619606
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630050
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630063
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630080
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630097
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630113
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630130
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630147
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630163
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630180
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625630197
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630197
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630213
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625630230
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625630814
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625630897
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625630897
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625633866
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "remove Production_Budget",
+    "Time": 1604625641033
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-x<aggregate>count,Rotten_Tomatoes_Rating-quantitative-y<aggregate>mean,Worldwide_Gross-quantitative-size<aggregate>mean",
+    "Time": 1604625641288
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Creative_Type",
+    "Time": 1604625647978
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625648050
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625648102
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625648860
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625648877
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625648877
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625649160
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625649728
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625649778
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625649778
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625649944
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625649945
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625653047
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "S",
+    "Time": 1604625655994
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Sc",
+    "Time": 1604625656545
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Sci",
+    "Time": 1604625656761
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Scie",
+    "Time": 1604625656905
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Scien",
+    "Time": 1604625657129
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Scienc",
+    "Time": 1604625657281
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science",
+    "Time": 1604625657481
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science ",
+    "Time": 1604625659097
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science F",
+    "Time": 1604625659353
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fi",
+    "Time": 1604625659609
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fic",
+    "Time": 1604625659737
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fict",
+    "Time": 1604625660017
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Ficti",
+    "Time": 1604625660129
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fictio",
+    "Time": 1604625660409
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction",
+    "Time": 1604625660529
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625662103
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625662136
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625662137
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625665206
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625665206
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625665222
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\n",
+    "Time": 1604625666394
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nR",
+    "Time": 1604625666809
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRo",
+    "Time": 1604625667745
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRot",
+    "Time": 1604625667889
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRott",
+    "Time": 1604625668049
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotte",
+    "Time": 1604625668161
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten",
+    "Time": 1604625668305
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten ",
+    "Time": 1604625668433
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten T",
+    "Time": 1604625668921
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten To",
+    "Time": 1604625669169
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tom",
+    "Time": 1604625669369
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Toma",
+    "Time": 1604625669513
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomat",
+    "Time": 1604625669721
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomato",
+    "Time": 1604625669889
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoe",
+    "Time": 1604625670033
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes",
+    "Time": 1604625670298
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes ",
+    "Time": 1604625670497
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes o",
+    "Time": 1604625670625
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of",
+    "Time": 1604625670761
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of ",
+    "Time": 1604625670953
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 8",
+    "Time": 1604625672513
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 82",
+    "Time": 1604625672577
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 8",
+    "Time": 1604625673681
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83",
+    "Time": 1604625673721
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625674996
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625675046
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625675046
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625692075
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625692075
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625692092
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\n",
+    "Time": 1604625694761
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nW",
+    "Time": 1604625695489
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWo",
+    "Time": 1604625695985
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWor",
+    "Time": 1604625696137
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorl",
+    "Time": 1604625696457
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld",
+    "Time": 1604625696601
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld ",
+    "Time": 1604625696945
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld W",
+    "Time": 1604625697289
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wi",
+    "Time": 1604625697601
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wid",
+    "Time": 1604625697721
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide",
+    "Time": 1604625697961
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide ",
+    "Time": 1604625698129
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide W",
+    "Time": 1604625698609
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide ",
+    "Time": 1604625699153
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide G",
+    "Time": 1604625699505
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide Gr",
+    "Time": 1604625699873
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide Gro",
+    "Time": 1604625700041
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide Gros",
+    "Time": 1604625700961
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Science Fiction\nRotten Tomatoes of 83\nWorld Wide Gross",
+    "Time": 1604625701185
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625705329
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625706069
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625706085
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625706086
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625706252
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625706252
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625706269
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625706552
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625706569
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625706569
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625711306
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625711306
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625711323
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625711656
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625711724
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625711724
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625712090
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625712090
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625712140
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625712273
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625712290
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625712290
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625723348
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625723348
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625723365
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625723465
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625723498
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625723498
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625723965
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625724015
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625724032
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625724032
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625724666
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625724666
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625724732
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625725066
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625725149
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625725149
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625728986
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625729086
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625729119
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625729119
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625729152
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729636
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729653
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729669
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729686
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729703
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729719
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729736
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729753
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729770
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729786
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729803
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625729820
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625730086
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625730186
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625730186
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625736841
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625736842
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625737025
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737506
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737508
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625737525
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737526
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625737542
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737542
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737559
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737576
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737592
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737609
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737626
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737642
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737659
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737675
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737692
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737708
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737725
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737742
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737758
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737775
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625737792
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Rotten_Tomatoes_Rating-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1604625738693
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Rotten_Tomatoes_Rating-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1604625738859
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Rotten_Tomatoes_Rating-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1604625738859
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Rotten_Tomatoes_Rating-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1604625741194
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Rotten_Tomatoes_Rating-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1604625741195
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Rotten_Tomatoes_Rating-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1604625741244
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:Rotten_Tomatoes_Rating-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1604625741993
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625743946
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625744096
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625744097
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744180
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744197
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744214
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744230
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625744247
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625744247
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744247
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744264
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625744280
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744280
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744297
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744314
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625744330
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744330
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744347
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744364
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744381
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625744397
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745729
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745731
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745748
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745764
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745781
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745798
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745815
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745831
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745848
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745865
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745881
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745898
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745915
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745931
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745948
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745965
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745981
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625745998
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625746310
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625747199
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625747215
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625747215
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625748066
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625748066
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625748450
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625753720
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625755371
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625755472
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625755472
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1604625757139
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625757173
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625757189
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625757189
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625758174
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625758174
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625758207
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625758390
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625758891
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625758891
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625759074
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "tried to add Production_Budget, but failed because already selected 3 fields",
+    "Time": 1604625762433
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625771750
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625771817
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625771817
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625772050
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625772050
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625772284
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625773616
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774041
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774052
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774069
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774085
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774102
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774119
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774135
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774152
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625774169
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774169
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774186
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774202
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774219
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625774236
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774785
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774802
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774819
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774835
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774852
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774869
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774886
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774902
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-size,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625774919
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774919
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774935
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774952
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774969
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625774985
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625775002
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625775002
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625775019
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625775052
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625775052
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625775552
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625776186
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625776203
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625776203
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625776470
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625776470
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625776586
+  },
+  {
+    "Interaction": "deleted chart from bookmark",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625776992
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625777263
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625777265
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625777265
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625777504
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625777504
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625777520
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "remove Rotten_Tomatoes_Rating",
+    "Time": 1604625778880
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-y,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625779073
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604625779224
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-y,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625779729
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-y,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625780011
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-y,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625780011
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-y,Worldwide_Gross-quantitative-x<bin>",
+    "Time": 1604625781218
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781340
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781356
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781373
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781390
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781407
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781423
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781440
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781457
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781473
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781490
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781507
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781524
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781540
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781557
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781574
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625781590
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Distributor-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625781672
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Distributor-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625781840
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625781874
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625781890
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625781890
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625791414
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625791414
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625791431
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Distributor-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625791464
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Distributor-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625793649
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Distributor-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625793649
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Distributor-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625793932
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Distributor-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625794696
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795451
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795467
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795484
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795501
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795517
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795534
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795551
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795567
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795584
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795601
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795617
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795634
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795650
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795667
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795684
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795701
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795717
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795734
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795750
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625795767
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625796134
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625796151
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625796151
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625797520
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625797520
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625797618
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Worldwide_Gross-quantitative-size",
+    "Time": 1604625798136
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798776
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798786
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798803
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798819
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798836
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798853
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798870
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798887
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798903
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798920
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798936
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798953
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798970
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625798986
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625799003
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625799019
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625799037
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625799053
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "check bookmarks",
+    "Time": 1604625800225
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "check bookmarks",
+    "Time": 1604625804152
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "sagree",
+    "Time": 1604625806377
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "sagree",
+    "Time": 1604625807961
+  },
+  {
+    "Interaction": "changed ptask ans of efficiency",
+    "Value": "sagree",
+    "Time": 1604625809616
+  },
+  {
+    "Interaction": "changed ptask ans of ease-of-use",
+    "Value": "sagree",
+    "Time": 1604625811464
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "sagree",
+    "Time": 1604625813096
+  },
+  {
+    "Interaction": "changed ptask ans of overall",
+    "Value": "sagree",
+    "Time": 1604625816104
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1604625817048
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1604625817048
+  }
+]

@@ -1,0 +1,2007 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1604625829677
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625841618
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625841668
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625935153
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625935169
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625935203
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625935219
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625935220
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625935736
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625935736
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625935753
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625939539
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625940974
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625940974
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625941136
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625942441
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625942458
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625942458
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625942542
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625942542
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1604625942558
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Worldwide_Gross-quantitative-x",
+    "Time": 1604625951431
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Worldwide_Gross-quantitative-x",
+    "Time": 1604625951448
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:US_Gross-quantitative-x",
+    "Time": 1604625951448
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:US_Gross-quantitative-x",
+    "Time": 1604625951515
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:US_Gross-quantitative-x",
+    "Time": 1604625951515
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:US_Gross-quantitative-x",
+    "Time": 1604625951531
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Production_Budget",
+    "Time": 1604625969616
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Production_Budget-quantitative-x",
+    "Time": 1604625969873
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Rotten_Tomatoes_Rating",
+    "Time": 1604625980728
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-x<aggregate>count,Production_Budget-quantitative-y<aggregate>mean,Rotten_Tomatoes_Rating-quantitative-size<aggregate>mean",
+    "Time": 1604625980918
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Creative_Type",
+    "Time": 1604625986920
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604625986990
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604625987591
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604625989576
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625989809
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625989826
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625989826
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604625989843
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625989909
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625989926
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625990677
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625997115
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625997115
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625997131
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997481
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997499
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997515
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997531
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997548
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997565
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997582
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997598
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997615
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997632
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604625997648
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625998432
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625998449
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604625998449
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626000784
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626000784
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626000801
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604626000901
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604626000951
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604626000951
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604626004320
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604626004320
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604626004553
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x",
+    "Time": 1604626005664
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626006305
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626006839
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-x",
+    "Time": 1604626007055
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-x",
+    "Time": 1604626007105
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-x",
+    "Time": 1604626007105
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-x",
+    "Time": 1604626008239
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-x",
+    "Time": 1604626008239
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-x",
+    "Time": 1604626008273
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-x",
+    "Time": 1604626009200
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011225
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011242
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011258
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011275
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011292
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011309
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011325
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011342
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011358
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011375
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011392
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626011408
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626011675
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626012265
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626014984
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015762
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015779
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015796
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015812
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015829
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015846
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015862
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015879
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015896
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015912
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015929
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626015945
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626016613
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626016629
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626016629
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626023468
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626023468
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Production_Budget-quantitative-x,Rotten_Tomatoes_Rating-quantitative-y",
+    "Time": 1604626023484
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626024068
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626024085
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626024085
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-y,Production_Budget-quantitative-size,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626024151
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "remove Production_Budget",
+    "Time": 1604626026216
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626026409
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626026565
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626027517
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1604626027691
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626027899
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029433
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029439
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029455
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029472
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029489
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029505
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029522
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029539
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029555
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029572
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029589
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029605
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029622
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029639
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029655
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029672
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029689
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626029706
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626030189
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030449
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030456
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030473
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030490
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030506
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030523
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030540
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030556
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030573
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030590
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030606
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030623
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030639
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030656
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030673
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030690
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030706
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030723
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626030740
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626031086
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626031440
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626031440
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626031507
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626032541
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626032574
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626032574
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626035276
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626035276
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626035493
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626036136
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626036463
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626036711
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626036711
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626036727
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626036928
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037049
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037061
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037078
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037094
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037111
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037128
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037144
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037161
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037178
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037194
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037211
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037228
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037244
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037261
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037278
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037294
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037311
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037328
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037344
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037361
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037378
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037395
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037411
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Director-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037412
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037661
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037678
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037695
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037712
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037728
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037745
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037745
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037761
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037778
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037795
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037811
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037828
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037845
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037861
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037878
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1604626037895
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626037912
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1604626038362
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1604626038412
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626038462
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626038479
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626038479
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626044199
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626044200
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626044283
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626045792
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1604626046090
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1604626046351
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1604626046351
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1604626046384
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "check bookmarks",
+    "Time": 1604626047233
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "check bookmarks",
+    "Time": 1604626050032
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1604626050271
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1604626050855
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "sagree",
+    "Time": 1604626052889
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "sagree",
+    "Time": 1604626054200
+  },
+  {
+    "Interaction": "changed ptask ans of efficiency",
+    "Value": "sagree",
+    "Time": 1604626055297
+  },
+  {
+    "Interaction": "changed ptask ans of ease-of-use",
+    "Value": "sagree",
+    "Time": 1604626058792
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "sagree",
+    "Time": 1604626061073
+  },
+  {
+    "Interaction": "changed ptask ans of overall",
+    "Value": "sagree",
+    "Time": 1604626062873
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "T",
+    "Time": 1604626069193
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Th",
+    "Time": 1604626069489
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The",
+    "Time": 1604626069681
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The ",
+    "Time": 1604626069841
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The p",
+    "Time": 1604626070121
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The pa",
+    "Time": 1604626070497
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The pat",
+    "Time": 1604626070809
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patt",
+    "Time": 1604626070969
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patte",
+    "Time": 1604626071105
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patter",
+    "Time": 1604626071233
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters",
+    "Time": 1604626071417
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters ",
+    "Time": 1604626071617
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters t",
+    "Time": 1604626071736
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters th",
+    "Time": 1604626071873
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters tha",
+    "Time": 1604626071921
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that",
+    "Time": 1604626072041
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that ",
+    "Time": 1604626072185
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I",
+    "Time": 1604626072521
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I ",
+    "Time": 1604626072857
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I w",
+    "Time": 1604626073169
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I wa",
+    "Time": 1604626073481
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was",
+    "Time": 1604626073649
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was ",
+    "Time": 1604626073857
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was m",
+    "Time": 1604626074081
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was mo",
+    "Time": 1604626074217
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was mos",
+    "Time": 1604626074369
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most",
+    "Time": 1604626074521
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most ",
+    "Time": 1604626074713
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most i",
+    "Time": 1604626074817
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most in",
+    "Time": 1604626074953
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most int",
+    "Time": 1604626075057
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most inte",
+    "Time": 1604626075185
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most inter",
+    "Time": 1604626075321
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most intere",
+    "Time": 1604626075433
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interes",
+    "Time": 1604626075705
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interest",
+    "Time": 1604626075857
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesti",
+    "Time": 1604626075961
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interestin",
+    "Time": 1604626076089
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting",
+    "Time": 1604626076217
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting ",
+    "Time": 1604626076401
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting w",
+    "Time": 1604626076649
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting we",
+    "Time": 1604626076769
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting wer",
+    "Time": 1604626077009
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were",
+    "Time": 1604626077129
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n",
+    "Time": 1604626077569
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n",
+    "Time": 1604626078489
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1",
+    "Time": 1604626081041
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1:",
+    "Time": 1604626081393
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: ",
+    "Time": 1604626082537
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: R",
+    "Time": 1604626083313
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Ro",
+    "Time": 1604626083593
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rot",
+    "Time": 1604626083760
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rott",
+    "Time": 1604626083913
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotte",
+    "Time": 1604626084049
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten",
+    "Time": 1604626084217
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten ",
+    "Time": 1604626084369
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten T",
+    "Time": 1604626084680
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten To",
+    "Time": 1604626084921
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tom",
+    "Time": 1604626085105
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Toma",
+    "Time": 1604626085185
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomat",
+    "Time": 1604626085345
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomato",
+    "Time": 1604626085520
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoe",
+    "Time": 1604626085641
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes",
+    "Time": 1604626085953
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n",
+    "Time": 1604626086921
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2",
+    "Time": 1604626087681
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:",
+    "Time": 1604626088297
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:C",
+    "Time": 1604626088673
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Cr",
+    "Time": 1604626089089
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Cre",
+    "Time": 1604626089345
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Crea",
+    "Time": 1604626089449
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creat",
+    "Time": 1604626089696
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creati",
+    "Time": 1604626089857
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creativ",
+    "Time": 1604626090009
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative",
+    "Time": 1604626090137
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative ",
+    "Time": 1604626090265
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative t",
+    "Time": 1604626090425
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative tu",
+    "Time": 1604626090745
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative t",
+    "Time": 1604626091545
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative ty",
+    "Time": 1604626092017
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative typ",
+    "Time": 1604626092153
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type",
+    "Time": 1604626092265
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n",
+    "Time": 1604626093049
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3",
+    "Time": 1604626094961
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3:",
+    "Time": 1604626095353
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: ",
+    "Time": 1604626096753
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: W",
+    "Time": 1604626098369
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Wo",
+    "Time": 1604626098601
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Wor",
+    "Time": 1604626098777
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word",
+    "Time": 1604626099064
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word ",
+    "Time": 1604626099337
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word w",
+    "Time": 1604626099832
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wi",
+    "Time": 1604626099969
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wid",
+    "Time": 1604626100137
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide",
+    "Time": 1604626100289
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide ",
+    "Time": 1604626100553
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide G",
+    "Time": 1604626101273
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gr",
+    "Time": 1604626101649
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gro",
+    "Time": 1604626101825
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gros",
+    "Time": 1604626102073
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross",
+    "Time": 1604626102257
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n",
+    "Time": 1604626103881
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n:",
+    "Time": 1604626104937
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n:4",
+    "Time": 1604626105449
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n:",
+    "Time": 1604626105905
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n",
+    "Time": 1604626106097
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4",
+    "Time": 1604626106225
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4:",
+    "Time": 1604626106521
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: ",
+    "Time": 1604626107161
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: S",
+    "Time": 1604626107361
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: So",
+    "Time": 1604626107673
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Sou",
+    "Time": 1604626108081
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Sour",
+    "Time": 1604626108233
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Sourc",
+    "Time": 1604626108465
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source",
+    "Time": 1604626108593
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n",
+    "Time": 1604626109409
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5",
+    "Time": 1604626110761
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5:",
+    "Time": 1604626111145
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: ",
+    "Time": 1604626112801
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626117987
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118003
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118020
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118037
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118054
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118070
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118087
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118104
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118120
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118137
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118154
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118171
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118187
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626118204
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118204
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626118221
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626118221
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118224
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118554
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118570
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118587
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118604
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118621
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118637
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118654
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118671
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,MPAA_Rating-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1604626118688
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118688
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118704
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118721
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118737
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118754
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1604626118771
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: D",
+    "Time": 1604626124121
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: Di",
+    "Time": 1604626124537
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: Dir",
+    "Time": 1604626124713
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: Dire",
+    "Time": 1604626124905
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: Direc",
+    "Time": 1604626125081
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: Direct",
+    "Time": 1604626125393
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: Directo",
+    "Time": 1604626125537
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "The patters that I was most interesting were\n\n1: Rotten Tomatoes\n2:Creative type\n3: Word wide Gross\n4: Source\n5: Director",
+    "Time": 1604626125649
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1604626131752
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1604626131752
+  }
+]
