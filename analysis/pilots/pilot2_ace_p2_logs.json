@@ -1,0 +1,3060 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1596753911557
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1596753912904
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1596753913268
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Major_Genre",
+    "Time": 1596753915763
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Major_Genre-nominal-y",
+    "Time": 1596753915798
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Rotten_Tomatoes_Rating",
+    "Time": 1596753917962
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1596753918003
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596753919947
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596753920525
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "task popup",
+    "Time": 1596753922953
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "task popup",
+    "Time": 1596753948901
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596753949554
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596753949587
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596753949587
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596753951107
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596753951108
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596753951123
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "task popup",
+    "Time": 1596753952625
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "task popup",
+    "Time": 1596753955638
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596753956045
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596753956086
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596753956086
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596753984858
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596753984893
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596753984910
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596753985342
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596753985342
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596753985393
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985661
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985677
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985694
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985710
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985728
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985744
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985777
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985795
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985810
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985826
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985843
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985875
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985893
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985911
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985926
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985945
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985960
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985978
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753985993
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753985993
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986128
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986144
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986161
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986177
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986193
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986209
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986227
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986242
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986261
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986294
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986844
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986861
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986877
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986893
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986910
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986927
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753986943
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987044
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987061
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987077
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987094
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987110
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987126
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987156
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987194
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987209
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987230
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987248
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987260
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987276
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987293
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753987910
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988411
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988426
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988442
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988460
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988476
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988494
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988509
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988526
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988559
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988576
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988593
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988610
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988627
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988643
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988676
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988693
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988711
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988726
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988744
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988760
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988776
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988794
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988809
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753988826
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753988843
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989059
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989077
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989092
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989109
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989126
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989143
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989160
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989176
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989193
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989209
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989231
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989260
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989277
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989293
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989310
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989325
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989343
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989359
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989517
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989527
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989544
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989559
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989575
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989593
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989609
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989627
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989643
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989661
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989677
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989709
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753989727
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990019
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990043
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990063
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990076
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990092
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990126
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990144
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990160
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990176
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990192
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990210
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990226
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990244
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990259
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990277
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990293
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990310
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596753990342
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991577
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991592
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991609
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991626
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991642
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991659
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991676
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991692
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991710
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991726
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991743
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991759
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991776
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753991792
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Distributor-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596753992060
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992376
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992393
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992409
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992426
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992443
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992476
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992516
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992532
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992548
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596753992565
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596753995715
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596753995750
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596753995751
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001287
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001299
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001315
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001331
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001347
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001364
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001382
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001398
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001416
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754001432
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001433
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001450
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001466
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001482
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001499
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001516
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001533
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001549
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001565
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001582
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754001598
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754001925
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754001948
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754001965
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754001981
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754001998
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754002015
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754002032
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754002048
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754002081
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754002099
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754002115
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754002132
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754002149
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754002331
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003396
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003408
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003425
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003443
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003460
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003476
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003493
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003509
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003541
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003559
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003575
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003592
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003608
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003626
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754003641
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006159
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006175
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006193
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006209
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006225
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006251
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006257
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006275
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006292
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006309
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006326
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006342
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006358
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006374
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006392
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006407
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006426
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006442
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006459
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006475
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006492
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006508
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006525
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754006541
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008428
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008442
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008459
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008476
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008492
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008508
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008525
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008541
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008575
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008591
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754008608
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010359
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010374
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010392
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010407
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010425
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010442
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010457
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010474
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010492
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010508
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010524
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010542
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010574
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754010642
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754011732
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754011742
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754011758
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754011824
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754011842
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754011891
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754011941
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013444
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013463
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013479
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013496
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013512
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013529
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013546
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013562
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013579
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013597
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013613
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013630
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013645
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013662
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013679
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013695
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013713
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013729
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754013746
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014082
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014095
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014112
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014130
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014148
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014161
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014179
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014195
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014213
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014245
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014262
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014281
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014295
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754014313
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754014672
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754014695
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754014712
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754014730
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754014745
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754014762
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754014778
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754014797
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754016311
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754016311
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754016329
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754016745
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754017145
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754017146
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Major_Genre-nominal-x,Rotten_Tomatoes_Rating-quantitative-size,Source-nominal-y",
+    "Time": 1596754017162
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018081
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018098
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018112
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018129
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018146
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018179
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018278
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018562
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018578
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018595
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018612
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018628
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018646
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018662
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018678
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018694
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754018712
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019034
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019045
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019062
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019080
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019096
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019112
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019128
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019146
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019162
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019178
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019195
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019211
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019229
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019245
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019261
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019279
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019296
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019311
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019328
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019346
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019361
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019395
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754019413
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754019429
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754022266
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754022278
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754022295
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754022311
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754022345
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754022679
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754023544
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754023562
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754023616
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024049
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024067
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024082
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024099
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024115
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024132
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024182
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024199
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024215
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024232
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024265
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024282
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024299
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024317
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024333
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754024349
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025099
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025780
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025798
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025816
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025832
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025849
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025866
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025882
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025900
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025916
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025933
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025949
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754025966
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026289
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026299
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026316
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026332
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026350
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026367
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026383
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026400
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026415
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026432
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026449
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026465
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026483
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026499
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026515
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026532
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026548
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026565
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026582
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026599
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026616
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026632
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026649
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026666
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026682
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026699
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026822
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026832
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026849
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026865
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026883
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026899
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026916
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026931
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026949
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026965
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026982
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754026999
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027016
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027032
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027050
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027066
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027082
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027099
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027116
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027132
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027149
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027165
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027182
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027199
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027216
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027235
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027298
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027315
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027332
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027348
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027365
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027400
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027416
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027434
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027450
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027465
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027483
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027499
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027517
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027532
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027549
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027566
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027582
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027599
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027617
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027633
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027648
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027666
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027684
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027703
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754027866
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754028251
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754028266
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754029733
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754029749
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754029883
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030167
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030182
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030199
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030215
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030233
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030249
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030265
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030283
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030300
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030331
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030350
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030366
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030382
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030398
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030416
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030431
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030448
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030466
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030483
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030562
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030582
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030599
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030615
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030632
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030648
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030665
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030683
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030699
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030715
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030732
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030749
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030764
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030783
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030798
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030816
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030831
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030848
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030865
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030883
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030898
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030929
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030965
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030982
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754030998
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031015
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031033
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031049
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031144
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031167
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031183
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031200
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031216
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031232
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031248
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031283
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031299
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031316
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031333
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031349
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031365
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754031382
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Director-nominal-x,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-size",
+    "Time": 1596754032582
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754033915
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754033938
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754033954
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754033971
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754033987
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034004
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034022
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034037
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034054
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034074
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034087
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034120
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034137
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034155
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034173
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034187
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034203
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034236
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034254
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034280
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034304
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034448
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034471
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034487
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034503
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034520
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034536
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034554
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034571
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034588
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034604
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034619
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034637
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034654
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034670
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034687
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034704
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034721
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034737
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034754
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754034770
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754036020
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754036071
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754036072
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754068964
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "task popup",
+    "Time": 1596754070161
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "adventure",
+    "Time": 1596754073278
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "task popup",
+    "Time": 1596754076051
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Major_Genre-nominal-y,Rotten_Tomatoes_Rating-quantitative-x<bin>",
+    "Time": 1596754076738
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754077144
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754077160
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754077160
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754077231
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754077231
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754077343
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "task popup",
+    "Time": 1596754078749
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1596754082232
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1596754082232
+  }
+]

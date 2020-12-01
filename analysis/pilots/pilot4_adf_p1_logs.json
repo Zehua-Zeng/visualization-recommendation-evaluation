@@ -1,0 +1,3617 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1598466996493
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598466996762
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598466997441
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed undefined",
+    "Time": 1598466999816
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Creative_Type",
+    "Time": 1598467000413
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Creative_Type-nominal-y",
+    "Time": 1598467000454
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Source",
+    "Time": 1598467004674
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467004727
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467005292
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006099
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006099
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006660
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006672
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006686
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006699
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006712
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006726
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006739
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006753
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006766
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006779
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006792
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006806
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006819
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006832
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006846
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006859
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006873
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006886
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006899
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006912
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006926
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006940
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006953
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006965
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006979
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467006993
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007007
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007019
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007032
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007046
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007060
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007073
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007086
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007486
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007499
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007513
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007526
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007539
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007553
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007566
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007579
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467007873
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467009874
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467009914
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467009914
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467010967
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467010980
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467010994
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011007
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011021
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011034
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011047
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011060
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011074
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011087
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011100
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011114
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011127
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011141
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011154
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011167
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011181
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011194
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467011208
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014448
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014462
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014475
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014488
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014502
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014515
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014529
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014542
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014555
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014569
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014582
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014595
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014609
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014622
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014635
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014648
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014662
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014675
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014689
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014702
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014715
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014729
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014742
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014755
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014769
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014782
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014795
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467014808
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015702
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015715
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015728
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015742
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015755
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015768
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015783
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015796
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015809
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015822
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015836
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015849
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015863
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015875
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015889
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015903
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015916
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015929
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015943
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467015956
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467019721
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467019721
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467019731
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020104
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020117
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020130
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020144
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020157
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020170
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020184
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020197
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020210
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020224
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020237
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020251
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020264
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020277
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020291
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020304
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020318
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020331
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020344
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020357
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020371
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020384
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020397
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020411
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020424
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020531
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020544
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020558
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020571
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020585
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020598
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020611
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020624
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020638
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020651
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020664
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020713
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020717
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020731
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020744
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020757
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020771
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020877
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020890
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020904
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020918
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020931
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020944
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020957
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020971
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020984
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467020998
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021011
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021025
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021038
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021051
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021064
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021078
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021090
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021104
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021118
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021211
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021225
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021237
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021251
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021264
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021277
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021291
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021305
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021318
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021331
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021345
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021358
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021371
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021384
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021397
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467021411
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022625
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022679
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022692
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022705
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022718
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022732
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022745
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022758
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022772
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022785
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022799
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022812
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022824
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022838
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022852
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022865
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467022878
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023065
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023078
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023091
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023104
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023118
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023132
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023145
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023159
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023172
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023185
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023199
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023211
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023224
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023239
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023251
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023265
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023278
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023292
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023305
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023319
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023332
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023345
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023358
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023371
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023694
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023718
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023732
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023745
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023758
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023772
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023785
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023798
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023812
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023825
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023839
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023852
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023865
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023878
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023892
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023906
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023918
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023932
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023945
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023959
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023972
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467023985
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024256
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024279
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024292
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024305
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024319
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024332
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024345
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024359
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024372
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024385
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024399
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024412
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024425
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024438
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024452
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024466
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024479
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024492
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024506
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024519
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024533
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024545
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024558
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024572
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024745
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024759
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024772
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024786
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024799
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024812
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024826
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024849
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024852
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024865
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024879
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024892
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024906
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024919
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024932
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024947
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024959
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024973
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024986
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467024999
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467025500
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467025506
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467025506
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467031121
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467031121
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467031135
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467031682
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467032068
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467032108
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467032109
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467033762
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467033762
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034215
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034229
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034242
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034256
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034269
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034282
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034296
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034309
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467034322
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035456
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035470
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035483
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035496
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035509
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035522
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035536
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035549
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035563
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035576
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035589
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035603
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035616
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467035629
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467036243
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467036243
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467038369
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467038369
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467038377
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "contemporary_fiction",
+    "Time": 1598467039768
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "check bookmarks",
+    "Time": 1598467040652
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "bookmark popup",
+    "Time": 1598467041370
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "agree",
+    "Time": 1598467047312
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "sagree",
+    "Time": 1598467048533
+  },
+  {
+    "Interaction": "changed ptask ans of efficiency",
+    "Value": "sdisagree",
+    "Time": 1598467052535
+  },
+  {
+    "Interaction": "changed ptask ans of ease-of-use",
+    "Value": "neutral",
+    "Time": 1598467061945
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "disagree",
+    "Time": 1598467064168
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066441
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066454
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066467
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066480
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066494
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066507
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066521
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066533
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066547
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066561
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066574
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066587
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066600
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066614
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066627
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066640
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467066653
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068028
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068041
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068041
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068242
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068254
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068267
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068281
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068295
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068308
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068321
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068334
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068347
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068361
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068375
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068387
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068401
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068414
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068428
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068441
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068455
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068468
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068481
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068801
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068814
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068828
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068841
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068855
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068868
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068882
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068895
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068908
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068921
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068935
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068948
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068961
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068975
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467068988
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467069001
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467069014
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467069029
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467069042
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467069068
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467069068
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467069082
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069228
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069242
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069255
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069268
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069282
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069295
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069308
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069322
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069334
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069348
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069361
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069375
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069388
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069401
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069414
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069428
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069442
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467069454
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070042
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070121
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070122
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070255
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070269
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070282
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070295
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070308
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070322
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070335
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070349
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070362
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070376
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070389
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070402
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070416
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070429
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070442
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070455
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070469
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070482
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467070495
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071015
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071029
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071042
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071055
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071069
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071082
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071095
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071109
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071122
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071135
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071148
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071162
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071176
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071189
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071202
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071216
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071229
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467071242
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467076071
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467076071
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467076083
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467080645
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467083233
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467083233
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467083247
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083433
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083446
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083460
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083473
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083487
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083500
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083513
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083526
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083540
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083553
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083567
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083580
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083593
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083607
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083620
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467083633
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083634
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083646
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467083660
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467083660
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083660
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083674
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083687
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083700
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083713
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467083727
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467083753
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467083753
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:Creative_Type-nominal-x,Source-nominal-y,US_DVD_Sales-quantitative-size<aggregate>mean",
+    "Time": 1598467083767
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084447
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084460
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084474
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084487
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084500
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084514
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084527
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084540
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084553
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084567
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084580
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084593
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084607
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084620
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084633
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084647
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084660
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084674
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467084687
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Release_Date-nominal-row,Source-nominal-y",
+    "Time": 1598467085180
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Release_Date-nominal-row,Source-nominal-y",
+    "Time": 1598467085193
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Release_Date-nominal-row,Source-nominal-y",
+    "Time": 1598467085194
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Release_Date-nominal-row,Source-nominal-y",
+    "Time": 1598467086381
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Release_Date-nominal-row,Source-nominal-y",
+    "Time": 1598467086381
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Release_Date-nominal-row,Source-nominal-y",
+    "Time": 1598467086394
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086607
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086621
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086634
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086648
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086661
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086674
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086687
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086701
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086715
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086728
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086741
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086755
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086768
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086781
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086794
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086808
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086821
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086834
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086888
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086901
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086914
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086927
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086941
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086954
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086968
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086981
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467086994
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087008
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087021
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087034
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087047
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087061
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087075
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087087
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087101
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087114
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087128
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467087141
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467087315
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467087355
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467087355
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467088195
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088368
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088395
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088408
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088422
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088435
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088448
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088462
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088475
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088488
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088502
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088515
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088528
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088542
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088554
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088569
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088581
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088595
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088609
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088622
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088635
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088648
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088662
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088822
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088835
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088848
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088862
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088875
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088889
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088902
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088916
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088929
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088942
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088955
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088969
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088981
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467088995
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089008
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089022
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089035
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089049
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089062
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089075
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089090
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089102
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089115
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089129
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089569
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089582
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089595
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089609
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089622
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089636
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089649
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089662
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089675
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089688
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089702
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089715
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089729
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089742
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089755
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089769
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089782
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089795
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089809
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089822
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089836
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089849
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089862
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089876
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089889
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089902
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089915
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089929
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089942
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089956
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089969
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089982
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467089995
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090182
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090195
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090208
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090222
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090235
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090249
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090263
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090277
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090289
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090303
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090316
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090329
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090343
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090355
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090369
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090382
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090396
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090409
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090422
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090436
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090449
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090462
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090476
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090489
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090502
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090516
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090528
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090543
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090556
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090570
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090702
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090716
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090729
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090743
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090756
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090769
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090782
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090796
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090810
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090823
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090836
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090849
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090862
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090875
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090889
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090902
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090916
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090929
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090943
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467090956
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467091277
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467091289
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467091289
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467091343
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467093490
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467096104
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467097372
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467097385
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467097385
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Creative_Type-nominal-x,Source-nominal-y",
+    "Time": 1598467097411
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "agree",
+    "Time": 1598467100277
+  },
+  {
+    "Interaction": "changed ptask ans of overall",
+    "Value": "agree",
+    "Time": 1598467105578
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1598467106840
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1598467106840
+  }
+]

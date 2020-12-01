@@ -1,0 +1,5622 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1598467120212
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:US_Gross-quantitative-x",
+    "Time": 1598467120444
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:US_Gross-quantitative-x",
+    "Time": 1598467120730
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598467120730
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598467120892
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598467120892
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598467120911
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598467122060
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598467122073
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598467122073
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Title-nominal-y",
+    "Time": 1598467125035
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Source",
+    "Time": 1598467127710
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Source-nominal-y",
+    "Time": 1598467128279
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Running_Time_min",
+    "Time": 1598467131511
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Running_Time_min-quantitative-x,Source-nominal-y",
+    "Time": 1598467131572
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Worldwide_Gross",
+    "Time": 1598467135811
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467136284
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467136872
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467136880
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467136880
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467143641
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467143641
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467143655
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467143908
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467143922
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467143935
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467143948
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467143962
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467143975
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467143988
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144001
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144015
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144028
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144042
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144054
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144068
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144082
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144095
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144108
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144121
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144135
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144148
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144162
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144175
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467144188
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:MPAA_Rating-nominal-color,Running_Time_min-quantitative-y<aggregate>mean,Source-nominal-x",
+    "Time": 1598467144295
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:MPAA_Rating-nominal-color,Running_Time_min-quantitative-y<aggregate>mean,Source-nominal-x",
+    "Time": 1598467144308
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:MPAA_Rating-nominal-color,Running_Time_min-quantitative-y<aggregate>mean,Source-nominal-x",
+    "Time": 1598467144308
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:MPAA_Rating-nominal-color,Running_Time_min-quantitative-y<aggregate>mean,Source-nominal-x",
+    "Time": 1598467145376
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145749
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145762
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145776
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145790
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145802
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145815
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145828
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Running_Time_min-quantitative-y<aggregate>mean,Source-nominal-x",
+    "Time": 1598467145842
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145842
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145856
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145869
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145882
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145896
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145909
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145923
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Running_Time_min-quantitative-y<aggregate>mean,Source-nominal-x",
+    "Time": 1598467145936
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145936
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145949
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145962
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145975
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467145989
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146003
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146016
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146323
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146336
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146349
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146362
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146376
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146389
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146402
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146416
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146429
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146443
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146455
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146469
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146483
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146496
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146509
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146522
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146535
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146549
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146563
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146576
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146589
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146603
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467146616
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147216
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147229
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147242
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147256
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147269
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147283
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147296
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147310
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147323
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147336
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147349
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147363
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147376
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147389
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147402
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147416
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147430
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147443
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147456
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147470
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467147482
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147882
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147896
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147910
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147923
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147937
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147949
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147962
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147976
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467147990
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148003
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148016
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148029
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148043
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148057
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148069
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148083
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148096
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148110
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148123
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148136
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148149
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148163
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148176
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148189
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148202
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148216
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148230
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148243
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467148257
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467148909
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467148924
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467148938
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467148950
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467148963
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467148976
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467148989
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149003
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149017
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149030
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149044
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149057
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149070
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149084
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149096
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149110
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467149124
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149475
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149497
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149510
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149523
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149537
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149550
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149563
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149577
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149590
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149603
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149617
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149630
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149643
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149657
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149670
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149683
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149697
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149710
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149724
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149737
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149750
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149817
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149830
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149843
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149857
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149870
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149883
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149897
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149910
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149924
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149937
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149951
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149964
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149977
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467149990
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150004
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150017
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150030
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150044
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150057
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150070
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150164
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150177
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150190
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150204
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150217
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150230
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150243
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150257
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150271
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150285
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150297
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150310
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150324
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150337
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150351
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150364
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467150377
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467152725
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467152764
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467152764
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467156940
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467156940
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467157006
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467157500
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467157513
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467157513
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467157593
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467157593
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467157607
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467165116
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467165129
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467165129
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467165423
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467165423
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467165436
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "tried to add Title, but failed because already selected 3 fields",
+    "Time": 1598467167777
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467169304
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467169530
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467169597
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467169718
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467169718
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467173959
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467173959
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467174026
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467176747
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467176893
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467176893
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467177213
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467183202
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467183429
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467185963
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467185976
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467185990
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186003
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186017
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186030
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186043
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186056
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186070
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186084
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186097
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186110
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186123
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186137
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186149
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186164
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186176
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186189
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186203
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186216
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186230
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186243
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186257
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186270
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186283
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186297
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186310
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186323
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186336
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186350
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467186364
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188031
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188044
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188057
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188071
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188084
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188098
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188110
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188124
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188138
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188150
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188164
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188178
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188191
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188204
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188217
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188230
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188244
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188257
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188271
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188284
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188297
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188311
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188324
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188337
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188350
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188364
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188524
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188538
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188551
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188564
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188578
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188591
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188604
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188617
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188631
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188644
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188658
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188671
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188684
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188697
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188711
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188724
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188738
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188751
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188765
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188777
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188791
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188804
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188817
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188831
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188844
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188857
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188871
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188885
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188898
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467188910
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189698
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189712
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189724
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189786
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189792
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189804
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189818
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189831
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189845
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189858
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189871
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189885
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189898
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189911
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189925
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189938
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189952
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189965
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189978
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467189991
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467190005
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467190018
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467190031
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467190045
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467190071
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194553
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194566
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194580
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194593
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194606
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194620
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194633
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194646
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194659
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194673
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194686
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194700
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194713
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194726
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194739
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194753
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194767
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194779
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194833
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194846
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194859
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194873
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194886
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194899
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194913
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194926
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194940
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194953
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194967
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194980
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467194993
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195007
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195019
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195033
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195046
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195060
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195073
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195086
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195100
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195113
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467195127
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Running_Time_min-quantitative-y<aggregate>mean,Source-nominal-x",
+    "Time": 1598467197021
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Running_Time_min-quantitative-y<aggregate>mean,Source-nominal-x",
+    "Time": 1598467197034
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467197087
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467197100
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467197101
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467197541
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467197541
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467197554
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed Running_Time_min",
+    "Time": 1598467199030
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467199123
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200544
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200822
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200835
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200848
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200862
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200875
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200888
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200902
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200915
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200929
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200952
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200955
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200969
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200982
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467200995
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201009
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201022
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201036
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201049
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201062
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201075
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201089
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201102
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201116
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201129
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201143
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201156
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467201169
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467202796
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467202796
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467202809
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203236
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203249
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203263
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203276
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203290
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203302
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203317
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203329
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203343
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203356
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203370
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203383
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203396
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203409
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203423
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203436
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203449
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203463
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203476
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203490
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203503
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203517
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203530
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203543
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203556
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203569
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203583
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203596
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203610
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203623
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203636
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203650
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467203663
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204263
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204276
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204290
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204303
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204317
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204330
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204343
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204357
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204370
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204383
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204397
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204409
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204423
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204437
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204449
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204463
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204476
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204489
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204503
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204516
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204530
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204543
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204557
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204570
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204583
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204596
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204610
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204623
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204636
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204650
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204663
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204676
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204690
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204703
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204716
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204730
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204743
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467204757
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467204850
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467204997
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:MPAA_Rating-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467205010
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:MPAA_Rating-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467205184
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:MPAA_Rating-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467206157
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:MPAA_Rating-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467206171
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467206184
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206371
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206384
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206398
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206412
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206424
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206437
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467206451
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206451
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206464
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206477
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206490
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206504
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206518
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206530
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206544
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206557
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206571
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206584
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206597
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206610
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206731
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206744
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206758
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206771
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206784
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206797
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206811
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206824
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206837
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206850
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206864
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206877
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206890
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206904
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206917
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467206931
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467207024
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467207117
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467207117
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467207157
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467207331
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467207344
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207571
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207584
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207598
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207612
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207624
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207638
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207651
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207665
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207678
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207691
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207704
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207718
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207731
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207745
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207757
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207770
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207785
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207798
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207811
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467207824
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208505
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208518
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208532
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208545
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208558
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208572
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208585
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208598
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208611
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208625
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208638
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208651
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208665
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208678
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208692
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208704
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208718
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208732
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208745
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208758
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208772
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208784
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208797
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208811
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208825
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208838
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208851
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208865
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467208878
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209385
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209398
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209412
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209425
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209439
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209451
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209465
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209478
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209492
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209560
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209572
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209585
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209598
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209611
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467209625
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_DVD_Sales-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467210225
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_DVD_Sales-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467210332
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467210345
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467210358
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467210358
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467210692
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467210692
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467210705
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467214120
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467214187
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467214187
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_Gross-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467214200
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_DVD_Sales-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467214200
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_DVD_Sales-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467214400
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_DVD_Sales-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467214400
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,US_DVD_Sales-quantitative-color,Worldwide_Gross-quantitative-x",
+    "Time": 1598467214427
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214600
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214614
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214628
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214640
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214654
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214667
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214680
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214694
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214707
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214720
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214733
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214747
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214761
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214774
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214787
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214800
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214814
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214893
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214906
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214920
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214933
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214947
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214960
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214974
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467214987
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215000
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215014
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215028
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215040
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215054
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215067
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215081
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215094
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215107
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215120
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215133
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215148
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215161
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467215174
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467215547
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467215560
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467215560
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220335
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220349
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220362
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220376
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220389
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220402
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220415
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220429
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220442
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220455
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220468
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220482
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220495
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220509
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220522
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220536
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220549
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467220562
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221069
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221082
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221096
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221109
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221123
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221136
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221150
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221162
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221176
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221189
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221203
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221218
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221229
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221242
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221256
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221269
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221282
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221295
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221309
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221322
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221335
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221349
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221363
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221376
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221390
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467221403
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467223856
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467223857
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467223897
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467224231
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467224257
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467224257
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467224630
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467224630
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467224643
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Running_Time_min",
+    "Time": 1598467226700
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467229332
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467230674
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467231049
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467231206
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467231219
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467231219
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467234487
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed Source",
+    "Time": 1598467236306
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467237301
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Source",
+    "Time": 1598467237996
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467238148
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467239621
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467239760
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467246425
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467247639
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467247639
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467247652
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed Running_Time_min",
+    "Time": 1598467253020
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467253119
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467253698
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467253848
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467254172
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255668
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255681
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255695
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255708
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255722
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255735
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255748
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255762
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255775
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255788
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255801
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255815
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255828
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255841
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255855
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255868
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255881
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255895
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255908
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255921
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255935
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467255948
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467259200
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467259200
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467259203
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259576
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259590
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259603
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259616
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259630
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259643
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259656
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259670
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259683
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259696
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259709
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259723
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259736
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259749
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259763
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259776
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259789
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259803
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259816
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259829
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259843
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259856
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259870
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259883
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467259896
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260083
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260097
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260109
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260123
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260136
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260150
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260163
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260176
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260190
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260203
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260216
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260230
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260243
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260257
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260269
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260283
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260296
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260309
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260323
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260336
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260350
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260363
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260550
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260563
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260577
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260590
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260603
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260616
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260630
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260643
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260657
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260669
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260683
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260697
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260710
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260724
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260736
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260750
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260763
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260776
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260790
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260803
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467260816
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261310
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261324
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261337
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261350
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261363
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261377
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261390
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261403
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261417
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261430
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261443
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261457
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261470
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261483
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261497
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261510
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261523
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261537
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261550
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261563
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261577
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261590
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261603
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261616
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261631
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261643
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261657
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261670
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261817
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261830
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261844
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261857
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261870
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261883
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261896
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261910
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261924
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261938
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261950
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261964
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261976
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467261991
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262004
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262017
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262030
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262044
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262057
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262070
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262084
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262097
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262110
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262123
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262137
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262151
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262164
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262177
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262191
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262643
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262658
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262670
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262684
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467262697
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262711
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262724
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262737
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262764
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262791
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262804
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262831
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262844
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262857
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262870
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262884
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262897
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262911
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262924
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262937
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262950
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262964
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262977
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467262991
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263004
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263017
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263031
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263044
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263057
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263071
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263178
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263191
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263204
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263217
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263231
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263244
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263257
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263271
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263284
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263298
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263310
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263324
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263338
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263350
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263364
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263377
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263391
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263404
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263417
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263431
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263444
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263457
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263604
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263617
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263631
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263647
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263658
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263671
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263684
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263697
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263711
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263724
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263737
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263751
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263765
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263778
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263791
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263805
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263818
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467263831
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467264565
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467264592
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467264592
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467269460
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467269460
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467269471
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467273328
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467273354
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467273355
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467289800
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467289800
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467289827
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Running_Time_min",
+    "Time": 1598467293598
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467293696
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed Source",
+    "Time": 1598467294803
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467294858
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467295997
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467296076
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467296076
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467296504
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467297016
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467299870
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467299870
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467299884
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Source",
+    "Time": 1598467306050
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467307342
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467307813
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467308161
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467308817
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467324186
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467324186
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467324252
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467327400
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467327414
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467327414
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467332789
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467332789
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467332803
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467337577
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467339311
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467339312
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467339325
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed Running_Time_min",
+    "Time": 1598467340212
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467340324
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467341600
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467348314
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467348315
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467348341
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Running_Time_min",
+    "Time": 1598467350033
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467350077
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467351078
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467352636
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467352636
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467352650
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed Running_Time_min",
+    "Time": 1598467354687
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467354745
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467355038
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467355102
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467355102
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467365480
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467365481
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467365494
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467365521
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467365595
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467366427
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467366441
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467366441
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Creative_Type-nominal-color,Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467366535
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467366641
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467366681
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467366681
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467369055
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467369055
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467369109
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Running_Time_min",
+    "Time": 1598467370763
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467370848
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467371361
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467374004
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467374884
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467375097
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467375097
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467375110
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467375258
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467376258
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "1",
+    "Time": 1598467377975
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "15",
+    "Time": 1598467378207
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "151",
+    "Time": 1598467378295
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "disagree",
+    "Time": 1598467380613
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "neutral",
+    "Time": 1598467382853
+  },
+  {
+    "Interaction": "changed ptask ans of efficiency",
+    "Value": "sdisagree",
+    "Time": 1598467385125
+  },
+  {
+    "Interaction": "changed ptask ans of ease-of-use",
+    "Value": "agree",
+    "Time": 1598467387994
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "sdisagree",
+    "Time": 1598467389957
+  },
+  {
+    "Interaction": "changed ptask ans of overall",
+    "Value": "disagree",
+    "Time": 1598467391572
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467392944
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467393010
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467393011
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467393384
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467393384
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467393424
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467394031
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467395958
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467395972
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467395972
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467396052
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467396052
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467396078
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed Source",
+    "Time": 1598467397697
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467400319
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467402747
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467402867
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467402867
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403174
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403174
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403294
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403654
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403681
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403681
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403775
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403775
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-x,Worldwide_Gross-quantitative-y",
+    "Time": 1598467403787
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Source",
+    "Time": 1598467405087
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:Running_Time_min-quantitative-size<aggregate>mean,Source-nominal-x,Worldwide_Gross-quantitative-y<bin>",
+    "Time": 1598467409760
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed Running_Time_min",
+    "Time": 1598467412267
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467412327
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467412902
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467413347
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467413347
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467413660
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467415499
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467415605
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467415605
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467417672
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467417673
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467417793
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:tick;encoding:Source-nominal-y,Worldwide_Gross-quantitative-x",
+    "Time": 1598467418167
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "check bookmarks",
+    "Time": 1598467420244
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "bookmark popup",
+    "Time": 1598467420958
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1598467422099
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1598467422099
+  }
+]

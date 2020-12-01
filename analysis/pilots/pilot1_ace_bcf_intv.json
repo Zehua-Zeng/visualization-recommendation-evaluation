@@ -1,0 +1,5 @@
+{
+  "adv": "Honestly, I did not see any advantage other than me not having to 'create' the visualization",
+  "disadv": "Most of the recommendations were unnecessarily adding a third attribute in the visualization which was not helpful especially when the question required to be answered based on only 2 attributes.\n\nNone of the specified or recommended visualization had average aggregation!\n\nThere was a lot of overlap between the marks using color encoding which made it very difficult to make sense out of it",
+  "comment": "I would have liked some more control on creating the visualizations rather than just choosing what to visualize - like the aggregation to be performed, the encodings to be used, etc."
+}

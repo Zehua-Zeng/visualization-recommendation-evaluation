@@ -1,0 +1,752 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1598468519556
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468520518
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468520938
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Cost_Repair",
+    "Time": 1598468532193
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x",
+    "Time": 1598468532269
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
+    "Time": 1598468533531
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
+    "Time": 1598468533597
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468533597
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468533910
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468533910
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468534543
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468534544
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468534560
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
+    "Time": 1598468536394
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
+    "Time": 1598468536428
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
+    "Time": 1598468536428
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
+    "Time": 1598468536744
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
+    "Time": 1598468536745
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
+    "Time": 1598468536761
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Wildlife_Species",
+    "Time": 1598468541821
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468541867
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468543158
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468543399
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468559720
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468559736
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468559736
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563046
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563055
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563071
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563088
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563105
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563122
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563138
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563155
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563172
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563188
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563205
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563222
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563238
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563255
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563271
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563288
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563305
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563322
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563338
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563355
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563372
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563388
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563405
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563422
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563438
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563455
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563472
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563488
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563505
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563522
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563538
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563555
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563572
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563588
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563605
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563622
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563672
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563688
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563738
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563755
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563772
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563789
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563805
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563822
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563839
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468563888
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468564605
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565630
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565642
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565657
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565673
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565690
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565706
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565723
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565739
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565756
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565773
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565789
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565806
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565823
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565840
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565856
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565873
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565889
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565906
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565923
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565939
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565956
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565973
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468565990
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566006
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566023
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566040
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566056
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566073
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566123
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566155
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566173
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566190
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566206
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566223
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566240
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566256
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566273
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566290
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566306
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566323
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566340
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566356
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566373
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566390
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566406
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566423
+  },
+  {
+    "Interaction": "scroll on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468566440
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468567773
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468567773
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468567790
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "C",
+    "Time": 1598468569170
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Ca",
+    "Time": 1598468569259
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Can",
+    "Time": 1598468569420
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Cana",
+    "Time": 1598468569541
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Canad",
+    "Time": 1598468569792
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Canada",
+    "Time": 1598468569892
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Canada ",
+    "Time": 1598468570200
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Canada g",
+    "Time": 1598468570991
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Canada go",
+    "Time": 1598468571155
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Canada goo",
+    "Time": 1598468571281
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Canada goos",
+    "Time": 1598468571416
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "Canada goose",
+    "Time": 1598468571532
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468572843
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468573010
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468573010
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468573026
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Species-nominal-y",
+    "Time": 1598468573852
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "neutral",
+    "Time": 1598468576915
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "agree",
+    "Time": 1598468578468
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "agree",
+    "Time": 1598468580098
+  },
+  {
+    "Interaction": "changed ptask ans of efficiency",
+    "Value": "neutral",
+    "Time": 1598468585368
+  },
+  {
+    "Interaction": "changed ptask ans of ease-of-use",
+    "Value": "neutral",
+    "Time": 1598468587098
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "agree",
+    "Time": 1598468592546
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "neutral",
+    "Time": 1598468594917
+  },
+  {
+    "Interaction": "changed ptask ans of overall",
+    "Value": "agree",
+    "Time": 1598468598712
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1598468602729
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1598468602730
+  }
+]

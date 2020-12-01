@@ -1,0 +1,357 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1598468280033
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468280696
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468280973
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468281324
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468281341
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468281341
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468281457
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468281458
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468281474
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-y",
+    "Time": 1598468281741
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-y",
+    "Time": 1598468281757
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468299482
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468299498
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468299498
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468299532
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468299798
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468299832
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468299832
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468299849
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468309169
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468309185
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468309186
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468309398
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468309398
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598468309404
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468310369
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468310753
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed undefined",
+    "Time": 1598468318385
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Speed_IAS_in_knots",
+    "Time": 1598468319944
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468319976
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Aircraft_Make_Model",
+    "Time": 1598468381848
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468381913
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468382640
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468383174
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468396688
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468396721
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468396721
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468423532
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468423533
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468423582
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468424332
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468424383
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468424383
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468438171
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468438571
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468439055
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Effect_Amount_of_damage",
+    "Time": 1598468442373
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468442448
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468442646
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468443473
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468443474
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468443507
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468448625
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468448675
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468448675
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468458296
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468458297
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468458313
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "2",
+    "Time": 1598468460469
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "23",
+    "Time": 1598468460556
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "235",
+    "Time": 1598468460831
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:tick;encoding:Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Speed_IAS_in_knots-quantitative-x",
+    "Time": 1598468463490
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "sagree",
+    "Time": 1598468466223
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "sagree",
+    "Time": 1598468468174
+  },
+  {
+    "Interaction": "changed ptask ans of efficiency",
+    "Value": "agree",
+    "Time": 1598468472540
+  },
+  {
+    "Interaction": "changed ptask ans of ease-of-use",
+    "Value": "agree",
+    "Time": 1598468476635
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "agree",
+    "Time": 1598468480167
+  },
+  {
+    "Interaction": "changed ptask ans of overall",
+    "Value": "agree",
+    "Time": 1598468488570
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "neutral",
+    "Time": 1598468506741
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1598468511201
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1598468511201
+  }
+]

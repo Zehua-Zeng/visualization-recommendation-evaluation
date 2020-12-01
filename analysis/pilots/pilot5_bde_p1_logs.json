@@ -1,0 +1,3832 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1598467977114
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598467977870
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598467978118
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598467978118
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598467978291
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598467978291
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598467978619
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598467978635
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598467978702
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598467979019
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598467979052
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598467979053
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1598467979069
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-y",
+    "Time": 1598467979452
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-y",
+    "Time": 1598467979485
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-y",
+    "Time": 1598467979486
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-y",
+    "Time": 1598467979502
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-y",
+    "Time": 1598467979502
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-y",
+    "Time": 1598467979553
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984666
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984687
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984738
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984755
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984771
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984787
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984804
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984821
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984837
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984854
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984870
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984887
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984904
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984921
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984937
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984954
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984971
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467984987
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467985028
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986440
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986454
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986471
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986488
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986505
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986522
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986538
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986555
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986571
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986588
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986622
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986642
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467986822
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467986841
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467986855
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467986871
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598467986905
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986972
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467986991
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987006
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987022
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987039
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987056
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987072
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987088
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987105
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987121
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987138
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987155
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987171
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987188
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987205
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987222
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987239
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987255
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987272
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987305
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987322
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987348
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987356
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987392
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467987406
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467988592
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467988623
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467988788
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467988902
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467988923
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467988944
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467988957
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467989023
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598467989040
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "approach",
+    "Time": 1598467995183
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "sagree",
+    "Time": 1598467998189
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Origin_State-nominal-y",
+    "Time": 1598467998560
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Origin_State-nominal-y",
+    "Time": 1598467998593
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-ans",
+    "Value": "sagree",
+    "Time": 1598468004116
+  },
+  {
+    "Interaction": "changed ptask ans of confidence-udata",
+    "Value": "agree",
+    "Time": 1598468005732
+  },
+  {
+    "Interaction": "changed ptask ans of efficiency",
+    "Value": "neutral",
+    "Time": 1598468037763
+  },
+  {
+    "Interaction": "changed ptask ans of ease-of-use",
+    "Value": "agree",
+    "Time": 1598468040798
+  },
+  {
+    "Interaction": "changed ptask ans of utility",
+    "Value": "neutral",
+    "Time": 1598468076896
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084673
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084678
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084694
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084711
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084728
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084745
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084761
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084778
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084795
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084811
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084828
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084844
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084861
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084878
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084895
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084911
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084928
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084944
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084961
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084978
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468084994
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085012
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085029
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085044
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085061
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085077
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085094
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085111
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085128
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085145
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085162
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085178
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085195
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085211
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468085228
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088372
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088382
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088413
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088433
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088446
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088463
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088480
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088496
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088513
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088529
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088546
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468088563
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468089881
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468089881
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468089898
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468102168
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468102435
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468102452
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468102468
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468102469
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468102502
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468102752
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468102769
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468102769
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
+    "Time": 1598468102786
+  },
+  {
+    "Interaction": "changed ptask ans of overall",
+    "Value": "neutral",
+    "Time": 1598468108441
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1598468109325
+  },
+  {
+    "Interaction": "submission failed",
+    "Value": "did not bookmark charts",
+    "Time": 1598468113717
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Origin_State-nominal-y",
+    "Time": 1598468113727
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Origin_State-nominal-y",
+    "Time": 1598468114056
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468114123
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468114157
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468114157
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468116818
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468116857
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468116874
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468116890
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468116907
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468116925
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468116958
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468116991
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468117024
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468117041
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468117057
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468128529
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468128530
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468128579
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468128579
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468128679
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468128679
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468128696
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468128729
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468128745
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468128746
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468134465
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468134465
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468134531
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468134648
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Airline_Operator-nominal-y",
+    "Time": 1598468135232
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468135348
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468135432
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468135432
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137539
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137568
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137599
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137616
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137633
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137650
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137666
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137682
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137699
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137715
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137732
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137749
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137766
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137783
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137800
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137816
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137832
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137849
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137866
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137883
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137902
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137966
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468137983
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138000
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138017
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138034
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138054
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138070
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138091
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138100
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138116
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138133
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138150
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138167
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138184
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138201
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138217
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138234
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138251
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138283
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138301
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138336
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468138366
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468139184
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468144235
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144236
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144236
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144239
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144268
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144286
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144302
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144319
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144336
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144352
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144369
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144385
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144402
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144419
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144436
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144452
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144469
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144486
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144502
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144519
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144536
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144552
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144569
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144586
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144602
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144619
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144844
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144902
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144919
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144936
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144952
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144969
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468144986
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145002
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145019
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145036
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145052
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145069
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145086
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145102
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145119
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145137
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145152
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145169
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145186
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145202
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145219
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145236
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145252
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145269
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145286
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145803
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145804
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1598468145820
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468146020
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146242
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146252
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146269
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146286
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146302
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146319
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146336
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146353
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146386
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146403
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146419
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146436
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146452
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146469
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146486
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146502
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146519
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146538
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468146703
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468147386
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468147386
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468150221
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468150321
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150586
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150591
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150612
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150629
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150638
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150654
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150671
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150687
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150704
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150721
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150737
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150754
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150771
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150787
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150804
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150821
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150837
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150854
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150871
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150888
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150905
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150922
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150944
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150957
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150973
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468150988
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151004
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151021
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151038
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151054
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151071
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151088
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151104
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151121
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151138
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151155
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468151172
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152151
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152157
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152171
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152188
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152205
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152222
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152238
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152255
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152271
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152289
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152305
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152322
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152338
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152355
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152371
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152389
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152406
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152450
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152457
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152489
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152522
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152540
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152571
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152622
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152672
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152691
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152706
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152722
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152739
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152756
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152773
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152789
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152806
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152822
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152839
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152855
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152872
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152888
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152905
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152922
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152938
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152955
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152972
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468152989
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468153006
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468153023
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468153039
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468153056
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468153073
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468153090
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468153107
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468153122
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468153575
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468153930
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468155287
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468157002
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468157114
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468157424
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468157424
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468159792
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468159792
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468159842
+  },
+  {
+    "Interaction": "specified chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
+    "Time": 1598468163280
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468163562
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468164043
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468164827
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468164827
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468165310
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468165311
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468165328
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168446
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168461
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168479
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168494
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168511
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168545
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168562
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168579
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168597
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168612
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168628
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168645
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168661
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168679
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168696
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168713
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168729
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168746
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168762
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168778
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168795
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168871
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168971
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468168978
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468170632
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468170632
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171199
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171212
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171230
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171248
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171263
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171279
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171296
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171312
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171330
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171347
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171362
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171380
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171396
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171412
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171430
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171446
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171463
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171497
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171514
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171541
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171555
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171564
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171596
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171614
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468171648
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468177118
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468177119
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468180188
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468181105
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468181139
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468182394
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468183013
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468184437
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468184471
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468184487
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468184502
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185432
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185439
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185451
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185468
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185485
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185502
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185518
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185535
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185552
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185569
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185585
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185602
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185619
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185635
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185652
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185668
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185685
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185702
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185719
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185736
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185810
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185874
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468185909
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468188182
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468196973
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468196974
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468196990
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468197023
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468197090
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468197090
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468203426
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468203426
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468203443
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468203476
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468204009
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468204010
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468204076
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468204076
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Effect_Amount_of_damage-nominal-color,When_Phase_of_flight-nominal-y",
+    "Time": 1598468204193
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468204460
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468204477
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468204477
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468205210
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468205210
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468205227
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468205527
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-row,When_Phase_of_flight-nominal-y",
+    "Time": 1598468205960
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Flight_Date",
+    "Time": 1598468212534
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468212608
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468212756
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468213296
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468213730
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215192
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215198
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215215
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215233
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215247
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215263
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215280
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215297
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215314
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215330
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215347
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215364
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215380
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215397
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215413
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468215431
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468215996
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216002
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216014
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216031
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216048
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216064
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216081
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216097
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216114
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216130
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468216147
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468218924
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468218932
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468218952
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468218965
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468218982
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468218998
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219015
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219032
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219048
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219066
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219084
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219099
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219115
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219132
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219148
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219165
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219183
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219199
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219216
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219233
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219250
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219266
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219283
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219300
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219317
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219333
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219350
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219366
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219383
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219400
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219415
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219432
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219449
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219465
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219482
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219499
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219516
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219533
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219550
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219566
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219583
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219620
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219633
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219650
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219666
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219683
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219700
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219716
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219732
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219749
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219766
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219783
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219799
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219816
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219833
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219849
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219866
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219899
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468219926
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468220083
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468221815
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468221866
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229248
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229253
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229269
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229287
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229303
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229319
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229336
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229352
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229369
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229386
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229403
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229419
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229436
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229452
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229469
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229486
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229503
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229520
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229537
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229553
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229570
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229587
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229604
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229620
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229636
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229653
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229670
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229686
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229703
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229720
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229736
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468229753
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238614
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238623
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238639
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238657
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238673
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238690
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238707
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238724
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238740
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238756
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238774
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468238790
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1598468240520
+  },
+  {
+    "Interaction": "submission failed",
+    "Value": "did not bookmark charts",
+    "Time": 1598468243033
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "bookmark popup",
+    "Time": 1598468243961
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "bookmark popup",
+    "Time": 1598468245493
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468245498
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468246327
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468248211
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468248244
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468248244
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468248711
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468248711
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468248728
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,Wildlife_Size-nominal-shape",
+    "Time": 1598468250461
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,Wildlife_Size-nominal-shape",
+    "Time": 1598468250745
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,Wildlife_Size-nominal-shape",
+    "Time": 1598468250745
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,Wildlife_Size-nominal-shape",
+    "Time": 1598468250762
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Effect_Amount_of_damage-nominal-shape,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468250762
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Effect_Amount_of_damage-nominal-shape,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468250962
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Effect_Amount_of_damage-nominal-shape,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468250962
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Effect_Amount_of_damage-nominal-shape,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468250995
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "check bookmarks",
+    "Time": 1598468251900
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "bookmark popup",
+    "Time": 1598468254492
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468255580
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468255597
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468255597
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x,When_Time_of_day-nominal-shape",
+    "Time": 1598468257015
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "removed When_Phase_of_flight",
+    "Time": 1598468259584
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Flight_Date-nominal-y",
+    "Time": 1598468259641
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468259804
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add When_Phase_of_flight",
+    "Time": 1598468261250
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468261281
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468261656
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468262005
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468262005
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468262033
+  },
+  {
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468264242
+  },
+  {
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468264434
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Flight_Date-nominal-y,When_Phase_of_flight-nominal-x",
+    "Time": 1598468264690
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266316
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266351
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266370
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266384
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266402
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266418
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266435
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266451
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266467
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266484
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266501
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266518
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266536
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266551
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266568
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266584
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266601
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266651
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266669
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468266785
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468269283
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468271465
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468271470
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468271503
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468271519
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468271536
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468271554
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1598468271571
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468271940
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468271954
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468271970
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468271986
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272003
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272020
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272036
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272053
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272070
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272087
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272104
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272120
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272137
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272170
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272187
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272203
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272220
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272238
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272609
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272620
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272637
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272654
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272670
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272687
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272703
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272720
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1598468272737
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1598468274736
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1598468274736
+  }
+]

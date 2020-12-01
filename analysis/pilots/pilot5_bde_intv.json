@@ -1,0 +1,5 @@
+{
+  "adv": "It allows you to list several variables and plot them in various combinations with little effort on the part of the user.",
+  "disadv": "Like I said earlier, it might have been useful to have location-based things like states plotted such that states that are near each other could be plotted together, but that might be hard to implement. This really lends itself more to axis-friendly data.",
+  "comment": ""
+}

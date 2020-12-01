@@ -1,0 +1,2725 @@
+[
+  {
+    "Interaction": "study begins",
+    "Value": "page loaded",
+    "Time": 1596754823197
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1596754828184
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1596754828416
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1596754828416
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
+    "Time": 1596754829516
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Speed_IAS_in_knots",
+    "Time": 1596754831191
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:tick;encoding:Speed_IAS_in_knots-quantitative-x",
+    "Time": 1596754831243
+  },
+  {
+    "Interaction": "clicked on a field",
+    "Value": "add Wildlife_Species",
+    "Time": 1596754835918
+  },
+  {
+    "Interaction": "main chart changed because of clicking a field",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Speed_IAS_in_knots-quantitative-x<bin>,Wildlife_Species-nominal-y",
+    "Time": 1596754835973
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Aircraft_Make_Model-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754837893
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Aircraft_Make_Model-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754838071
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Aircraft_Make_Model-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754838768
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Aircraft_Make_Model-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754839766
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754847024
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754848483
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754848944
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754852732
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754852735
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754853598
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754853600
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754853600
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754854784
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754854785
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754856431
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Airport_Name-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754856433
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754856440
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754856454
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Airport_Name-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754857019
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Airport_Name-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754857019
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Airport_Name-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754857753
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754860567
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Airport_Name-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754861214
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754861234
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Airport_Name-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754862584
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Airport_Name-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754862585
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Airport_Name-nominal-x,Flight_Date-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754864114
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754864292
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754865177
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754865211
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1596754865212
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866543
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866572
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866588
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866606
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866622
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866639
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866655
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866721
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866739
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866755
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866772
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866788
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866806
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866822
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866839
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866855
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866872
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754866889
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867121
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867140
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867156
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867172
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867189
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867205
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867221
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867238
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867255
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754867273
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754868988
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869006
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869023
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869039
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869056
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869071
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869088
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869106
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869121
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869137
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869155
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869172
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869189
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869206
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869237
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869254
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869272
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869288
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869304
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869321
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869339
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869355
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869371
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869387
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869405
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869422
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869540
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869555
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869571
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869588
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869604
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869620
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869637
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869653
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869672
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869688
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869721
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869738
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869755
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869772
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869788
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869805
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869821
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869838
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869855
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869870
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869888
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754869904
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870082
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870105
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870121
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870137
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870154
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870170
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870189
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870221
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870242
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870257
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870271
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870303
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870320
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870338
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870355
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870387
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870404
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870599
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870621
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754870638
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871341
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871358
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871617
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871641
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871657
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871673
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871691
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871708
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871725
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871742
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871759
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871774
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871792
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871808
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871824
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871842
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871875
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871891
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871908
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871924
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754871941
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872037
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872075
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872096
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872107
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872125
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872141
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872157
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872174
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872208
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872225
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872243
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872258
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872275
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872290
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872308
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872324
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872342
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872359
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872375
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872392
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872409
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872425
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872442
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872458
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872474
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754872490
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873096
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873141
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873208
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873257
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873458
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873474
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873491
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873507
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873525
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873542
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873558
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754873574
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754873993
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874007
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874024
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874042
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874057
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874073
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874091
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874108
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874125
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874157
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874174
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874190
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874208
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874225
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874257
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874275
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874292
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874307
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874325
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874342
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874357
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874375
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874390
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Origin_State-nominal-x,Wildlife_Size-nominal-color,Wildlife_Species-nominal-y",
+    "Time": 1596754874409
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874412
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874493
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874509
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874525
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874541
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874558
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874574
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874591
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874625
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874642
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874658
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874675
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874691
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874708
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874725
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874741
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874759
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874791
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874807
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874825
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874840
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874859
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874875
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874892
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874907
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754874924
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754874941
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875091
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875107
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875124
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875141
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875158
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875175
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875191
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875208
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875225
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875240
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875260
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875274
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875292
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875307
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875325
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875342
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875359
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875374
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875391
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875408
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875425
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875441
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875457
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875474
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875491
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875508
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875525
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875541
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754875558
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754876108
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754876108
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Value": "mark:point;encoding:Flight_Date-nominal-color,Origin_State-nominal-x,Wildlife_Species-nominal-y",
+    "Time": 1596754876124
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876473
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876492
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876509
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876525
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876541
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876558
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876575
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876591
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876608
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876624
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876658
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876675
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1596754876692
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754878058
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754878092
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754878340
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754878375
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754878375
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754883658
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "task popup",
+    "Time": 1596754884288
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "task popup",
+    "Time": 1596754886600
+  },
+  {
+    "Interaction": "mouseover a chart",
+    "Time": 1596754886968
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887705
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887719
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887736
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887753
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887769
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887785
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887803
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887818
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887834
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887851
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887869
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887885
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887902
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887919
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887935
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887951
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887971
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754887985
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888002
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888018
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888035
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888051
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888068
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888085
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888101
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888118
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888138
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888152
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888169
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888185
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888202
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888217
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888235
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888252
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888578
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888602
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888618
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888635
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888652
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888668
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888685
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888702
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888719
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888735
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888752
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888768
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888785
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888802
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888818
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888902
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888918
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888934
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888951
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888968
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754888985
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889001
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889018
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889034
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889475
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889484
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889502
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889518
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889535
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889552
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889568
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889585
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889602
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889618
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889635
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889651
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754889668
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891018
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891036
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891052
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891068
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891085
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891102
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891117
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891134
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891152
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891169
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891186
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754891201
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754916965
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754916981
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754916997
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917014
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917031
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917047
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917064
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917081
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917114
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917131
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917147
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917164
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917181
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917197
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917214
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917231
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917248
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917264
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917281
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917297
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917314
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917878
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917897
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917914
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917931
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917947
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917965
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917981
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754917999
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754918014
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754918031
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754918047
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754934387
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754934421
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754934437
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754934471
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754934505
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754934522
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754934571
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754934653
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935486
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935521
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935538
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935555
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935572
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935589
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935605
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935620
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935637
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935654
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935670
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935687
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935705
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935722
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935738
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935754
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935788
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935805
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935822
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935838
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935854
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935871
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935888
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935905
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935921
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935938
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935954
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754935972
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936253
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936272
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936287
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936305
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936320
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936338
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936354
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936371
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936388
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936404
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936421
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936437
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936453
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936470
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936487
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936504
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936521
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936538
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754936980
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937004
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937020
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937038
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937053
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937071
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937088
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937104
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937120
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937138
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937154
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937171
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937188
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937204
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937221
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937240
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937626
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937637
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937653
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937671
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937688
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937703
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937722
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937737
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937755
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937771
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937787
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937804
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754937821
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938362
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938370
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938387
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938404
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938422
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938437
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938455
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938471
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938488
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938504
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938522
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938538
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938554
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938571
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938587
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938603
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938620
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938637
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938653
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938670
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938688
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938705
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938720
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938738
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938754
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938771
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938788
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938804
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938821
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938837
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938854
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938870
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938886
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938903
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938921
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938938
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938955
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938971
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754938988
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939833
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939871
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939887
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939904
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939920
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939937
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939954
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939971
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754939987
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940003
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940020
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940038
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940055
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940071
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940088
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940104
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940121
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940138
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940154
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940170
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940479
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940487
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940504
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940521
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940538
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940554
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940570
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940588
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940603
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940619
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940638
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940655
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940671
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754940687
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941190
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941205
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941221
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941239
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941254
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941271
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941288
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941303
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941321
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941336
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941347
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941363
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941380
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941395
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941412
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941428
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941447
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941463
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941479
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941495
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941513
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941528
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941545
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941897
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941912
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754941947
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754942363
+  },
+  {
+    "Interaction": "scroll on a chart",
+    "Time": 1596754942380
+  },
+  {
+    "Interaction": "mouseout a chart",
+    "Time": 1596754953629
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "task popup",
+    "Time": 1596754954435
+  },
+  {
+    "Interaction": "closed window",
+    "Value": "task popup",
+    "Time": 1596754957950
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Speed_IAS_in_knots-quantitative-x<bin>,Wildlife_Species-nominal-y",
+    "Time": 1596754958879
+  },
+  {
+    "Interaction": "opened window",
+    "Value": "task popup",
+    "Time": 1596754959783
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "european_starling",
+    "Time": 1596754962162
+  },
+  {
+    "Interaction": "hit the submit button",
+    "Value": "",
+    "Time": 1596754965368
+  },
+  {
+    "Interaction": "submitted successfully",
+    "Value": "",
+    "Time": 1596754965368
+  }
+]

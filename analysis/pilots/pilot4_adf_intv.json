@@ -1,0 +1,5 @@
+{
+  "adv": "It was very easy to switch between variables",
+  "disadv": "The choices of visualization weren't always great; for example, the one which displayed individual records as vertical lines for a given categorical variable was basically useless with enough records; coloring by density might've helped.\n\nThe ability to customize the visualizations further might've been nice (e.g., change which field was on which axis, or sort the categorical variables, such as in the MPAA ratings, where \"Open\" and \"Not Rated\" were in the middle of things)",
+  "comment": ""
+}
