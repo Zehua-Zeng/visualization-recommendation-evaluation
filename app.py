@@ -30,7 +30,7 @@ def send_js(filename):
 @app.route('/study/<pid>')
 def index(pid = None):
     if pid == "demo":
-        return render_template("demo.html")
+        return render_template("demo-new.html")
     return render_template("index.html", pid=pid)
 
 @app.route('/pilot/<username>/<version>/<interface>')
@@ -39,11 +39,11 @@ def study(username, version, interface):
     if interface.startswith("t"):
         return render_template("task.html", username = username, version = version, interface = interface)
     elif interface.startswith("p"):
-        return render_template("perform.html", username = username, version = version, interface = interface)
+        return render_template("perform-new.html", username = username, version = version, interface = interface)
     elif interface.startswith("s"):
         return render_template("stop.html", username = username, version = version, interface = interface)
-    elif interface.startswith("q"):
-        return render_template("post-task-quest.html", username = username, version = version, interface = interface)
+    # elif interface.startswith("q"):
+    #     return render_template("post-task-quest.html", username = username, version = version, interface = interface)
     elif interface.startswith("intv"):
         return render_template("post-study-intv.html", username = username, version = version, interface = interface)
 
@@ -381,6 +381,7 @@ def snd_interaction_logs():
     interface = received_data["interface"]
     bookmarked = received_data["bookmarked"]
     answer = received_data["answer"]
+    pt_ans = received_data["ptaskAns"]
 
     with open('./logs/' + status + '/' + username + '_' + version + '_' + interface + '_logs.json', 'w') as out:
         json.dump(interaction_logs, out, indent=2)
@@ -390,6 +391,9 @@ def snd_interaction_logs():
 
     with open('./logs/' + status + '/' + username + '_' + version + '_' + interface + '_answer.json', "w") as out:
         json.dump({"answer": answer}, out, indent=2)
+    
+    with open('./logs/' + status + '/' + username + '_' + version + '_' + interface + '_ptask.json', "w") as out:
+        json.dump(pt_ans, out, indent=2)
 
     return jsonify(status="success")
 
@@ -482,7 +486,7 @@ def get_vgl_from_vglstr(vglstr, dataset):
             else:
                 one_encoding[transform_type] = transform_val
             
-            encodings[encoding_type] = one_encoding
+            #encodings[encoding_type] = one_encoding
 
         else:
             encode_split = encode.split('-')
@@ -528,8 +532,18 @@ def get_vgl_from_vglstr(vglstr, dataset):
                 
             if "Release_Date-nominal" in encode:
                 one_encoding["timeUnit"] = "month"
+        
+        if "field" in one_encoding:
+            if one_encoding["field"] == "Title":
+                if encoding_type == "x":
+                    vgl["width"] = 3200
+                else:
+                    vgl["height"] = 18000
+            if one_encoding["field"] == "Director" or one_encoding["field"] == "Distributor":
+                if encoding_type == "x":
+                    vgl["width"] = 3200
             
-            encodings[encoding_type] = one_encoding
+        encodings[encoding_type] = one_encoding
     
     vgl["encoding"] = encodings
     return vgl

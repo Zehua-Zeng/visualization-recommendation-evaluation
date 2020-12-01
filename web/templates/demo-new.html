@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/d494f7bb71.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"
+      type="text/javascript"
+    ></script>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.12.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+    <!-- Import vega-embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.8.0"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="main_nav navbar fixed-top navbar-expand-lg navbar-light bg-light"
+    >
+      <a class="navbar-brand mb-0 h1" href="#"
+        ><i class="fas fa-database"></i>&nbsp;Visualization Recommendation
+        System - Demo</a
+      >
+      <div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-success"
+              id="bookmark"
+            >
+              <i class="fas fa-bookmark"></i> &nbsp; Bookmarks
+            </button>
+          </li>
+          <li class="nav-item active">
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-info"
+              id="go_study"
+            >
+              <i class="fa fa-sign-in"></i> &nbsp; Go to Study
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main contents of the page, includes sideNavs and page contents -->
+    <main>
+      <div class="wrapper">
+        <!-- =========== Sidebar ============ -->
+        <nav id="sidebar">
+          <!-- (1) Sidebar data -->
+          <div class="sidebar-datablock">
+            <h6>Data</h6>
+            <p>
+              <i class="fas fa-database"></i>
+              <span>Cars</span>
+            </p>
+          </div>
+
+          <!-- (2) sidebar fields -->
+          <!-- on submit the selection, call readFields in v1.js -->
+          <form>
+            <div class="sidebar-fields form-check">
+              <h6>Fields</h6>
+              <!-- fields of attributes are here -->
+
+              <!-- List of Attrs here (contains templates to different attr types) -->
+              <ul class="attr-lst list-unstyled"></ul>
+            </div>
+          </form>
+        </nav>
+        <nav id="sidebar-right">
+          <div>
+            <div id="task_content"></div>
+            <b>Check your bookmarked charts:</b><br /><br />
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-warning"
+              id="check-bookmark"
+            >
+              <i class="fas fa-bookmark"></i> &nbsp; Check Bookmarks
+            </button>
+            <br />
+            <br />
+            <div class="post-task-container">
+              <h6>Post-task Questionnaire</h6>
+
+              <div class="form-group">
+                <label>I am confident in understanding the dataset.</label>
+                <select name="confidence-udata" id="confidence-udata">
+                  <option value="" selected="selected"></option>
+                  <option value="sdisagree">Strongly Disagree</option>
+                  <option value="disagree">Disagree</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="agree">Agree</option>
+                  <option value="sagree">Strongly Agree</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>I am confident in my answer to the task. </label>
+                <select name="confidence-ans" id="confidence-ans">
+                  <option value="" selected="selected"></option>
+                  <option value="sdisagree">Strongly Disagree</option>
+                  <option value="disagree">Disagree</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="agree">Agree</option>
+                  <option value="sagree">Strongly Agree</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>
+                  I felt that the related views made it easier to complete the
+                  task.</label
+                >
+
+                <select name="efficiency" id="efficiency">
+                  <option value="" selected="selected"></option>
+                  <option value="sdisagree">Strongly Disagree</option>
+                  <option value="disagree">Disagree</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="agree">Agree</option>
+                  <option value="sagree">Strongly Agree</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label
+                  >I felt that the related views were easy to understand.
+                </label>
+                <select name="ease-of-use" id="ease-of-use">
+                  <option value="" selected="selected"></option>
+                  <option value="sdisagree">Strongly Disagree</option>
+                  <option value="disagree">Disagree</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="agree">Agree</option>
+                  <option value="sagree">Strongly Agree</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label
+                  >I felt that the related views were useful for completing the
+                  task.</label
+                >
+                <select name="utility" id="utility">
+                  <option value="" selected="selected"></option>
+                  <option value="sdisagree">Strongly Disagree</option>
+                  <option value="disagree">Disagree</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="agree">Agree</option>
+                  <option value="sagree">Strongly Agree</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label
+                  >I would use this visualization recommendation tool for
+                  similar tasks in the future.</label
+                >
+                <select name="overall" id="overall">
+                  <option value="" selected="selected"></option>
+                  <option value="sdisagree">Strongly Disagree</option>
+                  <option value="disagree">Disagree</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="agree">Agree</option>
+                  <option value="sagree">Strongly Agree</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-light">
+              Submit, then go to next step.
+            </button>
+            <br />
+            (If you are ready, please click on the "Go to Study" button on the
+            top)
+          </div>
+        </nav>
+
+        <!-- Page Content (specified and related) -->
+        <div class="page_content">
+          <!-- Popup window content -->
+          <div id="bmpopup" class="modal">
+            <div class="modal-content">
+              <span id="bmclose">&times;</span>
+              <div class="bookmark_content"></div>
+            </div>
+          </div>
+          <div id="gstdypopup" class="modal">
+            <div class="modal-content">
+              <span id="gstdyclose">&times;</span>
+              <div class="gstdy_content"></div>
+            </div>
+          </div>
+
+          <!-- specified views -->
+          <div class="specified_views">
+            <h3>Specified View</h3>
+            <div class="specified_main_area">
+              <div class="mainImg">
+                No specified visualization yet. Start exploring by selecting
+                fields on the Field panel or specifying a chart below.
+              </div>
+            </div>
+          </div>
+
+          <!-- related views -->
+          <div class="related_views">
+            <h3>Related Views</h3>
+            <div class="related_main_area">
+              <div class="relatedImg"></div>
+              <div class="loadmoreDiv" style="display: none;">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-secondary"
+                  id="loadmoreBtn"
+                >
+                  <i class="fa fa-spinner"></i> &nbsp; Load More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- d3 and js file -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="/js/demo-new.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  </body>
+</html>

@@ -49,8 +49,8 @@
         {% elif version[0] == "a" and interface[1] == "2" %}
         <h1>Task 2</h1>
         <div>
-          Which major genre appears to have higher rotten tomatoes rating,
-          Adventure, or Horror? <br />
+          Among Disney Ride (Source) movies, what is the running time (mins) of
+          the highest Worldwide grossing movie? <br />
           Please <b>enter your answer</b> and also <b>bookmark charts</b> you
           think that could answer the question.
         </div>
@@ -60,13 +60,14 @@
           What kinds of movies will be the most successful movies based on your
           observations of the data? Summarize the 2-3 characteristics that you
           believe are most important in predicting their success. <br />
-          Please <b>enter your answer</b> and also <b>bookmark charts</b> you
-          think that could answer the question.
+          Please <b>enter your answer</b> and also
+          <b>bookmark at least 5 charts</b> you think that could demostrate or
+          highlight your thoughts.
         </div>
         {% elif version[0] == "b" and interface[1] == "1" %}
         <h1>Task 1</h1>
         <div>
-          When phase of flight has the highest number of bird strike records in
+          When phase of flight has the highest number of birdstrike records in
           June (Flight_Date)? <br />
           Please <b>enter your answer</b> and also <b>bookmark charts</b> you
           think that could answer the question.
@@ -74,20 +75,21 @@
         {% elif version[0] == "b" and interface[1] == "2" %}
         <h1>Task 2</h1>
         <div>
-          Which wildlife species appears to have higher speed IAS in knots,
-          European starling or Rock pigeon? <br />
+          What speed (IAS) in knots could cause the substantial (Effect Amount
+          of damage) damage of AVRO RJ 85 (Aircraft Make Model)? <br />
           Please <b>enter your answer</b> and also <b>bookmark charts</b> you
           think that could answer the question.
         </div>
         {% elif version[0] == "b" and interface[1] == "3" %}
         <h1>Task 3</h1>
         <div>
-          What kinds of bird strikes would usually cost the most to repair the
+          What kinds of birdstrikes would usually cost the most to repair the
           airplane? Note that any dataset columns that are interesting to you
           can be included. Summarize the 2-3 factors that you believe would
-          cause bird strikes with highest chance.<br />
-          Please <b>enter your answer</b> and also <b>bookmark charts</b> you
-          think that could answer the question.
+          cause the highest repair cost.<br />
+          Please <b>enter your answer</b> and also
+          <b>bookmark at least 5 charts</b> you think that could demostrate or
+          highlight your thoughts.
         </div>
         {% elif interface[1] == "4" %}
         <h1>Task 4</h1>
@@ -95,10 +97,10 @@
           Feel free to explore any and all aspects of the data for up to
           <b>[15 mins]</b>. Use the bookmark features to save any interesting
           patterns, trends or other insights worth sharing with colleagues. Note
-          the top 3 bookmarks that you found most interesting from your
+          the top 5 bookmarks that you found most interesting from your
           exploration. <br />
           Please <b>write down your insights</b> and also
-          <b>bookmark top 3 charts</b> you think that could answer the question.
+          <b>bookmark top 5 charts</b> you think that could answer the question.
         </div>
         {% endif %}
         <br />
@@ -120,12 +122,12 @@
         let username = hrefSplit[hrefSplitLen - 3];
         let version = hrefSplit[hrefSplitLen - 2];
         let interface = hrefSplit[hrefSplitLen - 1];
-        if (sversion == "pilot") {
+        if (sversion === "pilot") {
           window.location =
             "/pilot/" + username + "/" + version + "/" + "p" + interface[1];
         } else {
           window.location =
-            "/" + username + "/" + version + "/" + "p" + interface[1];
+            "/study/" + username + "/" + version + "/" + "p" + interface[1];
         }
       }
     </script>
