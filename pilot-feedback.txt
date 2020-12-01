@@ -1,8 +1,0 @@
-to be fixed:
-Tutorial Video is too quick
-
-fixed:
-Answer - change from typing in to dropdown selecting or radio selecting
-In post-task questions, change "recommended charts" to "related views"
-put a timer on Task 4?
-Add missing interaction logs:(i) hover on charts; (ii) scroll up/down; (iii) record the time when hitting submit button
