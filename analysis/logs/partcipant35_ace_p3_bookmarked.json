@@ -1,5 +1,5 @@
 {
-  "markpointencodingquantitativesizeaggregatecountCreative_TypenominalyWorldwide_Grossquantitativexbin": {
+  "markpointencodingquantitativesizeaggregatecountDistributornominalyWorldwide_Grossquantitativexbin": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
       "url": "/data/movies/movies.json"
@@ -15,13 +15,13 @@
         "type": "quantitative"
       },
       "y": {
-        "field": "Creative_Type",
+        "field": "Distributor",
         "type": "nominal"
       }
     },
     "mark": "point"
   },
-  "markpointencodingCreative_TypenominalxSourcenominalyWorldwide_Grossquantitativesize": {
+  "markpointencodingIMDB_RatingquantitativexIMDB_VotesquantitativeyWorldwide_Grossquantitativesize": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
       "url": "/data/movies/movies.json"
@@ -32,7 +32,28 @@
         "type": "quantitative"
       },
       "x": {
-        "field": "Creative_Type",
+        "field": "IMDB_Rating",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "IMDB_Votes",
+        "type": "quantitative"
+      }
+    },
+    "mark": "point"
+  },
+  "markpointencodingMajor_GenrenominalxSourcenominalyWorldwide_Grossquantitativesize": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "/data/movies/movies.json"
+    },
+    "encoding": {
+      "size": {
+        "field": "Worldwide_Gross",
+        "type": "quantitative"
+      },
+      "x": {
+        "field": "Major_Genre",
         "type": "nominal"
       },
       "y": {
@@ -41,57 +62,6 @@
       }
     },
     "mark": "point"
-  },
-  "marktickencodingCreative_TypenominalyWorldwide_Grossquantitativex": {
-    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
-    "data": {
-      "url": "/data/movies/movies.json"
-    },
-    "encoding": {
-      "x": {
-        "field": "Worldwide_Gross",
-        "type": "quantitative"
-      },
-      "y": {
-        "field": "Creative_Type",
-        "type": "nominal"
-      }
-    },
-    "mark": "tick"
-  },
-  "markpointencodingIMDB_RatingquantitativexWorldwide_Grossquantitativey": {
-    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
-    "data": {
-      "url": "/data/movies/movies.json"
-    },
-    "encoding": {
-      "x": {
-        "field": "IMDB_Rating",
-        "type": "quantitative"
-      },
-      "y": {
-        "field": "Worldwide_Gross",
-        "type": "quantitative"
-      }
-    },
-    "mark": "point"
-  },
-  "marktickencodingDistributornominalyWorldwide_Grossquantitativex": {
-    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
-    "data": {
-      "url": "/data/movies/movies.json"
-    },
-    "encoding": {
-      "x": {
-        "field": "Worldwide_Gross",
-        "type": "quantitative"
-      },
-      "y": {
-        "field": "Distributor",
-        "type": "nominal"
-      }
-    },
-    "mark": "tick"
   },
   "markpointencodingCreative_TypenominalyProduction_BudgetquantitativesizeWorldwide_Grossquantitativexbin": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
@@ -110,6 +80,28 @@
       },
       "y": {
         "field": "Creative_Type",
+        "type": "nominal"
+      }
+    },
+    "mark": "point"
+  },
+  "markpointencodingquantitativesizeaggregatecountDirectornominalyWorldwide_Grossquantitativexbin": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "/data/movies/movies.json"
+    },
+    "encoding": {
+      "size": {
+        "aggregate": "count",
+        "type": "quantitative"
+      },
+      "x": {
+        "bin": true,
+        "field": "Worldwide_Gross",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "Director",
         "type": "nominal"
       }
     },

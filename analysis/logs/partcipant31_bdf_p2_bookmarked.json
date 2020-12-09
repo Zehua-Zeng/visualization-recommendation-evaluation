@@ -1,16 +1,29 @@
 {
-  "marktickencodingAircraft_Make_ModelnominalyEffect_Amount_of_damagenominalcolorSpeed_IAS_in_knotsquantitativex": {
+  "markbarencodingquantitativexaggregatecountAirport_Namenominaly": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
       "url": "/data/birdstrikes/birdstrikes.json"
     },
     "encoding": {
-      "color": {
-        "field": "Effect_Amount_of_damage",
-        "type": "nominal"
-      },
       "x": {
-        "field": "Speed_IAS_in_knots",
+        "aggregate": "count",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "Airport_Name",
+        "type": "nominal"
+      }
+    },
+    "mark": "bar"
+  },
+  "markbarencodingquantitativexaggregatecountAircraft_Make_Modelnominaly": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": {
+      "url": "/data/birdstrikes/birdstrikes.json"
+    },
+    "encoding": {
+      "x": {
+        "aggregate": "count",
         "type": "quantitative"
       },
       "y": {
@@ -18,6 +31,6 @@
         "type": "nominal"
       }
     },
-    "mark": "tick"
+    "mark": "bar"
   }
 }

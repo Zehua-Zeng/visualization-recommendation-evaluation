@@ -1,18 +1,17 @@
 {
-  "markbarencodingquantitativeyaggregatecountRelease_Datenominalx": {
+  "markbarencodingquantitativexaggregatecountMajor_Genrenominaly": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
       "url": "/data/movies/movies.json"
     },
     "encoding": {
       "x": {
-        "field": "Release_Date",
-        "timeUnit": "month",
-        "type": "nominal"
-      },
-      "y": {
         "aggregate": "count",
         "type": "quantitative"
+      },
+      "y": {
+        "field": "Major_Genre",
+        "type": "nominal"
       }
     },
     "mark": "bar"
@@ -34,26 +33,22 @@
     },
     "mark": "bar"
   },
-  "markpointencodingIMDB_RatingquantitativexUS_GrossquantitativeyWorldwide_Grossquantitativesize": {
+  "markbarencodingquantitativexaggregatecountDistributornominaly": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
       "url": "/data/movies/movies.json"
     },
     "encoding": {
-      "size": {
-        "field": "Worldwide_Gross",
-        "type": "quantitative"
-      },
       "x": {
-        "field": "IMDB_Rating",
+        "aggregate": "count",
         "type": "quantitative"
       },
       "y": {
-        "field": "US_Gross",
-        "type": "quantitative"
+        "field": "Distributor",
+        "type": "nominal"
       }
     },
-    "mark": "point"
+    "mark": "bar"
   },
   "markpointencodingIMDB_RatingquantitativexRotten_Tomatoes_Ratingquantitativey": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
@@ -72,18 +67,18 @@
     },
     "mark": "point"
   },
-  "markpointencodingIMDB_RatingquantitativexIMDB_Votesquantitativey": {
+  "markpointencodingIMDB_VotesquantitativexRotten_Tomatoes_Ratingquantitativey": {
     "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
     "data": {
       "url": "/data/movies/movies.json"
     },
     "encoding": {
       "x": {
-        "field": "IMDB_Rating",
+        "field": "IMDB_Votes",
         "type": "quantitative"
       },
       "y": {
-        "field": "IMDB_Votes",
+        "field": "Rotten_Tomatoes_Rating",
         "type": "quantitative"
       }
     },

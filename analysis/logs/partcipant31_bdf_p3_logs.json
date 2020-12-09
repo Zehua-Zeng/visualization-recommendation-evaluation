@@ -2,2066 +2,2746 @@
   {
     "Interaction": "study begins",
     "Value": "page loaded",
-    "Time": 1602333430884
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333454151
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333454311
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333454333
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333454350
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333454368
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333454400
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333455075
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333455101
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333455117
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333455134
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333455151
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333462058
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333463894
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333464685
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333464693
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333464711
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333464728
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333464741
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333465443
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333465494
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333465509
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333465648
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333465692
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333465727
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333465744
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333465826
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333465977
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333466460
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333466478
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333466494
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333466511
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Other-quantitative-x",
-    "Time": 1602333466526
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Other-quantitative-x",
-    "Time": 1602333467415
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Other-quantitative-x",
-    "Time": 1602333467415
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Other-quantitative-x",
-    "Time": 1602333467544
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Time_of_day-nominal-y",
-    "Time": 1602333467578
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Time_of_day-nominal-y",
-    "Time": 1602333467595
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Time_of_day-nominal-y",
-    "Time": 1602333467595
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333468431
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333468454
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333468496
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333468512
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333468543
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333469024
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333469047
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333469065
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Time_of_day-nominal-y",
-    "Time": 1602333469612
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333469612
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333469631
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333469664
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333469747
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333471581
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333471785
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333471816
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333471848
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333471866
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333471899
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333472366
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333472399
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333480208
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333489380
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333489867
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333489897
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333489931
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333489964
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Airport_Name-nominal-y",
-    "Time": 1602333490297
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490348
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490571
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490614
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490648
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490681
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490730
-  },
-  {
-    "Interaction": "scroll on a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490797
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490981
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490981
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
-    "Time": 1602333490997
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333491213
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333491248
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333491264
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333491298
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333491348
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
-    "Time": 1602333492715
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
-    "Time": 1602333492733
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
-    "Time": 1602333492733
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
-    "Time": 1602333493266
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
-    "Time": 1602333493266
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Species-nominal-y",
-    "Time": 1602333493282
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Size-nominal-y",
-    "Time": 1602333493299
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Size-nominal-y",
-    "Time": 1602333493332
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Size-nominal-y",
-    "Time": 1602333493332
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Wildlife_Size-nominal-y",
-    "Time": 1602333493349
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333493749
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333493783
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
-    "Time": 1602333493799
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333493799
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,When_Phase_of_flight-nominal-y",
-    "Time": 1602333493817
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333493817
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333493833
+    "Time": 1606850296237
   },
   {
     "Interaction": "clicked on a field",
-    "Value": "add Cost_Repair",
-    "Time": 1602333505735
+    "Value": "add Aircraft_Make_Model",
+    "Time": 1606850306043
   },
   {
     "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x",
-    "Time": 1602333505873
-  },
-  {
-    "Interaction": "scroll up",
-    "Value": "",
-    "Time": 1602333506198
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333506820
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333507424
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-y",
-    "Time": 1602333509643
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-y",
-    "Time": 1602333511531
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-y",
-    "Time": 1602333511532
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-y",
-    "Time": 1602333511548
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333511565
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333511598
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333511598
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333511631
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333511698
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333511715
+    "Value": "mark:bar;encoding:-quantitative-x<aggregate>count,Aircraft_Make_Model-nominal-y",
+    "Time": 1606850307244
   },
   {
     "Interaction": "clicked on a field",
-    "Value": "add Wildlife_Size",
-    "Time": 1602333523625
+    "Value": "add Wildlife_Species",
+    "Time": 1606850317804
   },
   {
     "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333523765
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850318861
   },
   {
     "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333525498
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850320278
   },
   {
     "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333527327
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850321737
   },
   {
     "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333527327
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850326532
   },
   {
     "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333527360
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850341506
   },
   {
     "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333528361
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850395645
   },
   {
     "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333528511
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333528511
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333529797
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333529797
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333529880
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850395653
   },
   {
     "Interaction": "added chart to bookmark",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Wildlife_Size-nominal-y",
-    "Time": 1602333530350
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "L",
-    "Time": 1602333539905
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "La",
-    "Time": 1602333540112
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Lar",
-    "Time": 1602333540377
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Larg",
-    "Time": 1602333540578
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large",
-    "Time": 1602333540729
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large ",
-    "Time": 1602333541073
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large w",
-    "Time": 1602333542068
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wi",
-    "Time": 1602333542185
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wil",
-    "Time": 1602333542410
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wild",
-    "Time": 1602333542602
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildl",
-    "Time": 1602333548089
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildli",
-    "Time": 1602333548299
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlif",
-    "Time": 1602333549721
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife",
-    "Time": 1602333549786
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife ",
-    "Time": 1602333549944
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife s",
-    "Time": 1602333550073
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife si",
-    "Time": 1602333550209
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife siz",
-    "Time": 1602333550363
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size",
-    "Time": 1602333550666
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\n",
-    "Time": 1602333552138
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "remove Wildlife_Size",
-    "Time": 1602333557541
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x",
-    "Time": 1602333557675
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "add When_Time_of_day",
-    "Time": 1602333558627
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333558686
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333563109
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333565593
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nT",
-    "Time": 1602333570962
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\n",
-    "Time": 1602333572009
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nD",
-    "Time": 1602333572409
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nDa",
-    "Time": 1602333572649
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nDaw",
-    "Time": 1602333572905
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nDawn",
-    "Time": 1602333573154
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nB",
-    "Time": 1602333576624
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBi",
-    "Time": 1602333577203
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBir",
-    "Time": 1602333577297
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBird",
-    "Time": 1602333577553
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirds",
-    "Time": 1602333578035
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdst",
-    "Time": 1602333578268
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstr",
-    "Time": 1602333578435
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstri",
-    "Time": 1602333578513
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrik",
-    "Time": 1602333578729
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrike",
-    "Time": 1602333578809
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes",
-    "Time": 1602333579034
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes ",
-    "Time": 1602333579202
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes i",
-    "Time": 1602333579425
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in",
-    "Time": 1602333579530
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in ",
-    "Time": 1602333579737
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in d",
-    "Time": 1602333579897
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in da",
-    "Time": 1602333580177
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in daw",
-    "Time": 1602333580416
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn",
-    "Time": 1602333580633
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn ",
-    "Time": 1602333580897
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \n",
-    "Time": 1602333588690
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333591798
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333591814
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333591814
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333591898
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333591898
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333592514
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333593215
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333593232
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333593232
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333594416
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333594416
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333594433
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "remove When_Time_of_day",
-    "Time": 1602333609736
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x",
-    "Time": 1602333609872
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "add Airport_Name",
-    "Time": 1602333623392
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Airport_Name-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333623519
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "remove Airport_Name",
-    "Time": 1602333627920
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x",
-    "Time": 1602333627997
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "add When_Phase_of_flight",
-    "Time": 1602333631638
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y",
-    "Time": 1602333631717
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y",
-    "Time": 1602333635034
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y",
-    "Time": 1602333635050
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y",
-    "Time": 1602333635050
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y",
-    "Time": 1602333635066
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850395842
   },
   {
     "Interaction": "added chart to bookmark",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y",
-    "Time": 1602333637471
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850396954
   },
   {
-    "Interaction": "opened window",
-    "Value": "bookmark popup",
-    "Time": 1602333638462
-  },
-  {
-    "Interaction": "closed window",
-    "Value": "bookmark popup",
-    "Time": 1602333644325
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nS",
-    "Time": 1602333649291
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nSt",
-    "Time": 1602333649601
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nSta",
-    "Time": 1602333649810
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStag",
-    "Time": 1602333649986
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage",
-    "Time": 1602333650113
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage ",
-    "Time": 1602333650265
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage o",
-    "Time": 1602333650521
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of",
-    "Time": 1602333650652
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of ",
-    "Time": 1602333650769
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of f",
-    "Time": 1602333650906
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of fl",
-    "Time": 1602333651002
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of fli",
-    "Time": 1602333651253
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flig",
-    "Time": 1602333651425
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of fligh",
-    "Time": 1602333651763
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight",
-    "Time": 1602333651937
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight ",
-    "Time": 1602333654195
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (",
-    "Time": 1602333654786
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (_",
-    "Time": 1602333655243
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (",
-    "Time": 1602333655690
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (C",
-    "Time": 1602333656146
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Cl",
-    "Time": 1602333656354
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Cli",
-    "Time": 1602333656602
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Clib",
-    "Time": 1602333656780
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Cli",
-    "Time": 1602333657203
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Clim",
-    "Time": 1602333657474
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb",
-    "Time": 1602333657619
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)",
-    "Time": 1602333658489
+    "Interaction": "deleted chart from bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850400041
   },
   {
     "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y,Wildlife_Size-nominal-color",
-    "Time": 1602333659420
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850400592
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850400592
   },
   {
     "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y,Wildlife_Size-nominal-color",
-    "Time": 1602333659504
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850433075
   },
   {
     "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y,When_Time_of_day-nominal-color",
-    "Time": 1602333659519
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850434192
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850434192
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850434193
   },
   {
     "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y,When_Time_of_day-nominal-color",
-    "Time": 1602333659536
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850460473
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850460475
   },
   {
     "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y,When_Time_of_day-nominal-color",
-    "Time": 1602333659536
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850460497
   },
   {
     "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-y,When_Time_of_day-nominal-color",
-    "Time": 1602333659737
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "remove When_Phase_of_flight",
-    "Time": 1602333662606
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x",
-    "Time": 1602333662744
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "add When_Time_of_day",
-    "Time": 1602333663831
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333663918
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333665007
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333665133
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333668904
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333669122
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850460617
   },
   {
     "Interaction": "added chart to bookmark",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333669956
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850474448
   },
   {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333670412
+    "Interaction": "deleted chart from bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850474828
   },
   {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333670446
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850474892
   },
   {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333670446
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333670579
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333670579
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Time_of_day-nominal-y",
-    "Time": 1602333670596
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333670913
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333670929
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333670929
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333670980
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333671631
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333671812
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333671812
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color,When_Time_of_day-nominal-y",
-    "Time": 1602333671928
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "remove When_Time_of_day",
-    "Time": 1602333673402
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x",
-    "Time": 1602333673480
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "add Flight_Date",
-    "Time": 1602333674535
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333674611
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333678017
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333679741
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\n",
-    "Time": 1602333684468
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333698651
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333698656
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333698656
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333698785
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333710880
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333710928
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nF",
-    "Time": 1602333713490
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFl",
-    "Time": 1602333713619
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFli",
-    "Time": 1602333713850
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlig",
-    "Time": 1602333713986
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFligh",
-    "Time": 1602333714146
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight",
-    "Time": 1602333714379
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight ",
-    "Time": 1602333714658
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight d",
-    "Time": 1602333714810
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight da",
-    "Time": 1602333715002
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight dat",
-    "Time": 1602333715123
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date",
-    "Time": 1602333715265
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date ",
-    "Time": 1602333715810
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (",
-    "Time": 1602333716171
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date ()",
-    "Time": 1602333716474
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date ()F",
-    "Time": 1602333717130
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date ()",
-    "Time": 1602333717666
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (F)",
-    "Time": 1602333718235
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Fe)",
-    "Time": 1602333718458
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)",
-    "Time": 1602333718714
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850474892
   },
   {
     "Interaction": "added chart to bookmark",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y",
-    "Time": 1602333721294
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850475280
   },
   {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Cost_Total-quantitative-color,Flight_Date-nominal-y",
-    "Time": 1602333721955
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Cost_Total-quantitative-color,Flight_Date-nominal-y",
-    "Time": 1602333721972
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Cost_Total-quantitative-color,Flight_Date-nominal-y",
-    "Time": 1602333722372
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Cost_Total-quantitative-color,Flight_Date-nominal-y",
-    "Time": 1602333722439
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Effect_Amount_of_damage-nominal-color,Flight_Date-nominal-y",
-    "Time": 1602333722439
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Effect_Amount_of_damage-nominal-color,Flight_Date-nominal-y",
-    "Time": 1602333722673
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Effect_Amount_of_damage-nominal-color,Flight_Date-nominal-y",
-    "Time": 1602333722673
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Effect_Amount_of_damage-nominal-color,Flight_Date-nominal-y",
-    "Time": 1602333722689
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "remove Flight_Date",
-    "Time": 1602333724871
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x",
-    "Time": 1602333725240
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-y",
-    "Time": 1602333726361
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-y",
-    "Time": 1602333726644
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333726832
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Cost_Repair-quantitative-x,Flight_Date-nominal-y,When_Phase_of_flight-nominal-color",
-    "Time": 1602333726951
-  },
-  {
-    "Interaction": "clicked on a field",
-    "Value": "add Aircraft_Airline_Operator",
-    "Time": 1602333729816
-  },
-  {
-    "Interaction": "main chart changed because of clicking a field",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333729902
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333732730
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733319
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733347
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733379
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733413
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733679
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733696
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733715
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733746
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733814
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333733814
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333734047
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333734064
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333734096
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333734146
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333734636
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333734636
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333735359
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333735381
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333735398
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333735448
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333735595
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333735595
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333736107
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333736149
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333736166
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333736199
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333736686
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333736686
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333738618
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333738618
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333738633
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333738968
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333739527
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333739581
-  },
-  {
-    "Interaction": "scroll on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333739618
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333739802
-  },
-  {
-    "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333739802
-  },
-  {
-    "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333739868
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\n",
-    "Time": 1602333742026
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nA",
-    "Time": 1602333743116
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAi",
-    "Time": 1602333743483
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAir",
-    "Time": 1602333743650
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirl",
-    "Time": 1602333743931
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirli",
-    "Time": 1602333744162
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirlin",
-    "Time": 1602333744258
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline",
-    "Time": 1602333744347
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline ",
-    "Time": 1602333744594
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline O",
-    "Time": 1602333744834
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Op",
-    "Time": 1602333745018
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Ope",
-    "Time": 1602333746003
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Oper",
-    "Time": 1602333746100
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Opera",
-    "Time": 1602333746299
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operat",
-    "Time": 1602333746443
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operato",
-    "Time": 1602333746684
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator",
-    "Time": 1602333746810
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator ",
-    "Time": 1602333749074
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator (",
-    "Time": 1602333749548
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator ()",
-    "Time": 1602333749787
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator (F)",
-    "Time": 1602333751179
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator (Fe)",
-    "Time": 1602333751298
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator (Fed)",
-    "Time": 1602333751906
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator (Fede)",
-    "Time": 1602333752098
-  },
-  {
-    "Interaction": "typed in answer",
-    "Value": "Large wildlife size\nBirdstrikes in dawn \nStage of flight (Climb)\nFlight date (Feb)\nAirline Operator (Fedex)",
-    "Time": 1602333752419
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850484654
   },
   {
     "Interaction": "added chart to bookmark",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333754457
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850485719
   },
   {
     "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333754980
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850502021
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850502176
   },
   {
     "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333755347
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850502192
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850502192
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850502195
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850502195
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850504042
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850504043
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850504885
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850504885
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850505185
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850507584
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850509012
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850524384
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850525032
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525154
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525171
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525188
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525204
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525221
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525254
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525272
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525288
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525305
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525334
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525355
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525372
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850525388
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850525509
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850525509
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526038
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526056
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526073
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526090
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526107
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526123
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526140
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526157
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526174
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526190
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526206
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526223
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526240
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526257
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526274
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526291
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526324
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526357
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526907
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526924
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526941
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526958
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526976
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850526992
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527009
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527026
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527042
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527059
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527075
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527092
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527110
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527143
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527159
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850527258
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850527259
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527544
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527560
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527576
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527593
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527610
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527626
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527644
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527660
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527677
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527693
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527711
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527727
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527744
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527760
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850527777
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850527877
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850527877
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528178
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528195
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528211
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528229
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528245
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528262
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528279
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528296
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528312
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528329
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528345
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528362
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528378
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850528395
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850528494
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529715
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529756
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529774
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529784
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529820
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529836
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529853
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529870
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529887
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529905
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529930
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529950
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850529983
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850530082
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530579
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850530686
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850530687
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530766
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530782
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530799
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530817
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530834
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530850
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530867
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530884
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530901
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530918
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530934
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530952
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530968
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850530985
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531001
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531018
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850531117
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850531117
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531201
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531217
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531235
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531251
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531269
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531286
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531302
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531319
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531336
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531352
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531368
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531386
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531404
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531436
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531453
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531469
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850531568
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850531568
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531618
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531636
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531652
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531686
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531703
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531720
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531736
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531753
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531770
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531787
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531803
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531820
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531836
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531853
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531870
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531886
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531904
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850531920
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850532020
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532086
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532102
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532120
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532136
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532153
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532170
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532188
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532204
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532221
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532237
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532255
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532271
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532288
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532305
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532322
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850532339
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850532454
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850532604
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850532637
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850533205
+  },
+  {
+    "Interaction": "added chart to bookmark",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850533852
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850543680
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850543947
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850548525
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850548608
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850548608
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550296
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550313
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550329
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550347
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550364
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550381
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550397
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550414
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550430
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550447
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550465
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550480
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550498
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550513
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550530
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550547
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550564
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550581
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550597
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550614
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550630
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850550648
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Total-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850550747
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850550747
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557629
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557646
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557663
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557680
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557697
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557714
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557730
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557747
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557763
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557780
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557796
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557813
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557830
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557847
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850557863
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558030
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558046
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558063
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558081
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558097
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558114
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558131
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558147
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558164
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558181
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558198
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558214
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558232
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558249
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558265
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558281
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558298
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558366
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558715
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558715
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Cost_Other-quantitative-color<aggregate>mean,Wildlife_Species-nominal-x",
+    "Time": 1606850558765
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559117
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559134
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559150
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559167
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559185
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559217
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559234
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559250
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559268
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559285
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559301
+  },
+  {
+    "Interaction": "scroll down",
+    "Value": "",
+    "Time": 1606850559318
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562490
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562507
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562526
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562543
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562559
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562576
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562593
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562609
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562626
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562642
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562659
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562675
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562691
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562710
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562726
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562742
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562759
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562775
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562792
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562810
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562825
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562842
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562859
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562875
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562892
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562909
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850562926
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565414
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565431
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565448
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565465
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565482
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565499
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565515
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565532
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565549
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565565
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565582
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565599
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565616
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565633
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565649
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565666
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565683
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565699
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565716
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565733
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565749
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850565766
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566015
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566033
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566050
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566067
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566084
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566100
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566117
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566134
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566150
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566168
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566184
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566200
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566217
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566233
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566251
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566267
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566285
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850566301
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566302
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566317
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566334
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566352
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850566368
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850570342
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850571545
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850571579
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850571579
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572280
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572297
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572315
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572332
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572348
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572364
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572382
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572399
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572415
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572432
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572448
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572465
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572482
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572499
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572516
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572532
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572549
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Effect_Amount_of_damage-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850572566
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850572567
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572567
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572586
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850572599
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850573299
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850573299
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575821
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575839
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575855
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575872
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575889
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575906
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575922
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575940
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575956
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575973
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850575989
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576006
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576023
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576040
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576056
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576073
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576090
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576106
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576123
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576140
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576156
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576173
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576190
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576206
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576223
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576240
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576256
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576774
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576774
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850576857
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577243
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577260
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577277
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577293
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577310
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577327
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577343
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577360
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577377
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577393
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577411
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577427
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577444
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577461
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577478
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850577593
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "3",
+    "Time": 1606850588173
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "",
+    "Time": 1606850588643
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A",
+    "Time": 1606850590188
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-",
+    "Time": 1606850590996
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-3",
+    "Time": 1606850591428
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-30",
+    "Time": 1606850592060
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300",
+    "Time": 1606850592220
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\n",
+    "Time": 1606850594644
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB",
+    "Time": 1606850598268
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-",
+    "Time": 1606850598796
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-6",
+    "Time": 1606850599300
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62",
+    "Time": 1606850599524
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\n",
+    "Time": 1606850600723
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB",
+    "Time": 1606850606804
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-",
+    "Time": 1606850607924
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-7",
+    "Time": 1606850609138
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-73",
+    "Time": 1606850609524
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737",
+    "Time": 1606850609708
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-7373",
+    "Time": 1606850613300
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-73730",
+    "Time": 1606850613604
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300",
+    "Time": 1606850613764
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615214
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615549
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615566
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615595
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615603
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615619
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615650
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615666
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615683
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615700
+  },
+  {
+    "Interaction": "scroll on a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850615716
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,When_Phase_of_flight-nominal-color,Wildlife_Species-nominal-x",
+    "Time": 1606850616200
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850616216
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850616250
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617320
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617338
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617353
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617371
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617388
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617404
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617421
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617437
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617454
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617471
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617488
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617504
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617522
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617537
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617555
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617571
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617587
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850617605
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\n",
+    "Time": 1606850622061
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA",
+    "Time": 1606850623756
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-",
+    "Time": 1606850624732
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-3",
+    "Time": 1606850625163
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-32",
+    "Time": 1606850625356
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-320",
+    "Time": 1606850625796
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627810
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627827
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627845
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627862
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627879
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627896
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627913
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627929
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627946
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627962
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627981
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850627996
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850628013
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850628030
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850628046
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850628062
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850628080
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850628096
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850628113
+  },
+  {
+    "Interaction": "scroll up",
+    "Value": "",
+    "Time": 1606850628130
   },
   {
     "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333755381
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850629900
   },
   {
     "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333755398
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850630784
   },
   {
     "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333755398
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850630784
   },
   {
     "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333755531
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850636681
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-320\n",
+    "Time": 1606850637884
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-320\nA",
+    "Time": 1606850639067
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-320\nA-",
+    "Time": 1606850639404
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-320\nA-3",
+    "Time": 1606850640100
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-320\nA-31",
+    "Time": 1606850640556
+  },
+  {
+    "Interaction": "typed in answer",
+    "Value": "A-300\nB-62\nB-737300\nA-320\nA-319",
+    "Time": 1606850640772
+  },
+  {
+    "Interaction": "mouseover a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850655067
+  },
+  {
+    "Interaction": "mouseout a related chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Flight_Date-nominal-row,Wildlife_Species-nominal-x",
+    "Time": 1606850656829
   },
   {
     "Interaction": "mouseover on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333755715
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850657129
   },
   {
     "Interaction": "mouseout on the specified chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x",
-    "Time": 1602333755731
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850657146
   },
   {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333755866
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850657146
   },
   {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333755881
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850657413
   },
   {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333755881
+    "Interaction": "mouseover on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850657413
   },
   {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333755982
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333755982
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333755998
+    "Interaction": "mouseout on the specified chart",
+    "Value": "mark:point;encoding:-quantitative-size<aggregate>count,Aircraft_Make_Model-nominal-y,Wildlife_Species-nominal-x",
+    "Time": 1606850657429
   },
   {
     "Interaction": "changed ptask ans of confidence-udata",
-    "Value": "agree",
-    "Time": 1602333759334
+    "Value": "neutral",
+    "Time": 1606850660837
   },
   {
     "Interaction": "changed ptask ans of confidence-ans",
-    "Value": "agree",
-    "Time": 1602333761681
+    "Value": "neutral",
+    "Time": 1606850669373
   },
   {
     "Interaction": "changed ptask ans of efficiency",
     "Value": "neutral",
-    "Time": 1602333766935
+    "Time": 1606850671582
   },
   {
     "Interaction": "changed ptask ans of ease-of-use",
-    "Value": "agree",
-    "Time": 1602333771461
+    "Value": "neutral",
+    "Time": 1606850676966
   },
   {
     "Interaction": "changed ptask ans of utility",
     "Value": "neutral",
-    "Time": 1602333776594
+    "Time": 1606850681270
   },
   {
     "Interaction": "changed ptask ans of overall",
-    "Value": "agree",
-    "Time": 1602333778603
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333780568
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333780585
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333780585
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333780852
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333781059
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333781086
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333781119
-  },
-  {
-    "Interaction": "scroll down",
-    "Value": "",
-    "Time": 1602333781169
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333781316
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333781870
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333781870
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,When_Phase_of_flight-nominal-color",
-    "Time": 1602333781887
-  },
-  {
-    "Interaction": "mouseover a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,Wildlife_Size-nominal-color",
-    "Time": 1602333781937
-  },
-  {
-    "Interaction": "mouseout a related chart",
-    "Value": "mark:tick;encoding:Aircraft_Airline_Operator-nominal-y,Cost_Repair-quantitative-x,Wildlife_Size-nominal-color",
-    "Time": 1602333781986
+    "Value": "neutral",
+    "Time": 1606850685262
   },
   {
     "Interaction": "hit the submit button",
     "Value": "",
-    "Time": 1602333783889
+    "Time": 1606850687205
   },
   {
     "Interaction": "submitted successfully",
     "Value": "",
-    "Time": 1602333783889
+    "Time": 1606850687206
   }
 ]

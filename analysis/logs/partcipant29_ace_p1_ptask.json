@@ -1,8 +1,8 @@
 {
-  "confidence-udata": "agree",
-  "confidence-ans": "agree",
+  "confidence-udata": "neutral",
+  "confidence-ans": "sagree",
   "efficiency": "agree",
   "ease-of-use": "agree",
-  "utility": "agree",
-  "overall": "agree"
+  "utility": "sagree",
+  "overall": "neutral"
 }

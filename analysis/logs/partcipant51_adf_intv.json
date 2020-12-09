@@ -1,5 +1,5 @@
 {
-  "adv": "It is easier to just click on the dimensions and see a relevant plot. So I don't have to think which plot to make for one particular aspect I am looking for in the data. \n\nThe related views save time as they already add additional relevant dimensions on top of my created chart. ",
-  "disadv": "The recommendations were useful but most of the time distractive and too many for answering specific questions. While free exploration they added more value. Though comparing long lists of bar were not fun. It could have been better if recommendations could highlight minimum, maximum values to avoid scrolling and linear searching. ",
+  "adv": "The visualizations load quickly and are well organized and thought out. I am guessing that numeric variables on a large range could be binned automatically, but I am unsure of that - it could be these values were categorical in their nature.",
+  "disadv": "I am not able to select and filter records of interest\nI did not see a way to change the glyph/item display\nI am not able to change the zoom/perspective in order to change what I see (for example, I have to scroll to see the whole list of Directors)\nThe order of visualizations that I see and the combinations of the three dimensions cannot be determined by me (I have to click on Load more to see more)",
   "comment": ""
 }
