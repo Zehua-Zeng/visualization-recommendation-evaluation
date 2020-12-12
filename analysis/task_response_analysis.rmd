@@ -1,0 +1,156 @@
+---
+title: "task_response_analysis"
+output: html_document
+---
+
+```{r libraries, message=FALSE, warning=FALSE}
+
+knitr::opts_chunk$set(fig.align="center") 
+library(rstanarm) #bayesian analysis package
+library(tidyverse) #tidy datascience commands
+library(tidybayes) #tidy data + ggplot workflow
+library(modelr) #tidy pipelines for modeling
+library(ggplot2) #plotting package
+library(gganimate) #animate ggplots
+
+theme_set(theme_light()) # set the ggplot theme for all plots 
+
+```
+
+
+###Read in data
+
+```{r data_prep}
+
+# mydata = read.csv('datasets/choc_cleaned_data.csv') #CHANGE ME 1  
+mydata = read.csv('processed_ptask_responses.csv')  
+mydata_split = read.csv('processed_ptask_responses_split.csv')  
+analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
+summaries = c()
+```
+
+
+## Specify model (using stan_glm(y ~ x1 * x2 * x3))
+```{r specify_model}
+
+
+run_model_3_var = function(data, attr){
+  #select your independent and dependent variables
+
+  data$x1 = as.factor(data$dataset) 
+  data$x2 = as.factor(data$condition)
+  data$x3 = as.factor(data$task)
+  data$y = data[,attr]
+  
+  # label the axes on the plots
+  x_lab = "Task"
+  y_lab = attr
+  fill_lab = "Condition"
+  
+  a_prior = 0  
+  a_prior_max = 2
+  
+  a_sd = (a_prior_max - a_prior) / 2
+  
+  b1_prior = 0
+  b1_sd = a_sd 
+  
+  m = stan_glm(y ~ x1*x2*x3, data = data,
+  prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
+  prior = normal(b1_prior, b1_sd, autoscale = FALSE))
+  
+  summaries = c(summaries, summary(m, digits=3))
+  
+  # Create the dataframe with fitted draws
+  fit = data %>%#pipe mydata to datagrid()
+      data_grid(x1,x2, x3) %>% #create a fit grid with each level in x, and pipe it to add_fitted_draws()
+      add_fitted_draws(m) %>% #add n fitted draws from the model to the fit grid
+      mean_qi(.width = .95) #add 95% credible intervals
+
+  static_post_plot = function(fit) {
+    print(ggplot(fit, aes(x = x3, y = .value, fill = x2)) +
+      geom_bar(stat='identity', position='dodge') +
+      geom_errorbar(aes(ymin = .lower, ymax = .upper), position = position_dodge(width = .9), width = .2) +
+      coord_cartesian(ylim = c(min(data$y, na.rm=T), max(data$y, na.rm=T))) + # sets axis limits
+      facet_grid(cols = vars(x1))+
+      labs(x=x_lab, y=y_lab, fill=fill_lab)+
+      theme(axis.text.x = element_text(size = 8, angle = 45)))
+  }
+  
+  static_post_plot(fit)
+
+}
+run_model_3_var = function(data, attr, split){
+  #select your independent and dependent variables
+  if(split){
+    data$x1 = as.factor(data$oracle) 
+    data$x2 = as.factor(data$search)
+    data$x3 = as.factor(data$task)
+    data$y = data[,attr]
+    
+    # label the axes on the plots
+    x_lab = "Task"
+    y_lab = attr
+    fill_lab = "Search"
+  }
+  else{
+    data$x1 = as.factor(data$dataset) 
+    data$x2 = as.factor(data$condition)
+    data$x3 = as.factor(data$task)
+    data$y = data[,attr]
+    
+    # label the axes on the plots
+    x_lab = "Task"
+    y_lab = attr
+    fill_lab = "Condition"
+    
+  }
+  
+  a_prior = 0  
+  a_prior_max = 2
+  
+  a_sd = (a_prior_max - a_prior) / 2
+  
+  b1_prior = 0
+  b1_sd = a_sd 
+  
+  m = stan_glm(y ~ x1*x2*x3, data = data,
+  prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
+  prior = normal(b1_prior, b1_sd, autoscale = FALSE))
+  
+  summaries = c(summaries, summary(m, digits=3))
+  
+  # Create the dataframe with fitted draws
+  fit = data %>%#pipe mydata to datagrid()
+      data_grid(x1,x2, x3) %>% #create a fit grid with each level in x, and pipe it to add_fitted_draws()
+      add_fitted_draws(m) %>% #add n fitted draws from the model to the fit grid
+      mean_qi(.width = .95) #add 95% credible intervals
+
+  static_post_plot = function(fit) {
+    plot = ggplot(fit, aes(x = x3, y = .value, fill = x2)) +
+      geom_bar(stat='identity', position='dodge') +
+      geom_errorbar(aes(ymin = .lower, ymax = .upper), position = position_dodge(width = .9), width = .2) +
+      coord_cartesian(ylim = c(min(data$y, na.rm=T), max(data$y, na.rm=T))) + # sets axis limits
+      facet_grid(cols = vars(x1))+
+      labs(x=x_lab, y=y_lab, fill=fill_lab)+
+      theme(axis.text.x = element_text(size = 8, angle = 45))
+    filename = gsub("\\.", "_", attr)
+    if(split){
+      filename = paste(filename, "_split")
+    }
+    filename = paste(filename, ".png")
+    ggsave(filename, plot=plot, path="./plots")
+  }
+  
+  static_post_plot(fit)
+
+}
+
+for (attr in analyses){
+    run_model_3_var(mydata, attr, FALSE)
+    run_model_3_var(mydata_split, attr, TRUE)
+}
+
+```
+
+
