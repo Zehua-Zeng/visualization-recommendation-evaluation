@@ -23,8 +23,7 @@ theme_set(theme_light()) # set the ggplot theme for all plots
 ```{r data_prep}
 
 # mydata = read.csv('datasets/choc_cleaned_data.csv') #CHANGE ME 1  
-mydata = read.csv('processed_ptask_responses.csv')  
-mydata_split = read.csv('processed_ptask_responses_split.csv')  
+mydata = read.csv('processed_ptask_responses.csv')
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
 summaries = c()
 ```
@@ -148,7 +147,7 @@ run_model_3_var = function(data, attr, split){
 
 for (attr in analyses){
     run_model_3_var(mydata, attr, FALSE)
-    run_model_3_var(mydata_split, attr, TRUE)
+    run_model_3_var(mydata, attr, TRUE)
 }
 
 ```
