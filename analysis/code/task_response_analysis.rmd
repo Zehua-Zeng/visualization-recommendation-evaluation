@@ -22,7 +22,6 @@ theme_set(theme_light()) # set the ggplot theme for all plots
 
 ```{r data_prep}
 
-# mydata = read.csv('datasets/choc_cleaned_data.csv') #CHANGE ME 1  
 mydata = read.csv('processed_ptask_responses.csv')
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
 summaries = c()
@@ -135,10 +134,10 @@ run_model_3_var = function(data, attr, split){
       theme(axis.text.x = element_text(size = 8, angle = 45))
     filename = gsub("\\.", "_", attr)
     if(split){
-      filename = paste(filename, "_split")
+      filename = paste(filename, "_split", sep="")
     }
-    filename = paste(filename, ".png")
-    ggsave(filename, plot=plot, path="./plots")
+    filename = paste(filename, ".png", sep="")
+    ggsave(filename, plot=plot, path="../plots")
   }
   
   static_post_plot(fit)
@@ -149,6 +148,64 @@ for (attr in analyses){
     run_model_3_var(mydata, attr, FALSE)
     run_model_3_var(mydata, attr, TRUE)
 }
+
+```
+
+```{r time_analysis}
+
+timedata = read.csv('processed_completion_time.csv')
+
+run_model_time = function(data, task, prior_mean, prior_sd){
+  #select your independent and dependent variables
+  data$x1 = as.factor(data$dataset) 
+  data$x2 = as.factor(data$search)
+  data$x3 = as.factor(data$oracle)
+  data$y = data$completion_time
+    
+  # label the axes on the plots
+  x_lab = "Oracle"
+  y_lab = "Time"
+  fill_lab = "Search"
+  a_prior = prior_mean 
+  
+  a_sd = prior_sd
+  
+  b1_prior = 0
+  b1_sd = a_sd 
+  
+  m = stan_glm(y ~ x1*x2*x3, data = data,
+  prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
+  prior = normal(b1_prior, b1_sd, autoscale = FALSE))
+  
+  summaries = c(summaries, summary(m, digits=3))
+  
+  # Create the dataframe with fitted draws
+  fit = data %>%#pipe mydata to datagrid()
+      data_grid(x1,x2, x3) %>% #create a fit grid with each level in x, and pipe it to add_fitted_draws()
+      add_fitted_draws(m) %>% #add n fitted draws from the model to the fit grid
+      mean_qi(.width = .95) #add 95% credible intervals
+
+  static_post_plot = function(fit) {
+    plot = ggplot(fit, aes(x = x3, y = .value, fill = x2)) +
+      geom_bar(stat='identity', position='dodge') +
+      geom_errorbar(aes(ymin = .lower, ymax = .upper), position = position_dodge(width = .9), width = .2) +
+      coord_cartesian(ylim = c(min(data$y, na.rm=T), max(data$y, na.rm=T))) + # sets axis limits
+      facet_grid(cols = vars(x1))+
+      labs(x=x_lab, y=y_lab, fill=fill_lab)+
+      theme(axis.text.x = element_text(size = 8, angle = 45))
+    filename = gsub(" ", "_", task)
+    filename = paste("time_", filename, ".png", sep="")
+    ggsave(filename, plot=plot, path="../plots")
+  }
+  
+  static_post_plot(fit)
+
+}
+
+run_model_time(filter(time_data, task == "1. Find Extremum"), "Find Extremum", 190342, 96573)
+run_model_time(filter(time_data, task == "2. Retrieve Value"), "Retrieve Value", 313366, 88498)
+run_model_time(filter(time_data, task == "3. Prediction"), "Prediction", 522316, 394608)
+run_model_time(filter(time_data, task == "4. Exploration"), "Exploration", 415880, 115980)
 
 ```
 
