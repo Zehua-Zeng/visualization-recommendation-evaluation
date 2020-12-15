@@ -136,8 +136,9 @@ run_model_3_var = function(data, attr, split){
     if(split){
       filename = paste(filename, "_split", sep="")
     }
-    filename = paste(filename, ".png", sep="")
-    ggsave(filename, plot=plot, path="../plots")
+  
+    ggsave(paste(filename, ".png", sep=""), plot=plot, path="../plots")
+    write.csv(fit, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
   }
   
   static_post_plot(fit)
@@ -153,7 +154,7 @@ for (attr in analyses){
 
 ```{r time_analysis}
 
-timedata = read.csv('processed_completion_time.csv')
+time_data = read.csv('processed_completion_time.csv')
 
 run_model_time = function(data, task, prior_mean, prior_sd){
   #select your independent and dependent variables
@@ -194,8 +195,10 @@ run_model_time = function(data, task, prior_mean, prior_sd){
       labs(x=x_lab, y=y_lab, fill=fill_lab)+
       theme(axis.text.x = element_text(size = 8, angle = 45))
     filename = gsub(" ", "_", task)
-    filename = paste("time_", filename, ".png", sep="")
-    ggsave(filename, plot=plot, path="../plots")
+    filename = paste("time_", filename, sep="")
+    ggsave(paste(filename, ".png", sep=""), plot=plot, path="../plots")
+    
+    write.csv(fit, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
   }
   
   static_post_plot(fit)
