@@ -1,0 +1,237 @@
+participant_id,dataset,oracle,search,condition,task,time
+partcipant41,movies,dziban,bfs,dziban_bfs,3. Prediction,785329
+partcipant5,movies,dziban,bfs,dziban_bfs,4. Exploration,595646
+partcipant36,birdstrikes,compassql,dfs,compassql_dfs,3. Prediction,1445670
+partcipant17,movies,compassql,dfs,compassql_dfs,2. Retrieve Value,103418
+partcipant56,movies,dziban,dfs,dziban_dfs,3. Prediction,665856
+partcipant6,birdstrikes,compassql,dfs,compassql_dfs,3. Prediction,591527
+partcipant29,movies,compassql,bfs,compassql_bfs,1. Find Extremum,243796
+partcipant57,birdstrikes,dziban,dfs,dziban_dfs,3. Prediction,689810
+partcipant7,movies,compassql,dfs,compassql_dfs,3. Prediction,537480
+partcipant28,birdstrikes,compassql,bfs,compassql_bfs,1. Find Extremum,180459
+partcipant33,birdstrikes,dziban,bfs,dziban_bfs,1. Find Extremum,316352
+partcipant20,birdstrikes,compassql,dfs,compassql_dfs,1. Find Extremum,405433
+partcipant27,birdstrikes,dziban,bfs,dziban_bfs,1. Find Extremum,186400
+partcipant8,movies,dziban,dfs,dziban_dfs,3. Prediction,498083
+partcipant54,movies,dziban,dfs,dziban_dfs,1. Find Extremum,131425
+partcipant23,birdstrikes,compassql,dfs,compassql_dfs,2. Retrieve Value,354845
+partcipant35,movies,compassql,bfs,compassql_bfs,2. Retrieve Value,91089
+partcipant43,movies,dziban,bfs,dziban_bfs,1. Find Extremum,76532
+partcipant16,birdstrikes,dziban,dfs,dziban_dfs,4. Exploration,1291678
+partcipant42,birdstrikes,dziban,bfs,dziban_bfs,1. Find Extremum,185373
+partcipant14,movies,compassql,dfs,compassql_dfs,1. Find Extremum,365158
+partcipant9,movies,dziban,bfs,dziban_bfs,1. Find Extremum,399447
+partcipant44,movies,dziban,bfs,dziban_bfs,4. Exploration,807027
+partcipant18,birdstrikes,dziban,dfs,dziban_dfs,3. Prediction,927510
+partcipant53,movies,dziban,dfs,dziban_dfs,4. Exploration,641783
+partcipant1,birdstrikes,compassql,bfs,compassql_bfs,3. Prediction,529136
+partcipant19,movies,compassql,dfs,compassql_dfs,3. Prediction,842218
+partcipant11,birdstrikes,compassql,dfs,compassql_dfs,1. Find Extremum,88641
+partcipant46,movies,dziban,dfs,dziban_dfs,3. Prediction,595914
+partcipant39,movies,compassql,bfs,compassql_bfs,1. Find Extremum,223658
+partcipant10,birdstrikes,compassql,bfs,compassql_bfs,3. Prediction,712305
+partcipant22,movies,dziban,bfs,dziban_bfs,1. Find Extremum,149612
+partcipant5,movies,dziban,bfs,dziban_bfs,2. Retrieve Value,241724
+partcipant17,movies,compassql,dfs,compassql_dfs,4. Exploration,644776
+partcipant47,movies,dziban,bfs,dziban_bfs,1. Find Extremum,287882
+partcipant34,birdstrikes,dziban,dfs,dziban_dfs,1. Find Extremum,274496
+partcipant32,movies,compassql,bfs,compassql_bfs,1. Find Extremum,210676
+partcipant44,movies,dziban,bfs,dziban_bfs,2. Retrieve Value,308046
+partcipant53,movies,dziban,dfs,dziban_dfs,2. Retrieve Value,212660
+partcipant12,movies,compassql,dfs,compassql_dfs,3. Prediction,977202
+partcipant3,birdstrikes,compassql,bfs,compassql_bfs,1. Find Extremum,299530
+partcipant52,birdstrikes,dziban,bfs,dziban_bfs,1. Find Extremum,417279
+partcipant23,birdstrikes,compassql,dfs,compassql_dfs,4. Exploration,962746
+partcipant49,birdstrikes,compassql,bfs,compassql_bfs,1. Find Extremum,343252
+partcipant16,birdstrikes,dziban,dfs,dziban_dfs,2. Retrieve Value,152353
+partcipant24,movies,compassql,bfs,compassql_bfs,3. Prediction,739454
+partcipant35,movies,compassql,bfs,compassql_bfs,4. Exploration,440362
+partcipant17,movies,compassql,dfs,compassql_dfs,3. Prediction,1025924
+partcipant56,movies,dziban,dfs,dziban_dfs,2. Retrieve Value,225553
+partcipant25,birdstrikes,dziban,dfs,dziban_dfs,1. Find Extremum,229329
+partcipant6,birdstrikes,compassql,dfs,compassql_dfs,2. Retrieve Value,191305
+partcipant21,birdstrikes,compassql,dfs,compassql_dfs,1. Find Extremum,242337
+partcipant57,birdstrikes,dziban,dfs,dziban_dfs,2. Retrieve Value,243737
+partcipant7,movies,compassql,dfs,compassql_dfs,2. Retrieve Value,185769
+partcipant41,movies,dziban,bfs,dziban_bfs,2. Retrieve Value,239045
+partcipant10,birdstrikes,compassql,bfs,compassql_bfs,4. Exploration,914374
+partcipant45,movies,compassql,dfs,compassql_dfs,1. Find Extremum,169317
+partcipant40,birdstrikes,dziban,dfs,dziban_dfs,1. Find Extremum,235069
+partcipant36,birdstrikes,compassql,dfs,compassql_dfs,2. Retrieve Value,177032
+partcipant13,birdstrikes,dziban,bfs,dziban_bfs,1. Find Extremum,123751
+partcipant46,movies,dziban,dfs,dziban_dfs,4. Exploration,597168
+partcipant1,birdstrikes,compassql,bfs,compassql_bfs,4. Exploration,764832
+partcipant19,movies,compassql,dfs,compassql_dfs,4. Exploration,595448
+partcipant24,movies,compassql,bfs,compassql_bfs,4. Exploration,902994
+partcipant35,movies,compassql,bfs,compassql_bfs,3. Prediction,325284
+partcipant8,movies,dziban,dfs,dziban_dfs,2. Retrieve Value,374719
+partcipant23,birdstrikes,compassql,dfs,compassql_dfs,3. Prediction,993777
+partcipant59,movies,compassql,bfs,compassql_bfs,1. Find Extremum,118083
+partcipant30,movies,dziban,dfs,dziban_dfs,1. Find Extremum,129046
+partcipant31,birdstrikes,dziban,dfs,dziban_dfs,1. Find Extremum,169197
+partcipant12,movies,compassql,dfs,compassql_dfs,4. Exploration,908271
+partcipant4,movies,compassql,dfs,compassql_dfs,1. Find Extremum,64071
+partcipant26,birdstrikes,dziban,bfs,dziban_bfs,1. Find Extremum,210051
+partcipant18,birdstrikes,dziban,dfs,dziban_dfs,2. Retrieve Value,190595
+partcipant50,birdstrikes,compassql,dfs,compassql_dfs,1. Find Extremum,733951
+partcipant46,movies,dziban,dfs,dziban_dfs,2. Retrieve Value,87353
+partcipant51,movies,dziban,dfs,dziban_dfs,1. Find Extremum,146532
+partcipant19,movies,compassql,dfs,compassql_dfs,2. Retrieve Value,196136
+partcipant1,birdstrikes,compassql,bfs,compassql_bfs,2. Retrieve Value,130713
+partcipant55,movies,compassql,dfs,compassql_dfs,1. Find Extremum,180368
+partcipant57,birdstrikes,dziban,dfs,dziban_dfs,4. Exploration,794259
+partcipant7,movies,compassql,dfs,compassql_dfs,4. Exploration,670009
+partcipant56,movies,dziban,dfs,dziban_dfs,4. Exploration,751604
+partcipant6,birdstrikes,compassql,dfs,compassql_dfs,4. Exploration,597295
+partcipant38,movies,compassql,bfs,compassql_bfs,1. Find Extremum,289185
+partcipant15,movies,dziban,dfs,dziban_dfs,1. Find Extremum,124763
+partcipant58,birdstrikes,dziban,bfs,dziban_bfs,1. Find Extremum,311761
+partcipant10,birdstrikes,compassql,bfs,compassql_bfs,2. Retrieve Value,366251
+partcipant36,birdstrikes,compassql,dfs,compassql_dfs,4. Exploration,850893
+partcipant41,movies,dziban,bfs,dziban_bfs,4. Exploration,895906
+partcipant5,movies,dziban,bfs,dziban_bfs,3. Prediction,659498
+partcipant53,movies,dziban,dfs,dziban_dfs,3. Prediction,664562
+partcipant12,movies,compassql,dfs,compassql_dfs,2. Retrieve Value,286290
+partcipant48,birdstrikes,compassql,bfs,compassql_bfs,1. Find Extremum,156766
+partcipant44,movies,dziban,bfs,dziban_bfs,3. Prediction,847375
+partcipant18,birdstrikes,dziban,dfs,dziban_dfs,4. Exploration,898077
+partcipant24,movies,compassql,bfs,compassql_bfs,2. Retrieve Value,243659
+partcipant16,birdstrikes,dziban,dfs,dziban_dfs,3. Prediction,413259
+partcipant2,birdstrikes,compassql,bfs,compassql_bfs,1. Find Extremum,365038
+partcipant37,movies,dziban,bfs,dziban_bfs,1. Find Extremum,171549
+partcipant8,movies,dziban,dfs,dziban_dfs,4. Exploration,880304
+partcipant55,movies,compassql,dfs,compassql_dfs,4. Exploration,410176
+partcipant51,movies,dziban,dfs,dziban_dfs,4. Exploration,440702
+partcipant33,birdstrikes,dziban,bfs,dziban_bfs,3. Prediction,610181
+partcipant20,birdstrikes,compassql,dfs,compassql_dfs,3. Prediction,286541
+partcipant13,birdstrikes,dziban,bfs,dziban_bfs,2. Retrieve Value,181251
+partcipant41,movies,dziban,bfs,dziban_bfs,1. Find Extremum,232085
+partcipant36,birdstrikes,compassql,dfs,compassql_dfs,1. Find Extremum,176562
+partcipant40,birdstrikes,dziban,dfs,dziban_dfs,2. Retrieve Value,241323
+partcipant15,movies,dziban,dfs,dziban_dfs,4. Exploration,860832
+partcipant45,movies,compassql,dfs,compassql_dfs,2. Retrieve Value,352708
+partcipant58,birdstrikes,dziban,bfs,dziban_bfs,4. Exploration,782013
+partcipant6,birdstrikes,compassql,dfs,compassql_dfs,1. Find Extremum,189291
+partcipant25,birdstrikes,dziban,dfs,dziban_dfs,2. Retrieve Value,354573
+partcipant29,movies,compassql,bfs,compassql_bfs,3. Prediction,529649
+partcipant38,movies,compassql,bfs,compassql_bfs,4. Exploration,859345
+partcipant56,movies,dziban,dfs,dziban_dfs,1. Find Extremum,173295
+partcipant7,movies,compassql,dfs,compassql_dfs,1. Find Extremum,97353
+partcipant28,birdstrikes,compassql,bfs,compassql_bfs,3. Prediction,617546
+partcipant57,birdstrikes,dziban,dfs,dziban_dfs,1. Find Extremum,214771
+partcipant21,birdstrikes,compassql,dfs,compassql_dfs,2. Retrieve Value,386503
+partcipant4,movies,compassql,dfs,compassql_dfs,2. Retrieve Value,274449
+partcipant9,movies,dziban,bfs,dziban_bfs,3. Prediction,1139979
+partcipant50,birdstrikes,compassql,dfs,compassql_dfs,2. Retrieve Value,172199
+partcipant18,birdstrikes,dziban,dfs,dziban_dfs,1. Find Extremum,86738
+partcipant48,birdstrikes,compassql,bfs,compassql_bfs,4. Exploration,560507
+partcipant26,birdstrikes,dziban,bfs,dziban_bfs,2. Retrieve Value,277825
+partcipant14,movies,compassql,dfs,compassql_dfs,3. Prediction,671747
+partcipant30,movies,dziban,dfs,dziban_dfs,2. Retrieve Value,85470
+partcipant31,birdstrikes,dziban,dfs,dziban_dfs,2. Retrieve Value,150188
+partcipant27,birdstrikes,dziban,bfs,dziban_bfs,3. Prediction,284909
+partcipant8,movies,dziban,dfs,dziban_dfs,1. Find Extremum,378739
+partcipant54,movies,dziban,dfs,dziban_dfs,3. Prediction,1440465
+partcipant37,movies,dziban,bfs,dziban_bfs,4. Exploration,668223
+partcipant59,movies,compassql,bfs,compassql_bfs,2. Retrieve Value,125868
+partcipant2,birdstrikes,compassql,bfs,compassql_bfs,4. Exploration,682492
+partcipant43,movies,dziban,bfs,dziban_bfs,3. Prediction,378740
+partcipant42,birdstrikes,dziban,bfs,dziban_bfs,3. Prediction,654838
+partcipant22,movies,dziban,bfs,dziban_bfs,3. Prediction,754890
+partcipant40,birdstrikes,dziban,dfs,dziban_dfs,4. Exploration,821641
+partcipant10,birdstrikes,compassql,bfs,compassql_bfs,1. Find Extremum,80865
+partcipant58,birdstrikes,dziban,bfs,dziban_bfs,2. Retrieve Value,199194
+partcipant15,movies,dziban,dfs,dziban_dfs,2. Retrieve Value,175713
+partcipant45,movies,compassql,dfs,compassql_dfs,4. Exploration,434847
+partcipant21,birdstrikes,compassql,dfs,compassql_dfs,4. Exploration,886577
+partcipant47,movies,dziban,bfs,dziban_bfs,3. Prediction,473256
+partcipant38,movies,compassql,bfs,compassql_bfs,2. Retrieve Value,156638
+partcipant25,birdstrikes,dziban,dfs,dziban_dfs,4. Exploration,729704
+partcipant34,birdstrikes,dziban,dfs,dziban_dfs,3. Prediction,353005
+partcipant1,birdstrikes,compassql,bfs,compassql_bfs,1. Find Extremum,419898
+partcipant19,movies,compassql,dfs,compassql_dfs,1. Find Extremum,102940
+partcipant51,movies,dziban,dfs,dziban_dfs,2. Retrieve Value,170892
+partcipant11,birdstrikes,compassql,dfs,compassql_dfs,3. Prediction,778919
+partcipant55,movies,compassql,dfs,compassql_dfs,2. Retrieve Value,154328
+partcipant39,movies,compassql,bfs,compassql_bfs,3. Prediction,745930
+partcipant13,birdstrikes,dziban,bfs,dziban_bfs,4. Exploration,722972
+partcipant46,movies,dziban,dfs,dziban_dfs,1. Find Extremum,127562
+partcipant37,movies,dziban,bfs,dziban_bfs,2. Retrieve Value,196112
+partcipant59,movies,compassql,bfs,compassql_bfs,4. Exploration,541348
+partcipant49,birdstrikes,compassql,bfs,compassql_bfs,3. Prediction,289783
+partcipant2,birdstrikes,compassql,bfs,compassql_bfs,2. Retrieve Value,182050
+partcipant24,movies,compassql,bfs,compassql_bfs,1. Find Extremum,212961
+partcipant50,birdstrikes,compassql,dfs,compassql_dfs,4. Exploration,523348
+partcipant32,movies,compassql,bfs,compassql_bfs,3. Prediction,427959
+partcipant48,birdstrikes,compassql,bfs,compassql_bfs,2. Retrieve Value,213068
+partcipant26,birdstrikes,dziban,bfs,dziban_bfs,4. Exploration,568648
+partcipant4,movies,compassql,dfs,compassql_dfs,4. Exploration,949550
+partcipant12,movies,compassql,dfs,compassql_dfs,1. Find Extremum,774624
+partcipant3,birdstrikes,compassql,bfs,compassql_bfs,3. Prediction,555236
+partcipant31,birdstrikes,dziban,dfs,dziban_dfs,4. Exploration,376334
+partcipant30,movies,dziban,dfs,dziban_dfs,4. Exploration,722775
+partcipant52,birdstrikes,dziban,bfs,dziban_bfs,3. Prediction,780384
+partcipant20,birdstrikes,compassql,dfs,compassql_dfs,2. Retrieve Value,170561
+partcipant39,movies,compassql,bfs,compassql_bfs,4. Exploration,907191
+partcipant13,birdstrikes,dziban,bfs,dziban_bfs,3. Prediction,382749
+partcipant11,birdstrikes,compassql,dfs,compassql_dfs,4. Exploration,878045
+partcipant33,birdstrikes,dziban,bfs,dziban_bfs,2. Retrieve Value,385035
+partcipant47,movies,dziban,bfs,dziban_bfs,4. Exploration,802248
+partcipant29,movies,compassql,bfs,compassql_bfs,2. Retrieve Value,246990
+partcipant25,birdstrikes,dziban,dfs,dziban_dfs,3. Prediction,476703
+partcipant34,birdstrikes,dziban,dfs,dziban_dfs,4. Exploration,632996
+partcipant17,movies,compassql,dfs,compassql_dfs,1. Find Extremum,158680
+partcipant28,birdstrikes,compassql,bfs,compassql_bfs,2. Retrieve Value,238401
+partcipant21,birdstrikes,compassql,dfs,compassql_dfs,3. Prediction,1229062
+partcipant22,movies,dziban,bfs,dziban_bfs,4. Exploration,956825
+partcipant40,birdstrikes,dziban,dfs,dziban_dfs,3. Prediction,1401570
+partcipant45,movies,compassql,dfs,compassql_dfs,3. Prediction,730911
+partcipant30,movies,dziban,dfs,dziban_dfs,3. Prediction,377597
+partcipant52,birdstrikes,dziban,bfs,dziban_bfs,4. Exploration,548394
+partcipant3,birdstrikes,compassql,bfs,compassql_bfs,4. Exploration,954624
+partcipant31,birdstrikes,dziban,dfs,dziban_dfs,3. Prediction,390969
+partcipant4,movies,compassql,dfs,compassql_dfs,3. Prediction,1035578
+partcipant50,birdstrikes,compassql,dfs,compassql_dfs,3. Prediction,732418
+partcipant9,movies,dziban,bfs,dziban_bfs,2. Retrieve Value,262809
+partcipant32,movies,compassql,bfs,compassql_bfs,4. Exploration,762361
+partcipant14,movies,compassql,dfs,compassql_dfs,2. Retrieve Value,432948
+partcipant26,birdstrikes,dziban,bfs,dziban_bfs,3. Prediction,355453
+partcipant43,movies,dziban,bfs,dziban_bfs,2. Retrieve Value,88999
+partcipant35,movies,compassql,bfs,compassql_bfs,1. Find Extremum,118354
+partcipant42,birdstrikes,dziban,bfs,dziban_bfs,2. Retrieve Value,212966
+partcipant54,movies,dziban,dfs,dziban_dfs,2. Retrieve Value,536050
+partcipant27,birdstrikes,dziban,bfs,dziban_bfs,2. Retrieve Value,155633
+partcipant49,birdstrikes,compassql,bfs,compassql_bfs,4. Exploration,617956
+partcipant23,birdstrikes,compassql,dfs,compassql_dfs,1. Find Extremum,776278
+partcipant59,movies,compassql,bfs,compassql_bfs,3. Prediction,581608
+partcipant28,birdstrikes,compassql,bfs,compassql_bfs,4. Exploration,622002
+partcipant34,birdstrikes,dziban,dfs,dziban_dfs,2. Retrieve Value,317898
+partcipant47,movies,dziban,bfs,dziban_bfs,2. Retrieve Value,164610
+partcipant29,movies,compassql,bfs,compassql_bfs,4. Exploration,985296
+partcipant38,movies,compassql,bfs,compassql_bfs,3. Prediction,548430
+partcipant22,movies,dziban,bfs,dziban_bfs,2. Retrieve Value,443844
+partcipant15,movies,dziban,dfs,dziban_dfs,3. Prediction,804142
+partcipant58,birdstrikes,dziban,bfs,dziban_bfs,3. Prediction,1055394
+partcipant5,movies,dziban,bfs,dziban_bfs,1. Find Extremum,229185
+partcipant39,movies,compassql,bfs,compassql_bfs,2. Retrieve Value,158165
+partcipant20,birdstrikes,compassql,dfs,compassql_dfs,4. Exploration,705415
+partcipant51,movies,dziban,dfs,dziban_dfs,3. Prediction,348954
+partcipant33,birdstrikes,dziban,bfs,dziban_bfs,4. Exploration,363301
+partcipant11,birdstrikes,compassql,dfs,compassql_dfs,2. Retrieve Value,127336
+partcipant55,movies,compassql,dfs,compassql_dfs,3. Prediction,1061322
+partcipant42,birdstrikes,dziban,bfs,dziban_bfs,4. Exploration,749451
+partcipant2,birdstrikes,compassql,bfs,compassql_bfs,3. Prediction,558253
+partcipant43,movies,dziban,bfs,dziban_bfs,4. Exploration,493578
+partcipant16,birdstrikes,dziban,dfs,dziban_dfs,1. Find Extremum,226503
+partcipant37,movies,dziban,bfs,dziban_bfs,3. Prediction,732332
+partcipant27,birdstrikes,dziban,bfs,dziban_bfs,4. Exploration,1045948
+partcipant49,birdstrikes,compassql,bfs,compassql_bfs,2. Retrieve Value,193396
+partcipant54,movies,dziban,dfs,dziban_dfs,4. Exploration,927655
+partcipant3,birdstrikes,compassql,bfs,compassql_bfs,2. Retrieve Value,157941
+partcipant53,movies,dziban,dfs,dziban_dfs,1. Find Extremum,131910
+partcipant52,birdstrikes,dziban,bfs,dziban_bfs,2. Retrieve Value,380652
+partcipant9,movies,dziban,bfs,dziban_bfs,4. Exploration,829866
+partcipant44,movies,dziban,bfs,dziban_bfs,1. Find Extremum,378562
+partcipant32,movies,compassql,bfs,compassql_bfs,2. Retrieve Value,522845
+partcipant48,birdstrikes,compassql,bfs,compassql_bfs,3. Prediction,614957
+partcipant14,movies,compassql,dfs,compassql_dfs,4. Exploration,630240
