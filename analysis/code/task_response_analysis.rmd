@@ -123,8 +123,8 @@ run_model_time = function(data, task, a_prior, a_sd){
 
 run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", 190.34, 96.57)
 run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value", 313.37, 88.50)
-run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", 522.32, 394.61)
-run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 415.88, 115.98)
+run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", 870.53, 657.68)
+run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 693.13, 193.30)
 
 ```
 
