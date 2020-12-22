@@ -42,10 +42,10 @@ generate_posterior_plot = function(model, num_independent_variables, filename, x
     emmeans( ~ x1*x2*x3) %>%
     gather_emmeans_draws()
     
-    f$condition = paste(f$x1, f$x2, f$x3)
+    f$condition = paste(f$x3, f$x1, f$x2, sep= " | ")
   }
   #plot = ggplot(f, aes(x = .value, y = condition, color = x2)) +stat_halfeye()
-  plot = ggplot(f, aes(x = .value, y = condition, fill = x2)) + stat_halfeye() + labs(x=x_lab)
+  plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x2)) + stat_halfeye() + labs(x=x_lab)
   ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
   
   write.csv(f, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
