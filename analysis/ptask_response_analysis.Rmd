@@ -1,0 +1,230 @@
+---
+title: "ptask_response_analysis"
+output: html_document
+---
+
+```{r libraries, message=FALSE, warning=FALSE}
+
+knitr::opts_chunk$set(fig.align="center") 
+
+# install.packages(c("ggplot2", "rstanarm", "tidyverse", "tidybayes", "modelr", "gganimate"))
+
+library(rstanarm) #bayesian analysis package
+library(tidyverse) #tidy datascience commands
+library(tidybayes) #tidy data + ggplot workflow
+library(modelr) #tidy pipelines for modeling
+library(ggplot2) #plotting package
+library(gganimate) #animate ggplots
+
+theme_set(theme_light()) # set the ggplot theme for all plots 
+
+```
+
+
+###Read in data
+
+```{r data_prep}
+
+# mydata = read.csv('datasets/choc_cleaned_data.csv') #CHANGE ME 1
+ mydata = read.csv('processed_ptask_responses_split.csv')
+```
+
+
+## Specify model (using stan_glm(y ~ x1 * x2 * x3))
+```{r specify_model}
+
+#select your independent and dependent variables
+
+mydata$x1 = as.factor(mydata$oracle) 
+mydata$x2 = as.factor(mydata$task)
+mydata$x3 = as.factor(mydata$search)
+mydata$y = mydata$confidence.udata #CHANGE ME 4
+
+# label the axes on the plots
+x_lab = "Oracle" #CHANGE ME 5
+y_lab = "Confidence (Understanding Data)" #CHANGE ME 6
+fill_lab = "Task"
+
+```
+
+###Set Priors
+
+```{r}
+
+a_prior = 0  
+a_prior_max = 2
+
+# With a normal distribution, we can't completely rule out
+# impossible values, but we choose an sd that assigns less than
+# 5% probability to those impossible values. Remember that in a normal
+# distribution, 95% of the data lies within 2 sds of the mean. Therefore,
+# we calculate the value of 1 sd by finding the maximum amount our data
+# can vary from the mean (a_prior_max - a_prior) and divide that in half.
+
+a_sd = (a_prior_max - a_prior) / 2  # do not change
+
+# CHANGE THIS COMMENT EXPLAINING YOUR CHOICE OF PRIORS (11)
+# In our example dataset, we do not have a strong hypothesis that the treatment 
+# conditions will be higher or lower than the control, so we set the mean of
+# the effect size parameters to be 0. In the absence of other information, we
+# set the sd to be the same as for the control condition.
+
+b1_prior = 0  # CHANGE ME 9
+b1_sd = a_sd   # CHANGE ME 10
+
+```
+
+
+
+### Checking priors with visualizations
+
+```{r check_priors, results="hide"}
+
+# generate the prior distribution
+m_prior = stan_glm(y ~ x1*x2*x3, data = mydata,
+  prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
+  prior = normal(b1_prior, b1_sd, autoscale = FALSE),
+  prior_PD = TRUE
+)
+
+# Create the dataframe with fitted draws
+prior_draws = mydata %>% #pipe mydata to datagrid()
+                data_grid(x1, x2, x3) %>% #create a fit grid with each level in x, and pipe it to add_fitted_draws()
+                add_fitted_draws(m_prior, n = 5, seed = 12345) #add n fitted draws from the model to the fit grid
+                # the seed argument is for reproducibility: it ensures the pseudo-random
+                # number generator used to pick draws has the same seed on every run,
+                # so that someone else can re-run this code and verify their output matches
+
+# Plot the five sample draws
+static_prior_plot = function(prior_draws) {
+  ggplot(prior_draws, aes(x = x3, y = .value, fill = x2))  +
+    geom_bar(stat='identity', position='dodge') +
+    facet_grid(cols = vars(x1), rows = vars(.draw)) +
+    # coord_cartesian(ylim = c(min(mydata$y, na.rm=T), max(mydata$y, na.rm=T))) + # sets axis limits
+    theme(strip.background = element_blank(),
+          strip.text.y = element_blank(),
+          axis.text.x = element_text(angle = 45, hjust = 1),
+          plot.title = element_text(hjust = 0.5)) +
+    labs(x=x_lab, y=y_lab, fill=fill_lab) + # axes labels
+    ggtitle("Five sample draws from the priors")
+}
+static_prior_plot(prior_draws)
+```
+
+#### Animated visualization of priors
+
+```{r HOPs_priors}
+# Animation parameters
+n_draws = 50 # the number of draws to visualize in the HOPs 
+frames_per_second = 2.5 # the speed of the HOPs
+# 2.5 frames per second (400ms) is the recommended speed for the HOPs visualization.
+# Faster speeds (100ms) have been demonstrated to not work as well.
+# See Kale et al. VIS 2018 for more info.
+
+# Add more prior draws to the data frame for the visualization
+more_prior_draws = prior_draws %>%
+                rbind(
+                mydata %>%
+                data_grid(x1,x2, x3) %>%
+                add_fitted_draws(m_prior, n = n_draws - 5, seed = 12345))
+
+# Animate the prior draws with HOPs
+# this function is defined in 'plotting_functions.R', if you wish to customize the aesthetics.
+# prior_HOPs = animate(HOPs_plot_7a(more_prior_draws), nframes = n_draws * 2, fps = frames_per_second)
+# prior_HOPs = animate(HOPs_plot_7b(more_prior_draws), nframes = n_draws * 2, fps = frames_per_second)
+
+HOPs_plot = function(data) {
+  ggplot(data, aes(x = x3, y = .value, fill = x2)) + #do not change
+    geom_bar(stat='identity', position='dodge') + #do not change from stat='identity'. Fill and line aesthetics may be modified here, see ggplot2 documentation
+    transition_states(.draw, transition_length = 1, state_length = 1) + # gganimate code to animate the plots. Do not change
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) + #rotates the x-axis text for readability
+    coord_cartesian(ylim = c(min(mydata$y, na.rm=T), max(mydata$y, na.rm=T))) + # sets axis limits
+    # scale_x_discrete(limits=c("before","after")) + #manually set the order of the x-axis levels
+    facet_grid(cols = vars(x1))+
+    labs(x=x_lab, y=y_lab, fill=fill_lab) # axes labels
+}
+prior_HOPs = animate(HOPs_plot(more_prior_draws), nframes = n_draws * 2, fps = frames_per_second)
+prior_HOPs
+```
+
+
+
+### Run the model
+There's nothing you have to change here. Just run the model.
+
+<span style="color:red">**Troubleshooting:**</span> If this code produces errors, check the troubleshooting section under the "Check priors" heading above for a few troubleshooting options. 
+
+```{r results = "hide", message = FALSE, warning = FALSE}
+
+m = stan_glm(y ~ x1*x2*x3, data = mydata,
+  prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
+  prior = normal(b1_prior, b1_sd, autoscale = FALSE)
+)
+
+```
+
+
+## Model summary
+Here is a summary of the model fit. 
+
+The summary reports diagnostic values that can help you evaluate whether your model is a good fit for the data. For this template, we can keep diagnostics simple: check that your `Rhat` values are very close to 1.0. Larger values mean that your model is not a good fit for the data. This is usually only a problem if the `Rhat` values are greater than 1.1, which is a warning sign that the Markov chains have failed to converge. In this happens, Stan will warn you about the failure, and you should adjust your priors.
+
+```{r}
+summary(m, digits=3)
+```
+
+
+## Visualizing results
+To plot the results, we again create a fit grid using `data_grid()`, just as we did when we created the HOPs for the prior. Given this fit grid, we can then create any number of visualizations of the results. One way we might want to visualize the results is a static graph with error bars that represent a 95% credible interval. For each x position in the fit grid, we can get the posterior mean estimates and 95% credible intervals from the model:
+
+```{r static_graph}
+
+# Create the dataframe with fitted draws
+fit = mydata %>%#pipe mydata to datagrid()
+      data_grid(x1,x2, x3) %>% #create a fit grid with each level in x, and pipe it to add_fitted_draws()
+      add_fitted_draws(m) %>% #add n fitted draws from the model to the fit grid
+      mean_qi(.width = .95) #add 95% credible intervals
+
+# Plot the posterior draws
+# this function is defined in 'plotting_functions.R', if you wish to customize the aesthetics.
+static_post_plot = function(fit) {
+  ggplot(fit, aes(x = x3, y = .value, fill = x2)) +
+    geom_bar(stat='identity', position='dodge') +
+    geom_errorbar(aes(ymin = .lower, ymax = .upper), position = position_dodge(width = .9), width = .2) +
+    coord_cartesian(ylim = c(min(mydata$y, na.rm=T), max(mydata$y, na.rm=T))) + # sets axis limits
+    facet_grid(cols = vars(x1))+
+    labs(x=x_lab, y=y_lab, fill=fill_lab)+
+    theme(axis.text.x = element_text(size = 8, angle = 45))
+}
+static_post_plot(fit)
+```
+
+
+
+### Sampling from the posterior
+
+```{r}
+
+p = mydata %>% #pipe mydata to datagrid()
+  data_grid(x1, x2, x3) %>% #create a fit grid with each level in x, and pipe it to add_fitted_draws()
+  add_fitted_draws(m, n = n_draws, seed = 12345) #add n fitted draws from the model to the fit grid
+
+# animate the data from p, using the graph aesthetics set in the graph aesthetics code chunk
+# this function is defined in 'plotting_functions.R', if you wish to customize the aesthetic
+post_HOPs = animate(HOPs_plot(p), nframes = n_draws * 2, fps = frames_per_second) 
+post_HOPs
+
+```
+
+
+<center><span style="font-size:1.5em">**Prior draws**</span></center>
+```{r echo=F}
+prior_HOPs
+```
+
+<center><span style="font-size:1.5em">**Posterior draws**</span></center>
+```{r echo=F}
+post_HOPs
+```
+
+
