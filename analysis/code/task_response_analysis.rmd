@@ -33,7 +33,7 @@ analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", 
 generate_posterior_plot = function(model, num_independent_variables, filename, x_lab, facet=TRUE) {
   
   fit_info = f %>%
-    mean_qi(.value)
+    mean_qi(.value, .width = c(.95, .5))
   
   f = model %>%
     emmeans( ~ x1*x2*x3) %>%
@@ -46,13 +46,17 @@ generate_posterior_plot = function(model, num_independent_variables, filename, x
     f$condition = paste(f$x1, f$x2, f$x3, sep= " | ")
   }
   #plot = ggplot(f, aes(x = .value, y = condition, color = x2)) +stat_halfeye()
-  plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x3)) + stat_halfeye() + 
+  plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x3)) + stat_halfeye(.width = c(.95, .5)) + 
     labs(x=x_lab, y="Condition")
   if(facet){
     plot = plot + facet_grid(cols = vars(x1))
+      ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots", width = 6, height = 4, dpi = 300, units = "in")
   }
-  ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots", width = 6, height = 4, dpi = 300, units = "in")
-  
+  else{
+      ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
+
+  }
+
   write.csv(fit_info, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
 }
 ```
@@ -152,9 +156,10 @@ run_model_time = function(data, task, a_prior, a_sd){
 
 }
 
-run_model_time(subset(time_data, task_type == "Focused"), "Focused", 251.85, 106.79)
-run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", 781.83, 444.30)
-
+# run_model_time(subset(time_data, task_type == "Focused"), "Focused", 251.85, 106.79)
+# run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", 781.83, 444.30)
+run_model_time(subset(time_data, task_type == "Focused"), "Focused", 251.85, 62.9625)
+run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", 781.83, 195.4575)
 
 run_model_3_var = function(data, attr, response, a_prior, a_sd, x_lab){
   #select your independent and dependent variables
@@ -192,7 +197,7 @@ run_model_time = function(data, task, a_prior, a_sd){
   data$x1 = as.factor(data$dataset) 
   data$x2 = as.factor(data$oracle)
   data$x3 = as.factor(data$search)
-  data$y = data$completion_time
+  data$y = data$time
   
   b1_prior = 0
   b1_sd = a_sd 
