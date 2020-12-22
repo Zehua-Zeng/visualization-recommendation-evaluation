@@ -30,16 +30,20 @@ analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", 
 
 ```{r posterior_plotting_function}
 generate_posterior_plot = function(model, num_independent_variables, filename, x_lab) {
+  
+  fit_info = f %>%
+    mean_qi(.value)
+  
   f = model %>%
     emmeans( ~ x1*x2*x3) %>%
     gather_emmeans_draws()
     
     f$condition = paste(f$x1, f$x2, f$x3, sep= " | ")
   #plot = ggplot(f, aes(x = .value, y = condition, color = x2)) +stat_halfeye()
-  plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x2)) + stat_halfeye() + labs(x=x_lab)
+  plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x3)) + stat_halfeye() + labs(x=x_lab)
   ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
   
-  write.csv(f, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
+  write.csv(fit_info, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
 }
 ```
 
@@ -53,6 +57,7 @@ run_model_3_var = function(data, attr, split, response, a_prior, a_sd, x_lab){
     data$x2 = as.factor(data$oracle) 
     data$x3 = as.factor(data$search)
     data$y = data[,attr]
+    
     
   }
   else{
@@ -119,7 +124,39 @@ run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 693.1
 
 ```
 
+```{r accuracy_analysis}  
+time_data = read.csv('processed_completion_time.csv')
 
+run_model_time = function(data, task, a_prior, a_sd){
+  #select your independent and dependent variables
+  data$x1 = as.factor(data$dataset) 
+  data$x2 = as.factor(data$oracle)
+  data$x3 = as.factor(data$search)
+  data$y = data$completion_time
+  
+  b1_prior = 0
+  b1_sd = a_sd 
+  
+  m = stan_glm(y ~ x1*x2*x3, data = data,
+  prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
+  prior = normal(b1_prior, b1_sd, autoscale = FALSE))
+  filename = gsub(" ", "_", task)
+  filename = paste("time_", filename, sep="")
+  generate_posterior_plot(m, 3, filename, "Time (Seconds)")
+
+}
+
+run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", 190.34, 96.57)
+run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value", 313.37, 88.50)
+run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", 870.53, 657.68)
+run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 693.13, 193.30)
+
+m %>%
+  emmeans( ~ y) %>%
+  gather_emmeans_draws() %>%
+  mean_qi()
+
+```
 
 
 
