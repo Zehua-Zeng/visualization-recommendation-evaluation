@@ -29,7 +29,7 @@ analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", 
 ```
 
 ```{r posterior_plotting_function}
-generate_posterior_plot = function(model, num_independent_variables, filename) {
+generate_posterior_plot = function(model, num_independent_variables, filename, x_lab) {
   if(num_independent_variables == 2){
     f = model %>%
     emmeans( ~ x1*x2) %>%
@@ -45,7 +45,7 @@ generate_posterior_plot = function(model, num_independent_variables, filename) {
     f$condition = paste(f$x1, f$x2, f$x3)
   }
   #plot = ggplot(f, aes(x = .value, y = condition, color = x2)) +stat_halfeye()
-  plot = ggplot(f, aes(x = .value, y = condition, fill = x2)) + stat_halfeye()
+  plot = ggplot(f, aes(x = .value, y = condition, fill = x2)) + stat_halfeye() + labs(x=x_lab)
   ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
   
   write.csv(f, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
@@ -55,7 +55,7 @@ generate_posterior_plot = function(model, num_independent_variables, filename) {
 ## Specify model (using stan_glm(y ~ x1 * x2 * x3))
 ```{r specify_model}
 
-run_model_3_var = function(data, attr, split, response, a_prior, a_sd){
+run_model_3_var = function(data, attr, split, response, a_prior, a_sd, x_lab){
   #select your independent and dependent variables
   if(split){
     data$x1 = as.factor(data$oracle) 
@@ -88,13 +88,13 @@ run_model_3_var = function(data, attr, split, response, a_prior, a_sd){
     filename = paste(filename, "_split", sep="")
   }
   
-  generate_posterior_plot(m, 3, filename)
+  generate_posterior_plot(m, 3, filename, x_lab)
 
 }
 
 for (attr in analyses){
-    run_model_3_var(mydata, attr, FALSE, "task", 0, 1)
-    run_model_3_var(mydata, attr, TRUE, "task", 0, 1)
+    run_model_3_var(mydata, attr, FALSE, "task", 0, 1, "User Score")
+    run_model_3_var(mydata, attr, TRUE, "task", 0, 1, "User Score")
 }
 
 ```
@@ -117,14 +117,14 @@ run_model_time = function(data, task, a_prior, a_sd){
   prior = normal(b1_prior, b1_sd, autoscale = FALSE))
   filename = gsub(" ", "_", task)
   filename = paste("time_", filename, sep="")
-  generate_posterior_plot(m, 3, filename)
+  generate_posterior_plot(m, 3, filename, "Time (Seconds)")
 
 }
 
-run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", 190342, 96573)
-run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value", 313366, 88498)
-run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", 522316, 394608)
-run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 415880, 115980)
+run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", 190.34, 96.57)
+run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value", 313.37, 88.50)
+run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", 522.32, 394.61)
+run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 415.88, 115.98)
 
 ```
 
