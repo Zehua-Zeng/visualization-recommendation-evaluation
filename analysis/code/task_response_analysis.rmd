@@ -30,20 +30,11 @@ analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", 
 
 ```{r posterior_plotting_function}
 generate_posterior_plot = function(model, num_independent_variables, filename, x_lab) {
-  if(num_independent_variables == 2){
-    f = model %>%
-    emmeans( ~ x1*x2) %>%
-    gather_emmeans_draws()
-    
-    f$condition = paste(f$x1, f$x2)
-  }
-  else if(num_independent_variables == 3){
-    f = model %>%
+  f = model %>%
     emmeans( ~ x1*x2*x3) %>%
     gather_emmeans_draws()
     
-    f$condition = paste(f$x3, f$x1, f$x2, sep= " | ")
-  }
+    f$condition = paste(f$x1, f$x2, f$x3, sep= " | ")
   #plot = ggplot(f, aes(x = .value, y = condition, color = x2)) +stat_halfeye()
   plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x2)) + stat_halfeye() + labs(x=x_lab)
   ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
@@ -58,16 +49,16 @@ generate_posterior_plot = function(model, num_independent_variables, filename, x
 run_model_3_var = function(data, attr, split, response, a_prior, a_sd, x_lab){
   #select your independent and dependent variables
   if(split){
-    data$x1 = as.factor(data$oracle) 
-    data$x2 = as.factor(data$search)
-    data$x3 = as.factor(data[,response])
+    data$x1 = as.factor(data[,response])
+    data$x2 = as.factor(data$oracle) 
+    data$x3 = as.factor(data$search)
     data$y = data[,attr]
     
   }
   else{
-    data$x1 = as.factor(data$dataset) 
-    data$x2 = as.factor(data$condition)
-    data$x3 = as.factor(data[,response])
+    data$x1 = as.factor(data[,response])
+    data$x2 = as.factor(data$dataset)
+    data$x3 = as.factor(data$condition)
     data$y = data[,attr]
   
     # label the axes on the plots
@@ -105,8 +96,8 @@ time_data = read.csv('processed_completion_time.csv')
 run_model_time = function(data, task, a_prior, a_sd){
   #select your independent and dependent variables
   data$x1 = as.factor(data$dataset) 
-  data$x2 = as.factor(data$search)
-  data$x3 = as.factor(data$oracle)
+  data$x2 = as.factor(data$oracle)
+  data$x3 = as.factor(data$search)
   data$y = data$completion_time
   
   b1_prior = 0
