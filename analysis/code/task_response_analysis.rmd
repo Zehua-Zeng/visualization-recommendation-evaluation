@@ -6,17 +6,16 @@ output: html_document
 ```{r libraries, message=FALSE, warning=FALSE}
 
 knitr::opts_chunk$set(fig.align="center") 
-library(rstanarm) #bayesian analysis package
-library(tidyverse) #tidy datascience commands
-library(tidybayes) #tidy data + ggplot workflow
-library(modelr) #tidy pipelines for modeling
-library(ggplot2) #plotting package
-library(gganimate) #animate ggplots\
+library(rstanarm)
+library(tidyverse)
+library(tidybayes)
+library(modelr) 
+library(ggplot2)
 library(magrittr)  
 library(emmeans)
 library(bayesplot)
 
-theme_set(theme_light()) # set the ggplot theme for all plots 
+theme_set(theme_light())
 
 ```
 
@@ -34,23 +33,25 @@ seed = 122474487139
 ```
 
 ```{r posterior_plotting_function}
-generate_posterior_plot = function(model, num_independent_variables, filename, x_lab, =TRUE) {
-  
-  
+generate_posterior_plot = function(model, num_independent_variables, filename, x_lab, facet=TRUE) {
   f = model %>%
     emmeans( ~ x1*x2*x3) %>%
     gather_emmeans_draws()
   
+  # save the credible interval boundaries.  We will use the 90% credible interval.
   fit_info = f %>%
     mean_qi(.value, .width = c(.95, .5))
   
+  # if facet is true, we split the data into two plots: one for the birdstrikes dataset, one for the movies dataset
+  # the condition column will be used to label the y axis
   if (facet){
     f$condition = paste(f$x2, f$x3, sep= " | ")
   }
   else{
     f$condition = paste(f$x1, f$x2, f$x3, sep= " | ")
   }
-  #plot = ggplot(f, aes(x = .value, y = condition, color = x2)) +stat_halfeye()
+  
+  # create, format, and save our posterior plot
   plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x3)) + stat_halfeye(.width = c(.95, .5)) + 
     labs(x=x_lab, y="Condition")
   if(facet){
@@ -61,13 +62,16 @@ generate_posterior_plot = function(model, num_independent_variables, filename, x
       ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
   }
 
+  # save out the credible interval boundaries as well to use for the paper
   write.csv(fit_info, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
 }
 ```
 
 ```{r task_response_analysis}
-
+# analysis to predict user score (ranges from -2 to 2) and different tasks given an oracle algorithm, search algorithm, and dataset
 run_model_3_var = function(data, attr, split, response, a_prior, a_sd, x_lab){
+  
+  # if split, we want to split oracle and search when training the model rather than combining them into one field
   if(split){
     data$x1 = as.factor(data[,response])
     data$x2 = as.factor(data$oracle) 
@@ -85,6 +89,7 @@ run_model_3_var = function(data, attr, split, response, a_prior, a_sd, x_lab){
   b1_prior = 0
   b1_sd = a_sd 
   
+  # train model
   m = stan_glm(y ~ x1*x2*x3, data = data,
   prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
   prior = normal(b1_prior, b1_sd, autoscale = FALSE),
@@ -100,6 +105,7 @@ run_model_3_var = function(data, attr, split, response, a_prior, a_sd, x_lab){
 }
 
 for (attr in analyses){
+  # weakly-informed prior on user response is N(0,1)
     run_model_3_var(mydata, attr, FALSE, "task", 0, 1, "User Score")
     run_model_3_var(mydata, attr, TRUE, "task", 0, 1, "User Score")
 }
@@ -107,7 +113,9 @@ for (attr in analyses){
 ```
 
 ```{r time_analysis}  
-run_model_time = function(data, task, a_prior, a_sd){
+# analysis to predict time elapsed for the user to complete a certain task given a dataset, oracle, and search algorithm
+
+run_model_time = function(data, task, a_prior, a_sd, facet){
   #select your independent and dependent variables
   data$x1 = as.factor(data$dataset) 
   data$x2 = as.factor(data$oracle)
@@ -117,6 +125,7 @@ run_model_time = function(data, task, a_prior, a_sd){
   b1_prior = 0
   b1_sd = a_sd 
   
+  # train model
   m = stan_glm(y ~ x1*x2*x3, data = data,
   prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
   prior = normal(b1_prior, b1_sd, autoscale = FALSE),
@@ -125,32 +134,36 @@ run_model_time = function(data, task, a_prior, a_sd){
   
   filename = gsub(" ", "_", task)
   filename = paste("time_", filename, sep="")
-  generate_posterior_plot(m, 3, filename, "Time (Seconds)", FALSE)
+  generate_posterior_plot(m, 3, filename, "Time (Seconds)", facet)
 
 }
 
-run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", 190.34, 96.57)
-run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value", 313.37, 88.50)
-run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", 870.53, 657.68)
-run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 693.13, 193.30)
+# priors for completion time of each task were derived from a pilot study
+run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", 190.34, 96.57, FALSE)
+run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value", 313.37, 88.50, FALSE)
+run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", 870.53, 657.68, FALSE)
+run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 693.13, 193.30, FALSE)
 
 ```
 
 ```{r analysis_focused_or_open}  
-
-run_model_time(subset(time_data, task_type == "Focused"), "Focused", 251.85, 62.9625)
-run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", 781.83, 195.4575)
-run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum (split by dataset)", 190.34, 96.57)
-run_model_time(subset(time_data, task == "3. Prediction"), "Prediction (split by dataset)", 870.53, 657.68)
-
+# The different tasks can be decribed as "focused" or "open-ended", so let's run analyses where we split on that attribute
+run_model_time(subset(time_data, task_type == "Focused"), "Focused", 251.85, 62.9625, TRUE)
+run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", 781.83, 195.4575, TRUE)
 
 for (attr in analyses){
     run_model_3_var(mydata, attr, TRUE, "task_type", 0, 1, "User Score")
 }
 ```
 
-```{r accuracy_analysis}  
+```{r misc_analyses}
+run_model_time(subset(time_data, task == "3. Prediction"), "Prediction (split by dataset)", 870.53, 657.68, TRUE)
+run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum (split by dataset)", 190.34, 96.57, TRUE)
+```
 
+
+```{r accuracy_analysis}  
+# analyses to predict the probability of getting a correct answer given a certain task, oracle, and search algorithm
 accuracy_tasks = c("1. Find Extremum", "2. Retrieve Value")
 
 run_model_accuracy = function(data, task){
@@ -163,18 +176,15 @@ run_model_accuracy = function(data, task){
   
   task_accuracy$condition <- paste(task_accuracy$oracle, " | ", task_accuracy$search)
   
+  # uninformed prior on coefficients?
   t_prior <- student_t(df = 2, location = 0, scale = 2.5)
   
+  # train model
   m = stan_glm(y ~ oracle*search*dataset, data = task_accuracy, family = binomial(link = "logit"),
   prior_intercept = t_prior,
   prior = t_prior,
   seed = seed)
-  # 
-  # pplot<-plot(m, "areas", prob = 0.95, prob_outer = 1)
-  # pplot+ geom_vline(xintercept = 0)
-  # 
-  # round(coef(m), 2)
-  # round(posterior_interval(m, prob = 0.9), 2)
+  
   plot = ppc_violin_grouped(y = m$y, 
                      yrep = posterior_predict(m, draws = 1000), 
                      group = task_accuracy$condition, 
@@ -185,110 +195,22 @@ run_model_accuracy = function(data, task){
     legend_none() +
     scale_y_continuous(breaks=seq(0,1,.1))
   
-  filename = gsub("\\.", "_", task)
+  filename = gsub("\\.", "", task)
   filename = gsub(" ", "_", filename)
   ggsave(file=paste("accuracy_",filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
-  # write.csv(fit_info, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
-
-    
 }
+
 for (task in accuracy_tasks){
     run_model_accuracy(accuracy_data, task)
 }
+
+# TODO:  Figure out how to get the values of the credible interval boundaries that are shown on the plots
+
 #run_model_accuracy(accuracy_data, "1. Find Extremum")
   
 ```
 
-```{r accuracy_analysis_scratch}  
-# accuracy_data = read.csv('processed_accuracy_split_1_hot.csv')
 
-# task_1_accuracy = subset(accuracy_data, task == "1. Find Extremum")
-
-# task_1_accuracy_movies = subset(task_1_accuracy, dataset == "movies")
-# task_1_accuracy_movies$oracle_compassql = as.factor(task_1_accuracy_movies$oracle_compassql)
-# task_1_accuracy_movies$oracle_dziban = as.factor(task_1_accuracy_movies$oracle_dziban)
-# task_1_accuracy_movies$search_bfs = as.factor(task_1_accuracy_movies$search_bfs)
-# task_1_accuracy_movies$search_dfs = as.factor(task_1_accuracy_movies$search_dfs)
-# task_1_accuracy_movies$outcome = task_1_accuracy_movies$accuracy
-# 
-# keeps <- c("oracle_compassql", "oracle_dziban", "search_bfs", "search_dfs", "outcome")
-# task_1_accuracy_movies= task_1_accuracy_movies[keeps]
-# 
-# t_prior <- student_t(df = 7, location = 0, scale = 2.5)
-# 
-# post1 = stan_glm(outcome ~ oracle_compassql*oracle_dziban*search_bfs*search_dfs, data = task_1_accuracy_movies, family = binomial(link = "logit"),
-#   prior_intercept = t_prior,
-#   prior = t_prior)
-# 
-# pplot<-plot(post1, "areas", prob = 0.95, prob_outer = 1)
-# pplot+ geom_vline(xintercept = 0)
-# 
-# round(coef(post1), 2)
-# round(posterior_interval(post1, prob = 0.9), 2)
-# 
-# y_rep <- posterior_predict(post1, newdata=task_1_accuracy_movies)
-
-
-# task_1_accuracy_movies = subset(task_1_accuracy, dataset == "movies")
-# task_1_accuracy_movies$oracle = as.factor(task_1_accuracy_movies$oracle)
-# task_1_accuracy_movies$search = as.factor(task_1_accuracy_movies$search)
-# task_1_accuracy_movies$y = task_1_accuracy_movies$accuracy
-# 
-# keeps <- c("oracle", "search", "y")
-# task_1_accuracy_movies= task_1_accuracy_movies[keeps]
-# task_1_accuracy_movies$condition <- paste(task_1_accuracy_movies$oracle, "-", task_1_accuracy_movies$search)
-# 
-# t_prior <- student_t(df = 7, location = 0, scale = 2.5)
-# 
-# post1 = stan_glm(y ~ oracle*search, data = task_1_accuracy_movies, family = binomial(link = "logit"),
-#   prior_intercept = t_prior,
-#   prior = t_prior)
-# 
-# pplot<-plot(post1, "areas", prob = 0.95, prob_outer = 1)
-# pplot+ geom_vline(xintercept = 0)
-# 
-# round(coef(post1), 2)
-# round(posterior_interval(post1, prob = 0.9), 2)
-# ppc_error_hist_grouped(y = post1$y, yrep = posterior_predict(post1, draws = 500), group = task_1_accuracy_movies$condition)
-# ppc_dens_overlay(y = post1$y, yrep = posterior_predict(post1, draws = 500))
-# ppc_stat(y, yrep_nb, stat = "prop_zero")
-# ppc_stat_grouped(y = post1$y, yrep = posterior_predict(post1, draws = 500), group = task_1_accuracy_movies$search)
-# 
-# ppc_violin_grouped(y = post1$y, yrep = posterior_predict(post1, draws = 500), group = task_1_accuracy_movies$search)
-# 
-# ppc_stat(y = post1$y, posterior_predict(post1, draws = 500), binwidth = 0.005)
-
-# tidy_coefs <- tidy(bayes_logistic_model)
-# 
-# round(posterior_interval(bayes_logistic_model, prob = 0.9), 2)
-# 
-# bayes_logistic_model_function <- function(.x) invlogit(tidy_coefs$estimate[1] + tidy_coefs$estimate[2]*.x)
-# ggplot(task_1_accuracy_movies, aes(x = search, y = accuracy)) +
-#   geom_jitter(width = 0, height = .05, alpha = 0.5) + 
-#   stat_function(fun = bayes_logistic_model_function, color = "blue", size = 1)
-
-# pplot<-plot(bayes_logistic_model, "areas", prob = 0.95, prob_outer = 1)
-# pplot+ geom_vline(xintercept = 0)
-# 
-# round(posterior_interval(bayes_logistic_model, prob = 0.9), 2)
-
-# f = bayes_logistic_model %>%
-#     emmeans( ~ x1*x2) %>%
-#     gather_emmeans_draws()
-#   
-#   fit_info = f %>%
-#     mean_qi(.value, .width = c(.95, .5))
-#   
-#   f$condition = paste(f$x1, f$x2, sep= " | ")
-#   #plot = ggplot(f, aes(x = .value, y = condition, color = x2)) +stat_halfeye()
-#   plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x2)) + stat_halfeye(.width = c(.95, .5)) + labs(x="Accuracy", y="Condition")
-#   
-#   ggsave(file="acc_test.png", plot=plot)
-# 
-#   write.csv(fit_info, paste("acc_test.csv", sep=""), row.names = FALSE)
-
-  
-```
 
 
 
