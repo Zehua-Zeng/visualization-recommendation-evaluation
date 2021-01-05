@@ -33,7 +33,7 @@ seed = 122474487139
 ```
 
 ```{r posterior_plotting_function}
-generate_posterior_plot = function(model, num_independent_variables, filename, x_lab, facet=TRUE) {
+generate_posterior_plot = function(model, num_independent_variables, filename, x_lab, facet=TRUE, log_transformed=FALSE) {
   f = model %>%
     emmeans( ~ x1*x2*x3) %>%
     gather_emmeans_draws()
@@ -52,7 +52,7 @@ generate_posterior_plot = function(model, num_independent_variables, filename, x
   }
   
   # create, format, and save our posterior plot
-  plot = ggplot(f, aes(x = .value, y = reorder(condition, desc(condition)), fill = x3)) + stat_halfeye(.width = c(.95, .5)) + 
+  plot = ggplot(f, aes(x = if(log_transformed) exp(.value) else .value, y = reorder(condition, desc(condition)), fill = x3)) + stat_halfeye(.width = c(.95, .5)) + 
     labs(x=x_lab, y="Condition")
   if(facet){
     plot = plot + facet_grid(cols = vars(x1))
@@ -120,7 +120,7 @@ run_model_time = function(data, task, a_prior, a_sd, facet){
   data$x1 = as.factor(data$dataset) 
   data$x2 = as.factor(data$oracle)
   data$x3 = as.factor(data$search)
-  data$y = data$completion_time
+  data$y = log(data$completion_time)
   
   b1_prior = 0
   b1_sd = a_sd 
@@ -134,22 +134,25 @@ run_model_time = function(data, task, a_prior, a_sd, facet){
   
   filename = gsub(" ", "_", task)
   filename = paste("time_", filename, sep="")
-  generate_posterior_plot(m, 3, filename, "Time (Seconds)", facet)
+  generate_posterior_plot(m, 3, filename, "Time (Seconds)", facet, TRUE)
 
 }
 
+prior_mean = 360.48
+prior_sd = 224.40
+
 # priors for completion time of each task were derived from a pilot study
-run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", 190.34, 96.57, FALSE)
-run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value", 313.37, 88.50, FALSE)
-run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", 870.53, 657.68, FALSE)
-run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", 693.13, 193.30, FALSE)
+run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", prior_mean, prior_sd, FALSE)
+run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value", prior_mean, prior_sd, FALSE)
+run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", prior_mean, prior_sd, FALSE)
+run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", prior_mean, prior_sd, FALSE)
 
 ```
 
 ```{r analysis_focused_or_open}  
 # The different tasks can be decribed as "focused" or "open-ended", so let's run analyses where we split on that attribute
-run_model_time(subset(time_data, task_type == "Focused"), "Focused", 251.85, 62.9625, TRUE)
-run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", 781.83, 195.4575, TRUE)
+run_model_time(subset(time_data, task_type == "Focused"), "Focused", prior_mean, prior_sd, TRUE)
+run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", prior_mean, prior_sd, TRUE)
 
 for (attr in analyses){
     run_model_3_var(mydata, attr, TRUE, "task_type", 0, 1, "User Score")
@@ -185,8 +188,16 @@ run_model_accuracy = function(data, task){
   prior = t_prior,
   seed = seed)
   
+  print(posterior_interval(
+  m,
+  prob = 0.9))
+  pplot <- plot(m, "areas", prob = 0.95, prob_outer = 1)
+  pplot + geom_vline(xintercept = 0)
+  pplot
+  
+  yrep = posterior_predict(m, draws = 1000)
   plot = ppc_violin_grouped(y = m$y, 
-                     yrep = posterior_predict(m, draws = 1000), 
+                     yrep = yrep, 
                      group = task_accuracy$condition, 
                      probs = c(0.05, 0.5, 0.95),
                      y_draw = "points", y_alpha = 0) +
@@ -206,7 +217,7 @@ for (task in accuracy_tasks){
 
 # TODO:  Figure out how to get the values of the credible interval boundaries that are shown on the plots
 
-#run_model_accuracy(accuracy_data, "1. Find Extremum")
+run_model_accuracy(accuracy_data, "1. Find Extremum")
   
 ```
 
