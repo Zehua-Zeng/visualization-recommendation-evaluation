@@ -29,7 +29,7 @@ time_data = read.csv('processed_completion_time.csv')
 accuracy_data = read.csv('processed_accuracy_split.csv')
 
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
-seed = 122474487139
+seed = 12
 ```
 
 ```{r posterior_plotting_function}
@@ -65,6 +65,206 @@ generate_posterior_plot = function(model, num_independent_variables, filename, x
   # save out the credible interval boundaries as well to use for the paper
   write.csv(fit_info, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
 }
+```
+
+```{r task_response_ordinal}
+library(tidyverse)
+library(brms)
+library(tidybayes)
+library(gganimate)
+data <- read.csv('processed_ptask_responses.csv')
+response_levels =  c(-2,-1, 0, 1, 2)
+response_labels = c("-2", "-1", "0", "1", "2")
+data <- data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search),
+    task = as.factor(task),
+    confidence.udata = ordered(
+      confidence.udata,
+      levels = c(-1, 0, 1, 2),
+      labels = c("-1", "0", "1", "2")
+    ),
+    confidence.ans = ordered(
+      confidence.ans,
+      levels = response_levels,
+      labels = response_labels
+    ),
+    efficiency = ordered(
+      efficiency,
+      levels = response_levels,
+      labels = response_labels
+    ),
+    ease.of.use = ordered(
+      ease.of.use,
+      levels = response_levels,
+      labels = response_labels
+    ),
+    utility = ordered(
+      utility,
+      levels = response_levels,
+      labels = response_labels
+    ),
+    overall = ordered(
+      overall,
+      levels = response_levels,
+      labels = response_labels
+    ),
+  )
+model <- brm(
+    formula = bf(overall ~ dataset * oracle * search * task),
+    family = cumulative("probit"),
+    prior = prior(normal(0, 1), class = b),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = data,
+    control = list(adapt_delta = 0.99),
+    file = "overall"
+  )
+
+generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
+  filename = gsub("\\.", "_", attr)
+  data$y = data[,attr]
+  model <- brm(
+    formula = bf(y ~ dataset * oracle * search * task),
+    family = cumulative("probit"),
+    prior = prior(normal(0, 1), class = b),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = data,
+    control = list(adapt_delta = 0.99),
+    file = filename
+  )
+  if(generate_eval_plots){
+    summary(model)
+  plot(model)
+  
+  pairs(
+    model,
+    pars = c(
+      "b_Intercept",
+      "b_datasetmovies",
+      "b_oracledziban",
+      "b_searchdfs",
+      "b_datasetmovies:oracledziban",
+      "b_datasetmovies:searchdfs",
+      "b_oracledziban:searchdfs",
+      "b_datasetmovies:oracledziban:searchdfs"
+    ),
+    fixed = TRUE
+  )
+  
+  data %>%
+    mutate(rating = ordered(y, levels = response_labels)) %>%
+    ggplot(aes(x = oracle, fill = rating)) +
+    geom_bar() +
+    theme_minimal() +
+    facet_grid(. ~ search)
+  
+  data %>%
+    add_predicted_draws(model, seed = seed) %>%
+    group_by(search, oracle, dataset) %>%
+    summarize(rating = .prediction) %>%
+    ggplot(aes(x = oracle, fill = rating)) +
+    geom_bar() +
+    theme_minimal() +
+    facet_grid(. ~ search)
+  
+  spec <- data %>%
+    add_predicted_draws(model, seed = seed, n = 50) %>%
+    mutate(rating = .prediction) %>%
+    ggplot(aes(x = oracle, fill = rating)) +
+    geom_bar() +
+    theme_minimal() +
+    facet_grid(. ~ search) +
+    transition_manual(.draw)
+  
+    animate(spec, fps = 2.5)
+  }
+  
+  predictive_plot <- data %>%
+    add_predicted_draws(model, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, .draw) %>%
+    mutate(rating = weighted.mean(as.numeric(as.character(.prediction)))) %>%
+    ggplot(aes(x = oracle, y = rating)) +
+    stat_eye(.width = c(.95, .5)) +
+    theme_minimal() +
+    coord_cartesian(ylim = c(-2, 2)) +
+    facet_grid(. ~ search)
+  
+  ggsave(file=paste(filename, ".png", sep=""), plot=predictive_plot)
+  
+  return(model)
+}
+
+# draws1 = generate_model_and_draws(data, "overall")
+# draws2 = generate_model_and_draws(data, "confidence.ans")
+# draws3 = generate_model_and_draws(data, "efficiency")
+# draws4 = generate_model_and_draws(data, "ease.of.use")
+# draws5 = generate_model_and_draws(data, "utility")
+# draws6 = generate_model_and_draws(data, "confidence.udata")
+# a <- rbind(draws1, draws2) %>% rbind(draws3)  %>% rbind(draws4)  %>% rbind(draws5)  %>% rbind(draws6)
+search_draw_data_combined <- data.frame(draw=numeric(),
+                 search=character(),
+                 diff_in_rating=numeric(),
+                 task=character(), 
+                 stringsAsFactors=FALSE) 
+
+oracle_draw_data_combined <- data.frame(draw=numeric(),
+                 oracle=character(),
+                 diff_in_rating=numeric(),
+                 task=character(), 
+                 stringsAsFactors=FALSE) 
+
+for (attr in analyses) {
+  model = generate_model_and_draws(data, attr)
+  draw_data <- data %>%
+    add_predicted_draws(model, seed = seed, re_formula = NA) 
+  
+  search_draw_data <- draw_data %>%
+    group_by(search, .draw) %>%
+    summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
+    compare_levels(rating, by = search) %>%
+    rename(diff_in_rating = rating) 
+  
+  search_draw_data['task'] = attr
+  search_draw_data_combined <- rbind(search_draw_data_combined, search_draw_data)
+  
+  oracle_draw_data <- draw_data %>%
+    group_by(oracle, .draw) %>%
+    summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
+    compare_levels(rating, by = oracle) %>%
+    rename(diff_in_rating = rating) 
+  
+  oracle_draw_data['task'] = attr
+  oracle_draw_data_combined <- rbind(oracle_draw_data_combined, oracle_draw_data)
+}
+
+search_differences_plot <-  search_draw_data_combined %>%
+    ggplot(aes(x = diff_in_rating, y = task)) +
+    ylab("Task") +
+    xlab("Expected Difference in Rating (dfs - bfs)") +
+    stat_halfeye() +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal()
+
+ggsave(file="search_rating_differences.png", plot=search_differences_plot)
+
+oracle_differences_plot <-  oracle_draw_data_combined %>%
+    ggplot(aes(x = diff_in_rating, y = task)) +
+    ylab("Task") +
+    xlab("Expected Difference in Rating (dziban - compassql)") +
+    stat_halfeye() +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal()
+
+ggsave(file="oracle_rating_differences.png", plot=oracle_differences_plot)
+
 ```
 
 ```{r task_response_analysis}
