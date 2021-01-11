@@ -112,24 +112,12 @@ data <- data %>%
       labels = response_labels
     ),
   )
-model <- brm(
-    formula = bf(overall ~ dataset * oracle * search * task),
-    family = cumulative("probit"),
-    prior = prior(normal(0, 1), class = b),
-    chains = 2,
-    cores = 2,
-    iter = 2500,
-    warmup = 1000,
-    data = data,
-    control = list(adapt_delta = 0.99),
-    file = "overall"
-  )
 
 generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
   filename = gsub("\\.", "_", attr)
   data$y = data[,attr]
   model <- brm(
-    formula = bf(y ~ dataset * oracle * search * task),
+    formula = bf(y ~ dataset * oracle * search * task_type),
     family = cumulative("probit"),
     prior = prior(normal(0, 1), class = b),
     chains = 2,
@@ -187,17 +175,33 @@ generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
     animate(spec, fps = 2.5)
   }
   
-  predictive_plot <- data %>%
+  predictive_plot_data <- data %>%
     add_predicted_draws(model, seed = seed, re_formula = NA) %>%
     group_by(search, oracle, .draw) %>%
-    mutate(rating = weighted.mean(as.numeric(as.character(.prediction)))) %>%
+    mutate(rating = weighted.mean(as.numeric(as.character(.prediction))))
+  
+  predictive_plot <- predictive_plot_data %>%
     ggplot(aes(x = oracle, y = rating)) +
     stat_eye(.width = c(.95, .5)) +
     theme_minimal() +
     coord_cartesian(ylim = c(-2, 2)) +
     facet_grid(. ~ search)
   
-  ggsave(file=paste(filename, ".png", sep=""), plot=predictive_plot)
+  ggsave(file=paste(filename, ".png", sep=""), plot=predictive_plot, path = "../plots/posterior_plots/new")
+  credible_intervals <- predictive_plot_data %>% group_by(search, oracle) %>% mean_qi(rating, .width = c(.95, .5))
+  write.csv(credible_intervals, paste("../plot_data/new/",filename,".csv", sep=""), row.names = FALSE, append=FALSE)
+  
+  
+  predictive_plot_focused_open_split <- predictive_plot_data %>%
+    ggplot(aes(x = oracle, y = rating, fill=search, alpha=0.5)) +
+    stat_eye(.width = c(.95, .5)) +
+    theme_minimal() +
+    coord_cartesian(ylim = c(-2, 2)) +
+    facet_grid(. ~ task_type)
+  
+  ggsave(file=paste(filename, "_focused_open_split.png", sep=""), plot=predictive_plot_focused_open_split, path = "../plots/posterior_plots/new")
+  credible_intervals <- predictive_plot_data %>% group_by(search, oracle, task_type) %>% mean_qi(rating, .width = c(.95, .5))
+  write.csv(credible_intervals, paste("../plot_data/new/",filename,"_focused_open_split.csv", sep=""), row.names = FALSE, append=FALSE)
   
   return(model)
 }
@@ -215,11 +219,34 @@ search_draw_data_combined <- data.frame(draw=numeric(),
                  task=character(), 
                  stringsAsFactors=FALSE) 
 
+search_differences_intervals <- data.frame(
+                .lower=numeric(),
+                .upper=numeric(),
+                .width=numeric(),
+                .point=character(),
+                interval=character(),
+                 search=character(),
+                 diff_in_rating=numeric(),
+                 task=character(), 
+                 stringsAsFactors=FALSE) 
+
 oracle_draw_data_combined <- data.frame(draw=numeric(),
                  oracle=character(),
                  diff_in_rating=numeric(),
                  task=character(), 
                  stringsAsFactors=FALSE) 
+
+oracle_differences_intervals <- data.frame(
+                .lower=numeric(),
+                .upper=numeric(),
+                .width=numeric(),
+                .point=character(),
+                interval=character(),
+                 oracle=character(),
+                 diff_in_rating=numeric(),
+                 task=character(), 
+                 stringsAsFactors=FALSE) 
+
 
 for (attr in analyses) {
   model = generate_model_and_draws(data, attr)
@@ -235,6 +262,10 @@ for (attr in analyses) {
   search_draw_data['task'] = attr
   search_draw_data_combined <- rbind(search_draw_data_combined, search_draw_data)
   
+  search_credible_intervals <- search_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+  search_credible_intervals['task'] = attr
+  search_differences_intervals <- rbind(search_differences_intervals, search_credible_intervals)
+  
   oracle_draw_data <- draw_data %>%
     group_by(oracle, .draw) %>%
     summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
@@ -243,27 +274,264 @@ for (attr in analyses) {
   
   oracle_draw_data['task'] = attr
   oracle_draw_data_combined <- rbind(oracle_draw_data_combined, oracle_draw_data)
+  
+  oracle_credible_intervals <- oracle_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+  oracle_credible_intervals['task'] = attr
+  oracle_differences_intervals <- rbind(oracle_differences_intervals, oracle_credible_intervals)
 }
 
 search_differences_plot <-  search_draw_data_combined %>%
     ggplot(aes(x = diff_in_rating, y = task)) +
     ylab("Task") +
     xlab("Expected Difference in Rating (dfs - bfs)") +
-    stat_halfeye() +
+    stat_halfeye(.width = c(.95, .5)) +
     geom_vline(xintercept = 0, linetype = "longdash") +
     theme_minimal()
 
-ggsave(file="search_rating_differences.png", plot=search_differences_plot)
+ggsave(file="search_rating_differences.png", plot=search_differences_plot, path = "../plots/posterior_plots/new")
+write.csv(search_differences_intervals, paste("../plot_data/new/search_rating_differences.csv", sep=""), row.names = FALSE)
 
 oracle_differences_plot <-  oracle_draw_data_combined %>%
     ggplot(aes(x = diff_in_rating, y = task)) +
     ylab("Task") +
     xlab("Expected Difference in Rating (dziban - compassql)") +
-    stat_halfeye() +
+    stat_halfeye(.width = c(.95, .5)) +
     geom_vline(xintercept = 0, linetype = "longdash") +
     theme_minimal()
 
-ggsave(file="oracle_rating_differences.png", plot=oracle_differences_plot)
+ggsave(file="oracle_rating_differences.png", plot=oracle_differences_plot, path = "../plots/posterior_plots/new")
+write.csv(oracle_differences_intervals, paste("../plot_data/new/oracle_rating_differences.csv", sep=""), row.names = FALSE)
+
+
+
+```
+```{r focused_vs_open_ordinal}
+library(tidyverse)
+library(brms)
+library(tidybayes)
+library(gganimate)
+data <- read.csv('processed_ptask_responses.csv')
+response_levels =  c(-2,-1, 0, 1, 2)
+response_labels = c("-2", "-1", "0", "1", "2")
+data <- data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search),
+    task = as.factor(task),
+    confidence.udata = ordered(
+      confidence.udata,
+      levels = c(-1, 0, 1, 2),
+      labels = c("-1", "0", "1", "2")
+    ),
+    confidence.ans = ordered(
+      confidence.ans,
+      levels = response_levels,
+      labels = response_labels
+    ),
+    efficiency = ordered(
+      efficiency,
+      levels = response_levels,
+      labels = response_labels
+    ),
+    ease.of.use = ordered(
+      ease.of.use,
+      levels = response_levels,
+      labels = response_labels
+    ),
+    utility = ordered(
+      utility,
+      levels = response_levels,
+      labels = response_labels
+    ),
+    overall = ordered(
+      overall,
+      levels = response_levels,
+      labels = response_labels
+    ),
+  )
+model <- brm(
+    formula = bf(overall ~ dataset * oracle * search * task),
+    family = cumulative("probit"),
+    prior = prior(normal(0, 1), class = b),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = data,
+    control = list(adapt_delta = 0.99),
+    file = "overall"
+  )
+
+generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
+  filename = gsub("\\.", "_", attr)
+  filename = paste0(filename,"focused_split")
+  data$y = data[,attr]
+  model <- brm(
+    formula = bf(y ~ dataset * oracle * search * task_type),
+    family = cumulative("probit"),
+    prior = prior(normal(0, 1), class = b),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = data,
+    control = list(adapt_delta = 0.99),
+    file = filename
+  )
+  if(generate_eval_plots){
+    summary(model)
+  plot(model)
+  
+  pairs(
+    model,
+    pars = c(
+      "b_Intercept",
+      "b_datasetmovies",
+      "b_oracledziban",
+      "b_searchdfs",
+      "b_datasetmovies:oracledziban",
+      "b_datasetmovies:searchdfs",
+      "b_oracledziban:searchdfs",
+      "b_datasetmovies:oracledziban:searchdfs"
+    ),
+    fixed = TRUE
+  )
+  
+  data %>%
+    mutate(rating = ordered(y, levels = response_labels)) %>%
+    ggplot(aes(x = oracle, fill = rating)) +
+    geom_bar() +
+    theme_minimal() +
+    facet_grid(. ~ search)
+  
+  data %>%
+    add_predicted_draws(model, seed = seed) %>%
+    group_by(search, oracle, dataset) %>%
+    summarize(rating = .prediction) %>%
+    ggplot(aes(x = oracle, fill = rating)) +
+    geom_bar() +
+    theme_minimal() +
+    facet_grid(. ~ search)
+  
+  spec <- data %>%
+    add_predicted_draws(model, seed = seed, n = 50) %>%
+    mutate(rating = .prediction) %>%
+    ggplot(aes(x = oracle, fill = rating)) +
+    geom_bar() +
+    theme_minimal() +
+    facet_grid(. ~ search) +
+    transition_manual(.draw)
+  
+    animate(spec, fps = 2.5)
+  }
+  predictive_plot_data <- data %>%
+    add_predicted_draws(model, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, .draw) %>%
+    mutate(rating = weighted.mean(as.numeric(as.character(.prediction))))
+  
+  predictive_plot <- predictive_plot_data %>%
+    ggplot(aes(x = oracle, y = rating, fill=search, alpha=0.5)) +
+    stat_eye(.width = c(.95, .5)) +
+    theme_minimal() +
+    coord_cartesian(ylim = c(-2, 2)) +
+    facet_grid(. ~ task_type)
+  
+  ggsave(file=paste(filename, ".png", sep=""), plot=predictive_plot, path = "../plots/posterior_plots/focused_open_split/new")
+  credible_intervals <- predictive_plot_data %>% group_by(search, oracle, task_type) %>% mean_qi(rating, .width = c(.95, .5))
+  write.csv(credible_intervals, paste("../plot_data/focused_open_split/",filename,".csv", sep=""), row.names = FALSE, append=FALSE)
+  
+  return(model)
+}
+
+search_draw_data_combined <- data.frame(draw=numeric(),
+                 search=character(),
+                 diff_in_rating=numeric(),
+                 task=character(), 
+                 stringsAsFactors=FALSE) 
+
+search_differences_intervals <- data.frame(
+                .lower=numeric(),
+                .upper=numeric(),
+                .width=numeric(),
+                .point=character(),
+                interval=character(),
+                 search=character(),
+                 diff_in_rating=numeric(),
+                 task=character(), 
+                 stringsAsFactors=FALSE) 
+
+oracle_draw_data_combined <- data.frame(draw=numeric(),
+                 oracle=character(),
+                 diff_in_rating=numeric(),
+                 task=character(), 
+                 stringsAsFactors=FALSE) 
+
+oracle_differences_intervals <- data.frame(
+                .lower=numeric(),
+                .upper=numeric(),
+                .width=numeric(),
+                .point=character(),
+                interval=character(),
+                 oracle=character(),
+                 diff_in_rating=numeric(),
+                 task=character(), 
+                 stringsAsFactors=FALSE) 
+
+
+for (attr in analyses) {
+  model = generate_model_and_draws(data, attr)
+  draw_data <- data %>%
+    add_predicted_draws(model, seed = seed, re_formula = NA) 
+  
+  search_draw_data <- draw_data %>%
+    group_by(search, .draw) %>%
+    summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
+    compare_levels(rating, by = search) %>%
+    rename(diff_in_rating = rating) 
+  
+  search_draw_data['task'] = attr
+  search_draw_data_combined <- rbind(search_draw_data_combined, search_draw_data)
+  
+  search_credible_intervals <- search_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+  search_credible_intervals['task'] = attr
+  search_differences_intervals <- rbind(search_differences_intervals, search_credible_intervals)
+  
+  oracle_draw_data <- draw_data %>%
+    group_by(oracle, .draw) %>%
+    summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
+    compare_levels(rating, by = oracle) %>%
+    rename(diff_in_rating = rating) 
+  
+  oracle_draw_data['task'] = attr
+  oracle_draw_data_combined <- rbind(oracle_draw_data_combined, oracle_draw_data)
+  
+  oracle_credible_intervals <- oracle_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+  oracle_credible_intervals['task'] = attr
+  oracle_differences_intervals <- rbind(oracle_differences_intervals, oracle_credible_intervals)
+}
+
+search_differences_plot <-  search_draw_data_combined %>%
+    ggplot(aes(x = diff_in_rating, y = task)) +
+    ylab("Task") +
+    xlab("Expected Difference in Rating (dfs - bfs)") +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal()
+
+ggsave(file="search_rating_differences.png", plot=search_differences_plot, path = "../plots/posterior_plots/new")
+write.csv(search_differences_intervals, paste("../plot_data/new/search_rating_differences.csv", sep=""), row.names = FALSE)
+
+oracle_differences_plot <-  oracle_draw_data_combined %>%
+    ggplot(aes(x = diff_in_rating, y = task)) +
+    ylab("Task") +
+    xlab("Expected Difference in Rating (dziban - compassql)") +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal()
+
+ggsave(file="oracle_rating_differences.png", plot=oracle_differences_plot, path = "../plots/posterior_plots/new")
+write.csv(oracle_differences_intervals, paste("../plot_data/new/oracle_rating_differences.csv", sep=""), row.names = FALSE)
 
 ```
 
@@ -379,13 +647,11 @@ run_model_accuracy = function(data, task){
   
   task_accuracy$condition <- paste(task_accuracy$oracle, " | ", task_accuracy$search)
   
-  # uninformed prior on coefficients?
-  t_prior <- student_t(df = 2, location = 0, scale = 2.5)
   
   # train model
   m = stan_glm(y ~ oracle*search*dataset, data = task_accuracy, family = binomial(link = "logit"),
-  prior_intercept = t_prior,
-  prior = t_prior,
+  prior_intercept = normal(.15, .6, autoscale = FALSE),
+  prior = student_t(df = 2, location = 0, scale = 2.5),
   seed = seed)
   
   print(posterior_interval(
@@ -396,6 +662,7 @@ run_model_accuracy = function(data, task){
   pplot
   
   yrep = posterior_predict(m, draws = 1000)
+  print(yrep)
   plot = ppc_violin_grouped(y = m$y, 
                      yrep = yrep, 
                      group = task_accuracy$condition, 
@@ -409,6 +676,7 @@ run_model_accuracy = function(data, task){
   filename = gsub("\\.", "", task)
   filename = gsub(" ", "_", filename)
   ggsave(file=paste("accuracy_",filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
+  # credible_intervals <- yrep %>% mean_qi(diff_in_rating, .width = c(.95, .5))
 }
 
 for (task in accuracy_tasks){
