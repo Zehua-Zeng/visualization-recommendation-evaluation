@@ -1,4 +1,4 @@
-"oracle","diff_in_rating",".lower",".upper",".width",".point",".interval","task"
+"oracle","diff_in_rating",".lower",".upper",".width",".point",".interval","metric"
 "dziban - compassql",0.238631034482759,-0.0115014367816088,0.492837643678161,0.95,"mean","qi","confidence.udata"
 "dziban - compassql",0.238631034482759,0.151149425287356,0.323922413793104,0.5,"mean","qi","confidence.udata"
 "dziban - compassql",0.18899837164751,-0.0732902298850572,0.456630747126437,0.95,"mean","qi","confidence.ans"

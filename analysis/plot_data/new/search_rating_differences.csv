@@ -1,4 +1,4 @@
-"search","diff_in_rating",".lower",".upper",".width",".point",".interval","task","temp","lower"
+"search","diff_in_rating",".lower",".upper",".width",".point",".interval","metric","temp","lower"
 "bfs - dfs",0.0341931034482759,-0.285395114942529,0.285395114942529,0.95,"mean","qi","confidence.udata",0.285395114942529,-0.225596264367816
 "bfs - dfs",0.0341931034482759,-0.119971264367816,0.119971264367816,0.5,"mean","qi","confidence.udata",0.119971264367816,-0.0517241379310347
 "bfs - dfs",-0.0403511494252874,-0.236214080459771,0.236214080459771,0.95,"mean","qi","confidence.ans",0.236214080459771,-0.300869252873564

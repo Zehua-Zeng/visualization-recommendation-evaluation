@@ -1,4 +1,4 @@
-"alg","diff_in_rating",".lower",".upper",".width",".point",".interval","task"
+"alg","diff_in_rating",".lower",".upper",".width",".point",".interval","metric"
 "bfs dziban - bfs compassql",0.135025396825397,-0.225,0.495267857142857,0.95,"mean","qi","confidence.udata"
 "dfs compassql - bfs compassql",-0.133174603174603,-0.497619047619048,0.246458333333333,0.95,"mean","qi","confidence.udata"
 "dfs compassql - bfs dziban",-0.2682,-0.633333333333333,0.0833333333333335,0.95,"mean","qi","confidence.udata"

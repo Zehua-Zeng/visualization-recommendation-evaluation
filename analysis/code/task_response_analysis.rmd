@@ -31,6 +31,8 @@ time_data = read.csv('processed_completion_time.csv')
 accuracy_data = read.csv('processed_accuracy_split.csv')
 
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
+confidence_metrics = c("confidence.udata", "confidence.ans")
+preference_metrics = c("efficiency", "ease.of.use", "utility", "overall")
 seed = 12
 ```
 
@@ -268,11 +270,11 @@ for (attr in analyses) {
     compare_levels(rating, by = search) %>%
     rename(diff_in_rating = rating) 
   
-  search_draw_data['task'] = attr
+  search_draw_data['metric'] = attr
   search_draw_data_combined <- rbind(search_draw_data_combined, search_draw_data)
   
   search_credible_intervals <- search_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
-  search_credible_intervals['task'] = attr
+  search_credible_intervals['metric'] = attr
   search_differences_intervals <- rbind(search_differences_intervals, search_credible_intervals)
   
   oracle_draw_data <- draw_data %>%
@@ -281,11 +283,11 @@ for (attr in analyses) {
     compare_levels(rating, by = oracle) %>%
     rename(diff_in_rating = rating) 
   
-  oracle_draw_data['task'] = attr
+  oracle_draw_data['metric'] = attr
   oracle_draw_data_combined <- rbind(oracle_draw_data_combined, oracle_draw_data)
   
   oracle_credible_intervals <- oracle_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
-  oracle_credible_intervals['task'] = attr
+  oracle_credible_intervals['metric'] = attr
   oracle_differences_intervals <- rbind(oracle_differences_intervals, oracle_credible_intervals)
   
   alg_draw_data <- draw_data 
@@ -297,11 +299,11 @@ for (attr in analyses) {
     summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
     compare_levels(rating, by = alg) %>%
     rename(diff_in_rating = rating)
-  alg_draw_data['task'] = attr
+  alg_draw_data['metric'] = attr
   alg_draw_data_combined <- rbind(alg_draw_data_combined, alg_draw_data)
   
   alg_credible_intervals <- alg_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
-  alg_credible_intervals['task'] = attr
+  alg_credible_intervals['metric'] = attr
   alg_differences_intervals <- rbind(alg_differences_intervals, alg_credible_intervals)
 }
 
@@ -318,44 +320,67 @@ if(search_differences_intervals[1,'search']=="dfs - bfs"){
   search_differences_intervals$lower = -1 * search_differences_intervals$.upper
   search_differences_intervals$.upper = search_differences_intervals$temp 
 }
-search_draw_data_combined$task <- factor(search_draw_data_combined$task, levels=rev(analyses))
-search_differences_plot <-  search_draw_data_combined %>%
-    ggplot(aes(x = diff_in_rating, y = task)) +
-    ylab("Metric") +
+search_draw_data_combined$metric <- factor(search_draw_data_combined$metric, levels=rev(analyses))
+search_differences_plot_confidence <-  subset(search_draw_data_combined, metric %in% confidence_metrics) %>%
+    ggplot(aes(x = diff_in_rating, y = metric)) +
+    ylab("Confidence") +
     xlab(paste0("Expected Difference in Rating (",search_draw_data_combined[1,'search'],")")) +
     stat_halfeye(.width = c(.95, .5)) +
     geom_vline(xintercept = 0, linetype = "longdash") +
     theme_minimal()
 
-ggsave(file="search_rating_differences.png", plot=search_differences_plot, path = "../plots/posterior_plots/new")
-write.csv(search_differences_intervals, paste("../plot_data/new/search_rating_differences.csv", sep=""), row.names = FALSE)
+ggsave(file="search_rating_differences_confidence.png", plot=search_differences_plot_confidence, path = "../plots/posterior_plots/new", width = 7, height = 7)
 
-oracle_draw_data_combined$task <- factor(oracle_draw_data_combined$task, levels=rev(analyses))
-oracle_differences_plot <-  oracle_draw_data_combined %>%
-    ggplot(aes(x = diff_in_rating, y = task)) +
-    ylab("Metric") +
-    xlab("Expected Difference in Rating (dziban - compassql)") +
+search_differences_plot_preference <-  subset(search_draw_data_combined, metric %in% preference_metrics) %>%
+    ggplot(aes(x = diff_in_rating, y = metric)) +
+    ylab("Preference") +
+    xlab(paste0("Expected Difference in Rating (",search_draw_data_combined[1,'search'],")")) +
     stat_halfeye(.width = c(.95, .5)) +
     geom_vline(xintercept = 0, linetype = "longdash") +
     theme_minimal()
 
-ggsave(file="oracle_rating_differences.png", plot=oracle_differences_plot, path = "../plots/posterior_plots/new", width = 7, height = 7)
+ggsave(file="search_rating_differences_preference.png", plot=search_differences_plot_preference, path = "../plots/posterior_plots/new", width = 7, height = 7)
+
+write.csv(search_differences_intervals, paste("../plot_data/new/search_rating_differences.csv", sep=""), row.names = FALSE)
+
+oracle_draw_data_combined$metric <- factor(oracle_draw_data_combined$metric, levels=rev(analyses))
+
+oracle_differences_plot_confidence <-  subset(oracle_draw_data_combined, metric %in% confidence_metrics) %>%
+    ggplot(aes(x = diff_in_rating, y = metric)) +
+    ylab("Confidence") +
+    xlab(paste0("Expected Difference in Rating (",oracle_draw_data_combined[1,'oracle'],")")) +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal()
+
+ggsave(file="oracle_rating_differences_confidence.png", plot=oracle_differences_plot_confidence, path = "../plots/posterior_plots/new", width = 7, height = 7)
+
+oracle_differences_plot_preference <-  subset(oracle_draw_data_combined, metric %in% preference_metrics) %>%
+    ggplot(aes(x = diff_in_rating, y = metric)) +
+    ylab("Preference") +
+    xlab(paste0("Expected Difference in Rating (",oracle_draw_data_combined[1,'oracle'],")")) +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal()
+
+ggsave(file="oracle_rating_differences_preference.png", plot=oracle_differences_plot_preference, path = "../plots/posterior_plots/new", width = 7, height = 7)
+
 write.csv(oracle_differences_intervals, paste("../plot_data/new/oracle_rating_differences.csv", sep=""), row.names = FALSE)
 
 
 alg_draw_data_combined = subset(alg_draw_data_combined, alg == "dfs compassql - bfs dziban")
-alg_draw_data_combined$task <- factor(alg_draw_data_combined$task, levels=rev(analyses))
+alg_draw_data_combined$metric <- factor(alg_draw_data_combined$metric, levels=rev(analyses))
 alg_draw_data_combined$alg <- as.factor(alg_draw_data_combined$alg)
-alg_differences_plot <- alg_draw_data_combined %>%
-    ggplot(aes(x = diff_in_rating, y = task)) +
-    ylab("Metric") +
+alg_differences_plot <- subset(alg_draw_data_combined, metric %in% preference_metrics) %>%
+    ggplot(aes(x = diff_in_rating, y = metric)) +
+    ylab("Preference") +
     xlab("Expected Difference in Rating (dfs compassql - bfs dziban)") +
     stat_halfeye(.width = c(.95, .5)) +
     geom_vline(xintercept = 0, linetype = "longdash") +
     theme_minimal()
 
-ggsave(file="alg_rating_differences.png", plot=alg_differences_plot, path = "../plots/posterior_plots/new", width = 7, height = 7)
-write.csv(alg_differences_intervals, paste("../plot_data/new/oracle_rating_differences.csv", sep=""), row.names = FALSE)
+ggsave(file="alg_rating_differences_preference.png", plot=alg_differences_plot, path = "../plots/posterior_plots/new", width = 7, height = 7)
+write.csv(alg_differences_intervals, paste("../plot_data/new/alg_rating_differences.csv", sep=""), row.names = FALSE)
 
 
 
