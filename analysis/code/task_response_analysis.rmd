@@ -36,81 +36,21 @@ preference_metrics = c("efficiency", "ease.of.use", "utility", "overall")
 seed = 12
 ```
 
-```{r posterior_plotting_function}
-generate_posterior_plot = function(model, num_independent_variables, filename, x_lab, facet=TRUE, log_transformed=FALSE) {
-  f = model %>%
-    emmeans( ~ x1*x2*x3) %>%
-    gather_emmeans_draws()
-  
-  # save the credible interval boundaries.  We will use the 90% credible interval.
-  fit_info = f %>%
-    mean_qi(.value, .width = c(.95, .5))
-  
-  # if facet is true, we split the data into two plots: one for the birdstrikes dataset, one for the movies dataset
-  # the condition column will be used to label the y axis
-  if (facet){
-    f$condition = paste(f$x2, f$x3, sep= " | ")
-  }
-  else{
-    f$condition = paste(f$x1, f$x2, f$x3, sep= " | ")
-  }
-  
-  # create, format, and save our posterior plot
-  plot = ggplot(f, aes(x = if(log_transformed) exp(.value) else .value, y = reorder(condition, desc(condition)), fill = x3)) + stat_halfeye(.width = c(.95, .5)) + 
-    labs(x=x_lab, y="Condition")
-  if(facet){
-    plot = plot + facet_grid(cols = vars(x1))
-      ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots", width = 6, height = 4, dpi = 300, units = "in")
-  }
-  else{
-      ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
-  }
-
-  # save out the credible interval boundaries as well to use for the paper
-  write.csv(fit_info, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
-}
-```
-
 ```{r task_response_ordinal}
+
+analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
+confidence_metrics = c("confidence.udata", "confidence.ans")
+preference_metrics = c("efficiency", "ease.of.use", "utility", "overall")
+seed = 12
+
 data <- read.csv('processed_ptask_responses.csv')
-response_levels =  c(-2,-1, 0, 1, 2)
-response_labels = c("-2", "-1", "0", "1", "2")
+data[,analyses] <- lapply(data[,analyses],ordered)
 data <- data %>%
   mutate(
     dataset = as.factor(dataset),
     oracle = as.factor(oracle),
     search = as.factor(search),
-    task = as.factor(task),
-    confidence.udata = ordered(
-      confidence.udata,
-      levels = c(-1, 0, 1, 2),
-      labels = c("-1", "0", "1", "2")
-    ),
-    confidence.ans = ordered(
-      confidence.ans,
-      levels = response_levels,
-      labels = response_labels
-    ),
-    efficiency = ordered(
-      efficiency,
-      levels = response_levels,
-      labels = response_labels
-    ),
-    ease.of.use = ordered(
-      ease.of.use,
-      levels = response_levels,
-      labels = response_labels
-    ),
-    utility = ordered(
-      utility,
-      levels = response_levels,
-      labels = response_labels
-    ),
-    overall = ordered(
-      overall,
-      levels = response_levels,
-      labels = response_labels
-    ),
+    task = as.factor(task)
   )
 
 generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
@@ -192,7 +132,6 @@ generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
   credible_intervals <- predictive_plot_data %>% group_by(search, oracle) %>% mean_qi(rating, .width = c(.95, .5))
   write.csv(credible_intervals, paste("../plot_data/new/",filename,".csv", sep=""), row.names = FALSE, append=FALSE)
   
-  # TODO:  Make sure alpha looks nice
   predictive_plot_focused_open_split <- predictive_plot_data %>%
     ggplot(aes(x = oracle, y = rating, fill=search, alpha = 0.5)) +
     stat_eye(.width = c(.95, .5)) +
@@ -207,104 +146,50 @@ generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
   return(model)
 }
 
-search_draw_data_combined <- data.frame(draw=numeric(),
-                 search=character(),
-                 diff_in_rating=numeric(),
-                 task=character(), 
-                 stringsAsFactors=FALSE) 
+search_draw_data_combined <- data.frame() 
 
-search_differences_intervals <- data.frame(
-                .lower=numeric(),
-                .upper=numeric(),
-                .width=numeric(),
-                .point=character(),
-                interval=character(),
-                 search=character(),
-                 diff_in_rating=numeric(),
-                 task=character(), 
-                 stringsAsFactors=FALSE) 
+search_differences_intervals <- data.frame() 
 
-oracle_draw_data_combined <- data.frame(draw=numeric(),
-                 oracle=character(),
-                 diff_in_rating=numeric(),
-                 task=character(), 
-                 stringsAsFactors=FALSE) 
+oracle_draw_data_combined <- data.frame() 
 
-oracle_differences_intervals <- data.frame(
-                .lower=numeric(),
-                .upper=numeric(),
-                .width=numeric(),
-                .point=character(),
-                interval=character(),
-                 oracle=character(),
-                 diff_in_rating=numeric(),
-                 task=character(), 
-                 stringsAsFactors=FALSE) 
+oracle_differences_intervals <- data.frame() 
 
-alg_draw_data_combined <- data.frame(draw=numeric(),
-                 alg=character(),
-                 diff_in_rating=numeric(),
-                 task=character(), 
-                 stringsAsFactors=FALSE) 
+alg_draw_data_combined <- data.frame() 
 
-alg_differences_intervals <- data.frame(
-                .lower=numeric(),
-                .upper=numeric(),
-                .width=numeric(),
-                .point=character(),
-                interval=character(),
-                 alg=character(),
-                 diff_in_rating=numeric(),
-                 task=character(), 
-                 stringsAsFactors=FALSE) 
+alg_differences_intervals <- data.frame() 
 
+get_differences_and_intervals = function(draws, variable_to_compare, metric){
+  difference_data <- draw_data %>%
+    group_by(!!sym(variable_to_compare), .draw) %>%
+    summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
+    compare_levels(rating, by = !!sym(variable_to_compare)) %>%
+    rename(diff_in_rating = rating) 
+  
+  difference_data['metric'] = metric
+  difference_credible_intervals <- difference_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+  difference_credible_intervals['metric'] = metric
+  
+  return(list("differences" = difference_data, "intervals" = difference_credible_intervals))
+}
 
 for (attr in analyses) {
   model = generate_model_and_draws(data, attr)
   draw_data <- data %>%
-    add_predicted_draws(model, seed = seed, re_formula = NA) 
+  add_predicted_draws(model, seed = seed, re_formula = NA) 
   
-  search_draw_data <- draw_data %>%
-    group_by(search, .draw) %>%
-    summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-    compare_levels(rating, by = search) %>%
-    rename(diff_in_rating = rating) 
+  draw_data$alg <- paste(draw_data$search, draw_data$oracle)
   
-  search_draw_data['metric'] = attr
-  search_draw_data_combined <- rbind(search_draw_data_combined, search_draw_data)
+  search_vals <- get_differences_and_intervals(draw_data, "search", attr)
+  search_draw_data_combined <- rbind(search_draw_data_combined, search_vals$differences)
+  search_differences_intervals <- rbind(search_differences_intervals, search_vals$intervals)
   
-  search_credible_intervals <- search_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
-  search_credible_intervals['metric'] = attr
-  search_differences_intervals <- rbind(search_differences_intervals, search_credible_intervals)
+  oracle_vals <- get_differences_and_intervals(draw_data, "oracle", attr)
+  oracle_draw_data_combined <- rbind(oracle_draw_data_combined, oracle_vals$differences)
+  oracle_differences_intervals <- rbind(oracle_differences_intervals, oracle_vals$intervals)
   
-  oracle_draw_data <- draw_data %>%
-    group_by(oracle, .draw) %>%
-    summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-    compare_levels(rating, by = oracle) %>%
-    rename(diff_in_rating = rating) 
-  
-  oracle_draw_data['metric'] = attr
-  oracle_draw_data_combined <- rbind(oracle_draw_data_combined, oracle_draw_data)
-  
-  oracle_credible_intervals <- oracle_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
-  oracle_credible_intervals['metric'] = attr
-  oracle_differences_intervals <- rbind(oracle_differences_intervals, oracle_credible_intervals)
-  
-  alg_draw_data <- draw_data 
-  alg_draw_data$alg <- paste(alg_draw_data$search, alg_draw_data$oracle)
-  alg_draw_data$alg <- as.factor(alg_draw_data$alg)
-   
-  alg_draw_data <- alg_draw_data %>%
-    group_by(alg, .draw) %>%
-    summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-    compare_levels(rating, by = alg) %>%
-    rename(diff_in_rating = rating)
-  alg_draw_data['metric'] = attr
-  alg_draw_data_combined <- rbind(alg_draw_data_combined, alg_draw_data)
-  
-  alg_credible_intervals <- alg_draw_data %>% mean_qi(diff_in_rating, .width = c(.95, .5))
-  alg_credible_intervals['metric'] = attr
-  alg_differences_intervals <- rbind(alg_differences_intervals, alg_credible_intervals)
+  alg_vals <- get_differences_and_intervals(draw_data, "alg", attr)
+  alg_draw_data_combined <- rbind(alg_draw_data_combined, alg_vals$differences)
+  alg_differences_intervals <- rbind(alg_differences_intervals, alg_vals$intervals)
 }
 
 # flip order so that we get bfs - dfs
@@ -320,69 +205,42 @@ if(search_differences_intervals[1,'search']=="dfs - bfs"){
   search_differences_intervals$lower = -1 * search_differences_intervals$.upper
   search_differences_intervals$.upper = search_differences_intervals$temp 
 }
-search_draw_data_combined$metric <- factor(search_draw_data_combined$metric, levels=rev(analyses))
-search_differences_plot_confidence <-  subset(search_draw_data_combined, metric %in% confidence_metrics) %>%
-    ggplot(aes(x = diff_in_rating, y = metric)) +
-    ylab("Confidence") +
-    xlab(paste0("Expected Difference in Rating (",search_draw_data_combined[1,'search'],")")) +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal()
+generate_difference_plot = function(data, xLab, yLab, filename){
+   difference_plot <- data %>%
+      ggplot(aes(x = diff_in_rating, y = metric)) +
+      ylab(yLab) +
+      xlab(xLab) +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+    ggsave(file=filename, plot=difference_plot, path = "../plots/posterior_plots/new", width = 7, height = 7)
 
-ggsave(file="search_rating_differences_confidence.png", plot=search_differences_plot_confidence, path = "../plots/posterior_plots/new", width = 7, height = 7)
+}
 
-search_differences_plot_preference <-  subset(search_draw_data_combined, metric %in% preference_metrics) %>%
-    ggplot(aes(x = diff_in_rating, y = metric)) +
-    ylab("Preference") +
-    xlab(paste0("Expected Difference in Rating (",search_draw_data_combined[1,'search'],")")) +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal()
-
-ggsave(file="search_rating_differences_preference.png", plot=search_differences_plot_preference, path = "../plots/posterior_plots/new", width = 7, height = 7)
-
+generate_confidence_and_preference_plots = function(data, variable_to_compare){
+  data$metric <- factor(data$metric, levels=rev(analyses))
+  
+  generate_difference_plot(subset(data, metric %in% confidence_metrics),
+                            paste0("Expected Difference in Rating (",data[1,variable_to_compare],")"),
+                            "Confidence",
+                           paste0(variable_to_compare, "_rating_differences_confidence.png")
+                            )
+  
+  generate_difference_plot(subset(data, metric %in% preference_metrics),
+                            paste0("Expected Difference in Rating (",data[1,variable_to_compare],")"),
+                            "Preference",
+                           paste0(variable_to_compare, "_rating_differences_preference.png")
+                            )
+}
+generate_confidence_and_preference_plots(search_draw_data_combined, "search")
 write.csv(search_differences_intervals, paste("../plot_data/new/search_rating_differences.csv", sep=""), row.names = FALSE)
 
-oracle_draw_data_combined$metric <- factor(oracle_draw_data_combined$metric, levels=rev(analyses))
-
-oracle_differences_plot_confidence <-  subset(oracle_draw_data_combined, metric %in% confidence_metrics) %>%
-    ggplot(aes(x = diff_in_rating, y = metric)) +
-    ylab("Confidence") +
-    xlab(paste0("Expected Difference in Rating (",oracle_draw_data_combined[1,'oracle'],")")) +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal()
-
-ggsave(file="oracle_rating_differences_confidence.png", plot=oracle_differences_plot_confidence, path = "../plots/posterior_plots/new", width = 7, height = 7)
-
-oracle_differences_plot_preference <-  subset(oracle_draw_data_combined, metric %in% preference_metrics) %>%
-    ggplot(aes(x = diff_in_rating, y = metric)) +
-    ylab("Preference") +
-    xlab(paste0("Expected Difference in Rating (",oracle_draw_data_combined[1,'oracle'],")")) +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal()
-
-ggsave(file="oracle_rating_differences_preference.png", plot=oracle_differences_plot_preference, path = "../plots/posterior_plots/new", width = 7, height = 7)
-
+generate_confidence_and_preference_plots(oracle_draw_data_combined, "oracle")
 write.csv(oracle_differences_intervals, paste("../plot_data/new/oracle_rating_differences.csv", sep=""), row.names = FALSE)
 
 
-alg_draw_data_combined = subset(alg_draw_data_combined, alg == "dfs compassql - bfs dziban")
-alg_draw_data_combined$metric <- factor(alg_draw_data_combined$metric, levels=rev(analyses))
-alg_draw_data_combined$alg <- as.factor(alg_draw_data_combined$alg)
-alg_differences_plot <- subset(alg_draw_data_combined, metric %in% preference_metrics) %>%
-    ggplot(aes(x = diff_in_rating, y = metric)) +
-    ylab("Preference") +
-    xlab("Expected Difference in Rating (dfs compassql - bfs dziban)") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal()
-
-ggsave(file="alg_rating_differences_preference.png", plot=alg_differences_plot, path = "../plots/posterior_plots/new", width = 7, height = 7)
+generate_confidence_and_preference_plots(subset(alg_draw_data_combined, alg == "dfs compassql - bfs dziban"), "alg")
 write.csv(alg_differences_intervals, paste("../plot_data/new/alg_rating_differences.csv", sep=""), row.names = FALSE)
-
-
 
 ```
 
@@ -390,23 +248,43 @@ write.csv(alg_differences_intervals, paste("../plot_data/new/alg_rating_differen
 
 ```{r time_analysis}  
 # analysis to predict time elapsed for the user to complete a certain task given a dataset, oracle, and search algorithm
+time_data = read.csv('processed_completion_time.csv')
+
+time_data <- time_data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search),
+    task = as.factor(task)
+  )
 
 run_model_time = function(data, task, a_prior, a_sd, facet){
   #select your independent and dependent variables
-  data$x1 = as.factor(data$dataset) 
-  data$x2 = as.factor(data$oracle)
-  data$x3 = as.factor(data$search)
   data$y = log(data$completion_time)
-  
-  b1_prior = 0
-  b1_sd = a_sd 
-  
   # train model
-  m = stan_glm(y ~ x1*x2*x3, data = data,
-  prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
-  prior = normal(b1_prior, b1_sd, autoscale = FALSE),
-  seed = seed)
   
+  model <- brm(
+    formula = bf(y ~ dataset * oracle * search),
+    prior = prior(normal(5.69, 0.69), class = b),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = data,
+    control = list(adapt_delta = 0.99),
+    seed = seed
+  )
+  
+  predictive_plot_data <- data %>%
+    add_predicted_draws(model, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, .draw)
+  
+  predictive_plot <- predictive_plot_data %>%
+    ggplot(aes(x = oracle, y = exp(.prediction), fill = dataset, alpha =0.5 )) +
+    stat_eye(.width = c(.95, .5)) +
+    theme_minimal() +
+    coord_cartesian(ylim = c(0, 1500)) +
+    facet_grid(. ~ search)
   
   filename = gsub(" ", "_", task)
   filename = paste("time_", filename, sep="")
@@ -414,8 +292,10 @@ run_model_time = function(data, task, a_prior, a_sd, facet){
 
 }
 
-prior_mean = 360.48
-prior_sd = 224.40
+# prior_mean = 360.48
+# prior_sd = 224.40
+prior_mean = 5.69
+prior_sd = 0.69
 
 # priors for completion time of each task were derived from a pilot study
 run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum", prior_mean, prior_sd, FALSE)
@@ -423,6 +303,203 @@ run_model_time(subset(time_data, task == "2. Retrieve Value"), "Retrieve Value",
 run_model_time(subset(time_data, task == "3. Prediction"), "Prediction", prior_mean, prior_sd, FALSE)
 run_model_time(subset(time_data, task == "4. Exploration"), "Exploration", prior_mean, prior_sd, FALSE)
 
+```
+```{r posterior_plotting_function}
+generate_posterior_plot = function(model, num_independent_variables, filename, x_lab, facet=TRUE, log_transformed=FALSE) {
+  f = model %>%
+    emmeans( ~ x1*x2*x3) %>%
+    gather_emmeans_draws()
+  
+  # save the credible interval boundaries.  We will use the 90% credible interval.
+  fit_info = f %>%
+    mean_qi(.value, .width = c(.95, .5))
+  
+  # if facet is true, we split the data into two plots: one for the birdstrikes dataset, one for the movies dataset
+  # the condition column will be used to label the y axis
+  if (facet){
+    f$condition = paste(f$x2, f$x3, sep= " | ")
+  }
+  else{
+    f$condition = paste(f$x1, f$x2, f$x3, sep= " | ")
+  }
+  
+  # create, format, and save our posterior plot
+  plot = ggplot(f, aes(x = if(log_transformed) exp(.value) else .value, y = reorder(condition, desc(condition)), fill = x1, alpha = 0.5)) + stat_halfeye(.width = c(.95, .5)) + 
+    labs(x=x_lab, y="Condition")
+  if(facet){
+    plot = plot + facet_grid(cols = vars(x3))
+      ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots", width = 6, height = 4, dpi = 300, units = "in")
+  }
+  else{
+      ggsave(file=paste(filename, ".png", sep=""), plot=plot, path = "../plots/posterior_plots")
+  }
+
+  # save out the credible interval boundaries as well to use for the paper
+  write.csv(fit_info, paste("../plot_data/",filename,".csv", sep=""), row.names = FALSE)
+}
+```
+
+```{r time_analysis}  
+# analysis to predict time elapsed for the user to complete a certain task given a dataset, oracle, and search algorithm
+time_data = read.csv('processed_completion_time.csv')
+analyses = c(
+  "confidence.udata",
+  "confidence.ans",
+  "efficiency",
+  "ease.of.use",
+  "utility",
+  "overall"
+)
+confidence_metrics = c("confidence.udata", "confidence.ans")
+preference_metrics = c("efficiency", "ease.of.use", "utility", "overall")
+seed = 12
+
+time_data <- time_data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search)
+  )
+
+run_model_time = function(data, task, a_prior, a_sd) {
+  data$y = log(data$completion_time)
+  
+  # train model
+  model = stan_glm(
+    y ~ dataset * oracle * search,
+    data = data,
+    prior_intercept = normal(a_prior, a_sd, autoscale = FALSE),
+    prior = normal(0, a_sd, autoscale = FALSE),
+    seed = seed
+  )
+  filename = gsub("^.*\\.","", task )
+  filename = gsub(" ", "_", filename)
+  filename = paste("time", filename, sep = "")
+
+  
+  f = model %>%
+    emmeans(~ dataset * oracle * search) %>%
+    gather_emmeans_draws()
+  
+  f$condition = paste(f$oracle, f$search, sep = " | ")
+  # save the credible interval boundaries.  We will use the 90% credible interval.
+  fit_info = f %>%
+    mean_qi(.value, .width = c(.95, .5))
+  plot = ggplot(f, aes(
+    x = exp(.value),
+    y = condition,
+    fill = dataset,
+    alpha = 0.5
+  )) + stat_halfeye(.width = c(.95, .5)) +
+    labs(x = "Time (Seconds)", y = "Condition")
+  ggsave(
+    file = paste(filename, ".png", sep = ""),
+    plot = plot,
+    path = "../plots/posterior_plots/new"
+  )
+  write.csv(fit_info,
+            paste("../plot_data/new/", filename, ".csv", sep = ""),
+            row.names = FALSE)
+  return(model)
+}
+
+
+prior_mean = 5.69
+prior_sd = 0.69
+# priors for completion time of each task were derived from a pilot study
+task_list = c("1. Find Extremum",
+              "2. Retrieve Value",
+              "3. Prediction",
+              "4. Exploration")
+alg_difference_draws <- data.frame()
+alg_difference_intervals <- data.frame()
+
+search_difference_draws <- data.frame()
+search_difference_intervals <- data.frame()
+
+oracle_difference_draws <- data.frame()
+oracle_difference_intervals <- data.frame()
+
+get_differences_and_intervals = function(draws, variable_to_compare, metric){
+  difference_data <- draw_data %>%
+    group_by(!!sym(variable_to_compare), .draw) %>%
+    summarize(time = weighted.mean(exp(.prediction))) %>%
+    compare_levels(time, by = !!sym(variable_to_compare)) %>%
+    rename(diff_in_time = time) 
+  
+  difference_data['metric'] = metric
+  difference_credible_intervals <- difference_data %>% mean_qi(diff_in_time, .width = c(.95, .5))
+  difference_credible_intervals['metric'] = metric
+  
+  return(list("differences" = difference_data, "intervals" = difference_credible_intervals))
+}
+task = "1. Find Extremum"
+for (task in task_list) {
+  data = subset(time_data, task == task)
+  model <- run_model_time(data, task, prior_mean, prior_sd)
+  draw_data <- data %>%
+  add_predicted_draws(model, seed = seed, re_formula = NA)
+  draw_data$alg <- paste(draw_data$search, draw_data$oracle)
+
+  search_vals <- get_differences_and_intervals(draw_data, "search", task)
+  search_difference_draws <- rbind(search_difference_draws, search_vals$differences)
+  search_difference_intervals <- rbind(search_difference_intervals, search_vals$intervals)
+
+  oracle_vals <- get_differences_and_intervals(draw_data, "oracle", task)
+  oracle_difference_draws <- rbind(oracle_difference_draws, oracle_vals$differences)
+  oracle_difference_intervals <- rbind(oracle_difference_intervals, oracle_vals$intervals)
+
+  alg_vals <- get_differences_and_intervals(draw_data, "alg", task)
+  alg_difference_draws <- rbind(alg_difference_draws, alg_vals$differences)
+  alg_difference_intervals <- rbind(alg_difference_intervals, alg_vals$intervals)
+  
+  # alg_draws <- model %>% emmeans(~ oracle * search) %>%
+  #   contrast(method = "pairwise") %>%
+  #   gather_emmeans_draws()
+  # alg_draws$task = task
+  # alg_difference_draws <- rbind(alg_difference_draws, alg_draws)
+  # 
+  # oracle_draws <- model %>% emmeans(~ oracle) %>%
+  #   contrast(method = "pairwise") %>%
+  #   gather_emmeans_draws()
+  # oracle_draws$task = task
+  # oracle_difference_draws <-
+  #   rbind(oracle_difference_draws, oracle_draws)
+  # 
+  # search_draws <- model %>% emmeans(~ search) %>%
+  #   contrast(method = "pairwise") %>%
+  #   gather_emmeans_draws()
+  # search_draws$task = task
+  # search_difference_draws <-
+  #   rbind(search_difference_draws, search_draws)
+}
+# 
+# alg_difference_draws %>% ggplot(aes(x = diff_in_time, y = metric)) +
+#   geom_vline(xintercept = 0, linetype = "longdash") +
+#   stat_halfeye()
+# 
+# oracle_difference_draws %>% ggplot(aes(x = diff_in_time, y = oracle)) +
+#   geom_vline(xintercept = 0, linetype = "longdash") +
+#   stat_halfeye()
+
+generate_difference_plot = function(data, xLab, yLab, filename){
+   difference_plot <- data %>%
+      ggplot(aes(x = diff_in_time, y = metric)) +
+      ylab(yLab) +
+      xlab(xLab) +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+    ggsave(file=filename, plot=difference_plot, path = "../plots/posterior_plots/new", width = 7, height = 7)
+
+}
+
+generate_difference_plot(search_difference_draws, "Task", paste0("Time Difference (Seconds): ", search_difference_draws[1,'search']), "search_time_differences.png")
+generate_difference_plot(oracle_difference_draws, "Task", paste0("Time Difference (Seconds): ", oracle_difference_draws[1,'oracle']), "oracle_time_differences.png")
+generate_difference_plot(alg_difference_draws, "Task", paste0("Time Difference (Seconds): ", alg_difference_draws[1,'alg']), "alg_time_differences.png")
+write.csv(search_difference_intervals, paste("../plot_data/new/search_time_differences.csv", sep=""), row.names = FALSE)
+write.csv(oracle_difference_intervals, paste("../plot_data/new/oracle_time_differences.csv", sep=""), row.names = FALSE)
+write.csv(alg_difference_intervals, paste("../plot_data/new/alg_time_differences.csv", sep=""), row.names = FALSE)
 ```
 
 ```{r time_analysis_focused_or_open}  
