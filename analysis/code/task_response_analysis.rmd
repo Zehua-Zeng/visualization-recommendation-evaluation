@@ -27,7 +27,6 @@ theme_set(theme_light())
 ```{r data_prep}
 
 time_data = read.csv('processed_completion_time.csv')
-accuracy_data = read.csv('processed_accuracy_split.csv')
 
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
 confidence_metrics = c("confidence.udata", "confidence.ans")
@@ -326,7 +325,6 @@ run_model_time = function(data, task, a_prior, a_sd) {
 }
 
 for (task_name in task_list) {
-  print(task_name)
   data_sub <- subset(time_data, task == task_name)
   print(data_sub)
   model <- run_model_time(data_sub, task_name, prior_mean, prior_sd)
@@ -336,7 +334,7 @@ for (task_name in task_list) {
   draw_data$task <- task_name
   all_draws <- rbind(all_draws, draw_data)
   
-  fit_info =  draw_data %>% mean_qi(exp(.value), .width = c(.95, .5))
+  fit_info <- draw_data %>% mean_qi(exp(.value), .width = c(.95, .5))
   
   plot = ggplot(draw_data, aes(
     x = exp(.value),
@@ -425,19 +423,19 @@ write.csv(alg_difference_intervals, paste("../plot_data/comparisons/time/alg_tim
 
 ```{r time_analysis_focused_or_open}  
 # The different tasks can be decribed as "focused" or "open-ended", so let's run analyses where we split on that attribute
-run_model_time(subset(time_data, task_type == "Focused"), "Focused", prior_mean, prior_sd, TRUE)
-run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", prior_mean, prior_sd, TRUE)
+run_model_time(subset(time_data, task_type == "Focused"), "Focused", prior_mean, prior_sd)
+run_model_time(subset(time_data, task_type == "Open-Ended"), "Open-Ended", prior_mean, prior_sd)
 ```
 
 ```{r misc_analyses}
-run_model_time(subset(time_data, task == "3. Prediction"), "Prediction (split by dataset)", 870.53, 657.68, TRUE)
-run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum (split by dataset)", 190.34, 96.57, TRUE)
+run_model_time(subset(time_data, task == "3. Prediction"), "Prediction (split by dataset)", 870.53, 657.68)
+run_model_time(subset(time_data, task == "1. Find Extremum"), "Find Extremum (split by dataset)", 190.34, 96.57)
 ```
 
 ```{r accuracy_analysis}
 
 accuracy_data = read.csv('processed_accuracy_split.csv')
-
+differences = c("search", "oracle")
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
 confidence_metrics = c("confidence.udata", "confidence.ans")
 preference_metrics = c("efficiency", "ease.of.use", "utility", "overall")
@@ -448,13 +446,11 @@ accuracy_tasks = c("1. Find Extremum", "2. Retrieve Value")
 accuracy_data$oracle = as.factor(accuracy_data$oracle)
 accuracy_data$search = as.factor(accuracy_data$search)
 accuracy_data$dataset = as.factor(accuracy_data$dataset)
-accuracy_data = subset(accuracy_data, task == "1. Find Extremum")
+
 
 generate_accuracy_model_and_draws = function(data){
-  
-}
-model_binary <- brm(accuracy ~ oracle*search+dataset, 
-                    data = accuracy_data,
+  model_binary <- brm(accuracy ~ oracle*search+dataset, 
+                    data = data,
                     prior = c(prior(normal(1, .05), class = Intercept)),
                     family = bernoulli(link = "logit"),
                     warmup = 500, 
@@ -463,41 +459,118 @@ model_binary <- brm(accuracy ~ oracle*search+dataset,
                     cores=2,
                     seed=seed
                     )
+  
+  # START evaluation
+  if (FALSE){
+    
+  data %>%
+    select(-accuracy) %>%
+    add_predicted_draws(model_binary, prediction = "accuracy", seed = seed) %>%
+    ggplot(aes(x = accuracy)) +
+    geom_density(fill = "black", size = 0) +
+    scale_y_continuous(NULL, breaks = NULL) +
+    labs(subtitle = "Prior predictive distribution for correctness") +
+    theme(panel.grid = element_blank())
+  
+  stanplot(model_binary, type="trace")
+  stanplot(model_binary, type="acf_bar")
+  summary(model_binary)
+  stanplot(model_binary, type="areas", prob=0.95)
+  exp(fixef(model_binary)[,-2])
+  
+  plot(model_binary)
+  pairs(model_binary)
+  
+  pred <- predict(model_binary, type = "response")
+  pred <- if_else(pred[,1] > 0.5, 1, 0)
+  confusion_matrix <- table(pred, pull(data, accuracy)) 
+  }
+  # END evalutation
+  # 
+  # posterior_draws <- data %>%
+  #     add_fitted_draws(model_binary, seed = seed, re_formula = NA) %>%
+  #     group_by(search, oracle, dataset, .draw)
+  # posterior_plot <- posterior_draws %>%
+  #     ggplot(aes(x = oracle, y = .value)) +
+  #     stat_eye(.width = c(.95, .5)) +
+  #     theme_minimal() +
+  #     coord_cartesian(ylim = c(0, 1)) +
+  #     facet_grid(. ~ search)
 
-# START evaluation
-accuracy_data %>%
-  select(-accuracy) %>%
-  add_predicted_draws(model_binary, prediction = "accuracy", seed = seed) %>%
-  ggplot(aes(x = accuracy)) +
-  geom_density(fill = "black", size = 0) +
-  scale_y_continuous(NULL, breaks = NULL) +
-  labs(subtitle = "Prior predictive distribution for correctness") +
-  theme(panel.grid = element_blank())
+  return(model_binary)
+}
+draw_data_combined <- list()
+differences_intervals <- list()
 
-stanplot(model_binary, type="trace")
-stanplot(model_binary, type="acf_bar")
-summary(model_binary)
-stanplot(model_binary, type="areas", prob=0.95)
-exp(fixef(model_binary)[,-2])
+for (diff in differences){
+  draw_data_combined[[diff]] <- data.frame()
+  differences_intervals[[diff]] <- data.frame()
+}
 
-plot(model_binary)
-pairs(model_binary)
+all_draws <- data.frame()
 
-accuracy_data %>%
-    add_fitted_draws(model_binary, seed = seed, re_formula = NA) %>%
-    group_by(search, oracle, dataset, .draw) %>%
-    ggplot(aes(x = oracle, y = .value)) +
-    stat_eye(.width = c(.95, .5)) +
-    theme_minimal() +
-    coord_cartesian(ylim = c(0, 1)) +
-    facet_grid(. ~ search)
+get_differences_and_intervals = function(predictive_data, variable_to_compare, metric){
+  difference_data <- predictive_data %>%
+    group_by(!!sym(variable_to_compare), dataset, .draw) %>%
+    summarize(accuracy = weighted.mean(.prediction)) %>%
+    compare_levels(accuracy, by = !!sym(variable_to_compare)) %>%
+    rename(difference_in_accuracy = accuracy) 
+  
+  difference_data['metric'] = metric
+  difference_credible_intervals <- difference_data %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
+  difference_credible_intervals['metric'] = metric
+  
+  return(list("differences" = difference_data, "intervals" = difference_credible_intervals))
+}
 
 
-pred <- predict(model_binary, type = "response")
-pred <- if_else(pred[,1] > 0.5, 1, 0)
-confusion_matrix <- table(pred, pull(accuracy_data, accuracy)) 
+for (accuracy_task in accuracy_tasks){
+  subsetted_data <- subset(accuracy_data, task == accuracy_task)
+  model <- generate_accuracy_model_and_draws(subsetted_data)
+  
+  draw_data <- subsetted_data %>%
+    add_fitted_draws(model, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, dataset, .draw)
+  draw_data$task <- accuracy_task
+  draw_data$condition <- paste(draw_data$oracle, draw_data$search, sep="_")
+  all_draws <- rbind(all_draws, draw_data)
+  
+  fit_info <-  draw_data %>% group_by(search, oracle, dataset) %>% mean_qi(.value, .width = c(.95, .5))
+  
+  plot = ggplot(draw_data, aes(
+    x = .value,
+    y = condition,
+    fill = dataset,
+    alpha = 0.5
+  )) + stat_halfeye(.width = c(.95, .5)) +
+    labs(x = "Accuracy (p_correct)", y = "Condition") 
 
-# END evalutation
+  filename = gsub("^.*\\.","", accuracy_task )
+  filename = gsub(" ", "_", filename)
+  filename = paste("accuracy", filename, sep = "")
+  
+  ggsave(
+    file = paste(filename, ".png", sep = ""),
+    plot = plot,
+    path = "../plots/posterior_draws/accuracy"
+  )
+  write.csv(fit_info,
+            paste("../plot_data/posterior_draws/accuracy/", filename, ".csv", sep = ""),
+            row.names = FALSE)
+
+  predictive_data  <- subsetted_data %>%
+    add_predicted_draws(model, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, dataset, .draw)
+  
+  for (diff in differences){
+    vals <- get_differences_and_intervals(predictive_data, diff, accuracy_task)
+    draw_data_combined[[diff]] <- rbind(draw_data_combined[[diff]], vals$differences)
+    differences_intervals[[diff]] <- rbind(differences_intervals[[diff]], vals$intervals)
+  }
+
+}
+
+
 
 ```
 
