@@ -56,7 +56,7 @@ generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
   filename = gsub("\\.", "_", attr)
   data$y = data[,attr]
   model <- brm(
-    formula = bf(y ~ dataset * oracle * search * task_type),
+    formula = bf(y ~ dataset + oracle * search),
     family = cumulative("probit"),
     prior = prior(normal(0, 1), class = b),
     chains = 2,
@@ -88,8 +88,7 @@ generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
     pars = c(
       "b_datasetmovies",
       "b_oracledziban",
-      "b_searchdfs",
-      "b_task_typeOpenMEnded"
+      "b_searchdfs"
     ),
     fixed = TRUE
   )
@@ -577,7 +576,8 @@ generate_difference_plot = function(data, xLab, yLab, filename){
       xlab(xLab) +
       stat_halfeye(.width = c(.95, .5)) +
       geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+      theme_minimal() + 
+     facet_grid(. ~ dataset)
     ggsave(file=filename, plot=difference_plot, path = "../plots/comparisons/user_response", width = 7, height = 7)
 }
 
