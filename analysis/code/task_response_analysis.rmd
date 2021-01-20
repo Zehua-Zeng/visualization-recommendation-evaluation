@@ -570,6 +570,22 @@ for (accuracy_task in accuracy_tasks){
 
 }
 
+generate_difference_plot = function(data, xLab, yLab, filename){
+   difference_plot <- data %>%
+      ggplot(aes(x = difference_in_accuracy, y = metric, fill = dataset, alpha = 0.5)) +
+      ylab(yLab) +
+      xlab(xLab) +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+    ggsave(file=filename, plot=difference_plot, path = "../plots/comparisons/user_response", width = 7, height = 7)
+}
+
+for (diff in differences){
+  subsetted_draw_data <- draw_data_combined[[diff]]
+  generate_difference_plot(subsetted_draw_data,  paste0("Expected Difference in Accuracy (",subsetted_draw_data[1,diff],")"), "Task",  paste0(diff, "_accuracy_differences.png"))
+  write.csv(differences_intervals[[diff]], paste0("../plot_data/comparisons/accuracy/",diff, "_accuracy_differences.csv"), row.names = FALSE)
+}
 
 
 ```
