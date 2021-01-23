@@ -1,0 +1,606 @@
+---
+title: "time_analysis"
+output: html_document
+---
+
+### Libraries required for this analysis
+```{r libraries, message=FALSE, warning=FALSE}
+
+knitr::opts_chunk$set(fig.align="center") 
+library(rstanarm)
+library(tidyverse)
+library(tidybayes)
+library(modelr) 
+library(ggplot2)
+library(magrittr)  
+library(emmeans)
+library(bayesplot)
+library(brms)
+library(gganimate)
+
+theme_set(theme_light())
+```
+
+In our experiement, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the user's time to complete each of four tasks:
+  1. Find Extremum
+  2. Retrieve Value
+  3. Prediction
+  4. Exploration
+
+Given a search algorithm (bsf or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict the time it takes the average user to complete each task.  In addition, we would like to know if the choice of search algorithm and oracle has any meaninful impact on a user's completion time for each of these four tasks,
+
+### Read in and clean data
+```{r}
+time_data = read.csv('processed_completion_time.csv')
+time_data <- time_data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search),
+    log_completion_time = log(completion_time)
+  )
+```
+
+### Set Priors (based on data from our pilot study)
+Units on these are log seconds.  We choose to work in log space in order to prevent our model from predicting completion times of less than zero seconds.
+```{r}
+prior_mean = 5.69
+prior_sd = 0.69
+
+models <- list()
+
+draw_data <- list()
+
+search_differences <- list()
+oracle_differences <- list()
+
+seed = 12
+
+task_list = c("1. Find Extremum",
+              "2. Retrieve Value",
+              "3. Prediction",
+              "4. Exploration")
+```
+
+## Find Extremum:  Building a Model for Time Analysis
+```{r}
+data_find_extremum <- subset(time_data, task == "1. Find Extremum")
+models$find_extremum <- stan_glm(
+    log_completion_time ~ dataset * oracle * search,
+    data = data_find_extremum,
+    prior_intercept = normal(prior_mean, prior_sd, autoscale = FALSE),
+    prior = normal(0, prior_sd, autoscale = FALSE),
+    seed = seed
+  )
+```
+
+### Find Extremum:  Diagnostics + Model Evaluation
+In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
+```{r}
+summary(models$find_extremum)
+```
+
+Trace plots help us check whether there is evidence of non-convergence for model.
+```{r}
+plot(models$find_extremum)
+```
+
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
+```{r}
+pairs(models$find_extremum)
+```
+
+Using draws from the posterior, we can visualize parameter effects and average response.  Be sure to apply an exponential transform toour log-transformed times to make it interpretable!  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+```{r}
+draw_data$find_extremum <- data_find_extremum %>%
+  add_fitted_draws(models$find_extremum, seed = seed, re_formula = NA)
+
+plot_find_extremum = ggplot(draw_data$find_extremum, aes(
+    x = exp(.value),
+    y = condition,
+    fill = dataset,
+    alpha = 0.5
+  )) + stat_halfeye(.width = c(.95, .5)) +
+    labs(x = "Time (Seconds)", y = "Condition") 
+
+plot_find_extremum
+```
+
+We can get the numeric values of the interval boundaries shown above with mean_qi
+```{r}
+fit_info_find_extremum <- draw_data$find_extremum %>% mean_qi(exp(.value), .width = c(.95, .5))
+fit_info_find_extremum
+```
+
+```{r echo=FALSE}
+# save the plot and intervals
+ ggsave(file = "time_Find_Extremum.png", plot = plot_find_extremum, path = "../plots/posterior_draws/time")
+  write.csv(fit_info_find_extremum, "../plot_data/posterior_draws/time/time_Find_Extremum.csv", row.names = FALSE)
+```
+
+### Find Extremum: Differences Between Conditions
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+```{r}
+find_extremum_predictive_data <- data_find_extremum %>%
+    add_fitted_draws(models$find_extremum, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, dataset, .draw)
+
+search_differences$find_extremum <- find_extremum_predictive_data  %>%
+    group_by(search, dataset, .draw) %>%
+    summarize(time = weighted.mean(exp(.value))) %>%
+    compare_levels(time, by = search) %>%
+    rename(diff_in_time = time) 
+
+search_differences$find_extremum$metric = "1. Find Extremum"
+
+search_differences$find_extremum %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Completion Time (",search_differences$find_extremum[1,'search'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() 
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+search_differences$find_extremum %>% mean_qi(diff_in_time, .width = c(.95, .5))
+```
+
+```{r}
+oracle_differences$find_extremum <- find_extremum_predictive_data  %>%
+    group_by(oracle, dataset, .draw) %>%
+    summarize(time = weighted.mean(exp(.value))) %>%
+    compare_levels(time, by = oracle) %>%
+    rename(diff_in_time = time) 
+
+oracle_differences$find_extremum$metric = "1. Find Extremum"
+
+oracle_differences$find_extremum %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Completion Time (",oracle_differences$find_extremum[1,'oracle'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() 
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+oracle_differences$find_extremum %>% mean_qi(diff_in_time, .width = c(.95, .5))
+```
+
+
+
+
+
+## Retrieve Value:  Building a Model for Time Analysis
+```{r}
+data_retrieve_value <- subset(time_data, task == "2. Retrieve Value")
+models$retrieve_value <- stan_glm(
+    log_completion_time ~ dataset * oracle * search,
+    data = data_retrieve_value,
+    prior_intercept = normal(prior_mean, prior_sd, autoscale = FALSE),
+    prior = normal(0, prior_sd, autoscale = FALSE),
+    seed = seed
+  )
+```
+
+### Retrieve Value:  Diagnostics + Model Evaluation
+In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
+```{r}
+summary(models$retrieve_value)
+```
+
+Trace plots help us check whether there is evidence of non-convergence for model.
+```{r}
+plot(models$retrieve_value)
+```
+
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
+```{r}
+pairs(models$retrieve_value)
+```
+
+Using draws from the posterior, we can visualize parameter effects and average response.  Be sure to apply an exponential transform toour log-transformed times to make it interpretable!  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+```{r}
+draw_data$retrieve_value <- data_retrieve_value %>%
+  add_fitted_draws(models$retrieve_value, seed = seed, re_formula = NA)
+
+plot_retrieve_value = ggplot(draw_data$retrieve_value, aes(
+    x = exp(.value),
+    y = condition,
+    fill = dataset,
+    alpha = 0.5
+  )) + stat_halfeye(.width = c(.95, .5)) +
+    labs(x = "Time (Seconds)", y = "Condition") 
+
+plot_retrieve_value
+```
+
+We can get the numeric values of the interval boundaries shown above with mean_qi
+```{r}
+fit_info_retrieve_value <- draw_data$retrieve_value %>% mean_qi(exp(.value), .width = c(.95, .5))
+fit_info_retrieve_value
+```
+
+```{r echo=FALSE}
+# save the plot and intervals
+ ggsave(file = "time_retrieve_value.png", plot = plot_retrieve_value, path = "../plots/posterior_draws/time")
+  write.csv(fit_info_retrieve_value, "../plot_data/posterior_draws/time/time_retrieve_value.csv", row.names = FALSE)
+```
+
+### Retrieve Value: Differences Between Conditions
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+```{r}
+retrieve_value_predictive_data <- data_retrieve_value %>%
+    add_fitted_draws(models$retrieve_value, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, dataset, .draw)
+
+search_differences$retrieve_value <- retrieve_value_predictive_data  %>%
+    group_by(search, dataset, .draw) %>%
+    summarize(time = weighted.mean(exp(.value))) %>%
+    compare_levels(time, by = search) %>%
+    rename(diff_in_time = time) 
+
+search_differences$retrieve_value$metric = "2. Retrieve Value"
+
+search_differences$retrieve_value %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Completion Time (",search_differences$retrieve_value[1,'search'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() 
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+search_differences$retrieve_value %>% mean_qi(diff_in_time, .width = c(.95, .5))
+```
+
+```{r}
+oracle_differences$retrieve_value <- retrieve_value_predictive_data  %>%
+    group_by(oracle, dataset, .draw) %>%
+    summarize(time = weighted.mean(exp(.value))) %>%
+    compare_levels(time, by = oracle) %>%
+    rename(diff_in_time = time) 
+
+oracle_differences$retrieve_value$metric = "2. Retrieve Value"
+
+oracle_differences$retrieve_value %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Completion Time (",oracle_differences$retrieve_value[1,'oracle'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() 
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+oracle_differences$retrieve_value %>% mean_qi(diff_in_time, .width = c(.95, .5))
+```
+
+
+
+
+##  Prediction:  Building a Model for Time Analysis
+```{r}
+data_prediction <- subset(time_data, task == "3. Prediction")
+models$prediction <- stan_glm(
+    log_completion_time ~ dataset * oracle * search,
+    data = data_prediction,
+    prior_intercept = normal(prior_mean, prior_sd, autoscale = FALSE),
+    prior = normal(0, prior_sd, autoscale = FALSE),
+    seed = seed
+  )
+```
+
+###  Prediction:  Diagnostics + Model Evaluation
+In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
+```{r}
+summary(models$prediction)
+```
+
+Trace plots help us check whether there is evidence of non-convergence for model.
+```{r}
+plot(models$prediction)
+```
+
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
+```{r}
+pairs(models$prediction)
+```
+
+Using draws from the posterior, we can visualize parameter effects and average response.  Be sure to apply an exponential transform toour log-transformed times to make it interpretable!  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+```{r}
+draw_data$prediction <- data_prediction %>%
+  add_fitted_draws(models$prediction, seed = seed, re_formula = NA)
+
+plot_prediction = ggplot(draw_data$prediction, aes(
+    x = exp(.value),
+    y = condition,
+    fill = dataset,
+    alpha = 0.5
+  )) + stat_halfeye(.width = c(.95, .5)) +
+    labs(x = "Time (Seconds)", y = "Condition") 
+
+plot_prediction
+```
+
+We can get the numeric values of the interval boundaries shown above with mean_qi
+```{r}
+fit_info_prediction <- draw_data$prediction %>% mean_qi(exp(.value), .width = c(.95, .5))
+fit_info_prediction
+```
+
+```{r echo=FALSE}
+# save the plot and intervals
+ ggsave(file = "time_prediction.png", plot = plot_prediction, path = "../plots/posterior_draws/time")
+  write.csv(fit_info_prediction, "../plot_data/posterior_draws/time/time_prediction.csv", row.names = FALSE)
+```
+
+###  Prediction: Differences Between Conditions
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+```{r}
+prediction_predictive_data <- data_prediction %>%
+    add_fitted_draws(models$prediction, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, dataset, .draw)
+
+search_differences$prediction <- prediction_predictive_data  %>%
+    group_by(search, dataset, .draw) %>%
+    summarize(time = weighted.mean(exp(.value))) %>%
+    compare_levels(time, by = search) %>%
+    rename(diff_in_time = time) 
+
+search_differences$prediction$metric = "3. Prediction"
+
+search_differences$prediction %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Completion Time (",search_differences$prediction[1,'search'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() 
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+search_differences$prediction %>% mean_qi(diff_in_time, .width = c(.95, .5))
+```
+
+```{r}
+oracle_differences$prediction <- prediction_predictive_data  %>%
+    group_by(oracle, dataset, .draw) %>%
+    summarize(time = weighted.mean(exp(.value))) %>%
+    compare_levels(time, by = oracle) %>%
+    rename(diff_in_time = time) 
+
+oracle_differences$prediction$metric = "3. Prediction"
+
+oracle_differences$prediction %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Completion Time (",oracle_differences$prediction[1,'oracle'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() 
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+oracle_differences$prediction %>% mean_qi(diff_in_time, .width = c(.95, .5))
+```
+
+
+
+
+##  Exploration:  Building a Model for Time Analysis
+```{r}
+data_exploration <- subset(time_data, task == "4. Exploration")
+models$exploration <- stan_glm(
+    log_completion_time ~ dataset * oracle * search,
+    data = data_exploration,
+    prior_intercept = normal(prior_mean, prior_sd, autoscale = FALSE),
+    prior = normal(0, prior_sd, autoscale = FALSE),
+    seed = seed
+  )
+```
+
+###  Exploration:  Diagnostics + Model Evaluation
+In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
+```{r}
+summary(models$exploration)
+```
+
+Trace plots help us check whether there is evidence of non-convergence for model.
+```{r}
+plot(models$exploration)
+```
+
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
+```{r}
+pairs(models$exploration)
+```
+
+Using draws from the posterior, we can visualize parameter effects and average response.  Be sure to apply an exponential transform toour log-transformed times to make it interpretable!  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+```{r}
+draw_data$exploration <- data_exploration %>%
+  add_fitted_draws(models$exploration, seed = seed, re_formula = NA)
+
+plot_exploration = ggplot(draw_data$exploration, aes(
+    x = exp(.value),
+    y = condition,
+    fill = dataset,
+    alpha = 0.5
+  )) + stat_halfeye(.width = c(.95, .5)) +
+    labs(x = "Time (Seconds)", y = "Condition") 
+
+plot_exploration
+```
+
+We can get the numeric values of the interval boundaries shown above with mean_qi
+```{r}
+fit_info_exploration <- draw_data$exploration %>% mean_qi(exp(.value), .width = c(.95, .5))
+fit_info_exploration
+```
+
+```{r echo=FALSE}
+# save the plot and intervals
+ ggsave(file = "time_exploration.png", plot = plot_exploration, path = "../plots/posterior_draws/time")
+  write.csv(fit_info_exploration, "../plot_data/posterior_draws/time/time_exploration.csv", row.names = FALSE)
+```
+
+###  Exploration: Differences Between Conditions
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+```{r}
+exploration_predictive_data <- data_exploration %>%
+    add_fitted_draws(models$exploration, seed = seed, re_formula = NA) %>%
+    group_by(search, oracle, dataset, .draw)
+
+search_differences$exploration <- exploration_predictive_data  %>%
+    group_by(search, dataset, .draw) %>%
+    summarize(time = weighted.mean(exp(.value))) %>%
+    compare_levels(time, by = search) %>%
+    rename(diff_in_time = time) 
+
+search_differences$exploration$metric = "4. Exploration"
+
+search_differences$exploration %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Completion Time (",search_differences$exploration[1,'search'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() 
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+search_differences$exploration %>% mean_qi(diff_in_time, .width = c(.95, .5))
+```
+
+```{r}
+oracle_differences$exploration <- exploration_predictive_data  %>%
+    group_by(oracle, dataset, .draw) %>%
+    summarize(time = weighted.mean(exp(.value))) %>%
+    compare_levels(time, by = oracle) %>%
+    rename(diff_in_time = time) 
+
+oracle_differences$exploration$metric = "4. Exploration"
+
+oracle_differences$exploration %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Completion Time (",oracle_differences$exploration[1,'oracle'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() 
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+oracle_differences$exploration %>% mean_qi(diff_in_time, .width = c(.95, .5))
+```
+
+
+
+
+## Summary Plots
+Plot all of the posterior draws on one plot
+```{r}
+all_draws <- rbind(draw_data$find_extremum, draw_data$retrieve_value, draw_data$prediction, draw_data$exploration)
+ plot = ggplot(all_draws, aes(
+    x = exp(.value),
+    y = task,
+    fill = search,
+    alpha = 0.5
+  )) + stat_halfeye(.width = c(.95, .5)) +
+    labs(x = "Time (Seconds)", y = "Task") +  facet_grid(. ~ dataset)
+```
+
+``` {r echo = FALSE}
+ ggsave(
+    file = "all_tasks_search.png",
+    plot = plot,
+    path = "../plots/posterior_draws/time"
+  )
+```
+
+Putting the all of the plots for search algorithm and oracle differences on the same plot:
+```{r}
+combined_search_differences <- rbind(search_differences$find_extremum, search_differences$retrieve_value, search_differences$prediction, search_differences$exploration)
+
+combined_search_differences$metric <- factor(combined_search_differences$metric, levels=rev(task_list))
+
+search_differences_plot <- combined_search_differences %>%
+      ggplot(aes(x = diff_in_time, y = metric)) +
+      xlab(paste0("Time Difference (Seconds): ", combined_search_differences[1,'search'])) +
+      ylab("Task") +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+
+search_differences_plot
+
+```
+
+```{r}
+search_differences_plot_split_by_dataset <- combined_search_differences %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill= dataset)) +
+     xlab(paste0("Time Difference (Seconds): ", combined_search_differences[1,'search'])) +
+      ylab("Task") +
+  facet_grid(. ~ dataset) +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+
+search_differences_plot_split_by_dataset
+```
+
+```{r echo = FALSE}
+ggsave(file="search_time_differences.png", plot=search_differences_plot, path = "../plots/comparisons/time", width = 7, height = 7)
+ggsave(file="split_by_dataset_search_time_differences.png", plot=search_differences_plot_split_by_dataset, path = "../plots/comparisons/time", width = 7, height = 7)
+
+search_difference_intervals <- combined_search_differences %>% group_by(search, metric) %>% mean_qi(diff_in_time, .width = c(.95, .5))
+write.csv(search_difference_intervals, paste("../plot_data/comparisons/time/search_time_differences.csv", sep=""), row.names = FALSE)
+
+split_by_dataset_search_difference_intervals <- combined_search_differences %>% group_by(search, metric, dataset) %>% mean_qi(diff_in_time, .width = c(.95, .5))
+write.csv(split_by_dataset_search_difference_intervals, paste("../plot_data/comparisons/time/split_by_dataset_search_time_differences.csv", sep=""), row.names = FALSE)
+```
+
+Now for oracle differences
+```{r}
+combined_oracle_differences <- rbind(oracle_differences$find_extremum, oracle_differences$retrieve_value, oracle_differences$prediction, oracle_differences$exploration)
+
+combined_oracle_differences$metric <- factor(combined_oracle_differences$metric, levels=rev(task_list))
+
+oracle_differences_plot <- combined_oracle_differences %>%
+      ggplot(aes(x = diff_in_time, y = metric)) +
+      xlab(paste0("Time Difference (Seconds): ", combined_oracle_differences[1,'oracle'])) +
+      ylab("Task") +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+
+oracle_differences_plot
+
+```
+
+```{r}
+oracle_differences_plot_split_by_dataset <- combined_oracle_differences %>%
+      ggplot(aes(x = diff_in_time, y = metric, fill= dataset)) +
+      xlab(paste0("Time Difference (Seconds): ", combined_oracle_differences[1,'oracle'])) +
+      ylab("Task") +
+  facet_grid(. ~ dataset) +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+
+oracle_differences_plot_split_by_dataset
+```
+
+```{r echo = FALSE}
+ggsave(file="oracle_time_differences.png", plot=oracle_differences_plot, path = "../plots/comparisons/time", width = 7, height = 7)
+ggsave(file="split_by_dataset_oracle_time_differences.png", plot=oracle_differences_plot_split_by_dataset, path = "../plots/comparisons/time", width = 7, height = 7)
+
+oracle_difference_intervals <- combined_oracle_differences %>% group_by(oracle, metric) %>% mean_qi(diff_in_time, .width = c(.95, .5))
+write.csv(oracle_difference_intervals, paste("../plot_data/comparisons/time/oracle_time_differences.csv", sep=""), row.names = FALSE)
+
+split_by_dataset_oracle_difference_intervals <- combined_oracle_differences %>% group_by(oracle, metric, dataset) %>% mean_qi(diff_in_time, .width = c(.95, .5))
+write.csv(split_by_dataset_oracle_difference_intervals, paste("../plot_data/comparisons/time/split_by_dataset_oracle_time_differences.csv", sep=""), row.names = FALSE)
+```
+

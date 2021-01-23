@@ -21,6 +21,10 @@ library(gganimate)
 theme_set(theme_light())
 ```
 
+In our experiement, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the user's accuracy on two tasks: Find Extremum and Retrieve Value.
+
+Given a search algorithm (bsf or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict a user's chance of answering the Find Extremum task and the Retrieve Value tasks correctly.  In addition, we would like to know if the choice of search algorithm and oracle has any meaninful impact on a user's accuracy for these two tasks.
+
 ### Read in and clean data
 ```{r}
 accuracy_data = read.csv('processed_accuracy_split.csv')
@@ -38,9 +42,6 @@ oracle_differences <- list()
 seed = 12
 ```
 
-In our experiement, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the user's accuracy on two tasks: Find Extremum and Retrieve Value.
-
-Given a search algorithm (bsf or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict a user's chance of answering the Find Extremum task and the Retrieve Value tasks correctly.  In addition, we would like to know if the choice of search algorithm and oracle has any meaninful impact on a user's accuracy for these two tasks.
 ## Find Extremum:  Building a Model for Accuracy Analysis
 ```{r}
 data_find_extremum <- subset(accuracy_data, task == "1. Find Extremum")
@@ -120,7 +121,7 @@ fit_info
 ```
 
 ### Find Extremum: Differences Between Conditions
-Next, we want to see if there is any significant difference between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in accuracy between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
 
 Differences in search algorithms:
 ``` {r}
@@ -316,7 +317,7 @@ oracle_differences$retrieve_value %>% mean_qi(difference_in_accuracy, .width = c
 
 
 ## Summary Plots
-Putting the all of the plots for search algorithm differences on the same plot:
+Putting the all of the plots for search algorithm and oracle differences on the same plot:
 ```{r}
 combined_search_differences <- rbind(search_differences$find_extremum, search_differences$retrieve_value)
 search_differences_plot <- combined_search_differences %>%
