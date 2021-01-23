@@ -45,7 +45,7 @@ seed = 12
 ## Find Extremum:  Building a Model for Accuracy Analysis
 ```{r}
 data_find_extremum <- subset(accuracy_data, task == "1. Find Extremum")
-models$find_extremum <- brm(accuracy ~ oracle*search+dataset, 
+models$find_extremum <- brm(accuracy ~ oracle*search*dataset, 
                     data = data_find_extremum,
                     prior = c(prior(normal(1, .05), class = Intercept)),
                     family = bernoulli(link = "logit"),
@@ -183,7 +183,7 @@ oracle_differences$find_extremum %>% mean_qi(difference_in_accuracy, .width = c(
 ## Retrieve Value:  Building a Model for Accuracy Analysis
 ```{r}
 data_retrieve_value <- subset(accuracy_data, task == "2. Retrieve Value")
-models$retrieve_value <- brm(accuracy ~ oracle*search+dataset, 
+models$retrieve_value <- brm(accuracy ~ oracle*search*dataset, 
                     data = data_retrieve_value,
                     prior = c(prior(normal(1, .05), class = Intercept)),
                     family = bernoulli(link = "logit"),
