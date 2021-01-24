@@ -21,13 +21,13 @@ library(gganimate)
 theme_set(theme_light())
 ```
 
-In our experiement, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the user's time to complete each of four tasks:
+In our experiment, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the user's time to complete each of four tasks:
   1. Find Extremum
   2. Retrieve Value
   3. Prediction
   4. Exploration
 
-Given a search algorithm (bsf or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict the time it takes the average user to complete each task.  In addition, we would like to know if the choice of search algorithm and oracle has any meaninful impact on a user's completion time for each of these four tasks,
+Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict the time it takes the average user to complete each task.  In addition, we would like to know if the choice of search algorithm and oracle has any meaningful impact on a user's completion time for each of these four tasks,
 
 ### Read in and clean data
 ```{r}
