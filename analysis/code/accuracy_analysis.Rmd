@@ -65,12 +65,12 @@ In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in th
 summary(models$find_extremum)
 ```
 
-Trace plots help us check whether there is evidence of non-convergence for model.
+Trace plots help us check whether there is evidence of non-convergence for our model.
 ```{r}
 plot(models$find_extremum)
 ```
 
-In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differenciating the effect of such parameters).
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
 ```{r}
 pairs(models$find_extremum)
 ```
@@ -208,7 +208,7 @@ Trace plots help us check whether there is evidence of non-convergence for model
 plot(models$retrieve_value)
 ```
 
-In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differenciating the effect of such parameters).
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
 ```{r}
 pairs(models$retrieve_value)
 ```
