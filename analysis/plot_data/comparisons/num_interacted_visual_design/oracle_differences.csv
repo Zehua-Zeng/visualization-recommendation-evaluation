@@ -1,0 +1,5 @@
+"oracle","task","diff",".lower",".upper",".width",".point",".interval"
+"dziban - compassql","3. Prediction",0.640731526203853,-12.7475284597878,13.9752449782012,0.95,"mean","qi"
+"dziban - compassql","4. Exploration",4.37727704727986,-7.23224367717531,16.1834040653399,0.95,"mean","qi"
+"dziban - compassql","3. Prediction",0.640731526203853,-4.34616118640835,5.52372984353305,0.5,"mean","qi"
+"dziban - compassql","4. Exploration",4.37727704727986,0.354788386594461,8.38286403858437,0.5,"mean","qi"

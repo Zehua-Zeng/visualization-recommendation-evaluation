@@ -21,6 +21,219 @@ theme_set(theme_light())
 
 ```
 
+# num_of_interacted_variable_set_split.csv, num_interacted_variable_set
+# num_of_interacted_visual_design_split.csv, num_interacted_visual_design
+# num_of_exposed_visual_design_split.csv, num_exposed_visual_design
+# num_of_exposed_variable_set_split.csv, num_exposed_variable_set
+
+```{r}
+model1 <- analysis("num_of_interacted_variable_set_split.csv", "num_interacted_variable_set")
+model2 <- analysis("num_of_interacted_visual_design_split.csv", "num_interacted_visual_design")
+model3 <- analysis("num_of_exposed_visual_design_split.csv", "num_exposed_visual_design")
+model4 <-analysis("num_of_exposed_variable_set_split.csv", "num_exposed_variable_set")
+```
+
+```{r interaction_analysis}
+analysis = function(filename, col) {
+  data <- read.csv(filename)
+  task_list <- c("3. Prediction", "4. Exploration")
+  seed = 12
+  
+  
+  data <- data %>%
+    mutate(
+      dataset = as.factor(dataset),
+      oracle = as.factor(oracle),
+      search = as.factor(search),
+      task = as.factor(task)
+    )
+  model <- brm(
+    formula = as.formula(paste(col, "~ dataset * oracle * search * task")),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = data,
+  )
+  
+  summary(model)
+  
+  pairs(
+    model,
+    pars = c(
+      "b_Intercept",
+      "b_datasetmovies",
+      "b_oracledziban",
+      "b_searchdfs",
+      "b_task4.Exploration"
+    ),
+    fixed = TRUE
+  )
+  
+  draw_data <- data %>%
+    add_fitted_draws(model, seed = seed, re_formula = NA)
+  draw_data$condition <- paste(draw_data$oracle, draw_data$search)
+  
+  for (task_name in task_list) {
+    draw_data_sub <- subset(draw_data, task == task_name)
+    
+    plot <- draw_data_sub %>% ggplot(aes(x = oracle, y = .value)) +
+      stat_eye(.width = c(.95, .5)) +
+      theme_minimal() +
+      facet_grid(. ~ search)
+    
+    plot
+    
+    filename = gsub("^.*\\.", "", task_name)
+    filename = gsub(" ", "", filename)
+    
+    ggsave(
+      file = paste(filename, ".png", sep = ""),
+      plot = plot,
+      path = paste0("../plots/posterior_draws/",col)
+    )
+    
+    fit_info <-
+      draw_data_sub %>% group_by(search, oracle, dataset) %>% mean_qi(.value, .width = c(.95, .5))
+    fit_info
+    write.csv(
+      fit_info,
+      paste(
+        "../plot_data/posterior_draws/",col,"/",
+        filename,
+        ".csv",
+        sep = ""
+      ),
+      row.names = FALSE
+    )
+  }
+  
+  ############################################################################
+  predictive_data <- data %>%
+    add_predicted_draws(model, seed = seed, re_formula = NA)
+  
+  diff_in_search_prediction <- predictive_data %>%
+    group_by(search, task, dataset, .draw) %>%
+    summarize(value = weighted.mean(.prediction)) %>%
+    compare_levels(value, by = search) %>%
+    rename(diff = value)
+  
+  diff_in_search_prediction_plot <- diff_in_search_prediction %>%
+    ggplot(aes(x = diff, y = task)) +
+    xlab(
+      paste0(
+        "Difference in ",col,"(",
+        diff_in_search_prediction[1, 'search'],
+        ")"
+      )
+    ) +
+    ylab("Task") +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_search_prediction$task)))
+  
+  ggsave(
+    file = "search_differences.png",
+    plot = diff_in_search_prediction_plot,
+    path = paste0("../plots/comparisons/",col),
+    width = 7,
+    height = 7
+  )
+  
+  diff_in_search_prediction_intervals <-
+    diff_in_search_prediction %>% group_by(search, task) %>% mean_qi(diff, .width = c(.95, .5))
+  
+  write.csv(
+    diff_in_search_prediction_intervals,
+    paste0("../plot_data/comparisons/",col,"/search_differences.csv"),
+    sep = "",
+    row.names = FALSE
+  )
+  
+  diff_in_search_prediction_plot_split_by_dataset <-
+    diff_in_search_prediction_plot + facet_grid(. ~ dataset) + aes(fill = dataset)
+  
+  ggsave(
+    file = "split_by_dataset_search_differences.png",
+    plot = diff_in_search_prediction_plot_split_by_dataset,
+    path = paste0("../plots/comparisons/",col),
+    width = 7,
+    height = 7
+  )
+  
+  diff_in_search_prediction_intervals_split_by_dataset <-
+    diff_in_search_prediction %>% group_by(search, dataset, task) %>% mean_qi(diff, .width = c(.95, .5))
+  
+  write.csv(
+    diff_in_search_prediction_intervals_split_by_dataset,
+    paste0("../plot_data/comparisons/",col,"/search_differences_split_by_dataset.csv"),
+    row.names = FALSE
+  )
+  
+  ############
+ predictive_data <- data %>%
+    add_predicted_draws(model, seed = seed, re_formula = NA)
+  
+  diff_in_oracle_prediction <- predictive_data %>%
+    group_by(oracle, task, dataset, .draw) %>%
+    summarize(value = weighted.mean(.prediction)) %>%
+    compare_levels(value, by = oracle) %>%
+    rename(diff = value)
+  
+  diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
+    ggplot(aes(x = diff, y = task)) +
+    xlab(
+      paste0(
+        "Difference in ",col,"(",
+        diff_in_oracle_prediction[1, 'oracle'],
+        ")"
+      )
+    ) +
+    ylab("Task") +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction$task)))
+  
+  ggsave(
+    file = "oracle_differences.png",
+    plot = diff_in_oracle_prediction_plot,
+    path = paste0("../plots/comparisons/",col),
+    width = 7,
+    height = 7
+  )
+  
+  diff_in_oracle_prediction_intervals <-
+    diff_in_oracle_prediction %>% group_by(oracle, task) %>% mean_qi(diff, .width = c(.95, .5))
+  
+  write.csv(
+    diff_in_oracle_prediction_intervals,
+    paste0("../plot_data/comparisons/",col,"/oracle_differences.csv"),
+    sep = "",
+    row.names = FALSE
+  )
+  
+  diff_in_oracle_prediction_plot_split_by_dataset <-
+    diff_in_oracle_prediction_plot + facet_grid(. ~ dataset) + aes(fill = dataset)
+  
+  ggsave(
+    file = "split_by_dataset_oracle_differences.png",
+    plot = diff_in_oracle_prediction_plot_split_by_dataset,
+    path = paste0("../plots/comparisons/",col),
+    width = 7,
+    height = 7
+  )
+  
+  diff_in_oracle_prediction_intervals_split_by_dataset <-
+    diff_in_oracle_prediction %>% group_by(oracle, dataset, task) %>% mean_qi(diff, .width = c(.95, .5))
+  
+  write.csv(
+    diff_in_oracle_prediction_intervals_split_by_dataset,
+    paste0("../plot_data/comparisons/",col,"/oracle_differences_split_by_dataset.csv"),
+    row.names = FALSE
+  )
+  return(model)
+}
+```
 
 ```{r num_interacted_variable_set}
 data <- read.csv('num_of_interacted_variable_set_split.csv')
@@ -43,91 +256,108 @@ model <- brm(
     data = data,
   )
 
+summary(model)
+
+pairs(
+  model,
+  pars = c("b_Intercept",
+          "b_datasetmovies",
+           "b_oracledziban",
+           "b_searchdfs",
+            "b_task4.Exploration"),
+  fixed = TRUE
+)
+
 draw_data <- data %>%
   add_fitted_draws(model, seed = seed, re_formula = NA)
+draw_data$condition <- paste(draw_data$oracle, draw_data$search)
 
 for (task_name in task_list) {
   draw_data_sub <- subset(draw_data, task == task_name)
-
-  plot <- ggplot(draw_data_sub, aes(
-    x = exp(.value),
-    y = condition,
-    fill = dataset,
-    alpha = 0.5
-  )) + stat_halfeye(.width = c(.95, .5)) +
-    labs(x = " Number Interacted Variable Set", y = "Condition") 
+  
+  plot <- draw_data_sub %>% ggplot(aes(x = oracle, y = .value)) +
+  stat_eye(.width = c(.95, .5)) +
+  theme_minimal() +
+  facet_grid(. ~ search)
+  
   plot
+  
   filename = gsub("^.*\\.","", task_name )
-  filename = gsub(" ", "_", filename)
-  filename = paste("time", filename, sep = "")
+  filename = gsub(" ", "", filename)
 
   ggsave(
     file = paste(filename, ".png", sep = ""),
     plot = plot,
-    path = "../plots/posterior_draws/time"
+    path = "../plots/posterior_draws/num_interacted_variable_set"
   )
   
-  fit_info <- draw_data_sub %>% group_by(search, oracle, dataset) %>% mean_qi(exp(.value), .width = c(.95, .5))
+  fit_info <- draw_data_sub %>% group_by(search, oracle, dataset) %>% mean_qi(.value, .width = c(.95, .5))
   fit_info
   write.csv(fit_info,
-            paste("../plot_data/posterior_draws/time/", filename, ".csv", sep = ""),
+            paste("../plot_data/posterior_draws/num_interacted_variable_set/", filename, ".csv", sep = ""),
             row.names = FALSE)
 }
 
-draw_data <- data %>%
-  add_predicted_draws(model1,
-                   seed = seed,
-                   re_formula = NA) %>%
-  group_by(search, oracle, task, .draw) %>%
-  mutate(num_interacted_variable_set = weighted.mean(.prediction))
-
-
-
 ############################################################################
+predictive_data <- data %>%
+  add_predicted_draws(model, seed = seed, re_formula = NA)
 
-draw_data_prediction <- draw_data %>% subset(task=="3. Prediction")
-prediction_plot <- draw_data_prediction %>%
-  ggplot(aes(x = oracle, y = num_interacted_variable_set)) +
-  stat_eye(.width = c(.95, .5)) +
-  theme_minimal() +
-  facet_grid(. ~ search)
-
-prediction_intervals <- draw_data_prediction %>% group_by(oracle, search) %>% mean_qi(diff_in_time, .width = c(.95, .5))
-
-
-diff_in_search_prediction <- draw_data %>% 
-  group_by(search, task, .draw) %>%
+diff_in_search_prediction <- predictive_data %>% 
+  group_by(search, task, dataset, .draw) %>%
    summarize(num_interacted_variable_set = weighted.mean(.prediction)) %>%
    compare_levels(num_interacted_variable_set, by = search) %>%
    rename(diff_in_num_interacted_variable_set = num_interacted_variable_set) 
 
-diff_in_search_prediction %>%
+diff_in_search_prediction_plot <- diff_in_search_prediction %>%
       ggplot(aes(x = diff_in_num_interacted_variable_set, y = task)) +
-      xlab(paste0("Expected Difference in Number Interacted Variable Set (",diff_in_search_prediction[1,'search'],")")) +
+      xlab(paste0("Difference in Number Interacted Variable Set (",diff_in_search_prediction[1,'search'],")")) +
       ylab("Task")+
       stat_halfeye(.width = c(.95, .5)) +
       geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+      theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_search_prediction$task)))
 
-plot2 <- draw_data %>% subset(task=="4. Exploration") %>%
-  ggplot(aes(x = oracle, y = num_interacted_variable_set)) +
-  stat_eye(.width = c(.95, .5)) +
-  theme_minimal() +
-  facet_grid(. ~ search)
+ggsave(file="search_differences.png", plot=diff_in_search_prediction_plot, path = "../plots/comparisons/num_interacted_variable_set", width = 7, height = 7)
 
-diff_in_oracle_prediction <- draw_data %>% 
-  group_by(oracle, task, .draw) %>%
+diff_in_search_prediction_intervals <- diff_in_search_prediction %>% group_by(search, task) %>% mean_qi(diff_in_num_interacted_variable_set, .width = c(.95, .5))
+
+write.csv(diff_in_search_prediction_intervals, "../plot_data/comparisons/num_interacted_variable_set/search_differences.csv", sep="", row.names = FALSE)
+
+diff_in_search_prediction_plot_split_by_dataset <- diff_in_search_prediction_plot+facet_grid(. ~ dataset) + aes(fill= dataset)
+
+ggsave(file="split_by_dataset_search_differences.png", plot=diff_in_search_prediction_plot_split_by_dataset, path = "../plots/comparisons/num_interacted_variable_set", width = 7, height = 7)
+
+diff_in_search_prediction_intervals_split_by_dataset <- diff_in_search_prediction %>% group_by(search, dataset, task) %>% mean_qi(diff_in_num_interacted_variable_set, .width = c(.95, .5))
+
+write.csv(diff_in_search_prediction_intervals_split_by_dataset, "../plot_data/comparisons/num_interacted_variable_set/search_differences_split_by_dataset.csv", row.names = FALSE)
+
+############
+diff_in_oracle_prediction <- predictive_data %>% 
+  group_by(oracle, task, dataset, .draw) %>%
    summarize(num_interacted_variable_set = weighted.mean(.prediction)) %>%
    compare_levels(num_interacted_variable_set, by = oracle) %>%
    rename(diff_in_num_interacted_variable_set = num_interacted_variable_set) 
 
-diff_in_oracle_prediction %>%
+diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
       ggplot(aes(x = diff_in_num_interacted_variable_set, y = task)) +
-      xlab(paste0("Expected Difference in Number Interacted Variable Set (",diff_in_oracle_prediction[1,'oracle'],")")) +
+      xlab(paste0("Difference in Number Interacted Variable Set (",diff_in_oracle_prediction[1,'oracle'],")")) +
       ylab("Task")+
       stat_halfeye(.width = c(.95, .5)) +
       geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+      theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction$task)))
+
+ggsave(file="oracle_differences.png", plot=diff_in_oracle_prediction_plot, path = "../plots/comparisons/num_interacted_variable_set", width = 7, height = 7)
+
+diff_in_oracle_prediction_intervals <- diff_in_oracle_prediction %>% group_by(oracle, task) %>% mean_qi(diff_in_num_interacted_variable_set, .width = c(.95, .5))
+
+write.csv(diff_in_oracle_prediction_intervals, "../plot_data/comparisons/num_interacted_variable_set/oracle_differences.csv", sep="", row.names = FALSE)
+
+diff_in_oracle_prediction_plot_split_by_dataset <- diff_in_oracle_prediction_plot+facet_grid(. ~ dataset) + aes(fill= dataset)
+
+ggsave(file="split_by_dataset_oracle_differences.png", plot=diff_in_oracle_prediction_plot_split_by_dataset, path = "../plots/comparisons/num_interacted_variable_set", width = 7, height = 7)
+
+diff_in_oracle_prediction_intervals_split_by_dataset <- diff_in_oracle_prediction %>% group_by(oracle, dataset, task) %>% mean_qi(diff_in_num_interacted_variable_set, .width = c(.95, .5))
+
+write.csv(diff_in_oracle_prediction_intervals_split_by_dataset, "../plot_data/comparisons/num_interacted_variable_set/oracle_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 
 
