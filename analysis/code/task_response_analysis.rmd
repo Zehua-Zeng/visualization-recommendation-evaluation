@@ -27,14 +27,14 @@ theme_set(theme_light())
 # num_of_exposed_variable_set_split.csv, num_exposed_variable_set
 
 ```{r}
-model1 <- analysis("num_of_interacted_variable_set_split.csv", "num_interacted_variable_set")
-model2 <- analysis("num_of_interacted_visual_design_split.csv", "num_interacted_visual_design")
-model3 <- analysis("num_of_exposed_visual_design_split.csv", "num_exposed_visual_design")
-model4 <-analysis("num_of_exposed_variable_set_split.csv", "num_exposed_variable_set")
+model1 <- analysis("num_of_interacted_variable_set_split.csv", "num_interacted_variable_set", 35.24, 25.33)
+model2 <- analysis("num_of_interacted_visual_design_split.csv", "num_interacted_visual_design", 35.90, 25.25)
+model3 <- analysis("num_of_exposed_visual_design_split.csv", "num_exposed_visual_design", 121.58, 89.78)
+model4 <-analysis("num_of_exposed_variable_set_split.csv", "num_exposed_variable_set", 138.94, 120.45)
 ```
 
 ```{r interaction_analysis}
-analysis = function(filename, col) {
+analysis = function(filename, col, prior_mean, prior_sd) {
   data <- read.csv(filename)
   task_list <- c("3. Prediction", "4. Exploration")
   seed = 12
@@ -47,13 +47,16 @@ analysis = function(filename, col) {
       search = as.factor(search),
       task = as.factor(task)
     )
+stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
   model <- brm(
     formula = as.formula(paste(col, "~ dataset * oracle * search * task")),
+    prior = prior(normal(prior_mean, prior_sd), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
     warmup = 1000,
     data = data,
+    stanvars=stanvars
   )
   
   summary(model)
@@ -94,7 +97,7 @@ analysis = function(filename, col) {
     )
     
     fit_info <-
-      draw_data_sub %>% group_by(search, oracle, dataset) %>% mean_qi(.value, .width = c(.95, .5))
+      draw_data_sub %>% group_by(search, oracle) %>% mean_qi(.value, .width = c(.95, .5))
     fit_info
     write.csv(
       fit_info,
@@ -102,6 +105,28 @@ analysis = function(filename, col) {
         "../plot_data/posterior_draws/",col,"/",
         filename,
         ".csv",
+        sep = ""
+      ),
+      row.names = FALSE
+    )
+    
+    plot_dataset <- plot + aes(fill = dataset, alpha = 0.5)
+    plot_dataset
+    ggsave(
+      file = paste(filename, "_split_by_dataset.png", sep = ""),
+      plot = plot,
+      path = paste0("../plots/posterior_draws/",col)
+    )
+    
+    fit_info_dataset <-
+      draw_data_sub %>% group_by(search, oracle, dataset) %>% mean_qi(.value, .width = c(.95, .5))
+    fit_info_dataset
+    write.csv(
+      fit_info_dataset,
+      paste(
+        "../plot_data/posterior_draws/",col,"/",
+        filename,
+        "_split_by_dataset.csv",
         sep = ""
       ),
       row.names = FALSE
@@ -384,9 +409,9 @@ generate_model_and_draws = function(data, attr, generate_eval_plots = FALSE) {
   filename = gsub("\\.", "_", attr)
   data$y = data[,attr]
   model <- brm(
-    formula = bf(y ~ dataset + oracle * search),
+    formula = bf(y ~ dataset * oracle * search),
     family = cumulative("probit"),
-    prior = prior(normal(0, 1), class = Intercept),
+    prior = prior(normal(.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
@@ -774,7 +799,7 @@ task_list = c("1. Find Extremum",
 
 model <- brm(
     formula = bf(log_completion_time ~ dataset * oracle * search * task),
-    prior = prior(normal(5.69, 0.69), class = "Intercept"),
+    prior = prior(normal(5.69, 0.69), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
