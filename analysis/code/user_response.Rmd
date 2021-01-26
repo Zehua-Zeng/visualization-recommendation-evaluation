@@ -61,10 +61,11 @@ seed = 12
 
 ```{r}
 filename = "confidence_udata"
+
 models$confidence_udata <- brm(
-    formula = bf(confidence.udata ~ dataset + oracle * search),
+    formula = bf(confidence.udata ~ dataset * oracle * search),
     family = cumulative("probit"),
-    prior = prior(normal(0, 1), class = b),
+    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
@@ -74,6 +75,7 @@ models$confidence_udata <- brm(
     file = filename,
     seed = seed
   )
+
 ```
 
 Check some diagnostics regarding our model.  Rhat should be close to 1 and Bulk_ESS should be in the thousands.
@@ -217,9 +219,9 @@ alg_differences$confidence_udata %>%
 ```{r}
 filename = "confidence_ans"
 models$confidence_ans <- brm(
-    formula = bf(confidence.ans ~ dataset + oracle * search),
+    formula = bf(confidence.ans ~ dataset * oracle * search),
     family = cumulative("probit"),
-    prior = prior(normal(0, 1), class = b),
+    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
@@ -371,9 +373,9 @@ alg_differences$confidence_ans %>%
 ```{r}
 filename = "efficiency"
 models$efficiency <- brm(
-    formula = bf(efficiency ~ dataset + oracle * search),
+    formula = bf(efficiency ~ dataset * oracle * search),
     family = cumulative("probit"),
-    prior = prior(normal(0, 1), class = b),
+   prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
@@ -526,9 +528,9 @@ alg_differences$efficiency %>%
 ```{r}
 filename = "ease_of_use"
 models$ease_of_use <- brm(
-    formula = bf(ease.of.use ~ dataset + oracle * search),
+    formula = bf(ease.of.use ~ dataset * oracle * search),
     family = cumulative("probit"),
-    prior = prior(normal(0, 1), class = b),
+   prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
@@ -680,9 +682,9 @@ alg_differences$ease_of_use %>%
 ```{r}
 filename = "utility"
 models$utility <- brm(
-    formula = bf(utility ~ dataset + oracle * search),
+    formula = bf(utility ~ dataset * oracle * search),
     family = cumulative("probit"),
-    prior = prior(normal(0, 1), class = b),
+   prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
@@ -834,9 +836,9 @@ alg_differences$utility %>%
 ```{r}
 filename = "overall"
 models$overall <- brm(
-    formula = bf(overall ~ dataset + oracle * search),
+    formula = bf(overall ~ dataset * oracle * search),
     family = cumulative("probit"),
-    prior = prior(normal(0, 1), class = b),
+   prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
