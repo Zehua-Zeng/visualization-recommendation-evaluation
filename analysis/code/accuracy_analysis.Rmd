@@ -42,327 +42,163 @@ oracle_differences <- list()
 seed = 12
 ```
 
-## Find Extremum:  Building a Model for Accuracy Analysis
+## Building a Model for Accuracy Analysis
 ```{r}
-data_find_extremum <- subset(accuracy_data, task == "1. Find Extremum")
-models$find_extremum <- brm(accuracy ~ oracle*search*dataset, 
-                    data = data_find_extremum,
-                    prior = c(prior(normal(1, .05), class = Intercept)),
-                    family = bernoulli(link = "logit"),
-                    warmup = 500, 
-                    iter = 3000, 
-                    chains = 2, 
-                    cores=2,
-                    seed=seed,
-                    file = "acc_find_extremum"
-                    )
+model <- brm(
+  bf(
+    accuracy ~ 0 + Intercept + oracle * search + dataset + task
+    + (1 | participant_id)
+  ),
+  data = accuracy_data,
+  prior = c(prior(normal(0.5, .5), class = "b", coef = "Intercept"),
+            prior(normal(0, 2.5), class = "b")),
+  family = bernoulli(link = "logit"),
+  warmup = 500,
+  iter = 3000,
+  chains = 2,
+  cores = 2, 
+  control = list(adapt_delta = 0.9),
+  seed = seed,
+  file = "model_accuracy"
+)
 ```
 
-### Find Extremum:  Diagnostics + Model Evaluation
+### Diagnostics + Model Evaluation
 
 In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ``` {r}
-summary(models$find_extremum)
-```
-
-Trace plots help us check whether there is evidence of non-convergence for our model.
-```{r}
-plot(models$find_extremum)
-```
-
-In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
-```{r}
-pairs(models$find_extremum)
-```
-
-A confusion matrix can be used to check our correct classification rate (a useful measure to see how well our model fits our data).
-```{r}
-pred <- predict(models$find_extremum, type = "response")
-pred <- if_else(pred[,1] > 0.5, 1, 0)
-confusion_matrix <- table(pred, pull(data_find_extremum, accuracy)) 
-confusion_matrix
-```
-
-Visualization of parameter effects via draws from our model posterior.  The thicker line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
-```{r}
-draw_data$find_extremum <- data_find_extremum %>%
-  add_fitted_draws(models$find_extremum, seed = seed, re_formula = NA) %>%
-  group_by(search, oracle, dataset, .draw)
-
-draw_data$find_extremum$task <- "1. Find Extremum"
-draw_data$find_extremum$condition <- paste(draw_data$find_extremum$oracle, draw_data$find_extremum$search, sep="_")
-
-find_extremum_plot <- draw_data$find_extremum %>% ggplot(aes(
-    x = .value,
-    y = condition,
-    fill = dataset,
-    alpha = 0.5
-  )) + stat_halfeye(.width = c(.95, .5)) +
-    labs(x = "Predicted Accuracy (p_correct)", y = "Oracle/Search Combination") 
-
-find_extremum_plot
-```
-Since the credible intervals on our plot overlap, we can use mean_qi to get the numeric boundaries for the different intervals.
-```{r}
-fit_info <-  draw_data$find_extremum %>% group_by(search, oracle, dataset) %>% mean_qi(.value, .width = c(.95, .5))
-fit_info
-```
-
-``` {r echo = FALSE}
-# save the outputted plots and files
- ggsave(
-    file = paste("find_extremum.png", sep = ""),
-    plot = find_extremum_plot,
-    path = "../plots/posterior_draws/accuracy"
-  )
-  write.csv(fit_info,
-            paste("../plot_data/posterior_draws/accuracy/", "find_extremum.csv", sep = ""),
-            row.names = FALSE)
-```
-
-### Find Extremum: Differences Between Conditions
-Next, we want to see if there is any significant difference in accuracy between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
-
-Differences in search algorithms:
-``` {r}
-find_extremum_predictive_data  <- data_find_extremum %>%
-    add_predicted_draws(models$find_extremum, seed = seed, re_formula = NA) %>%
-    group_by(search, oracle, dataset, .draw)
-
-search_differences$find_extremum <- find_extremum_predictive_data  %>%
-    group_by(search, dataset, .draw) %>%
-    summarize(accuracy = weighted.mean(.prediction)) %>%
-    compare_levels(accuracy, by = search) %>%
-    rename(difference_in_accuracy = accuracy)
-
-search_differences$find_extremum$metric = "1. Find Extremum"
-
-search_differences$find_extremum %>%
-      ggplot(aes(x = difference_in_accuracy, y = metric, fill = dataset, alpha = 0.5)) +
-      xlab(paste0("Expected Difference in Accuracy (",search_differences$find_extremum[1,'search'],")")) + 
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() +
-     facet_grid(. ~ dataset)
-  
-```
-We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
-```{r}
-search_differences$find_extremum %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
-```
-
-
-Differences in oracle:
-``` {r}
-oracle_differences$find_extremum <- find_extremum_predictive_data  %>%
-    group_by(oracle, dataset, .draw) %>%
-    summarize(accuracy = weighted.mean(.prediction)) %>%
-    compare_levels(accuracy, by = oracle) %>%
-    rename(difference_in_accuracy = accuracy)
-
-oracle_differences$find_extremum$metric = "1. Find Extremum"
-
-oracle_differences$find_extremum %>%
-      ggplot(aes(x = difference_in_accuracy, y = metric, fill = dataset, alpha = 0.5)) +
-      xlab(paste0("Expected Difference in Accuracy (",oracle_differences$find_extremum[1,'oracle'],")")) + 
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() +
-     facet_grid(. ~ dataset)
-  
-```
-We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
-```{r}
-oracle_differences$find_extremum %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
-```
-
-
-
-## Retrieve Value:  Building a Model for Accuracy Analysis
-```{r}
-data_retrieve_value <- subset(accuracy_data, task == "2. Retrieve Value")
-models$retrieve_value <- brm(accuracy ~ oracle*search*dataset, 
-                    data = data_retrieve_value,
-                    prior = c(prior(normal(1, .05), class = Intercept)),
-                    family = bernoulli(link = "logit"),
-                    warmup = 500, 
-                    iter = 3000, 
-                    chains = 2, 
-                    cores=2,
-                    seed=seed,
-                    file = "acc_retrieve_value"
-                    )
-```
-
-### Retrieve Value:  Diagnostics + Model Evaluation
-
-In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
-``` {r}
-summary(models$retrieve_value)
+summary(model)
 ```
 
 Trace plots help us check whether there is evidence of non-convergence for model.
 ```{r}
-plot(models$retrieve_value)
+plot(model)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
+```{r fig.height=8, fig.width=8}
+pairs(
+  model,
+  pars = c("b_Intercept",
+            "b_datasetmovies",
+           "b_oracledziban",
+           "b_searchdfs",
+           "b_task2.RetrieveValue"),
+  fixed = TRUE
+)
+```
+
 ```{r}
-pairs(models$retrieve_value)
+pp_check(model, type = "dens_overlay", nsamples = 100)
 ```
 
 A confusion matrix can be used to check our correct classification rate (a useful measure to see how well our model fits our data).
 ```{r}
-pred <- predict(models$retrieve_value, type = "response")
+pred <- predict(model, type = "response")
 pred <- if_else(pred[,1] > 0.5, 1, 0)
-confusion_matrix <- table(pred, pull(data_retrieve_value, accuracy)) 
+confusion_matrix <- table(pred, pull(accuracy_data, accuracy)) 
 confusion_matrix
 ```
 
 Visualization of parameter effects via draws from our model posterior.  The thicker line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
-draw_data$retrieve_value <- data_retrieve_value %>%
-  add_fitted_draws(models$retrieve_value, seed = seed, re_formula = NA) %>%
-  group_by(search, oracle, dataset, .draw)
+draw_data <- accuracy_data %>%
+  add_fitted_draws(model, seed = seed, re_formula = NA, scale = "response") %>%
+  group_by(search, oracle, dataset, task, .draw)
 
-draw_data$retrieve_value$task <- "2. Retrieve Value"
-draw_data$retrieve_value$condition <- paste(draw_data$retrieve_value$oracle, draw_data$retrieve_value$search, sep="_")
+draw_data$condition <- paste(draw_data$oracle, draw_data$search, sep="_")
 
-retrieve_value_plot <- draw_data$retrieve_value %>% ggplot(aes(
+draw_plot <- draw_data %>% ggplot(aes(
     x = .value,
     y = condition,
     fill = dataset,
     alpha = 0.5
   )) + stat_halfeye(.width = c(.95, .5)) +
+  facet_grid(. ~ task) +
     labs(x = "Predicted Accuracy (p_correct)", y = "Oracle/Search Combination") 
 
-retrieve_value_plot
+draw_plot
 ```
 Since the credible intervals on our plot overlap, we can use mean_qi to get the numeric boundaries for the different intervals.
 ```{r}
-fit_info <-  draw_data$retrieve_value %>% group_by(search, oracle, dataset) %>% mean_qi(.value, .width = c(.95, .5))
+fit_info <-  draw_data %>% group_by(search, oracle, dataset, task) %>% mean_qi(.value, .width = c(.95, .5))
 fit_info
 ```
 
 ``` {r echo = FALSE}
 # save the outputted plots and files
  ggsave(
-    file = paste("retrieve_value.png", sep = ""),
-    plot = retrieve_value_plot,
+    file = "plot.png",
+    plot = draw_plot,
     path = "../plots/posterior_draws/accuracy"
   )
   write.csv(fit_info,
-            paste("../plot_data/posterior_draws/accuracy/", "retrieve_value.csv", sep = ""),
+            paste("../plot_data/posterior_draws/accuracy/fit.csv", sep = ""),
             row.names = FALSE)
 ```
 
-### Retrieve Value: Differences Between Conditions
-Next, we want to see if there is any significant difference between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+### Differences Between Conditions
+Next, we want to see if there is any significant difference in accuracy between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
 
 Differences in search algorithms:
 ``` {r}
-retrieve_value_predictive_data  <- data_retrieve_value %>%
-    add_predicted_draws(models$retrieve_value, seed = seed, re_formula = NA) %>%
-    group_by(search, oracle, dataset, .draw)
+predictive_data  <- accuracy_data %>%
+    add_fitted_draws(model, seed = seed, re_formula = NA, scale = "response")
 
-search_differences$retrieve_value <- retrieve_value_predictive_data  %>%
-    group_by(search, dataset, .draw) %>%
-    summarize(accuracy = weighted.mean(.prediction)) %>%
+search_differences <- predictive_data  %>%
+    group_by(search, dataset, task, .draw) %>%
+    summarize(accuracy = weighted.mean(.value)) %>%
     compare_levels(accuracy, by = search) %>%
     rename(difference_in_accuracy = accuracy)
 
-search_differences$retrieve_value$metric = "2. Retrieve Value"
-
-search_differences$retrieve_value %>%
-      ggplot(aes(x = difference_in_accuracy, y = metric, fill = dataset, alpha = 0.5)) +
-      xlab(paste0("Expected Difference in Accuracy (",search_differences$retrieve_value[1,'search'],")")) + 
+search_differences_plot <- search_differences %>%
+      ggplot(aes(x = difference_in_accuracy, y = task, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Accuracy (",search_differences[1,'search'],")")) + 
       ylab("Task")+
       stat_halfeye(.width = c(.95, .5)) +
       geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() +
-     facet_grid(. ~ dataset)
-  
-```
-We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
-```{r}
-search_differences$retrieve_value %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
-```
-
-Differences in oracle:
-``` {r}
-oracle_differences$retrieve_value <- retrieve_value_predictive_data  %>%
-    group_by(oracle, dataset, .draw) %>%
-    summarize(accuracy = weighted.mean(.prediction)) %>%
-    compare_levels(accuracy, by = oracle) %>%
-    rename(difference_in_accuracy = accuracy)
-
-oracle_differences$retrieve_value$metric = "2. Retrieve Value"
-
-oracle_differences$retrieve_value %>%
-      ggplot(aes(x = difference_in_accuracy, y = metric, fill = dataset, alpha = 0.5)) +
-      xlab(paste0("Expected Difference in Accuracy (",oracle_differences$retrieve_value[1,'oracle'],")")) + 
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() +
-     facet_grid(. ~ dataset)
-  
-```
-We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
-```{r}
-oracle_differences$retrieve_value %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
-```
-
-
-## Summary Plots
-Putting the all of the plots for search algorithm and oracle differences on the same plot:
-```{r}
-combined_search_differences <- rbind(search_differences$find_extremum, search_differences$retrieve_value)
-search_differences_plot <- combined_search_differences %>%
-      ggplot(aes(x = difference_in_accuracy, y = metric, fill = dataset, alpha = 0.5)) +
-      xlab(paste0("Expected Difference in Accuracy (",combined_search_differences[1,'search'],")")) + 
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() +
-     facet_grid(. ~ dataset)
+      facet_grid(. ~ dataset) + 
+      theme_minimal()
 
 search_differences_plot
 ```
-
-``` {r}
-search_intervals <- combined_search_differences %>% group_by(search, dataset, metric) %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+search_intervals <- search_differences %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
 search_intervals
+```
+
+
+Differences in oracle:
+``` {r}
+oracle_differences <- predictive_data  %>%
+    group_by(oracle, dataset, task, .draw) %>%
+    summarize(accuracy = weighted.mean(.value)) %>%
+    compare_levels(accuracy, by = oracle) %>%
+    rename(difference_in_accuracy = accuracy)
+
+oracle_differences_plot <- oracle_differences %>%
+      ggplot(aes(x = difference_in_accuracy, y = task, fill = dataset, alpha = 0.5)) +
+      xlab(paste0("Expected Difference in Accuracy (",oracle_differences[1,'oracle'],")")) + 
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+    facet_grid(. ~ dataset) +
+      theme_minimal()
+
+oracle_differences_plot
+  
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+oracle_intervals <- oracle_differences %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
+oracle_intervals
 ```
 
 ```{r echo = FALSE}
 ggsave(file="search_accuracy_differences.png", plot=search_differences_plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
 write.csv(search_intervals, "../plot_data/comparisons/accuracy/search_accuracy_differences.csv", row.names = FALSE)
-```
 
-Putting the all of the plots for oracle differences on the same plot:
-```{r}
-combined_oracle_differences <- rbind(oracle_differences$find_extremum, oracle_differences$retrieve_value)
-oracle_differences_plot <- combined_oracle_differences %>%
-      ggplot(aes(x = difference_in_accuracy, y = metric, fill = dataset, alpha = 0.5)) +
-      xlab(paste0("Expected Difference in Accuracy (",combined_oracle_differences[1,'oracle'],")")) + 
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() +
-     facet_grid(. ~ dataset)
-
-oracle_differences_plot
-```
-
-``` {r}
-oracle_intervals <- combined_oracle_differences %>% group_by(oracle, dataset, metric) %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
-oracle_intervals
-```
-
-```{r echo = FALSE}
 ggsave(file="oracle_accuracy_differences.png", plot=oracle_differences_plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
 write.csv(oracle_intervals, "../plot_data/comparisons/accuracy/oracle_accuracy_differences.csv", row.names = FALSE)
 ```

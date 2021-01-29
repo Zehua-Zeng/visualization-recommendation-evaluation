@@ -55,7 +55,10 @@ seed = 12
 Units on these are log seconds.  We choose to work in log space in order to prevent our model from predicting completion times of less than zero seconds.
 ```{r}
 model <- brm(
-    formula = bf(log_completion_time ~ dataset * oracle * search * task),
+    formula = bf(
+    log_completion_time ~ oracle * search + dataset + task
+    + (1 | participant_id)
+  ),
     prior = prior(normal(5.69, 0.69), class = "Intercept"),
     chains = 2,
     cores = 2,
