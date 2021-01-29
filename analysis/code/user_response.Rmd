@@ -63,14 +63,14 @@ seed = 12
 filename = "confidence_udata"
 
 models$confidence_udata <- brm(
-    formula = bf(confidence.udata ~ dataset * oracle * search),
+    formula = bf(confidence.udata ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
     prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
     warmup = 1000,
-    data = data,
+    data = user_response_data,
     control = list(adapt_delta = 0.99),
     file = filename,
     seed = seed
@@ -94,7 +94,8 @@ pairs(
   models$confidence_udata,
   pars = c("b_Intercept[1]",
            "b_Intercept[2]",
-           "b_Intercept[3]"),
+           "b_Intercept[3]",
+           "b_Intercept[4]"),
   fixed = TRUE
 )
 ```
@@ -104,7 +105,10 @@ pairs(
   models$confidence_udata,
   pars = c("b_datasetmovies",
            "b_oracledziban",
-           "b_searchdfs"),
+           "b_searchdfs",
+           "b_task2.RetrieveValue",
+           "b_task3.Prediction",
+           "b_task4.Exploration"),
   fixed = TRUE
 )
 
@@ -219,14 +223,14 @@ alg_differences$confidence_udata %>%
 ```{r}
 filename = "confidence_ans"
 models$confidence_ans <- brm(
-    formula = bf(confidence.ans ~ dataset * oracle * search),
+    formula = bf(confidence.ans ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
     prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
     warmup = 1000,
-    data = data,
+    data = user_response_data,
     control = list(adapt_delta = 0.99),
     file = filename,
     seed = seed
@@ -249,7 +253,8 @@ pairs(
   models$confidence_ans,
   pars = c("b_Intercept[1]",
            "b_Intercept[2]",
-           "b_Intercept[3]"),
+           "b_Intercept[3]",
+           "b_Intercept[4]"),
   fixed = TRUE
 )
 ```
@@ -259,7 +264,10 @@ pairs(
   models$confidence_ans,
   pars = c("b_datasetmovies",
            "b_oracledziban",
-           "b_searchdfs"),
+           "b_searchdfs",
+           "b_task2.RetrieveValue",
+           "b_task3.Prediction",
+           "b_task4.Exploration"),
   fixed = TRUE
 )
 
@@ -373,14 +381,14 @@ alg_differences$confidence_ans %>%
 ```{r}
 filename = "efficiency"
 models$efficiency <- brm(
-    formula = bf(efficiency ~ dataset * oracle * search),
+    formula = bf(efficiency ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
     warmup = 1000,
-    data = data,
+    data = user_response_data,
     control = list(adapt_delta = 0.99),
     file = filename,
     seed = seed
@@ -403,7 +411,8 @@ pairs(
   models$efficiency,
   pars = c("b_Intercept[1]",
            "b_Intercept[2]",
-           "b_Intercept[3]"),
+           "b_Intercept[3]",
+           "b_Intercept[4]"),
   fixed = TRUE
 )
 ```
@@ -411,9 +420,12 @@ pairs(
 ```{r}
 pairs(
   models$efficiency,
-  pars = c("b_datasetmovies",
+   pars = c("b_datasetmovies",
            "b_oracledziban",
-           "b_searchdfs"),
+           "b_searchdfs",
+           "b_task2.RetrieveValue",
+           "b_task3.Prediction",
+           "b_task4.Exploration"),
   fixed = TRUE
 )
 
@@ -528,14 +540,14 @@ alg_differences$efficiency %>%
 ```{r}
 filename = "ease_of_use"
 models$ease_of_use <- brm(
-    formula = bf(ease.of.use ~ dataset * oracle * search),
+    formula = bf(ease.of.use ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
     warmup = 1000,
-    data = data,
+    data = user_response_data,
     control = list(adapt_delta = 0.99),
     file = filename,
     seed = seed
@@ -558,7 +570,8 @@ pairs(
   models$ease_of_use,
   pars = c("b_Intercept[1]",
            "b_Intercept[2]",
-           "b_Intercept[3]"),
+           "b_Intercept[3]",
+           "b_Intercept[4]"),
   fixed = TRUE
 )
 ```
@@ -566,9 +579,12 @@ pairs(
 ```{r}
 pairs(
   models$ease_of_use,
-  pars = c("b_datasetmovies",
+   pars = c("b_datasetmovies",
            "b_oracledziban",
-           "b_searchdfs"),
+           "b_searchdfs",
+           "b_task2.RetrieveValue",
+           "b_task3.Prediction",
+           "b_task4.Exploration"),
   fixed = TRUE
 )
 
@@ -682,14 +698,14 @@ alg_differences$ease_of_use %>%
 ```{r}
 filename = "utility"
 models$utility <- brm(
-    formula = bf(utility ~ dataset * oracle * search),
+    formula = bf(utility ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
     warmup = 1000,
-    data = data,
+    data = user_response_data,
     control = list(adapt_delta = 0.99),
     file = filename,
     seed = seed
@@ -706,13 +722,14 @@ Trace plots help us check whether there is evidence of non-convergence for our m
 plot(models$utility)
 ```
 
-In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
+s plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
 ```{r}
 pairs(
   models$utility,
   pars = c("b_Intercept[1]",
            "b_Intercept[2]",
-           "b_Intercept[3]"),
+           "b_Intercept[3]",
+           "b_Intercept[4]"),
   fixed = TRUE
 )
 ```
@@ -720,9 +737,12 @@ pairs(
 ```{r}
 pairs(
   models$utility,
-  pars = c("b_datasetmovies",
+   pars = c("b_datasetmovies",
            "b_oracledziban",
-           "b_searchdfs"),
+           "b_searchdfs",
+           "b_task2.RetrieveValue",
+           "b_task3.Prediction",
+           "b_task4.Exploration"),
   fixed = TRUE
 )
 
@@ -836,14 +856,14 @@ alg_differences$utility %>%
 ```{r}
 filename = "overall"
 models$overall <- brm(
-    formula = bf(overall ~ dataset * oracle * search),
+    formula = bf(overall ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
     cores = 2,
     iter = 2500,
     warmup = 1000,
-    data = data,
+    data = user_response_data,
     control = list(adapt_delta = 0.99),
     file = filename,
     seed = seed
@@ -866,7 +886,8 @@ pairs(
   models$overall,
   pars = c("b_Intercept[1]",
            "b_Intercept[2]",
-           "b_Intercept[3]"),
+           "b_Intercept[3]",
+           "b_Intercept[4]"),
   fixed = TRUE
 )
 ```
@@ -874,9 +895,12 @@ pairs(
 ```{r}
 pairs(
   models$overall,
-  pars = c("b_datasetmovies",
+   pars = c("b_datasetmovies",
            "b_oracledziban",
-           "b_searchdfs"),
+           "b_searchdfs",
+           "b_task2.RetrieveValue",
+           "b_task3.Prediction",
+           "b_task4.Exploration"),
   fixed = TRUE
 )
 
