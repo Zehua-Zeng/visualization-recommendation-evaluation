@@ -200,6 +200,13 @@ ggsave(file="split_by_dataset_search_time_differences.png", plot=diff_in_search_
 diff_in_search_prediction_plot_split_by_dataset
 ```
 
+```{r}
+diff_in_search_prediction_plot_split_by_dataset_subset <- diff_in_search_prediction_plot_subset + facet_grid(. ~ dataset) + aes(fill= dataset)
+ggsave(file="split_by_dataset_search_time_differences_subset.png", plot=diff_in_search_prediction_plot_split_by_dataset_subset, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_search_prediction_plot_split_by_dataset_subset
+```
+
 Check intervals
 ```{r}
 diff_in_search_prediction_intervals_split_by_dataset <- diff_in_search_prediction %>% group_by(search, dataset, task) %>% mean_qi(diff_in_time, .width = c(.95, .5))
@@ -269,6 +276,14 @@ ggsave(file="split_by_dataset_oracle_time_differences.png", plot=diff_in_oracle_
 
 diff_in_oracle_prediction_plot_split_by_dataset
 ```
+
+```{r}
+diff_in_oracle_prediction_plot_split_by_dataset_subset <- diff_in_oracle_prediction_plot_subset + facet_grid(. ~ dataset) + aes(fill= dataset)
+ggsave(file="split_by_dataset_oracle_time_differences_subset.png", plot=diff_in_oracle_prediction_plot_split_by_dataset_subset, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_oracle_prediction_plot_split_by_dataset_subset
+```
+
 
 Check intervals
 ```{r}
