@@ -1,0 +1,265 @@
+participant_id,participant_group,dataset,oracle,search,task,completion_time
+stu14,student,birdstrikes,compassql,dfs,3. Prediction,1229.062
+stu11,student,movies,dziban,dfs,3. Prediction,804.142
+stu19,student,birdstrikes,dziban,bfs,2. Retrieve Value,155.633
+pro23,professional,movies,compassql,dfs,3. Prediction,730.911
+stu27,student,birdstrikes,dziban,dfs,1. Find Extremum,235.069
+pro21,professional,movies,dziban,bfs,4. Exploration,895.906
+pro2,professional,birdstrikes,compassql,bfs,2. Retrieve Value,130.713
+stu34,student,birdstrikes,compassql,dfs,2. Retrieve Value,172.199
+stu29,student,movies,dziban,bfs,4. Exploration,493.578
+stu31,student,movies,dziban,bfs,1. Find Extremum,287.882
+pro6,professional,birdstrikes,dziban,bfs,2. Retrieve Value,181.251
+pro3,professional,movies,compassql,bfs,2. Retrieve Value,189.975
+stu28,student,birdstrikes,dziban,bfs,4. Exploration,749.451
+stu8,student,birdstrikes,compassql,bfs,2. Retrieve Value,366.251
+stu18,student,birdstrikes,dziban,bfs,3. Prediction,355.453
+stu33,student,birdstrikes,compassql,bfs,4. Exploration,617.956
+pro18,professional,movies,dziban,dfs,2. Retrieve Value,85.47
+pro7,professional,birdstrikes,dziban,bfs,3. Prediction,807.478
+stu20,student,birdstrikes,dziban,dfs,4. Exploration,376.334
+stu39,student,movies,dziban,dfs,1. Find Extremum,173.295
+stu30,student,movies,dziban,dfs,3. Prediction,595.914
+pro5,professional,movies,dziban,dfs,3. Prediction,498.083
+stu40,student,birdstrikes,dziban,dfs,3. Prediction,689.81
+pro8,professional,movies,compassql,dfs,1. Find Extremum,365.158
+stu26,student,movies,compassql,bfs,4. Exploration,907.191
+stu16,student,birdstrikes,compassql,dfs,1. Find Extremum,776.278
+stu2,student,birdstrikes,compassql,bfs,3. Prediction,555.236
+stu17,student,movies,compassql,bfs,2. Retrieve Value,243.659
+stu7,student,movies,dziban,bfs,3. Prediction,1139.979
+stu12,student,birdstrikes,dziban,dfs,1. Find Extremum,226.503
+stu10,student,movies,compassql,dfs,4. Exploration,908.271
+pro1,professional,birdstrikes,compassql,dfs,2. Retrieve Value,125.308
+pro19,professional,birdstrikes,compassql,dfs,4. Exploration,850.893
+stu21,student,movies,compassql,bfs,1. Find Extremum,210.676
+pro12,professional,birdstrikes,dziban,dfs,2. Retrieve Value,411.033
+pro17,professional,movies,compassql,bfs,1. Find Extremum,243.796
+pro16,professional,birdstrikes,compassql,bfs,1. Find Extremum,180.459
+pro18,professional,movies,dziban,dfs,4. Exploration,722.775
+stu33,student,birdstrikes,compassql,bfs,2. Retrieve Value,193.396
+stu36,student,movies,dziban,dfs,1. Find Extremum,131.91
+stu8,student,birdstrikes,compassql,bfs,4. Exploration,914.374
+stu6,student,movies,compassql,dfs,1. Find Extremum,97.353
+pro20,professional,movies,dziban,bfs,3. Prediction,732.332
+stu25,student,movies,compassql,bfs,1. Find Extremum,289.185
+pro13,professional,movies,compassql,bfs,1. Find Extremum,118.083
+stu20,student,birdstrikes,dziban,dfs,2. Retrieve Value,150.188
+stu19,student,birdstrikes,dziban,bfs,4. Exploration,1045.948
+stu32,student,birdstrikes,compassql,bfs,3. Prediction,614.957
+pro6,professional,birdstrikes,dziban,bfs,4. Exploration,722.972
+stu28,student,birdstrikes,dziban,bfs,2. Retrieve Value,212.966
+pro25,professional,movies,compassql,dfs,1. Find Extremum,63.3
+pro3,professional,movies,compassql,bfs,4. Exploration,459.426
+stu13,student,movies,compassql,dfs,1. Find Extremum,102.94
+stu29,student,movies,dziban,bfs,2. Retrieve Value,88.999
+stu34,student,birdstrikes,compassql,dfs,4. Exploration,523.348
+pro2,professional,birdstrikes,compassql,bfs,4. Exploration,764.832
+pro21,professional,movies,dziban,bfs,2. Retrieve Value,239.045
+pro1,professional,birdstrikes,compassql,dfs,4. Exploration,592.364
+pro15,professional,movies,dziban,bfs,3. Prediction,333.522
+pro22,professional,movies,dziban,bfs,1. Find Extremum,378.562
+pro19,professional,birdstrikes,compassql,dfs,2. Retrieve Value,177.032
+stu5,student,birdstrikes,compassql,dfs,3. Prediction,591.527
+stu10,student,movies,compassql,dfs,2. Retrieve Value,286.29
+stu22,student,birdstrikes,dziban,bfs,3. Prediction,610.181
+pro12,professional,birdstrikes,dziban,dfs,4. Exploration,744.383
+stu23,student,birdstrikes,dziban,dfs,1. Find Extremum,274.496
+stu26,student,movies,compassql,bfs,2. Retrieve Value,158.165
+pro11,professional,birdstrikes,compassql,dfs,1. Find Extremum,405.433
+stu17,student,movies,compassql,bfs,4. Exploration,902.994
+pro2,professional,birdstrikes,compassql,bfs,3. Prediction,529.136
+stu34,student,birdstrikes,compassql,dfs,3. Prediction,732.418
+pro6,professional,birdstrikes,dziban,bfs,3. Prediction,382.749
+pro3,professional,movies,compassql,bfs,3. Prediction,312.078
+stu14,student,birdstrikes,compassql,dfs,2. Retrieve Value,386.503
+stu32,student,birdstrikes,compassql,bfs,4. Exploration,560.507
+stu11,student,movies,dziban,dfs,2. Retrieve Value,175.713
+stu19,student,birdstrikes,dziban,bfs,3. Prediction,284.909
+pro23,professional,movies,compassql,dfs,2. Retrieve Value,352.708
+pro26,professional,birdstrikes,dziban,bfs,1. Find Extremum,311.761
+stu9,student,birdstrikes,compassql,dfs,1. Find Extremum,88.641
+pro7,professional,birdstrikes,dziban,bfs,2. Retrieve Value,241.958
+stu30,student,movies,dziban,dfs,2. Retrieve Value,87.353
+pro20,professional,movies,dziban,bfs,4. Exploration,668.223
+stu18,student,birdstrikes,dziban,bfs,2. Retrieve Value,277.825
+stu8,student,birdstrikes,compassql,bfs,3. Prediction,712.305
+stu1,student,birdstrikes,compassql,bfs,1. Find Extremum,365.038
+pro10,professional,birdstrikes,dziban,dfs,1. Find Extremum,86.738
+stu4,student,movies,dziban,bfs,1. Find Extremum,229.185
+pro18,professional,movies,dziban,dfs,3. Prediction,377.597
+stu3,student,movies,compassql,dfs,1. Find Extremum,64.071
+stu2,student,birdstrikes,compassql,bfs,2. Retrieve Value,157.941
+stu7,student,movies,dziban,bfs,2. Retrieve Value,262.809
+stu17,student,movies,compassql,bfs,3. Prediction,739.454
+stu40,student,birdstrikes,dziban,dfs,2. Retrieve Value,243.737
+pro5,professional,movies,dziban,dfs,2. Retrieve Value,374.719
+pro12,professional,birdstrikes,dziban,dfs,3. Prediction,315.998
+pro24,professional,movies,dziban,dfs,1. Find Extremum,146.532
+stu5,student,birdstrikes,compassql,dfs,4. Exploration,597.295
+pro9,professional,movies,compassql,dfs,1. Find Extremum,158.68
+stu22,student,birdstrikes,dziban,bfs,4. Exploration,363.301
+pro1,professional,birdstrikes,compassql,dfs,3. Prediction,849.056
+pro15,professional,movies,dziban,bfs,4. Exploration,340.927
+stu30,student,movies,dziban,dfs,4. Exploration,597.168
+pro20,professional,movies,dziban,bfs,2. Retrieve Value,196.112
+stu20,student,birdstrikes,dziban,dfs,3. Prediction,390.969
+pro7,professional,birdstrikes,dziban,bfs,4. Exploration,441.893
+stu33,student,birdstrikes,compassql,bfs,3. Prediction,289.783
+stu18,student,birdstrikes,dziban,bfs,4. Exploration,568.648
+stu24,student,movies,compassql,bfs,1. Find Extremum,118.354
+stu28,student,birdstrikes,dziban,bfs,3. Prediction,654.838
+pro21,professional,movies,dziban,bfs,3. Prediction,785.329
+stu29,student,movies,dziban,bfs,3. Prediction,378.74
+pro23,professional,movies,compassql,dfs,4. Exploration,434.847
+pro4,professional,birdstrikes,compassql,bfs,1. Find Extremum,194.603
+stu14,student,birdstrikes,compassql,dfs,4. Exploration,886.577
+stu37,student,movies,dziban,dfs,1. Find Extremum,131.425
+stu11,student,movies,dziban,dfs,4. Exploration,860.832
+stu32,student,birdstrikes,compassql,bfs,2. Retrieve Value,213.068
+stu35,student,birdstrikes,dziban,bfs,1. Find Extremum,417.279
+pro19,professional,birdstrikes,compassql,dfs,3. Prediction,1445.67
+pro15,professional,movies,dziban,bfs,2. Retrieve Value,161.761
+stu5,student,birdstrikes,compassql,dfs,2. Retrieve Value,191.305
+pro14,professional,birdstrikes,dziban,dfs,1. Find Extremum,229.329
+stu22,student,birdstrikes,dziban,bfs,2. Retrieve Value,385.035
+stu10,student,movies,compassql,dfs,3. Prediction,977.202
+stu2,student,birdstrikes,compassql,bfs,4. Exploration,954.624
+stu38,student,movies,compassql,dfs,1. Find Extremum,180.368
+stu7,student,movies,dziban,bfs,4. Exploration,829.866
+stu26,student,movies,compassql,bfs,3. Prediction,745.93
+stu15,student,movies,dziban,bfs,1. Find Extremum,149.612
+pro5,professional,movies,dziban,dfs,4. Exploration,880.304
+stu40,student,birdstrikes,dziban,dfs,4. Exploration,794.259
+stu4,student,movies,dziban,bfs,2. Retrieve Value,241.724
+pro10,professional,birdstrikes,dziban,dfs,2. Retrieve Value,190.595
+stu1,student,birdstrikes,compassql,bfs,2. Retrieve Value,182.05
+stu18,student,birdstrikes,dziban,bfs,1. Find Extremum,210.051
+pro7,professional,birdstrikes,dziban,bfs,1. Find Extremum,307.67
+stu39,student,movies,dziban,dfs,3. Prediction,665.856
+stu30,student,movies,dziban,dfs,1. Find Extremum,127.562
+stu37,student,movies,dziban,dfs,4. Exploration,927.655
+stu11,student,movies,dziban,dfs,1. Find Extremum,124.763
+pro4,professional,birdstrikes,compassql,bfs,4. Exploration,412.116
+stu14,student,birdstrikes,compassql,dfs,1. Find Extremum,242.337
+stu27,student,birdstrikes,dziban,dfs,3. Prediction,1401.57
+stu9,student,birdstrikes,compassql,dfs,2. Retrieve Value,127.336
+pro26,professional,birdstrikes,dziban,bfs,2. Retrieve Value,199.194
+pro23,professional,movies,compassql,dfs,1. Find Extremum,169.317
+stu31,student,movies,dziban,bfs,3. Prediction,473.256
+stu24,student,movies,compassql,bfs,4. Exploration,440.362
+pro9,professional,movies,compassql,dfs,2. Retrieve Value,103.418
+pro14,professional,birdstrikes,dziban,dfs,4. Exploration,729.704
+stu21,student,movies,compassql,bfs,3. Prediction,427.959
+pro17,professional,movies,compassql,bfs,3. Prediction,529.649
+stu35,student,birdstrikes,dziban,bfs,4. Exploration,548.394
+pro24,professional,movies,dziban,dfs,2. Retrieve Value,170.892
+pro16,professional,birdstrikes,compassql,bfs,3. Prediction,617.546
+stu15,student,movies,dziban,bfs,4. Exploration,956.825
+pro5,professional,movies,dziban,dfs,1. Find Extremum,378.739
+stu40,student,birdstrikes,dziban,dfs,1. Find Extremum,214.771
+pro8,professional,movies,compassql,dfs,3. Prediction,671.747
+stu3,student,movies,compassql,dfs,2. Retrieve Value,274.449
+stu16,student,birdstrikes,compassql,dfs,3. Prediction,993.777
+stu7,student,movies,dziban,bfs,1. Find Extremum,399.447
+stu12,student,birdstrikes,dziban,dfs,3. Prediction,413.259
+stu2,student,birdstrikes,compassql,bfs,1. Find Extremum,299.53
+stu38,student,movies,compassql,dfs,4. Exploration,410.176
+stu9,student,birdstrikes,compassql,dfs,4. Exploration,878.045
+pro26,professional,birdstrikes,dziban,bfs,4. Exploration,782.013
+stu32,student,birdstrikes,compassql,bfs,1. Find Extremum,156.766
+stu37,student,movies,dziban,dfs,2. Retrieve Value,536.05
+pro4,professional,birdstrikes,compassql,bfs,2. Retrieve Value,538.575
+pro25,professional,movies,compassql,dfs,3. Prediction,529.69
+stu13,student,movies,compassql,dfs,3. Prediction,842.218
+stu24,student,movies,compassql,bfs,2. Retrieve Value,91.089
+stu36,student,movies,dziban,dfs,3. Prediction,664.562
+pro10,professional,birdstrikes,dziban,dfs,4. Exploration,898.077
+stu4,student,movies,dziban,bfs,4. Exploration,595.646
+stu1,student,birdstrikes,compassql,bfs,4. Exploration,682.492
+pro20,professional,movies,dziban,bfs,1. Find Extremum,171.549
+stu6,student,movies,compassql,dfs,3. Prediction,537.48
+stu25,student,movies,compassql,bfs,3. Prediction,548.43
+pro13,professional,movies,compassql,bfs,3. Prediction,581.608
+stu23,student,birdstrikes,dziban,dfs,3. Prediction,353.005
+pro11,professional,birdstrikes,compassql,dfs,3. Prediction,286.541
+stu15,student,movies,dziban,bfs,2. Retrieve Value,443.844
+stu38,student,movies,compassql,dfs,2. Retrieve Value,154.328
+stu3,student,movies,compassql,dfs,4. Exploration,949.55
+pro15,professional,movies,dziban,bfs,1. Find Extremum,261.083
+pro22,professional,movies,dziban,bfs,3. Prediction,847.375
+stu22,student,birdstrikes,dziban,bfs,1. Find Extremum,316.352
+stu5,student,birdstrikes,compassql,dfs,1. Find Extremum,189.291
+pro14,professional,birdstrikes,dziban,dfs,2. Retrieve Value,354.573
+pro9,professional,movies,compassql,dfs,4. Exploration,644.776
+pro24,professional,movies,dziban,dfs,4. Exploration,440.702
+stu35,student,birdstrikes,dziban,bfs,2. Retrieve Value,380.652
+stu25,student,movies,compassql,bfs,4. Exploration,859.345
+pro13,professional,movies,compassql,bfs,4. Exploration,541.348
+stu6,student,movies,compassql,dfs,4. Exploration,670.009
+stu39,student,movies,dziban,dfs,2. Retrieve Value,225.553
+pro10,professional,birdstrikes,dziban,dfs,3. Prediction,927.51
+stu4,student,movies,dziban,bfs,3. Prediction,659.498
+stu8,student,birdstrikes,compassql,bfs,1. Find Extremum,80.865
+stu1,student,birdstrikes,compassql,bfs,3. Prediction,558.253
+pro18,professional,movies,dziban,dfs,1. Find Extremum,129.046
+stu36,student,movies,dziban,dfs,4. Exploration,641.783
+stu31,student,movies,dziban,bfs,2. Retrieve Value,164.61
+stu34,student,birdstrikes,compassql,dfs,1. Find Extremum,733.951
+pro2,professional,birdstrikes,compassql,bfs,1. Find Extremum,419.898
+pro25,professional,movies,compassql,dfs,4. Exploration,660.211
+pro3,professional,movies,compassql,bfs,1. Find Extremum,142.886
+stu13,student,movies,compassql,dfs,4. Exploration,595.448
+pro6,professional,birdstrikes,dziban,bfs,1. Find Extremum,123.751
+stu9,student,birdstrikes,compassql,dfs,3. Prediction,778.919
+stu27,student,birdstrikes,dziban,dfs,2. Retrieve Value,241.323
+stu19,student,birdstrikes,dziban,bfs,1. Find Extremum,186.4
+pro26,professional,birdstrikes,dziban,bfs,3. Prediction,1055.394
+pro17,professional,movies,compassql,bfs,2. Retrieve Value,246.99
+stu21,student,movies,compassql,bfs,2. Retrieve Value,522.845
+pro12,professional,birdstrikes,dziban,dfs,1. Find Extremum,333.432
+pro16,professional,birdstrikes,compassql,bfs,2. Retrieve Value,238.401
+pro24,professional,movies,dziban,dfs,3. Prediction,348.954
+pro9,professional,movies,compassql,dfs,3. Prediction,1025.924
+pro22,professional,movies,dziban,bfs,4. Exploration,807.027
+pro1,professional,birdstrikes,compassql,dfs,1. Find Extremum,221.764
+stu3,student,movies,compassql,dfs,3. Prediction,1035.578
+stu16,student,birdstrikes,compassql,dfs,2. Retrieve Value,354.845
+stu12,student,birdstrikes,dziban,dfs,2. Retrieve Value,152.353
+stu17,student,movies,compassql,bfs,1. Find Extremum,212.961
+pro11,professional,birdstrikes,compassql,dfs,4. Exploration,705.415
+stu23,student,birdstrikes,dziban,dfs,4. Exploration,632.996
+pro8,professional,movies,compassql,dfs,2. Retrieve Value,432.948
+stu13,student,movies,compassql,dfs,2. Retrieve Value,196.136
+stu28,student,birdstrikes,dziban,bfs,1. Find Extremum,185.373
+pro25,professional,movies,compassql,dfs,2. Retrieve Value,112.813
+stu24,student,movies,compassql,bfs,3. Prediction,325.284
+pro21,professional,movies,dziban,bfs,1. Find Extremum,232.085
+stu29,student,movies,dziban,bfs,1. Find Extremum,76.532
+stu31,student,movies,dziban,bfs,4. Exploration,802.248
+stu27,student,birdstrikes,dziban,dfs,4. Exploration,821.641
+stu37,student,movies,dziban,dfs,3. Prediction,1440.465
+pro4,professional,birdstrikes,compassql,bfs,3. Prediction,988.753
+stu39,student,movies,dziban,dfs,4. Exploration,751.604
+stu6,student,movies,compassql,dfs,2. Retrieve Value,185.769
+pro13,professional,movies,compassql,bfs,2. Retrieve Value,125.868
+stu20,student,birdstrikes,dziban,dfs,1. Find Extremum,169.197
+stu25,student,movies,compassql,bfs,2. Retrieve Value,156.638
+stu36,student,movies,dziban,dfs,2. Retrieve Value,212.66
+stu33,student,birdstrikes,compassql,bfs,1. Find Extremum,343.252
+stu12,student,birdstrikes,dziban,dfs,4. Exploration,1291.678
+stu38,student,movies,compassql,dfs,3. Prediction,1061.322
+stu16,student,birdstrikes,compassql,dfs,4. Exploration,962.746
+pro8,professional,movies,compassql,dfs,4. Exploration,630.24
+stu26,student,movies,compassql,bfs,1. Find Extremum,223.658
+stu23,student,birdstrikes,dziban,dfs,2. Retrieve Value,317.898
+pro11,professional,birdstrikes,compassql,dfs,2. Retrieve Value,170.561
+stu15,student,movies,dziban,bfs,3. Prediction,754.89
+pro16,professional,birdstrikes,compassql,bfs,4. Exploration,622.002
+stu21,student,movies,compassql,bfs,4. Exploration,762.361
+pro17,professional,movies,compassql,bfs,4. Exploration,985.296
+stu35,student,birdstrikes,dziban,bfs,3. Prediction,780.384
+pro19,professional,birdstrikes,compassql,dfs,1. Find Extremum,176.562
+pro22,professional,movies,dziban,bfs,2. Retrieve Value,308.046
+stu10,student,movies,compassql,dfs,1. Find Extremum,774.624
+pro14,professional,birdstrikes,dziban,dfs,3. Prediction,476.703
