@@ -159,6 +159,30 @@ ggsave(file="search_time_differences.png", plot=diff_in_search_prediction_plot, 
 diff_in_search_prediction_plot
 
 ```
+```{r}
+diff_in_search_prediction_subset <- diff_in_search_prediction[diff_in_search_prediction$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
+diff_in_search_prediction_subset$task <- factor(diff_in_search_prediction_subset$task)
+
+# flip order so that we get bfs - dfs
+if(diff_in_search_prediction_subset[1,'search']=="dfs - bfs"){
+  diff_in_search_prediction_subset$search = 'bfs - dfs'
+  diff_in_search_prediction_subset$diff_in_time = -1 * diff_in_search_prediction_subset$diff_in_time
+}
+
+
+diff_in_search_prediction_plot_subset <- diff_in_search_prediction_subset %>%
+      ggplot(aes(x = diff_in_time, y = task)) +
+      xlab(paste0("Time Difference (Seconds) (",diff_in_search_prediction_subset[1,'search'],")")) +
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_search_prediction_subset$task)))
+
+ggsave(file="search_time_differences_subset.png", plot=diff_in_search_prediction_plot_subset, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_search_prediction_plot_subset
+```
+
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
 diff_in_search_prediction_intervals <- diff_in_search_prediction %>% group_by(search, task) %>% mean_qi(diff_in_time, .width = c(.95, .5))
@@ -210,6 +234,25 @@ ggsave(file="oracle_time_differences.png", plot=diff_in_oracle_prediction_plot, 
 diff_in_oracle_prediction_plot
 
 ```
+
+```{r}
+diff_in_oracle_prediction_subset <- diff_in_oracle_prediction
+diff_in_oracle_prediction_subset <- diff_in_oracle_prediction_subset[diff_in_oracle_prediction_subset$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
+diff_in_oracle_prediction_subset$task <- factor(diff_in_oracle_prediction_subset$task)
+
+diff_in_oracle_prediction_plot_subset <- diff_in_oracle_prediction_subset %>%
+      ggplot(aes(x = diff_in_time, y = task)) +
+      xlab(paste0("Time Difference (Seconds) (",diff_in_oracle_prediction[1,'oracle'],")")) +
+      ylab("Task")+
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction_subset$task)))
+
+ggsave(file="oracle_time_differences_subset.png", plot=diff_in_oracle_prediction_plot_subset, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_oracle_prediction_plot_subset
+```
+
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
 diff_in_oracle_prediction_intervals <- diff_in_oracle_prediction %>% group_by(oracle, task) %>% mean_qi(diff_in_time, .width = c(.95, .5))

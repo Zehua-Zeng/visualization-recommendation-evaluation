@@ -106,16 +106,24 @@ draw_data <- accuracy_data %>%
   add_fitted_draws(model, seed = seed, re_formula = NA, scale = "response") %>%
   group_by(search, oracle, dataset, task, .draw)
 
-draw_data$condition <- paste(draw_data$oracle, draw_data$search, sep="_")
+plot_data <- draw_data
+plot_data$oracle<- gsub('compassql', 'CompassQL', plot_data$oracle)
+plot_data$oracle<- gsub('dziban', 'Dziban', plot_data$oracle)
+plot_data$search<- gsub('bfs', 'BFS', plot_data$search)
+plot_data$search<- gsub('dfs', 'DFS', plot_data$search)
 
-draw_plot <- draw_data %>% ggplot(aes(
+plot_data$condition <- paste(plot_data$oracle, plot_data$search, sep=" + ")
+
+draw_plot <- plot_data %>% ggplot(aes(
     x = .value,
-    y = condition,
+    y = reorder(condition, desc(condition)),
     fill = dataset,
     alpha = 0.5
   )) + stat_halfeye(.width = c(.95, .5)) +
   facet_grid(. ~ task) +
-    labs(x = "Predicted Accuracy (p_correct)", y = "Oracle/Search Combination") 
+    labs(x = "Predicted Accuracy (p_correct)", y = "Oracle/Search Combination") +
+    theme(axis.text=element_text(size=12)) + 
+    coord_cartesian(xlim = c(0.5, 1)) 
 
 draw_plot
 ```
