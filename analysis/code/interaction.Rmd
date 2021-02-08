@@ -1,0 +1,591 @@
+---
+title: "interaction"
+output: html_document
+---
+
+```{r libraries, message=FALSE, warning=FALSE}
+
+knitr::opts_chunk$set(fig.align="center") 
+library(rstanarm)
+library(tidyverse)
+library(tidybayes)
+library(modelr) 
+library(ggplot2)
+library(magrittr)  
+library(emmeans)
+library(bayesplot)
+library(brms)
+library(gganimate)
+
+theme_set(theme_light())
+task_list <- c("3. Prediction", "4. Exploration")
+seed = 12
+```
+## Number of Interacted Variable Sets
+Read in and format data
+```{r}
+interacted_var_sets_data <- read.csv("split_by_participant_groups/num_of_interacted_variable_set.csv")
+interacted_var_sets_data <- interacted_var_sets_data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search),
+    task = as.factor(task),
+    participant_group = as.factor(participant_group)
+  )
+```
+
+Train model
+```{r}
+prior_mean = 35.24
+prior_sd = 25.33
+
+stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
+model_interacted_var_sets <- brm(
+    formula = num_interacted_variable_set ~ oracle * search + dataset + task + participant_group + (1 + oracle * search + dataset + participant_group | participant_id),
+    prior = prior(normal(prior_mean, prior_sd), class = Intercept),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = interacted_var_sets_data,
+    stanvars=stanvars,
+    seed = seed,
+    file = "model_interacted_var_sets_group"
+  )
+```
+Plot
+```{r}
+plot(model_interacted_var_sets)
+```
+
+Summary
+```{r}
+summary(model_interacted_var_sets)
+```
+
+```{r}
+pairs(
+    model_interacted_var_sets,
+    pars = c(
+      "b_Intercept",
+      "b_datasetmovies",
+      "b_oracledziban",
+      "b_searchdfs",
+      "b_task4.Exploration",
+      "b_participant_groupstudent"
+    ),
+    fixed = TRUE
+  )
+```
+
+```{r}
+draw_data_interacted_var_sets <- interacted_var_sets_data %>%
+  add_fitted_draws(model_interacted_var_sets, seed = seed, re_formula = NA)
+draw_data_interacted_var_sets$condition <- paste(draw_data_interacted_var_sets$oracle, draw_data_interacted_var_sets$search)
+```
+
+```{r}
+plot_interacted_var_sets <- draw_data_interacted_var_sets %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
+      stat_eye(.width = c(.95, .5)) +
+      theme_minimal() +
+      facet_grid(task ~ condition)
+    
+plot_interacted_var_sets
+
+ggsave(
+      file = paste("interacted_var_sets_split_group.png", sep = ""),
+      plot = plot_interacted_var_sets,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+
+```{r}
+fit_info_interacted_var_sets <-
+      draw_data_interacted_var_sets %>% group_by(search, oracle, task, participant_group) %>% mean_qi(.value, .width = c(.95, .5))
+
+fit_info_interacted_var_sets
+
+write.csv(
+      fit_info_interacted_var_sets,  "../plot_data/posterior_draws/num_interacted_variable_set/interacted_var_sets.csv",
+      row.names = FALSE
+    )
+```
+
+### Differences between factors
+```{r}
+predictive_data_interacted_var_sets <- interacted_var_sets_data %>%
+    add_predicted_draws(model_interacted_var_sets, seed = seed, re_formula = NA)
+```
+
+Difference in groups
+```{r}
+diff_in_group_prediction <- predictive_data_interacted_var_sets %>%
+    group_by(search, task, dataset, participant_group, .draw) %>%
+    summarize(value = weighted.mean(.prediction)) %>%
+    compare_levels(value, by = participant_group) %>%
+    rename(diff = value)
+
+```
+```{r}
+diff_in_group_prediction_plot <- diff_in_group_prediction %>%
+    ggplot(aes(x = diff, y = task)) +
+    xlab(
+      paste0(
+        "Difference in interacted_var_sets (",
+        diff_in_group_prediction[1, 'participant_group'],
+        ")"
+      )
+    ) +
+    ylab("Task") +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task)))
+
+diff_in_group_prediction_plot
+
+ggsave(
+      file = "group_differences.png",
+      plot = diff_in_group_prediction_plot,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+```{r}
+diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = dataset, alpha = 0.5)
+
+diff_in_group_prediction_plot_split_by_dataset
+
+ggsave(
+      file = "group_differences_split_by_dataset.png",
+      plot = diff_in_group_prediction_plot_split_by_dataset,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+## Number of Interacted Visual Designs
+
+Read in and format data
+```{r}
+interacted_visual_design_data <- read.csv("split_by_participant_groups/num_of_interacted_visual_design.csv")
+interacted_visual_design_data <- interacted_visual_design_data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search),
+    task = as.factor(task),
+    participant_group = as.factor(participant_group)
+  )
+```
+
+Train model
+```{r}
+prior_mean = 35.24
+prior_sd = 25.33
+
+stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
+model_interacted_visual_design <- brm(
+    formula = num_interacted_visual_design ~ oracle * search + dataset + task + participant_group + (1 + oracle * search + dataset + participant_group | participant_id),
+    prior = prior(normal(prior_mean, prior_sd), class = Intercept),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = interacted_visual_design_data,
+    stanvars=stanvars,
+    seed = seed,
+    file = "model_interacted_visual_design_group"
+  )
+```
+Plot
+```{r}
+plot(model_interacted_visual_design)
+```
+
+Summary
+```{r}
+summary(model_interacted_visual_design)
+```
+
+```{r}
+pairs(
+    model_interacted_visual_design,
+    pars = c(
+      "b_Intercept",
+      "b_datasetmovies",
+      "b_oracledziban",
+      "b_searchdfs",
+      "b_task4.Exploration",
+      "b_participant_groupstudent"
+    ),
+    fixed = TRUE
+  )
+```
+
+```{r}
+draw_data_interacted_visual_design <- interacted_visual_design_data %>%
+  add_fitted_draws(model_interacted_visual_design, seed = seed, re_formula = NA)
+draw_data_interacted_visual_design$condition <- paste(draw_data_interacted_visual_design$oracle, draw_data_interacted_visual_design$search)
+```
+
+```{r}
+plot_interacted_visual_design <- draw_data_interacted_visual_design %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
+      stat_eye(.width = c(.95, .5)) +
+      theme_minimal() +
+      facet_grid(task ~ condition)
+    
+plot_interacted_visual_design
+
+ggsave(
+      file = paste("interacted_visual_design_split_group.png", sep = ""),
+      plot = plot_interacted_visual_design,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+
+```{r}
+fit_info_interacted_visual_design <-
+      draw_data_interacted_visual_design %>% group_by(search, oracle, task, participant_group) %>% mean_qi(.value, .width = c(.95, .5))
+
+fit_info_interacted_visual_design
+
+write.csv(
+      fit_info_interacted_visual_design,  "../plot_data/posterior_draws/num_interacted_variable_set/interacted_visual_design.csv",
+      row.names = FALSE
+    )
+```
+
+### Differences between factors
+```{r}
+predictive_data_interacted_visual_design <- interacted_visual_design_data %>%
+    add_predicted_draws(model_interacted_visual_design, seed = seed, re_formula = NA)
+```
+
+Difference in groups
+```{r}
+diff_in_group_prediction <- predictive_data_interacted_visual_design %>%
+    group_by(search, task, dataset, participant_group, .draw) %>%
+    summarize(value = weighted.mean(.prediction)) %>%
+    compare_levels(value, by = participant_group) %>%
+    rename(diff = value)
+
+```
+```{r}
+diff_in_group_prediction_plot <- diff_in_group_prediction %>%
+    ggplot(aes(x = diff, y = task)) +
+    xlab(
+      paste0(
+        "Difference in interacted_visual_design (",
+        diff_in_group_prediction[1, 'participant_group'],
+        ")"
+      )
+    ) +
+    ylab("Task") +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task)))
+
+diff_in_group_prediction_plot
+
+ggsave(
+      file = "group_differences.png",
+      plot = diff_in_group_prediction_plot,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+```{r}
+diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = dataset, alpha = 0.5)
+
+diff_in_group_prediction_plot_split_by_dataset
+
+ggsave(
+      file = "group_differences_split_by_dataset.png",
+      plot = diff_in_group_prediction_plot_split_by_dataset,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+
+## Number of Exposed Variable Sets
+
+Read in and format data
+```{r}
+exposed_variable_set_data <- read.csv("split_by_participant_groups/num_of_exposed_variable_set.csv")
+exposed_variable_set_data <- exposed_variable_set_data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search),
+    task = as.factor(task),
+    participant_group = as.factor(participant_group)
+  )
+```
+
+Train model
+```{r}
+prior_mean = 35.24
+prior_sd = 25.33
+
+stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
+model_exposed_variable_set <- brm(
+    formula = num_exposed_variable_set ~ oracle * search + dataset + task + participant_group + (1 + oracle * search + dataset + participant_group | participant_id),
+    prior = prior(normal(prior_mean, prior_sd), class = Intercept),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = exposed_variable_set_data,
+    stanvars=stanvars,
+    seed = seed,
+    file = "model_exposed_variable_set_group"
+  )
+```
+Plot
+```{r}
+plot(model_exposed_variable_set)
+```
+
+Summary
+```{r}
+summary(model_exposed_variable_set)
+```
+
+```{r}
+pairs(
+    model_exposed_variable_set,
+    pars = c(
+      "b_Intercept",
+      "b_datasetmovies",
+      "b_oracledziban",
+      "b_searchdfs",
+      "b_task4.Exploration",
+      "b_participant_groupstudent"
+    ),
+    fixed = TRUE
+  )
+```
+
+```{r}
+draw_data_exposed_variable_set <- exposed_variable_set_data %>%
+  add_fitted_draws(model_exposed_variable_set, seed = seed, re_formula = NA)
+draw_data_exposed_variable_set$condition <- paste(draw_data_exposed_variable_set$oracle, draw_data_exposed_variable_set$search)
+```
+
+```{r}
+plot_exposed_variable_set <- draw_data_exposed_variable_set %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
+      stat_eye(.width = c(.95, .5)) +
+      theme_minimal() +
+      facet_grid(task ~ condition)
+    
+plot_exposed_variable_set
+
+ggsave(
+      file = paste("exposed_variable_set_split_group.png", sep = ""),
+      plot = plot_exposed_variable_set,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+
+```{r}
+fit_info_exposed_variable_set <-
+      draw_data_exposed_variable_set %>% group_by(search, oracle, task, participant_group) %>% mean_qi(.value, .width = c(.95, .5))
+
+fit_info_exposed_variable_set
+
+write.csv(
+      fit_info_exposed_variable_set,  "../plot_data/posterior_draws/num_interacted_variable_set/exposed_variable_set.csv",
+      row.names = FALSE
+    )
+```
+
+### Differences between factors
+```{r}
+predictive_data_exposed_variable_set <- exposed_variable_set_data %>%
+    add_predicted_draws(model_exposed_variable_set, seed = seed, re_formula = NA)
+```
+
+Difference in groups
+```{r}
+diff_in_group_prediction <- predictive_data_exposed_variable_set %>%
+    group_by(search, task, dataset, participant_group, .draw) %>%
+    summarize(value = weighted.mean(.prediction)) %>%
+    compare_levels(value, by = participant_group) %>%
+    rename(diff = value)
+
+```
+```{r}
+diff_in_group_prediction_plot <- diff_in_group_prediction %>%
+    ggplot(aes(x = diff, y = task)) +
+    xlab(
+      paste0(
+        "Difference in exposed_variable_set (",
+        diff_in_group_prediction[1, 'participant_group'],
+        ")"
+      )
+    ) +
+    ylab("Task") +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task)))
+
+diff_in_group_prediction_plot
+
+ggsave(
+      file = "group_differences.png",
+      plot = diff_in_group_prediction_plot,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+```{r}
+diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = dataset, alpha = 0.5)
+
+diff_in_group_prediction_plot_split_by_dataset
+
+ggsave(
+      file = "group_differences_split_by_dataset.png",
+      plot = diff_in_group_prediction_plot_split_by_dataset,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+
+
+## Number of Exposed Visual Designs
+
+
+Read in and format data
+```{r}
+exposed_visual_design_data <- read.csv("split_by_participant_groups/num_of_exposed_visual_design.csv")
+exposed_visual_design_data <- exposed_visual_design_data %>%
+  mutate(
+    dataset = as.factor(dataset),
+    oracle = as.factor(oracle),
+    search = as.factor(search),
+    task = as.factor(task),
+    participant_group = as.factor(participant_group)
+  )
+```
+
+Train model
+```{r}
+prior_mean = 35.24
+prior_sd = 25.33
+
+stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
+model_exposed_visual_design <- brm(
+    formula = num_exposed_visual_design ~ oracle * search + dataset + task + participant_group + (1 + oracle * search + dataset + participant_group | participant_id),
+    prior = prior(normal(prior_mean, prior_sd), class = Intercept),
+    chains = 2,
+    cores = 2,
+    iter = 2500,
+    warmup = 1000,
+    data = exposed_visual_design_data,
+    stanvars=stanvars,
+    seed = seed,
+    file = "model_exposed_visual_design_group"
+  )
+```
+Plot
+```{r}
+plot(model_exposed_visual_design)
+```
+
+Summary
+```{r}
+summary(model_exposed_visual_design)
+```
+
+```{r}
+pairs(
+    model_exposed_visual_design,
+    pars = c(
+      "b_Intercept",
+      "b_datasetmovies",
+      "b_oracledziban",
+      "b_searchdfs",
+      "b_task4.Exploration",
+      "b_participant_groupstudent"
+    ),
+    fixed = TRUE
+  )
+```
+
+```{r}
+draw_data_exposed_visual_design <- exposed_visual_design_data %>%
+  add_fitted_draws(model_exposed_visual_design, seed = seed, re_formula = NA)
+draw_data_exposed_visual_design$condition <- paste(draw_data_exposed_visual_design$oracle, draw_data_exposed_visual_design$search)
+```
+
+```{r}
+plot_exposed_visual_design <- draw_data_exposed_visual_design %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
+      stat_eye(.width = c(.95, .5)) +
+      theme_minimal() +
+      facet_grid(task ~ condition)
+    
+plot_exposed_visual_design
+
+ggsave(
+      file = paste("exposed_visual_design_split_group.png", sep = ""),
+      plot = plot_exposed_visual_design,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+
+```{r}
+fit_info_exposed_visual_design <-
+      draw_data_exposed_visual_design %>% group_by(search, oracle, task, participant_group) %>% mean_qi(.value, .width = c(.95, .5))
+
+fit_info_exposed_visual_design
+
+write.csv(
+      fit_info_exposed_visual_design,  "../plot_data/posterior_draws/num_interacted_variable_set/exposed_visual_design.csv",
+      row.names = FALSE
+    )
+```
+
+### Differences between factors
+```{r}
+predictive_data_exposed_visual_design <- exposed_visual_design_data %>%
+    add_predicted_draws(model_exposed_visual_design, seed = seed, re_formula = NA)
+```
+
+Difference in groups
+```{r}
+diff_in_group_prediction <- predictive_data_exposed_visual_design %>%
+    group_by(search, task, dataset, participant_group, .draw) %>%
+    summarize(value = weighted.mean(.prediction)) %>%
+    compare_levels(value, by = participant_group) %>%
+    rename(diff = value)
+
+```
+```{r}
+diff_in_group_prediction_plot <- diff_in_group_prediction %>%
+    ggplot(aes(x = diff, y = task)) +
+    xlab(
+      paste0(
+        "Difference in exposed_visual_design (",
+        diff_in_group_prediction[1, 'participant_group'],
+        ")"
+      )
+    ) +
+    ylab("Task") +
+    stat_halfeye(.width = c(.95, .5)) +
+    geom_vline(xintercept = 0, linetype = "longdash") +
+    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task)))
+
+diff_in_group_prediction_plot
+
+ggsave(
+      file = "group_differences.png",
+      plot = diff_in_group_prediction_plot,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+```{r}
+diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = dataset, alpha = 0.5)
+
+diff_in_group_prediction_plot_split_by_dataset
+
+ggsave(
+      file = "group_differences_split_by_dataset.png",
+      plot = diff_in_group_prediction_plot_split_by_dataset,
+      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+    )
+```
+
