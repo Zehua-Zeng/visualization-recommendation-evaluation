@@ -131,6 +131,46 @@ for (task_name in task_list) {
 ```
 
 
+```{r}
+plot_data <- draw_data
+plot_data <- diff_in_search_prediction[plot_data$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
+plot_data$task <- factor(plot_data$task)
+plot_data$oracle<- gsub('compassql', 'CompassQL', plot_data$oracle)
+plot_data$oracle<- gsub('dziban', 'Dziban', plot_data$oracle)
+plot_data$search<- gsub('bfs', 'BFS', plot_data$search)
+plot_data$search<- gsub('dfs', 'DFS', plot_data$search)
+
+plot_data$condition <- paste(plot_data$oracle, plot_data$search, sep=" + ")
+
+draw_plot <- plot_data %>% ggplot(aes(
+    x = exp(.value),
+    y = reorder(condition, desc(condition)),
+    fill = dataset,
+    alpha = 0.5
+  )) + stat_halfeye(.width = c(.95, .5)) +
+  facet_grid(. ~ task) +
+    labs(x = "Predicted Completion Time (seconds)", y = "Oracle/Search Combination") +
+    theme(axis.text.y=element_text(size=12))
+    # coord_cartesian(xlim = c(0.5, 1)) 
+
+draw_plot
+```
+
+``` {r echo = FALSE}
+# save the outputted plots and files
+ ggsave(
+    file = "plot.png",
+    plot = draw_plot,
+    path = "../plots/posterior_draws/time"
+  )
+fit_info <-  plot_data %>% group_by(search, oracle, dataset, task) %>% mean_qi(exp(.value), .width = c(.95, .5))
+fit_info
+
+  write.csv(fit_info,
+            paste("../plot_data/posterior_draws/accuracy/fit.csv", sep = ""),
+            row.names = FALSE)
+```
+
 ## Differences Between Conditions
 Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
 
