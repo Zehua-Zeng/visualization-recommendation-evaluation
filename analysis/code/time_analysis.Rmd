@@ -19,6 +19,8 @@ library(brms)
 library(gganimate)
 
 theme_set(theme_light())
+
+source('helper_functions.R')
 ```
 
 In our experiment, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the user's time to complete each of four tasks:
@@ -31,7 +33,7 @@ Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a da
 
 ### Read in and clean data
 ```{r}
-time_data = read.csv('processed_completion_time.csv')
+time_data = read.csv('split_by_participant_groups/completion_time.csv')
 
 time_data <- time_data %>%
   mutate(
@@ -40,8 +42,8 @@ time_data <- time_data %>%
     search = as.factor(search),
     task = as.factor(task)
   )
+time_data$condition <- paste(time_data$oracle, time_data$search)
 
-time_data$log_completion_time = log(time_data$completion_time)
 
 task_list = c("1. Find Extremum",
               "2. Retrieve Value",
@@ -52,20 +54,21 @@ seed = 12
 ```
 
 ## Building a Model for Time Analysis
-Units on these are log seconds.  We choose to work in log space in order to prevent our model from predicting completion times of less than zero seconds.
+Seconds.  We choose to work in log space in order to prevent our model from predicting completion times of less than zero seconds. 
+
 ```{r}
 model <- brm(
     formula = bf(
-    log_completion_time ~ oracle * search + dataset + task
-    + (1 | participant_id)
+    completion_time ~ oracle * search + dataset + task + (1 | participant_id)
   ),
-    prior = prior(normal(5.69, 0.69), class = "Intercept"),
+    prior = prior(normal(360.48, 224.40), class = "Intercept"),
     chains = 2,
     cores = 2,
     iter = 2500,
     warmup = 1000,
     data = time_data,
-    file = "model_time"
+    file = "models/time",
+    family = lognormal(),
   )
 ```
 
@@ -104,13 +107,7 @@ draw_data <- time_data %>%
 for (task_name in task_list) {
   draw_data_sub <- subset(draw_data, task == task_name)
 
-  plot <- ggplot(draw_data_sub, aes(
-    x = exp(.value),
-    y = condition,
-    fill = dataset,
-    alpha = 0.5
-  )) + stat_halfeye(.width = c(.95, .5)) +
-    labs(x = "Time (Seconds)", y = "Condition") 
+  plot <- posterior_draws_plot(draw_data_sub, "dataset", FALSE, "Predicted Mean Completion Time (seconds)", "Oracle/Search Combination")
   plot
   filename = gsub("^.*\\.","", task_name )
   filename = gsub(" ", "_", filename)
@@ -119,10 +116,10 @@ for (task_name in task_list) {
   ggsave(
     file = paste(filename, ".png", sep = ""),
     plot = plot,
-    path = "../plots/posterior_draws/time"
+    path = "../plots/posterior_draws/time", width = 7, height = 7
   )
   
-  fit_info <- draw_data_sub %>% group_by(search, oracle, dataset) %>% mean_qi(exp(.value), .width = c(.95, .5))
+  fit_info <- draw_data_sub %>% group_by(search, oracle, dataset) %>% mean_qi(.value, .width = c(.95, .5))
   fit_info
   write.csv(fit_info,
             paste("../plot_data/posterior_draws/time/", filename, ".csv", sep = ""),
@@ -133,7 +130,7 @@ for (task_name in task_list) {
 
 ```{r}
 plot_data <- draw_data
-plot_data <- diff_in_search_prediction[plot_data$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
+plot_data <- plot_data[plot_data$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
 plot_data$task <- factor(plot_data$task)
 plot_data$oracle<- gsub('compassql', 'CompassQL', plot_data$oracle)
 plot_data$oracle<- gsub('dziban', 'Dziban', plot_data$oracle)
@@ -141,196 +138,100 @@ plot_data$search<- gsub('bfs', 'BFS', plot_data$search)
 plot_data$search<- gsub('dfs', 'DFS', plot_data$search)
 
 plot_data$condition <- paste(plot_data$oracle, plot_data$search, sep=" + ")
-
-draw_plot <- plot_data %>% ggplot(aes(
-    x = exp(.value),
-    y = reorder(condition, desc(condition)),
-    fill = dataset,
-    alpha = 0.5
-  )) + stat_halfeye(.width = c(.95, .5)) +
-  facet_grid(. ~ task) +
-    labs(x = "Predicted Completion Time (seconds)", y = "Oracle/Search Combination") +
-    theme(axis.text.y=element_text(size=12))
-    # coord_cartesian(xlim = c(0.5, 1)) 
+draw_plot <- posterior_draws_plot(plot_data, "dataset", TRUE, "Predicted Mean Completion Time (seconds)", "Oracle/Search Combination") + theme(axis.text.y=element_text(size=12))
 
 draw_plot
 ```
 
 ``` {r echo = FALSE}
 # save the outputted plots and files
- ggsave(
-    file = "plot.png",
-    plot = draw_plot,
-    path = "../plots/posterior_draws/time"
-  )
-fit_info <-  plot_data %>% group_by(search, oracle, dataset, task) %>% mean_qi(exp(.value), .width = c(.95, .5))
+save_plot(draw_plot, "plot.png", "../plots/posterior_draws/time")
+
+fit_info <-  plot_data %>% group_by(search, oracle, dataset, task) %>% mean_qi(.value, .width = c(.95, .5))
 fit_info
 
-  write.csv(fit_info,
-            paste("../plot_data/posterior_draws/accuracy/fit.csv", sep = ""),
+write.csv(fit_info,
+            paste("../plot_data/posterior_draws/time/fit.csv", sep = ""),
             row.names = FALSE)
 ```
 
 ## Differences Between Conditions
 Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
 
-### Differences Between Search
 ```{r}
 predictive_data <- time_data %>%
   add_predicted_draws(model, seed = seed, re_formula = NA)
-
-
-diff_in_search_prediction <- predictive_data %>% 
-  group_by(search, task, dataset, .draw) %>%
-   summarize(time = weighted.mean(exp(.prediction))) %>%
-   compare_levels(time, by = search) %>%
-   rename(diff_in_time = time) 
-
-diff_in_search_prediction_plot <- diff_in_search_prediction %>%
-      ggplot(aes(x = diff_in_time, y = task)) +
-      xlab(paste0("Time Difference (Seconds) (",diff_in_search_prediction[1,'search'],")")) +
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_search_prediction$task)))
-
-ggsave(file="search_time_differences.png", plot=diff_in_search_prediction_plot, path = "../plots/comparisons/time", width = 7, height = 7)
-
-diff_in_search_prediction_plot
-
 ```
+
+### Differences Between Search
 ```{r}
-diff_in_search_prediction_subset <- diff_in_search_prediction[diff_in_search_prediction$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
-diff_in_search_prediction_subset$task <- factor(diff_in_search_prediction_subset$task)
+diff_in_search_plot_and_intervals <- expected_diff_in_mean_plot(predictive_data, "search", "Expected Time Difference (Seconds)",  "Task", FALSE, NULL)
 
-# flip order so that we get bfs - dfs
-if(diff_in_search_prediction_subset[1,'search']=="dfs - bfs"){
-  diff_in_search_prediction_subset$search = 'bfs - dfs'
-  diff_in_search_prediction_subset$diff_in_time = -1 * diff_in_search_prediction_subset$diff_in_time
-}
+ggsave(file="search_time_differences.png", plot=diff_in_search_plot_and_intervals$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
+diff_in_search_plot_and_intervals$plot
 
-diff_in_search_prediction_plot_subset <- diff_in_search_prediction_subset %>%
-      ggplot(aes(x = diff_in_time, y = task)) +
-      xlab(paste0("Time Difference (Seconds) (",diff_in_search_prediction_subset[1,'search'],")")) +
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_search_prediction_subset$task)))
-
-ggsave(file="search_time_differences_subset.png", plot=diff_in_search_prediction_plot_subset, path = "../plots/comparisons/time", width = 7, height = 7)
-
-diff_in_search_prediction_plot_subset
 ```
 
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
-diff_in_search_prediction_intervals <- diff_in_search_prediction %>% group_by(search, task) %>% mean_qi(diff_in_time, .width = c(.95, .5))
+write.csv(diff_in_search_plot_and_intervals$intervals, "../plot_data/comparisons/time/search_time_differences.csv", sep="", row.names = FALSE)
 
-write.csv(diff_in_search_prediction_intervals, "../plot_data/comparisons/time/search_time_differences.csv", sep="", row.names = FALSE)
-
-diff_in_search_prediction_intervals
+diff_in_search_plot_and_intervals$intervals
 ```
 
 Let's do the above, but split it by datasets
 ```{r}
-diff_in_search_prediction_plot_split_by_dataset <- diff_in_search_prediction_plot+facet_grid(. ~ dataset) + aes(fill= dataset)
-ggsave(file="split_by_dataset_search_time_differences.png", plot=diff_in_search_prediction_plot_split_by_dataset, path = "../plots/comparisons/time", width = 7, height = 7)
+diff_in_search_plot_and_intervals_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "search", "Expected Time Difference (Seconds)",  "Task", FALSE, "dataset")
 
-diff_in_search_prediction_plot_split_by_dataset
+ggsave(file="split_by_dataset_search_time_differences.png", plot=diff_in_search_plot_and_intervals_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_search_plot_and_intervals_split_by_dataset$plot
 ```
 
-```{r}
-diff_in_search_prediction_plot_split_by_dataset_subset <- diff_in_search_prediction_plot_subset + facet_grid(. ~ dataset) + aes(fill= dataset)
-ggsave(file="split_by_dataset_search_time_differences_subset.png", plot=diff_in_search_prediction_plot_split_by_dataset_subset, path = "../plots/comparisons/time", width = 7, height = 7)
-
-diff_in_search_prediction_plot_split_by_dataset_subset
-```
 
 Check intervals
 ```{r}
-diff_in_search_prediction_intervals_split_by_dataset <- diff_in_search_prediction %>% group_by(search, dataset, task) %>% mean_qi(diff_in_time, .width = c(.95, .5))
-write.csv(diff_in_search_prediction_intervals_split_by_dataset, "../plot_data/comparisons/time/search_time_differences_split_by_dataset.csv", row.names = FALSE)
+write.csv(diff_in_search_plot_and_intervals_split_by_dataset$intervals, "../plot_data/comparisons/time/search_time_differences_split_by_dataset.csv", row.names = FALSE)
 
-diff_in_search_prediction_intervals_split_by_dataset
+diff_in_search_plot_and_intervals_split_by_dataset$intervals
 
 ```
 
 ### Differences Between oracle
 ```{r}
-predictive_data <- time_data %>%
-  add_predicted_draws(model, seed = seed, re_formula = NA)
 
+diff_in_oracle_plot_and_intervals <- expected_diff_in_mean_plot(predictive_data, "oracle", "Expected Time Difference (Seconds)",  "Task", FALSE, NULL)
 
-diff_in_oracle_prediction <- predictive_data %>% 
-  group_by(oracle, task, dataset, .draw) %>%
-   summarize(time = weighted.mean(exp(.prediction))) %>%
-   compare_levels(time, by = oracle) %>%
-   rename(diff_in_time = time) 
+ggsave(file="oracle_time_differences.png", plot=diff_in_oracle_plot_and_intervals$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
-      ggplot(aes(x = diff_in_time, y = task)) +
-      xlab(paste0("Time Difference (Seconds) (",diff_in_oracle_prediction[1,'oracle'],")")) +
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction$task)))
-
-ggsave(file="oracle_time_differences.png", plot=diff_in_oracle_prediction_plot, path = "../plots/comparisons/time", width = 7, height = 7)
-
-diff_in_oracle_prediction_plot
+diff_in_oracle_plot_and_intervals$plot
 
 ```
 
-```{r}
-diff_in_oracle_prediction_subset <- diff_in_oracle_prediction
-diff_in_oracle_prediction_subset <- diff_in_oracle_prediction_subset[diff_in_oracle_prediction_subset$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
-diff_in_oracle_prediction_subset$task <- factor(diff_in_oracle_prediction_subset$task)
-
-diff_in_oracle_prediction_plot_subset <- diff_in_oracle_prediction_subset %>%
-      ggplot(aes(x = diff_in_time, y = task)) +
-      xlab(paste0("Time Difference (Seconds) (",diff_in_oracle_prediction[1,'oracle'],")")) +
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction_subset$task)))
-
-ggsave(file="oracle_time_differences_subset.png", plot=diff_in_oracle_prediction_plot_subset, path = "../plots/comparisons/time", width = 7, height = 7)
-
-diff_in_oracle_prediction_plot_subset
-```
 
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
-diff_in_oracle_prediction_intervals <- diff_in_oracle_prediction %>% group_by(oracle, task) %>% mean_qi(diff_in_time, .width = c(.95, .5))
+write.csv(diff_in_oracle_plot_and_intervals$intervals, "../plot_data/comparisons/time/oracle_time_differences.csv", sep="", row.names = FALSE)
 
-write.csv(diff_in_oracle_prediction_intervals, "../plot_data/comparisons/time/oracle_time_differences.csv", sep="", row.names = FALSE)
-
-diff_in_oracle_prediction_intervals
+diff_in_oracle_plot_and_intervals$intervals
 ```
 
 Let's do the above, but split it by datasets
 ```{r}
-diff_in_oracle_prediction_plot_split_by_dataset <- diff_in_oracle_prediction_plot+facet_grid(. ~ dataset) + aes(fill= dataset)
-ggsave(file="split_by_dataset_oracle_time_differences.png", plot=diff_in_oracle_prediction_plot_split_by_dataset, path = "../plots/comparisons/time", width = 7, height = 7)
+diff_in_oracle_plot_and_intervals_subset_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "oracle", "Expected Time Difference (Seconds)",  "Task", FALSE, "dataset")
+ggsave(file="split_by_dataset_oracle_time_differences.png", plot=diff_in_oracle_plot_and_intervals_subset_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-diff_in_oracle_prediction_plot_split_by_dataset
+diff_in_oracle_plot_and_intervals_subset_split_by_dataset$plot
 ```
 
-```{r}
-diff_in_oracle_prediction_plot_split_by_dataset_subset <- diff_in_oracle_prediction_plot_subset + facet_grid(. ~ dataset) + aes(fill= dataset)
-ggsave(file="split_by_dataset_oracle_time_differences_subset.png", plot=diff_in_oracle_prediction_plot_split_by_dataset_subset, path = "../plots/comparisons/time", width = 7, height = 7)
-
-diff_in_oracle_prediction_plot_split_by_dataset_subset
-```
 
 
 Check intervals
 ```{r}
-diff_in_oracle_prediction_intervals_split_by_dataset <- diff_in_oracle_prediction %>% group_by(oracle, dataset, task) %>% mean_qi(diff_in_time, .width = c(.95, .5))
-write.csv(diff_in_oracle_prediction_intervals_split_by_dataset, "../plot_data/comparisons/time/oracle_time_differences_split_by_dataset.csv", row.names = FALSE)
+write.csv(diff_in_oracle_plot_and_intervals_subset_split_by_dataset$intervals, "../plot_data/comparisons/time/oracle_time_differences_split_by_dataset.csv", row.names = FALSE)
 
-diff_in_oracle_prediction_intervals_split_by_dataset
+diff_in_oracle_plot_and_intervals_subset_split_by_dataset$intervals
 
 ```
 
@@ -339,7 +240,7 @@ diff_in_oracle_prediction_intervals_split_by_dataset
 Plot all of the posterior draws on one plot
 ```{r}
 plot <- draw_data %>% ggplot(aes(
-    x = exp(.value),
+    x = .value,
     y = task,
     fill = search,
     alpha = 0.5
@@ -355,4 +256,37 @@ ggsave(
     plot = plot,
     path = "../plots/posterior_draws/time"
   )
+```
+
+#Code for additional plots (mostly subsets)
+```{r}
+predictive_data_subset <- predictive_data[predictive_data$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
+predictive_data_subset$task <- factor(predictive_data_subset$task)
+
+diff_in_search_plot_and_intervals_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Expected Time Difference (Seconds)",  "Task", TRUE, NULL)
+
+ggsave(file="search_time_differences_subset.png", plot=diff_in_search_plot_and_intervals_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_search_plot_and_intervals_subset$plot
+```
+
+```{r}
+diff_in_search_prediction_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Expected Time Difference (Seconds)",  "Task", FALSE, "dataset")
+ggsave(file="split_by_dataset_search_time_differences_subset.png", plot=diff_in_search_prediction_split_by_dataset_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_search_prediction_split_by_dataset_subset$plot
+```
+
+```{r}
+diff_in_oracle_plot_and_intervals_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Expected Time Difference (Seconds)",  "Task", FALSE, NULL)
+
+ggsave(file="oracle_time_differences_subset.png", plot=diff_in_oracle_plot_and_intervals_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_oracle_plot_and_intervals_subset$plot
+```
+```{r}
+diff_in_oracle_plot_and_intervals_subset_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Expected Time Difference (Seconds)",  "Task", FALSE, "dataset")
+ggsave(file="split_by_dataset_oracle_time_differences_subset.png", plot=diff_in_oracle_plot_and_intervals_subset_split_by_dataset_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+
+diff_in_oracle_plot_and_intervals_subset_split_by_dataset_subset$plot
 ```
