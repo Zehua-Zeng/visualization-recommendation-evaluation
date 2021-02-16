@@ -160,81 +160,94 @@ Next, we want to see if there is any significant difference in completion time b
 
 ```{r}
 predictive_data <- time_data %>%
-  add_predicted_draws(model, seed = seed, re_formula = NA)
+  add_fitted_draws(model, seed = seed, re_formula = NA)
 ```
 
 ### Differences Between Search
 ```{r}
-diff_in_search_plot_and_intervals <- expected_diff_in_mean_plot(predictive_data, "search", "Expected Time Difference (Seconds)",  "Task", FALSE, NULL)
+search_differences <- expected_diff_in_mean_plot(predictive_data, "search", "Difference in Mean Completion Time (Seconds)",  "Task", NULL)
 
-ggsave(file="search_time_differences.png", plot=diff_in_search_plot_and_intervals$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+ggsave(file="search_time_differences.png", plot=search_differences$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-diff_in_search_plot_and_intervals$plot
+search_differences$plot
 
 ```
 
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
-write.csv(diff_in_search_plot_and_intervals$intervals, "../plot_data/comparisons/time/search_time_differences.csv", sep="", row.names = FALSE)
+write.csv(search_differences$intervals, "../plot_data/comparisons/time/search_time_differences.csv", sep="", row.names = FALSE)
 
-diff_in_search_plot_and_intervals$intervals
+search_differences$intervals
 ```
 
 Let's do the above, but split it by datasets
 ```{r}
-diff_in_search_plot_and_intervals_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "search", "Expected Time Difference (Seconds)",  "Task", FALSE, "dataset")
+search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "search", "Difference in Mean Completion Time (Seconds)",  "Task", "dataset")
 
-ggsave(file="split_by_dataset_search_time_differences.png", plot=diff_in_search_plot_and_intervals_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+ggsave(file="split_by_dataset_search_time_differences.png", plot=search_differences_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-diff_in_search_plot_and_intervals_split_by_dataset$plot
+search_differences_split_by_dataset$plot
 ```
 
 
 Check intervals
 ```{r}
-write.csv(diff_in_search_plot_and_intervals_split_by_dataset$intervals, "../plot_data/comparisons/time/search_time_differences_split_by_dataset.csv", row.names = FALSE)
+write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/time/search_time_differences_split_by_dataset.csv", row.names = FALSE)
 
-diff_in_search_plot_and_intervals_split_by_dataset$intervals
+search_differences_split_by_dataset$intervals
 
 ```
 
 ### Differences Between oracle
 ```{r}
+oracle_differences <- expected_diff_in_mean_plot(predictive_data, "oracle", "Difference in Mean Completion Time (Seconds)",  "Task", NULL)
 
-diff_in_oracle_plot_and_intervals <- expected_diff_in_mean_plot(predictive_data, "oracle", "Expected Time Difference (Seconds)",  "Task", FALSE, NULL)
+ggsave(file="oracle_time_differences.png", plot=oracle_differences$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-ggsave(file="oracle_time_differences.png", plot=diff_in_oracle_plot_and_intervals$plot, path = "../plots/comparisons/time", width = 7, height = 7)
-
-diff_in_oracle_plot_and_intervals$plot
+oracle_differences$plot
 
 ```
 
 
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
-write.csv(diff_in_oracle_plot_and_intervals$intervals, "../plot_data/comparisons/time/oracle_time_differences.csv", sep="", row.names = FALSE)
+write.csv(oracle_differences$intervals, "../plot_data/comparisons/time/oracle_time_differences.csv", sep="", row.names = FALSE)
 
-diff_in_oracle_plot_and_intervals$intervals
+oracle_differences$intervals
 ```
 
 Let's do the above, but split it by datasets
 ```{r}
-diff_in_oracle_plot_and_intervals_subset_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "oracle", "Expected Time Difference (Seconds)",  "Task", FALSE, "dataset")
-ggsave(file="split_by_dataset_oracle_time_differences.png", plot=diff_in_oracle_plot_and_intervals_subset_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+oracle_differences_subset_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "oracle", "Difference in Mean Completion Time (Seconds)",  "Task", "dataset")
+ggsave(file="split_by_dataset_oracle_time_differences.png", plot=oracle_differences_subset_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-diff_in_oracle_plot_and_intervals_subset_split_by_dataset$plot
+oracle_differences_subset_split_by_dataset$plot
 ```
-
-
 
 Check intervals
 ```{r}
-write.csv(diff_in_oracle_plot_and_intervals_subset_split_by_dataset$intervals, "../plot_data/comparisons/time/oracle_time_differences_split_by_dataset.csv", row.names = FALSE)
-
-diff_in_oracle_plot_and_intervals_subset_split_by_dataset$intervals
+write.csv(oracle_differences_subset_split_by_dataset$intervals, "../plot_data/comparisons/time/oracle_time_differences_split_by_dataset.csv", row.names = FALSE)
+oracle_differences_subset_split_by_dataset$intervals
 
 ```
 
+### Differences Between Participant Groups
+```{r}
+participant_group_differences <- expected_diff_in_mean_plot(predictive_data, "participant_group", "Difference in Mean Completion Time (Seconds)",  "Task", NULL)
+
+ggsave(file="participant_group_time_differences.png", plot=participant_group_differences$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+
+participant_group_differences$plot
+
+```
+
+
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+write.csv(participant_group_differences$intervals, "../plot_data/comparisons/time/participant_group_time_differences.csv", sep="", row.names = FALSE)
+
+participant_group_differences$intervals
+```
 
 ## Summary Plots
 Plot all of the posterior draws on one plot
@@ -263,30 +276,30 @@ ggsave(
 predictive_data_subset <- predictive_data[predictive_data$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
 predictive_data_subset$task <- factor(predictive_data_subset$task)
 
-diff_in_search_plot_and_intervals_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Expected Time Difference (Seconds)",  "Task", TRUE, NULL)
+search_differences_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Expected Time Difference (Seconds)",  "Task", NULL)
 
-ggsave(file="search_time_differences_subset.png", plot=diff_in_search_plot_and_intervals_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+ggsave(file="search_time_differences_subset.png", plot=search_differences_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-diff_in_search_plot_and_intervals_subset$plot
+search_differences_subset$plot
 ```
 
 ```{r}
-diff_in_search_prediction_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Expected Time Difference (Seconds)",  "Task", FALSE, "dataset")
+diff_in_search_prediction_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Expected Time Difference (Seconds)",  "Task", "dataset")
 ggsave(file="split_by_dataset_search_time_differences_subset.png", plot=diff_in_search_prediction_split_by_dataset_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
 diff_in_search_prediction_split_by_dataset_subset$plot
 ```
 
 ```{r}
-diff_in_oracle_plot_and_intervals_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Expected Time Difference (Seconds)",  "Task", FALSE, NULL)
+oracle_differences_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Expected Time Difference (Seconds)",  "Task", NULL)
 
-ggsave(file="oracle_time_differences_subset.png", plot=diff_in_oracle_plot_and_intervals_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+ggsave(file="oracle_time_differences_subset.png", plot=oracle_differences_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-diff_in_oracle_plot_and_intervals_subset$plot
+oracle_differences_subset$plot
 ```
 ```{r}
-diff_in_oracle_plot_and_intervals_subset_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Expected Time Difference (Seconds)",  "Task", FALSE, "dataset")
-ggsave(file="split_by_dataset_oracle_time_differences_subset.png", plot=diff_in_oracle_plot_and_intervals_subset_split_by_dataset_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
+oracle_differences_subset_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Expected Time Difference (Seconds)",  "Task", "dataset")
+ggsave(file="split_by_dataset_oracle_time_differences_subset.png", plot=oracle_differences_subset_split_by_dataset_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
-diff_in_oracle_plot_and_intervals_subset_split_by_dataset_subset$plot
+oracle_differences_subset_split_by_dataset_subset$plot
 ```
