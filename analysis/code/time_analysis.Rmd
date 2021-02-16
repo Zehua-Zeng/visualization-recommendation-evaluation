@@ -54,12 +54,12 @@ seed = 12
 ```
 
 ## Building a Model for Time Analysis
-Seconds.  We choose to work in log space in order to prevent our model from predicting completion times of less than zero seconds. 
+The prior was derived from pilot studies.  It describes the distribution of time (in seconds) needed to complete any given task.  The lognormal family was selected to prevent our model from predicting completion times of less than zero seconds. 
 
 ```{r}
 model <- brm(
     formula = bf(
-    completion_time ~ oracle * search + dataset + task + (1 | participant_id)
+    completion_time ~ oracle * search * dataset + task + participant_group + (1 | participant_id)
   ),
     prior = prior(normal(360.48, 224.40), class = "Intercept"),
     chains = 2,
@@ -69,6 +69,7 @@ model <- brm(
     data = time_data,
     file = "models/time",
     family = lognormal(),
+    seed = seed
   )
 ```
 
@@ -240,7 +241,13 @@ ggsave(file="participant_group_time_differences.png", plot=participant_group_dif
 participant_group_differences$plot
 
 ```
+Let's do the above, but split it by datasets
+```{r}
+participant_group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "participant_group", "Difference in Mean Completion Time (Seconds)",  "Task", "dataset")
+ggsave(file="split_by_dataset_participant_group_time_differences.png", plot=participant_group_differences_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
+participant_group_differences_split_by_dataset$plot
+```
 
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
