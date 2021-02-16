@@ -1,0 +1,5 @@
+"participant_group","task","difference",".lower",".upper",".width",".point",".interval"
+"student - professional","1. Find Extremum",-0.000480948937707321,-0.119723407708509,0.112839384866511,0.95,"mean","qi"
+"student - professional","2. Retrieve Value",0.0016996094437097,-0.075764909266451,0.0926261377770158,0.95,"mean","qi"
+"student - professional","1. Find Extremum",-0.000480948937707321,-0.0344932669315557,0.0338531956735995,0.5,"mean","qi"
+"student - professional","2. Retrieve Value",0.0016996094437097,-0.0191414637961447,0.0201303735689926,0.5,"mean","qi"

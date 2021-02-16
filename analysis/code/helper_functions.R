@@ -60,7 +60,7 @@ save_plot = function(plot, filename, path){
 
 expected_diff_in_mean_plot = function(draw_data, col_to_compare_by, xlab, ylab, color_by){
   diff_col = ""
-  if(".value" %in% colnames(confidence_udata_predictive_data)){
+  if(".value" %in% colnames(draw_data)){
     diff_col = ".value"
   } else {
     diff_col = ".prediction"
@@ -80,7 +80,7 @@ expected_diff_in_mean_plot = function(draw_data, col_to_compare_by, xlab, ylab, 
   xlab_formatted = paste0(xlab, " (",differences[[col_to_compare_by]][1],")")
 
   differences_plot <- differences %>%
-    ggplot(aes(x = diff, y = task)) +
+    ggplot(aes(x = difference, y = task)) +
     xlab(xlab_formatted) +
     ylab(ylab)+
     stat_halfeye(.width = c(.95, .5)) +
@@ -90,12 +90,12 @@ expected_diff_in_mean_plot = function(draw_data, col_to_compare_by, xlab, ylab, 
 
   if(!is.null(color_by)){
     differences_plot <- differences_plot + aes(fill=!!sym(color_by), alpha = 0.5)
-    intervals <- differences %>% group_by(!!sym(col_to_compare_by), !!sym(color_by), task) %>% mean_qi(diff, .width = c(.95, .5))
+    intervals <- differences %>% group_by(!!sym(col_to_compare_by), !!sym(color_by), task) %>% mean_qi(difference, .width = c(.95, .5))
   } else{
-    intervals <- differences %>% group_by(!!sym(col_to_compare_by), task) %>% mean_qi(diff, .width = c(.95, .5))
+    intervals <- differences %>% group_by(!!sym(col_to_compare_by), task) %>% mean_qi(difference, .width = c(.95, .5))
   }
 
-  return(list("plot" = differences_plot, "intervals" = intervals))
+  return(list("plot" = differences_plot, "intervals" = intervals, "differences" = differences))
 }
 
 
@@ -110,7 +110,7 @@ user_response_expected_diff_in_mean_plot = function(draw_data, col_to_compare_by
 
     # add groupby task
   differences <- draw_data %>%
-    group_by(!!sym(col_to_compare_by), .draw) %>%
+    group_by(!!sym(col_to_compare_by), task, .draw) %>%
     summarize(difference = weighted.mean(as.numeric(!!sym(diff_col)))) %>%
     compare_levels(difference, by = !!sym(col_to_compare_by))
 
@@ -125,13 +125,12 @@ user_response_expected_diff_in_mean_plot = function(draw_data, col_to_compare_by
   xlab_formatted = paste0(xlab, " (",differences[[col_to_compare_by]][1],")")
 
   differences_plot <- differences %>%
-    ggplot(aes(x = difference, y = "lable")) +
+    ggplot(aes(x = difference, y = task)) +
     xlab(xlab_formatted) +
     ylab(ylab)+
     stat_halfeye(.width = c(.95, .5)) +
     geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal()
-  #+ scale_y_discrete(limits = rev(levels(differences$task)))
+    theme_minimal() + scale_y_discrete(limits = rev(levels(differences$task)))
 
 
   return(list("plot" = differences_plot, "differences" = differences))
@@ -140,3 +139,4 @@ user_response_expected_diff_in_mean_plot = function(draw_data, col_to_compare_by
 user_response_combined_mean_diff = function(){
 
 }
+

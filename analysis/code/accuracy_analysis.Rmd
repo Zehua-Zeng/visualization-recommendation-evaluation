@@ -45,14 +45,14 @@ seed = 12
 ```
 
 ## Building a Model for Accuracy Analysis
+We derived a very weakly informative prior from our pilot studies
 ```{r}
 model <- brm(
   bf(
-    accuracy ~ 0 + Intercept + oracle * search + dataset + task
-    + (1 | participant_id)
+    accuracy ~ 0 + Intercept + oracle * search * dataset + task + participant_group + (1 | participant_id)
   ),
   data = accuracy_data,
-  prior = c(prior(normal(0.5, .5), class = "b", coef = "Intercept"),
+  prior = c(prior(normal(0.8, .1), class = "b", coef = "Intercept"),
             prior(normal(0, 2.5), class = "b")),
   family = bernoulli(link = "logit"),
   warmup = 500,
@@ -139,7 +139,6 @@ fit_info
 ```
 
 ### Differences Between Conditions
-Next, we want to see if there is any significant difference in accuracy between the two search algorithms (bfs and dfs), the two oracles (dzbian and compassql), and the participant groups (student and professional).
 
 ```{r}
 predictive_data  <- accuracy_data %>%
@@ -188,14 +187,27 @@ participant_group_differences <- expected_diff_in_mean_plot(predictive_data, "pa
 participant_group_differences$plot
   
 ```
+
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
 participant_group_differences$intervals
+```
+
+``` {r}
+participant_group_differences_dataset <- expected_diff_in_mean_plot(predictive_data, "participant_group", "Difference in Mean Accuracy (p_correct)", "Task", "dataset")
+
+participant_group_differences_dataset$plot
+  
 ```
 
 ```{r echo = FALSE}
 ggsave(file="participant_group_accuracy_differences.png", plot=participant_group_differences$plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
 
 write.csv(participant_group_differences$intervals, "../plot_data/comparisons/accuracy/participant_group_accuracy_differences.png", row.names = FALSE)
+
+ggsave(file="split_by_dataset_participant_group_accuracy_differences.png", plot=participant_group_differences_dataset$plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
+
+write.csv(participant_group_differences_dataset$intervals, "../plot_data/comparisons/accuracy/split_by_dataset_participant_group_accuracy_differences.png", row.names = FALSE)
+
 
 ```
