@@ -19,6 +19,8 @@ library(brms)
 library(gganimate)
 
 theme_set(theme_light())
+
+source('helper_functions.R')
 ```
 
 In our experiment, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the user's accuracy on two tasks: Find Extremum and Retrieve Value.
@@ -27,7 +29,7 @@ Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a da
 
 ### Read in and clean data
 ```{r}
-accuracy_data = read.csv('processed_accuracy_split.csv')
+accuracy_data = read.csv('split_by_participant_groups/accuracy.csv')
 accuracy_data$oracle = as.factor(accuracy_data$oracle)
 accuracy_data$search = as.factor(accuracy_data$search)
 accuracy_data$dataset = as.factor(accuracy_data$dataset)
@@ -59,7 +61,7 @@ model <- brm(
   cores = 2, 
   control = list(adapt_delta = 0.9),
   seed = seed,
-  file = "model_accuracy"
+  file = "models/accuracy"
 )
 ```
 
@@ -114,16 +116,7 @@ plot_data$search<- gsub('dfs', 'DFS', plot_data$search)
 
 plot_data$condition <- paste(plot_data$oracle, plot_data$search, sep=" + ")
 
-draw_plot <- plot_data %>% ggplot(aes(
-    x = .value,
-    y = reorder(condition, desc(condition)),
-    fill = dataset,
-    alpha = 0.5
-  )) + stat_halfeye(.width = c(.95, .5)) +
-  facet_grid(. ~ task) +
-    labs(x = "Predicted Accuracy (p_correct)", y = "Oracle/Search Combination") +
-    theme(axis.text=element_text(size=12)) + 
-    coord_cartesian(xlim = c(0.5, 1)) 
+draw_plot <- posterior_draws_plot(plot_data, "dataset", TRUE, "Predicted accuracy (p_correct)", "Oracle/Search Combination")
 
 draw_plot
 ```
@@ -146,67 +139,63 @@ fit_info
 ```
 
 ### Differences Between Conditions
-Next, we want to see if there is any significant difference in accuracy between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in accuracy between the two search algorithms (bfs and dfs), the two oracles (dzbian and compassql), and the participant groups (student and professional).
+
+```{r}
+predictive_data  <- accuracy_data %>%
+    add_fitted_draws(model, seed = seed, re_formula = NA, scale = "response")
+```
 
 Differences in search algorithms:
 ``` {r}
-predictive_data  <- accuracy_data %>%
-    add_fitted_draws(model, seed = seed, re_formula = NA, scale = "response")
+search_differences <- expected_diff_in_mean_plot(predictive_data, "search", "Expected Difference in Mean Accuracy (p_correct)",  "Task", "dataset")
 
-search_differences <- predictive_data  %>%
-    group_by(search, dataset, task, .draw) %>%
-    summarize(accuracy = weighted.mean(.value)) %>%
-    compare_levels(accuracy, by = search) %>%
-    rename(difference_in_accuracy = accuracy)
+search_differences$plot
 
-search_differences_plot <- search_differences %>%
-      ggplot(aes(x = difference_in_accuracy, y = task, fill = dataset, alpha = 0.5)) +
-      xlab(paste0("Expected Difference in Accuracy (",search_differences[1,'search'],")")) + 
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      facet_grid(. ~ dataset) + 
-      theme_minimal()
-
-search_differences_plot
 ```
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
-search_intervals <- search_differences %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
-search_intervals
+search_differences$intervals
+```
+
+```{r echo = FALSE}
+ggsave(file="search_accuracy_differences.png", plot=search_differences$plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
+write.csv(search_differences$intervals, "../plot_data/comparisons/accuracy/search_accuracy_differences.csv", row.names = FALSE)
 ```
 
 
 Differences in oracle:
 ``` {r}
-oracle_differences <- predictive_data  %>%
-    group_by(oracle, dataset, task, .draw) %>%
-    summarize(accuracy = weighted.mean(.value)) %>%
-    compare_levels(accuracy, by = oracle) %>%
-    rename(difference_in_accuracy = accuracy)
+oracle_differences <- expected_diff_in_mean_plot(predictive_data, "oracle", "Expected Difference in Mean Accuracy (p_correct)",  "Task", "dataset")
 
-oracle_differences_plot <- oracle_differences %>%
-      ggplot(aes(x = difference_in_accuracy, y = task, fill = dataset, alpha = 0.5)) +
-      xlab(paste0("Expected Difference in Accuracy (",oracle_differences[1,'oracle'],")")) + 
-      ylab("Task")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-    facet_grid(. ~ dataset) +
-      theme_minimal()
-
-oracle_differences_plot
+oracle_differences$plot
   
 ```
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
 ```{r}
-oracle_intervals <- oracle_differences %>% mean_qi(difference_in_accuracy, .width = c(.95, .5))
-oracle_intervals
+oracle_differences$intervals
 ```
 
 ```{r echo = FALSE}
-ggsave(file="search_accuracy_differences.png", plot=search_differences_plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
-write.csv(search_intervals, "../plot_data/comparisons/accuracy/search_accuracy_differences.csv", row.names = FALSE)
+ggsave(file="oracle_accuracy_differences.png", plot=oracle_differences$plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
+write.csv(oracle_differences$intervals, "../plot_data/comparisons/accuracy/oracle_accuracy_differences.csv", row.names = FALSE)
+```
 
-ggsave(file="oracle_accuracy_differences.png", plot=oracle_differences_plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
-write.csv(oracle_intervals, "../plot_data/comparisons/accuracy/oracle_accuracy_differences.csv", row.names = FALSE)
+Differences in participant group (student vs professional):
+``` {r}
+participant_group_differences <- expected_diff_in_mean_plot(predictive_data, "participant_group", "Expected Difference in Mean Accuracy (p_correct)", "Task", "dataset")
+
+participant_group_differences$plot
+  
+```
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+```{r}
+participant_group_differences$intervals
+```
+
+```{r echo = FALSE}
+ggsave(file="participant_group_accuracy_differences.png", plot=participant_group_differences$plot, path = "../plots/comparisons/accuracy", width = 7, height = 7)
+
+write.csv(participant_group_differences$intervals, "../plot_data/comparisons/accuracy/participant_group_accuracy_differences.png", row.names = FALSE)
+
 ```

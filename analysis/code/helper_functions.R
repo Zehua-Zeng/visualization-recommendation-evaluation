@@ -26,14 +26,14 @@ save_plot = function(plot, filename, path){
 }
 
 
-expected_diff_in_mean_plot = function(draw_data, col_to_compare_by, xlab, ylab, reverse_difference, color_by){
+expected_diff_in_mean_plot = function(draw_data, col_to_compare_by, xlab, ylab, color_by){
 
   differences <- draw_data %>%
     group_by(!!sym(col_to_compare_by), task, dataset, .draw) %>%
-    summarize(diff = weighted.mean(.prediction)) %>%
+    summarize(diff = weighted.mean(.value)) %>%
     compare_levels(diff, by = !!sym(col_to_compare_by))
 
-  if(reverse_difference ||  col_to_compare_by=="search"){
+  if(col_to_compare_by=="search"){
     split = strsplit(differences[[col_to_compare_by]][1], " - ")
     differences[[col_to_compare_by]] = paste0(split[[1]][2], " - ", split[[1]][1])
     differences$diff = -1 * differences$diff
