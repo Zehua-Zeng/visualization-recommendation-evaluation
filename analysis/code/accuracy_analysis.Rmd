@@ -148,7 +148,7 @@ predictive_data  <- accuracy_data %>%
 
 Differences in search algorithms:
 ``` {r}
-search_differences <- expected_diff_in_mean_plot(predictive_data, "search", "Expected Difference in Mean Accuracy (p_correct)",  "Task", "dataset")
+search_differences <- expected_diff_in_mean_plot(predictive_data, "search", "Difference in Mean Accuracy (p_correct)",  "Task", "dataset")
 
 search_differences$plot
 
@@ -166,7 +166,7 @@ write.csv(search_differences$intervals, "../plot_data/comparisons/accuracy/searc
 
 Differences in oracle:
 ``` {r}
-oracle_differences <- expected_diff_in_mean_plot(predictive_data, "oracle", "Expected Difference in Mean Accuracy (p_correct)",  "Task", "dataset")
+oracle_differences <- expected_diff_in_mean_plot(predictive_data, "oracle", "Difference in Mean Accuracy (p_correct)",  "Task", "dataset")
 
 oracle_differences$plot
   
@@ -183,7 +183,7 @@ write.csv(oracle_differences$intervals, "../plot_data/comparisons/accuracy/oracl
 
 Differences in participant group (student vs professional):
 ``` {r}
-participant_group_differences <- expected_diff_in_mean_plot(predictive_data, "participant_group", "Expected Difference in Mean Accuracy (p_correct)", "Task", "dataset")
+participant_group_differences <- expected_diff_in_mean_plot(predictive_data, "participant_group", "Difference in Mean Accuracy (p_correct)", "Task", NULL)
 
 participant_group_differences$plot
   

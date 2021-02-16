@@ -3,7 +3,6 @@ title: "user_response"
 output: html_document
 ---
 
-
 ### Libraries required for this analysis
 ```{r libraries, message=FALSE, warning=FALSE}
 
@@ -21,6 +20,9 @@ library(gganimate)
 
 theme_set(theme_light())
 
+
+source('helper_functions.R')
+
 ```
 
 In our experiment, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then asked the user to evaluate the tool on a variety of metrics (confidence in understanding data, confidence in answer, efficiency, ease of use, utility, and overall).
@@ -34,7 +36,7 @@ analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", 
 confidence_metrics = c("confidence.udata", "confidence.ans")
 preference_metrics = c("efficiency", "ease.of.use", "utility", "overall")
 
-user_response_data <- read.csv('processed_ptask_responses.csv')
+user_response_data <- read.csv('split_by_participant_groups/ptask_responses.csv')
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
 user_response_data[,analyses] <- lapply(user_response_data[,analyses],ordered)
 user_response_data <- user_response_data %>%
@@ -50,7 +52,7 @@ models <- list()
 search_differences <- list()
 oracle_differences <- list()
 alg_differences <- list()
-
+participant_group_differences <- list()
 
 seed = 12
 ```
@@ -60,8 +62,6 @@ seed = 12
 ### Confidence in Understanding Data:  Building a Model
 
 ```{r}
-filename = "confidence_udata"
-
 models$confidence_udata <- brm(
     formula = bf(confidence.udata ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
@@ -72,7 +72,7 @@ models$confidence_udata <- brm(
     warmup = 1000,
     data = user_response_data,
     control = list(adapt_delta = 0.99),
-    file = filename,
+    file = "models/confidence_udata",
     seed = seed
   )
 
@@ -116,33 +116,18 @@ pairs(
 
 We now look at a average response for confidence in understanding the data using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
-draw_data_confidence_udata <- user_response_data %>%
-  add_predicted_draws(models$confidence_udata,
-                   seed = seed,
-                   re_formula = NA) %>%
-  group_by(search, oracle, .draw) %>%
-  mutate(rating = weighted.mean(as.numeric(as.character(.prediction))))
-  
-confidence_udata_plot <- draw_data_confidence_udata %>%
-  ggplot(aes(x = oracle, y = rating)) +
-  stat_eye(.width = c(.95, .5)) +
-  theme_minimal() +
-  coord_cartesian(ylim = c(-2, 2)) +
-  facet_grid(. ~ search)
-
-confidence_udata_plot
-
+confidence_udata_plot <- user_response_posterior_draws_plot(user_response_data, models$confidence_udata, NULL, "Oracle/Search Combination", "Rating")
+confidence_udata_plot$plot
 ```
 We can get the numeric values of the interval boundaries shown above with mean_qi
 ```{r}
-fit_info_confidence_udata <- draw_data_confidence_udata %>% group_by(search, oracle) %>% mean_qi(rating, .width = c(.95, .5))
-fit_info_confidence_udata
+confidence_udata_plot$intervals
 ```
 
 ```{r echo=FALSE}
 # save the plot and intervals
- ggsave(file = "confidence_udata.png", plot = confidence_udata_plot, path = "../plots/posterior_draws/user_response")
-  write.csv(fit_info_confidence_udata, "../plot_data/posterior_draws/user_response/confidence_udata.csv", row.names = FALSE)
+ ggsave(file = "confidence_udata.png", plot = confidence_udata_plot$plot, path = "../plots/posterior_draws/user_response")
+  write.csv(confidence_udata_plot$intervals, "../plot_data/posterior_draws/user_response/confidence_udata.csv", row.names = FALSE)
 ```
 
 ### Confidence in Understanding Data: Differences Between Conditions
@@ -155,73 +140,37 @@ confidence_udata_predictive_data$alg <- paste(confidence_udata_predictive_data$s
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$confidence_udata <- confidence_udata_predictive_data %>% 
-  group_by(search, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = search) %>%
-   rename(diff_in_rating = rating)
-
-search_differences$confidence_udata$metric = "confidence.udata"
-
-search_differences$confidence_udata %>%
-      ggplot(aes(x = diff_in_rating, y = "confidence.udata")) +
-      xlab(paste0("Expected Difference in Rating (",search_differences$confidence_udata[1,'search'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+search_differences$confidence_udata <- user_response_expected_diff_in_mean_plot(confidence_udata_predictive_data, "search", "confidence.udata", "Difference in Average Confidence in Understanding Data (Rating)", "Task", NULL)
+search_differences$confidence_udata$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$confidence_udata <- confidence_udata_predictive_data %>% 
-  group_by(oracle, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = oracle) %>%
-   rename(diff_in_rating = rating)
-
-oracle_differences$confidence_udata$metric = "confidence.udata"
-
-oracle_differences$confidence_udata %>%
-      ggplot(aes(x = diff_in_rating, y = "confidence.udata")) +
-      xlab(paste0("Expected Difference in Rating (",oracle_differences$confidence_udata[1,'oracle'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+oracle_differences$confidence_udata <- user_response_expected_diff_in_mean_plot(confidence_udata_predictive_data, "oracle", "confidence.udata", "Difference in Average Confidence in Understanding Data (Rating)", "Task", NULL)
+oracle_differences$confidence_udata$plot
 ```
 
 
 Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
 ``` {r}
+confidence_udata_predictive_data_subset <- subset(confidence_udata_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
 
-alg_differences$confidence_udata <- confidence_udata_predictive_data %>% 
-  group_by(alg, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = alg) %>%
-   rename(diff_in_rating = rating)
-
-alg_differences$confidence_udata <- subset(alg_differences$confidence_udata, alg == "dfs compassql - bfs dziban")
-alg_differences$confidence_udata$metric = "confidence.udata"
-
-alg_differences$confidence_udata %>%
-      ggplot(aes(x = diff_in_rating, y = "confidence.udata")) +
-      xlab(paste0("Expected Difference in Rating (",alg_differences$confidence_udata[1,'alg'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+alg_differences$confidence_udata <- user_response_expected_diff_in_mean_plot(confidence_udata_predictive_data_subset, "alg", "confidence.udata", "Difference in Average Confidence in Understanding Data (Rating)", "Task", NULL)
+alg_differences$confidence_udata$plot
 ```
 
 
 
-
+Differences in user score by participant group
+``` {r}
+participant_group_differences$confidence_udata <- user_response_expected_diff_in_mean_plot(confidence_udata_predictive_data, "participant_group", "confidence.udata", "Difference in Average Confidence in Understanding Data (Rating)", "Task", NULL)
+participant_group_differences$confidence_udata$plot
+```
 
 
 ### Confidence in Answer:  Building a Model
 
 ```{r}
-filename = "confidence_ans"
 models$confidence_ans <- brm(
     formula = bf(confidence.ans ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
@@ -232,7 +181,7 @@ models$confidence_ans <- brm(
     warmup = 1000,
     data = user_response_data,
     control = list(adapt_delta = 0.99),
-    file = filename,
+    file = "models/confidence_ans",
     seed = seed
   )
 ```
@@ -275,33 +224,18 @@ pairs(
 
 We now look at a average response for confidence in answer using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
-draw_data_confidence_ans <- user_response_data %>%
-  add_predicted_draws(models$confidence_ans,
-                   seed = seed,
-                   re_formula = NA) %>%
-  group_by(search, oracle, .draw) %>%
-  mutate(rating = weighted.mean(as.numeric(as.character(.prediction))))
-  
-confidence_ans_plot <- draw_data_confidence_ans %>%
-  ggplot(aes(x = oracle, y = rating)) +
-  stat_eye(.width = c(.95, .5)) +
-  theme_minimal() +
-  coord_cartesian(ylim = c(-2, 2)) +
-  facet_grid(. ~ search)
-
-confidence_ans_plot
-
+confidence_ans_plot <- user_response_posterior_draws_plot(user_response_data, models$confidence_ans, NULL, "Oracle/Search Combination", "Rating")
+confidence_ans_plot$plot
 ```
 We can get the numeric values of the interval boundaries shown above with mean_qi
 ```{r}
-fit_info_confidence_ans <- draw_data_confidence_ans %>% group_by(search, oracle) %>% mean_qi(rating, .width = c(.95, .5))
-fit_info_confidence_ans
+confidence_ans_plot$intervals
 ```
 
 ```{r echo=FALSE}
 # save the plot and intervals
- ggsave(file = "confidence_ans.png", plot = confidence_ans_plot, path = "../plots/posterior_draws/user_response")
-  write.csv(fit_info_confidence_ans, "../plot_data/posterior_draws/user_response/confidence_ans.csv", row.names = FALSE)
+ ggsave(file = "confidence_ans.png", plot = confidence_ans_plot$plot, path = "../plots/posterior_draws/user_response")
+  write.csv(confidence_ans_plot$intervals, "../plot_data/posterior_draws/user_response/confidence_ans.csv", row.names = FALSE)
 ```
 
 ### Confidence in Answer: Differences Between Conditions
@@ -314,65 +248,29 @@ confidence_ans_predictive_data$alg <- paste(confidence_ans_predictive_data$searc
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$confidence_ans <- confidence_ans_predictive_data %>% 
-  group_by(search, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = search) %>%
-   rename(diff_in_rating = rating)
-
-search_differences$confidence_ans$metric = "confidence.ans"
-
-search_differences$confidence_ans %>%
-      ggplot(aes(x = diff_in_rating, y = "confidence.ans")) +
-      xlab(paste0("Expected Difference in Rating (",search_differences$confidence_ans[1,'search'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+search_differences$confidence_ans <- user_response_expected_diff_in_mean_plot(confidence_ans_predictive_data, "search", "confidence.ans", "Difference in Average Confidence in Answer (Rating)", "Task", NULL)
+search_differences$confidence_ans$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$confidence_ans <- confidence_ans_predictive_data %>% 
-  group_by(oracle, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = oracle) %>%
-   rename(diff_in_rating = rating)
-
-oracle_differences$confidence_ans$metric = "confidence.ans"
-
-oracle_differences$confidence_ans %>%
-      ggplot(aes(x = diff_in_rating, y = "confidence.ans")) +
-      xlab(paste0("Expected Difference in Rating (",oracle_differences$confidence_ans[1,'oracle'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+oracle_differences$confidence_ans <- user_response_expected_diff_in_mean_plot(confidence_ans_predictive_data, "oracle", "confidence.ans", "Difference in Average Confidence in Answer (Rating)", "Task", NULL)
+oracle_differences$confidence_ans$plot
 ```
 
 
 Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
 ``` {r}
-
-alg_differences$confidence_ans <- confidence_ans_predictive_data %>% 
-  group_by(alg, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = alg) %>%
-   rename(diff_in_rating = rating)
-
-alg_differences$confidence_ans <- subset(alg_differences$confidence_ans, alg == "dfs compassql - bfs dziban")
-alg_differences$confidence_ans$metric = "confidence.ans"
-
-alg_differences$confidence_ans %>%
-      ggplot(aes(x = diff_in_rating, y = "confidence.ans")) +
-      xlab(paste0("Expected Difference in Rating (",alg_differences$confidence_ans[1,'alg'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+confidence_ans_predictive_data_subset <- subset(confidence_ans_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
+alg_differences$confidence_ans <- user_response_expected_diff_in_mean_plot(confidence_ans_predictive_data_subset, "alg", "confidence.ans", "Difference in Average Confidence in Answer (Rating)", "Task", NULL)
+alg_differences$confidence_ans$plot
 ```
 
-
+Differences in user score by participant group
+``` {r}
+participant_group_differences$confidence_ans <- user_response_expected_diff_in_mean_plot(confidence_ans_predictive_data, "participant_group", "confidence.ans", "Difference in Average Confidence in Answer (Rating)", "Task", NULL)
+participant_group_differences$confidence_ans$plot
+```
 
 
 
@@ -390,7 +288,7 @@ models$efficiency <- brm(
     warmup = 1000,
     data = user_response_data,
     control = list(adapt_delta = 0.99),
-    file = filename,
+    file = "models/efficiency",
     seed = seed
   )
 ```
@@ -433,33 +331,19 @@ pairs(
 
 We now look at a average response for efficiency using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
-draw_data_efficiency <- user_response_data %>%
-  add_predicted_draws(models$efficiency,
-                   seed = seed,
-                   re_formula = NA) %>%
-  group_by(search, oracle, .draw) %>%
-  mutate(rating = weighted.mean(as.numeric(as.character(.prediction))))
-  
-efficiency_plot <- draw_data_efficiency %>%
-  ggplot(aes(x = oracle, y = rating)) +
-  stat_eye(.width = c(.95, .5)) +
-  theme_minimal() +
-  coord_cartesian(ylim = c(-2, 2)) +
-  facet_grid(. ~ search)
-
-efficiency_plot
+efficiency_plot <- user_response_posterior_draws_plot(user_response_data, models$efficiency, NULL, "Oracle/Search Combination", "Rating")
+efficiency_plot$plot
 
 ```
 We can get the numeric values of the interval boundaries shown above with mean_qi
 ```{r}
-fit_info_efficiency <- draw_data_efficiency %>% group_by(search, oracle) %>% mean_qi(rating, .width = c(.95, .5))
-fit_info_efficiency
+efficiency_plot$intervals
 ```
 
 ```{r echo=FALSE}
 # save the plot and intervals
- ggsave(file = "efficiency.png", plot = efficiency_plot, path = "../plots/posterior_draws/user_response")
-  write.csv(fit_info_efficiency, "../plot_data/posterior_draws/user_response/efficiency.csv", row.names = FALSE)
+ ggsave(file = "efficiency.png", plot = efficiency_plot$plot, path = "../plots/posterior_draws/user_response")
+  write.csv(efficiency_plot$intervals, "../plot_data/posterior_draws/user_response/efficiency.csv", row.names = FALSE)
 ```
 
 ### Efficiency: Differences Between Conditions
@@ -472,65 +356,28 @@ efficiency_predictive_data$alg <- paste(efficiency_predictive_data$search, effic
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$efficiency <- efficiency_predictive_data %>% 
-  group_by(search, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = search) %>%
-   rename(diff_in_rating = rating)
-
-search_differences$efficiency$metric = "efficiency"
-
-search_differences$efficiency %>%
-      ggplot(aes(x = diff_in_rating, y = "efficiency")) +
-      xlab(paste0("Expected Difference in Rating (",search_differences$efficiency[1,'search'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+search_differences$efficiency <- user_response_expected_diff_in_mean_plot(efficiency_predictive_data, "search", "efficiency", "Difference in Average Efficiency (Rating)", "Task", NULL)
+search_differences$efficiency$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$efficiency <- efficiency_predictive_data %>% 
-  group_by(oracle, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = oracle) %>%
-   rename(diff_in_rating = rating)
-
-oracle_differences$efficiency$metric = "efficiency"
-
-oracle_differences$efficiency %>%
-      ggplot(aes(x = diff_in_rating, y = "efficiency")) +
-      xlab(paste0("Expected Difference in Rating (",oracle_differences$efficiency[1,'oracle'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+oracle_differences$efficiency <- user_response_expected_diff_in_mean_plot(efficiency_predictive_data, "oracle", "efficiency", "Difference in Average Efficiency (Rating)", "Task", NULL)
+oracle_differences$efficiency$plot
 ```
 
 
 Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
 ``` {r}
-
-alg_differences$efficiency <- efficiency_predictive_data %>% 
-  group_by(alg, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = alg) %>%
-   rename(diff_in_rating = rating)
-
-alg_differences$efficiency <- subset(alg_differences$efficiency, alg == "dfs compassql - bfs dziban")
-alg_differences$efficiency$metric = "efficiency"
-
-
-alg_differences$efficiency %>%
-      ggplot(aes(x = diff_in_rating, y = "efficiency")) +
-      xlab(paste0("Expected Difference in Rating (",alg_differences$efficiency[1,'alg'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+efficiency_predictive_data_data_subset <- subset(efficiency_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
+alg_differences$efficiency <- user_response_expected_diff_in_mean_plot(efficiency_predictive_data_data_subset, "alg", "efficiency", "Difference in Average Efficiency (Rating)", "Task", NULL)
+alg_differences$efficiency$plot
 ```
-
+Differences in user score by participant group
+``` {r}
+participant_group_differences$efficiency <- user_response_expected_diff_in_mean_plot(efficiency_predictive_data, "participant_group", "efficiency", "Difference in Average Efficiency (Rating)", "Task", NULL)
+participant_group_differences$efficiency$plot
+```
 
 
 
@@ -538,7 +385,6 @@ alg_differences$efficiency %>%
 ### Ease of Use:  Building a Model
 
 ```{r}
-filename = "ease_of_use"
 models$ease_of_use <- brm(
     formula = bf(ease.of.use ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
@@ -549,7 +395,7 @@ models$ease_of_use <- brm(
     warmup = 1000,
     data = user_response_data,
     control = list(adapt_delta = 0.99),
-    file = filename,
+    file = "models/ease_of_use",
     seed = seed
   )
 ```
@@ -592,33 +438,18 @@ pairs(
 
 We now look at a average response for ease of use using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
-draw_data_ease_of_use <- user_response_data %>%
-  add_predicted_draws(models$ease_of_use,
-                   seed = seed,
-                   re_formula = NA) %>%
-  group_by(search, oracle, .draw) %>%
-  mutate(rating = weighted.mean(as.numeric(as.character(.prediction))))
-  
-ease_of_use_plot <- draw_data_ease_of_use %>%
-  ggplot(aes(x = oracle, y = rating)) +
-  stat_eye(.width = c(.95, .5)) +
-  theme_minimal() +
-  coord_cartesian(ylim = c(-2, 2)) +
-  facet_grid(. ~ search)
-
-ease_of_use_plot
-
+ease_of_use_plot <- user_response_posterior_draws_plot(user_response_data, models$ease_of_use, NULL, "Oracle/Search Combination", "Rating")
+ease_of_use_plot$plot
 ```
 We can get the numeric values of the interval boundaries shown above with mean_qi
 ```{r}
-fit_info_ease_of_use <- draw_data_ease_of_use %>% group_by(search, oracle) %>% mean_qi(rating, .width = c(.95, .5))
-fit_info_ease_of_use
+ease_of_use_plot$intervals
 ```
 
 ```{r echo=FALSE}
 # save the plot and intervals
- ggsave(file = "ease_of_use.png", plot = ease_of_use_plot, path = "../plots/posterior_draws/user_response")
-  write.csv(fit_info_ease_of_use, "../plot_data/posterior_draws/user_response/ease_of_use.csv", row.names = FALSE)
+ ggsave(file = "ease_of_use.png", plot = ease_of_use_plot$plot, path = "../plots/posterior_draws/user_response")
+  write.csv(ease_of_use_plot$intervals, "../plot_data/posterior_draws/user_response/ease_of_use.csv", row.names = FALSE)
 ```
 
 ### Ease of Use: Differences Between Conditions
@@ -631,72 +462,36 @@ ease_of_use_predictive_data$alg <- paste(ease_of_use_predictive_data$search, eas
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$ease_of_use <- ease_of_use_predictive_data %>% 
-  group_by(search, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = search) %>%
-   rename(diff_in_rating = rating)
-
-search_differences$ease_of_use$metric = "ease.of.use"
-
-search_differences$ease_of_use %>%
-      ggplot(aes(x = diff_in_rating, y = "ease.of.use")) +
-      xlab(paste0("Expected Difference in Rating (",search_differences$ease_of_use[1,'search'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+search_differences$ease_of_use <- user_response_expected_diff_in_mean_plot(ease_of_use_predictive_data, "search", "ease.of.use", "Difference in Average Ease of Use (Rating)", "Task", NULL)
+search_differences$ease_of_use$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$ease_of_use <- ease_of_use_predictive_data %>% 
-  group_by(oracle, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = oracle) %>%
-   rename(diff_in_rating = rating)
-
-oracle_differences$ease_of_use$metric = "ease.of.use"
-
-oracle_differences$ease_of_use %>%
-      ggplot(aes(x = diff_in_rating, y = "ease.of.use")) +
-      xlab(paste0("Expected Difference in Rating (",oracle_differences$ease_of_use[1,'oracle'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+oracle_differences$ease_of_use <- user_response_expected_diff_in_mean_plot(ease_of_use_predictive_data, "oracle", "ease.of.use", "Difference in Average Ease of Use (Rating)", "Task", NULL)
+oracle_differences$ease_of_use$plot
 ```
 
 
 Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
 ``` {r}
+ease_of_use_predictive_data_subset <- subset(ease_of_use_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
 
-alg_differences$ease_of_use <- ease_of_use_predictive_data %>% 
-  group_by(alg, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = alg) %>%
-   rename(diff_in_rating = rating)
-
-alg_differences$ease_of_use <- subset(alg_differences$ease_of_use, alg == "dfs compassql - bfs dziban")
-alg_differences$ease_of_use$metric = "ease.of.use"
-
-alg_differences$ease_of_use %>%
-      ggplot(aes(x = diff_in_rating, y = "ease.of.use")) +
-      xlab(paste0("Expected Difference in Rating (",alg_differences$ease_of_use[1,'alg'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+alg_differences$ease_of_use <- user_response_expected_diff_in_mean_plot(ease_of_use_predictive_data_subset, "alg", "ease.of.use", "Difference in Average Ease of Use (Rating)", "Task", NULL)
+alg_differences$ease_of_use$plot
 ```
 
-
+Differences in user score by participant group
+``` {r}
+participant_group_differences$ease_of_use <- user_response_expected_diff_in_mean_plot(ease_of_use_predictive_data, "participant_group", "ease.of.use", "Difference in Average Ease of Use (Rating)", "Task", NULL)
+participant_group_differences$ease_of_use$plot
+```
 
 
 
 ### Utility:  Building a Model
 
 ```{r}
-filename = "utility"
 models$utility <- brm(
     formula = bf(utility ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
@@ -707,7 +502,7 @@ models$utility <- brm(
     warmup = 1000,
     data = user_response_data,
     control = list(adapt_delta = 0.99),
-    file = filename,
+    file = "models/utility",
     seed = seed
   )
 ```
@@ -750,33 +545,19 @@ pairs(
 
 We now look at a average response for Utility using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
-draw_data_utility <- user_response_data %>%
-  add_predicted_draws(models$utility,
-                   seed = seed,
-                   re_formula = NA) %>%
-  group_by(search, oracle, .draw) %>%
-  mutate(rating = weighted.mean(as.numeric(as.character(.prediction))))
-  
-utility_plot <- draw_data_utility %>%
-  ggplot(aes(x = oracle, y = rating)) +
-  stat_eye(.width = c(.95, .5)) +
-  theme_minimal() +
-  coord_cartesian(ylim = c(-2, 2)) +
-  facet_grid(. ~ search)
-
-utility_plot
+utility_plot <- user_response_posterior_draws_plot(user_response_data, models$utility, NULL, "Oracle/Search Combination", "Rating")
+utility_plot$plot
 
 ```
 We can get the numeric values of the interval boundaries shown above with mean_qi
 ```{r}
-fit_info_utility <- draw_data_utility %>% group_by(search, oracle) %>% mean_qi(rating, .width = c(.95, .5))
-fit_info_utility
+utility_plot$intervals
 ```
 
 ```{r echo=FALSE}
 # save the plot and intervals
- ggsave(file = "utility.png", plot = utility_plot, path = "../plots/posterior_draws/user_response")
-  write.csv(fit_info_utility, "../plot_data/posterior_draws/user_response/utility.csv", row.names = FALSE)
+ ggsave(file = "utility.png", plot = utility_plot$plot, path = "../plots/posterior_draws/user_response")
+  write.csv(utility_plot$intervals, "../plot_data/posterior_draws/user_response/utility.csv", row.names = FALSE)
 ```
 
 ### Utility: Differences Between Conditions
@@ -789,72 +570,36 @@ utility_predictive_data$alg <- paste(utility_predictive_data$search, utility_pre
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$utility <- utility_predictive_data %>% 
-  group_by(search, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = search) %>%
-   rename(diff_in_rating = rating)
-
-search_differences$utility$metric = "utility"
-
-search_differences$utility %>%
-      ggplot(aes(x = diff_in_rating, y = "utility")) +
-      xlab(paste0("Expected Difference in Rating (",search_differences$utility[1,'search'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+search_differences$utility <- user_response_expected_diff_in_mean_plot(utility_predictive_data, "search", "utility", "Difference in Average Utility (Rating)", "Task", NULL)
+search_differences$utility$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$utility <- utility_predictive_data %>% 
-  group_by(oracle, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = oracle) %>%
-   rename(diff_in_rating = rating)
-
-oracle_differences$utility$metric = "utility"
-
-oracle_differences$utility %>%
-      ggplot(aes(x = diff_in_rating, y = "utility")) +
-      xlab(paste0("Expected Difference in Rating (",oracle_differences$utility[1,'oracle'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+oracle_differences$utility <- user_response_expected_diff_in_mean_plot(utility_predictive_data, "oracle", "utility", "Difference in Average Utility (Rating)", "Task", NULL)
+oracle_differences$utility$plot
 ```
 
 
 Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
 ``` {r}
+utility_predictive_data_subset <- subset(utility_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
+alg_differences$utility <- user_response_expected_diff_in_mean_plot(utility_predictive_data_subset, "alg", "utility", "Difference in Average Utility (Rating)", "Task", NULL)
+alg_differences$utility$plot
 
-alg_differences$utility <- utility_predictive_data %>% 
-  group_by(alg, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = alg) %>%
-   rename(diff_in_rating = rating)
-
-alg_differences$utility <- subset(alg_differences$utility, alg == "dfs compassql - bfs dziban")
-alg_differences$utility$metric = "utility"
-
-alg_differences$utility %>%
-      ggplot(aes(x = diff_in_rating, y = "utility")) +
-      xlab(paste0("Expected Difference in Rating (",alg_differences$utility[1,'alg'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
 ```
 
-
+Differences in user score by participant group
+``` {r}
+participant_group_differences$utility <- user_response_expected_diff_in_mean_plot(utility_predictive_data, "participant_group", "utility", "Difference in Average Utility (Rating)", "Task", NULL)
+participant_group_differences$utility$plot
+```
 
 
 
 ### Overall:  Building a Model
 
 ```{r}
-filename = "overall"
 models$overall <- brm(
     formula = bf(overall ~ dataset + oracle * search + task + (1 | participant_id)),
     family = cumulative("probit"),
@@ -865,7 +610,7 @@ models$overall <- brm(
     warmup = 1000,
     data = user_response_data,
     control = list(adapt_delta = 0.99),
-    file = filename,
+    file = "models/overall",
     seed = seed
   )
 ```
@@ -908,33 +653,19 @@ pairs(
 
 We now look at a average response for Overall using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
-draw_data_overall <- user_response_data %>%
-  add_predicted_draws(models$overall,
-                   seed = seed,
-                   re_formula = NA) %>%
-  group_by(search, oracle, .draw) %>%
-  mutate(rating = weighted.mean(as.numeric(as.character(.prediction))))
-  
-overall_plot <- draw_data_overall %>%
-  ggplot(aes(x = oracle, y = rating)) +
-  stat_eye(.width = c(.95, .5)) +
-  theme_minimal() +
-  coord_cartesian(ylim = c(-2, 2)) +
-  facet_grid(. ~ search)
-
-overall_plot
+overall_plot <- user_response_posterior_draws_plot(user_response_data, models$overall, NULL, "Oracle/Search Combination", "Rating")
+overall_plot$plot
 
 ```
 We can get the numeric values of the interval boundaries shown above with mean_qi
 ```{r}
-fit_info_overall <- draw_data_overall %>% group_by(search, oracle) %>% mean_qi(rating, .width = c(.95, .5))
-fit_info_overall
+overall_plot$intervals
 ```
 
 ```{r echo=FALSE}
 # save the plot and intervals
- ggsave(file = "overall.png", plot = overall_plot, path = "../plots/posterior_draws/user_response")
-  write.csv(fit_info_overall, "../plot_data/posterior_draws/user_response/overall.csv", row.names = FALSE)
+ ggsave(file = "overall.png", plot = overall_plot$plot, path = "../plots/posterior_draws/user_response")
+  write.csv(overall_plot$intervals, "../plot_data/posterior_draws/user_response/overall.csv", row.names = FALSE)
 ```
 
 ### Overall: Differences Between Conditions
@@ -947,21 +678,8 @@ overall_predictive_data$alg <- paste(overall_predictive_data$search, overall_pre
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$overall <- overall_predictive_data %>% 
-  group_by(search, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = search) %>%
-   rename(diff_in_rating = rating)
-
-search_differences$overall$metric = "overall"
-
-search_differences$overall %>%
-      ggplot(aes(x = diff_in_rating, y = "overall")) +
-      xlab(paste0("Expected Difference in Rating (",search_differences$overall[1,'search'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+search_differences$overall <- user_response_expected_diff_in_mean_plot(overall_predictive_data, "search", "overall", "Difference in Average Overall (Rating)", "Task", NULL)
+search_differences$overall$plot
 ```
 
 Differences in user score by oracle.
@@ -981,32 +699,25 @@ oracle_differences$overall %>%
       stat_halfeye(.width = c(.95, .5)) +
       geom_vline(xintercept = 0, linetype = "longdash") +
       theme_minimal()
+
+oracle_differences$overall <- user_response_expected_diff_in_mean_plot(overall_predictive_data, "oracle", "overall", "Difference in Average Overall (Rating)", "Task", NULL)
+oracle_differences$overall$plot
 ```
 
 
 Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
 ``` {r}
-
-alg_differences$overall <- overall_predictive_data %>% 
-  group_by(alg, .draw) %>%
-   summarize(rating = weighted.mean(as.numeric(.prediction))) %>%
-   compare_levels(rating, by = alg) %>%
-   rename(diff_in_rating = rating)
-
-alg_differences$overall <- subset(alg_differences$overall, alg == "dfs compassql - bfs dziban")
-alg_differences$overall$metric = "overall"
-
-alg_differences$overall %>%
-      ggplot(aes(x = diff_in_rating, y = "overall")) +
-      xlab(paste0("Expected Difference in Rating (",alg_differences$overall[1,'alg'],")")) + 
-      ylab("Condition")+
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
+overall_predictive_data_subset <- subset(overall_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
+alg_differences$overall <- user_response_expected_diff_in_mean_plot(overall_predictive_data_subset, "alg", "overall", "Difference in Average Overall (Rating)", "Task", NULL)
+alg_differences$overall$plot
 ```
 
 
-
+Differences in user score by participant group
+``` {r}
+participant_group_differences$overall <- user_response_expected_diff_in_mean_plot(overall_predictive_data, "participant_group", "overall", "Difference in Average Overall (Rating)", "Task", NULL)
+participant_group_differences$overall$plot
+```
 
 
 ## Summary Plots
@@ -1014,19 +725,21 @@ Putting the all of the plots for search algorithm and oracle differences togethe
 
 ### Differences in Search Algorithms
 ```{r}
-combined_search_differences <- rbind(search_differences$confidence_udata, search_differences$confidence_ans, search_differences$efficiency, search_differences$ease_of_use, search_differences$utility, search_differences$overall)
+combined_search_differences <- rbind(
+  search_differences$confidence_udata$differences, 
+  search_differences$confidence_ans$differences, 
+  search_differences$efficiency$differences,
+  search_differences$ease_of_use$differences, 
+  search_differences$utility$differences, 
+  search_differences$overall$differences)
 
 combined_search_differences$metric <- factor(combined_search_differences$metric, levels=rev(analyses))
+```
 
-# flip order so that we get bfs - dfs
-if(combined_search_differences[1,'search']=="dfs - bfs"){
-  combined_search_differences$search = 'bfs - dfs'
-  combined_search_differences$diff_in_rating = -1 * combined_search_differences$diff_in_rating
-}
-
+```{r}
 combined_search_differences_confidence <- subset(combined_search_differences, metric %in% confidence_metrics)
 search_differences_plot_confidence <- combined_search_differences_confidence %>%
-      ggplot(aes(x = diff_in_rating, y = metric)) +
+      ggplot(aes(x = difference, y = metric)) +
       ylab("Confidence") +
       xlab(paste0("Expected Difference in Rating (",combined_search_differences_confidence[1,'search'],")")) +
       stat_halfeye(.width = c(.95, .5)) +
@@ -1038,14 +751,14 @@ search_differences_plot_confidence
 
 View intervals
 ```{r}
-fit_info_search_differences_confidence <- combined_search_differences_confidence %>% group_by(search, metric) %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+fit_info_search_differences_confidence <- combined_search_differences_confidence %>% group_by(search, metric) %>% mean_qi(difference, .width = c(.95, .5))
 fit_info_search_differences_confidence
 ```
 
 ```{r}
 combined_search_differences_preference <- subset(combined_search_differences, metric %in% preference_metrics)
 search_differences_plot_preference <- combined_search_differences_preference %>%
-      ggplot(aes(x = diff_in_rating, y = metric)) +
+      ggplot(aes(x = difference, y = metric)) +
       ylab("Confidence") +
       xlab(paste0("Expected Difference in Rating (",combined_search_differences_preference[1,'search'],")")) +
       stat_halfeye(.width = c(.95, .5)) +
@@ -1057,7 +770,7 @@ search_differences_plot_preference
 
 View intervals
 ```{r}
-fit_info_search_differences_preference <- combined_search_differences_preference %>% group_by(search, metric) %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+fit_info_search_differences_preference <- combined_search_differences_preference %>% group_by(search, metric) %>% mean_qi(difference, .width = c(.95, .5))
 fit_info_search_differences_preference
 ```
 
@@ -1072,18 +785,23 @@ write.csv(fit_info_search_differences,"../plot_data/comparisons/user_response/se
 
 
 
-
-
-
 ### Differences in Oracle
 ```{r}
-combined_oracle_differences <- rbind(oracle_differences$confidence_udata, oracle_differences$confidence_ans, oracle_differences$efficiency, oracle_differences$ease_of_use, oracle_differences$utility, oracle_differences$overall)
+combined_oracle_differences <- rbind(
+  oracle_differences$confidence_udata$differences, 
+  oracle_differences$confidence_ans$differences, 
+  oracle_differences$efficiency$differences,
+  oracle_differences$ease_of_use$differences, 
+  oracle_differences$utility$differences, 
+  oracle_differences$overall$differences)
 
 combined_oracle_differences$metric <- factor(combined_oracle_differences$metric, levels=rev(analyses))
+```
 
+```{r}
 combined_oracle_differences_confidence <- subset(combined_oracle_differences, metric %in% confidence_metrics)
 oracle_differences_plot_confidence <- combined_oracle_differences_confidence %>%
-      ggplot(aes(x = diff_in_rating, y = metric)) +
+      ggplot(aes(x = difference, y = metric)) +
       ylab("Confidence") +
       xlab(paste0("Expected Difference in Rating (",combined_oracle_differences_confidence[1,'oracle'],")")) +
       stat_halfeye(.width = c(.95, .5)) +
@@ -1095,14 +813,14 @@ oracle_differences_plot_confidence
 
 View intervals
 ```{r}
-fit_info_oracle_differences_confidence <- combined_oracle_differences_confidence %>% group_by(oracle, metric) %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+fit_info_oracle_differences_confidence <- combined_oracle_differences_confidence %>% group_by(oracle, metric) %>% mean_qi(difference, .width = c(.95, .5))
 fit_info_oracle_differences_confidence
 ```
 
 ```{r}
 combined_oracle_differences_preference <- subset(combined_oracle_differences, metric %in% preference_metrics)
 oracle_differences_plot_preference <- combined_oracle_differences_preference %>%
-      ggplot(aes(x = diff_in_rating, y = metric)) +
+      ggplot(aes(x = difference, y = metric)) +
       ylab("Confidence") +
       xlab(paste0("Expected Difference in Rating (",combined_oracle_differences_preference[1,'oracle'],")")) +
       stat_halfeye(.width = c(.95, .5)) +
@@ -1114,7 +832,7 @@ oracle_differences_plot_preference
 
 View intervals
 ```{r}
-fit_info_oracle_differences_preference <- combined_oracle_differences_preference %>% group_by(oracle, metric) %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+fit_info_oracle_differences_preference <- combined_oracle_differences_preference %>% group_by(oracle, metric) %>% mean_qi(difference, .width = c(.95, .5))
 fit_info_oracle_differences_preference
 ```
 
@@ -1129,19 +847,21 @@ write.csv(fit_info_oracle_differences,"../plot_data/comparisons/user_response/or
 
 ### dfs compassql vs bfs dziban
 ```{r}
-combined_alg_differences <- rbind(alg_differences$confidence_udata, alg_differences$confidence_ans, alg_differences$efficiency, alg_differences$ease_of_use, alg_differences$utility, alg_differences$overall)
+combined_alg_differences <- rbind(
+  alg_differences$confidence_udata$differences, 
+  alg_differences$confidence_ans$differences, 
+  alg_differences$efficiency$differences,
+  alg_differences$ease_of_use$differences, 
+  alg_differences$utility$differences, 
+  alg_differences$overall$differences)
+
 combined_alg_differences$metric <- factor(combined_alg_differences$metric, levels=rev(analyses))
+```
 
-
-# flip order so that we get bfs - dfs
-if(combined_alg_differences[1,'alg']=="dfs - bfs"){
-  combined_alg_differences$alg = 'bfs - dfs'
-  combined_alg_differences$diff_in_rating = -1 * combined_alg_differences$diff_in_rating
-}
-
+```{r}
 combined_alg_differences_confidence <- subset(combined_alg_differences, metric %in% confidence_metrics)
 alg_differences_plot_confidence <- combined_alg_differences_confidence %>%
-      ggplot(aes(x = diff_in_rating, y = metric)) +
+      ggplot(aes(x = difference, y = metric)) +
       ylab("Confidence") +
       xlab(paste0("Expected Difference in Rating (",combined_alg_differences_confidence[1,'alg'],")")) +
       stat_halfeye(.width = c(.95, .5)) +
@@ -1153,14 +873,14 @@ alg_differences_plot_confidence
 
 View intervals
 ```{r}
-fit_info_alg_differences_confidence <- combined_alg_differences_confidence %>% group_by(alg, metric) %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+fit_info_alg_differences_confidence <- combined_alg_differences_confidence %>% group_by(alg, metric) %>% mean_qi(difference, .width = c(.95, .5))
 fit_info_alg_differences_confidence
 ```
 
 ```{r}
 combined_alg_differences_preference <- subset(combined_alg_differences, metric %in% preference_metrics)
 alg_differences_plot_preference <- combined_alg_differences_preference %>%
-      ggplot(aes(x = diff_in_rating, y = metric)) +
+      ggplot(aes(x = difference, y = metric)) +
       ylab("Confidence") +
       xlab(paste0("Expected Difference in Rating (",combined_alg_differences_preference[1,'alg'],")")) +
       stat_halfeye(.width = c(.95, .5)) +
@@ -1172,7 +892,7 @@ alg_differences_plot_preference
 
 View intervals
 ```{r}
-fit_info_alg_differences_preference <- combined_alg_differences_preference %>% group_by(alg, metric) %>% mean_qi(diff_in_rating, .width = c(.95, .5))
+fit_info_alg_differences_preference <- combined_alg_differences_preference %>% group_by(alg, metric) %>% mean_qi(difference, .width = c(.95, .5))
 fit_info_alg_differences_preference
 ```
 
@@ -1182,5 +902,66 @@ ggsave(file="alg_rating_differences_preference.png", plot=alg_differences_plot_p
 
 fit_info_alg_differences <- rbind(fit_info_alg_differences_confidence, fit_info_alg_differences_preference)
 write.csv(fit_info_alg_differences,"../plot_data/comparisons/user_response/alg_rating_differences.csv", row.names = FALSE)
+
+```
+
+
+### Differences in Participant Group
+```{r}
+combined_participant_group_differences <- rbind(
+  participant_group_differences$confidence_udata$differences, 
+  participant_group_differences$confidence_ans$differences, 
+  participant_group_differences$efficiency$differences,
+  participant_group_differences$ease_of_use$differences, 
+  participant_group_differences$utility$differences, 
+  participant_group_differences$overall$differences)
+
+combined_participant_group_differences$metric <- factor(combined_participant_group_differences$metric, levels=rev(analyses))
+```
+
+```{r}
+combined_participant_group_differences_confidence <- subset(combined_participant_group_differences, metric %in% confidence_metrics)
+participant_group_differences_plot_confidence <- combined_participant_group_differences_confidence %>%
+      ggplot(aes(x = difference, y = metric)) +
+      ylab("Confidence") +
+      xlab(paste0("Expected Difference in Rating (",combined_participant_group_differences_confidence[1,'participant_group'],")")) +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+
+participant_group_differences_plot_confidence
+```
+
+View intervals
+```{r}
+fit_info_participant_group_differences_confidence <- combined_participant_group_differences_confidence %>% group_by(participant_group, metric) %>% mean_qi(difference, .width = c(.95, .5))
+fit_info_participant_group_differences_confidence
+```
+
+```{r}
+combined_participant_group_differences_preference <- subset(combined_participant_group_differences, metric %in% preference_metrics)
+participant_group_differences_plot_preference <- combined_participant_group_differences_preference %>%
+      ggplot(aes(x = difference, y = metric)) +
+      ylab("Confidence") +
+      xlab(paste0("Expected Difference in Rating (",combined_participant_group_differences_preference[1,'participant_group'],")")) +
+      stat_halfeye(.width = c(.95, .5)) +
+      geom_vline(xintercept = 0, linetype = "longdash") +
+      theme_minimal()
+participant_group_differences_plot_preference
+
+```
+
+View intervals
+```{r}
+fit_info_participant_group_differences_preference <- combined_participant_group_differences_preference %>% group_by(participant_group, metric) %>% mean_qi(difference, .width = c(.95, .5))
+fit_info_participant_group_differences_preference
+```
+
+```{r echo=FALSE}
+ggsave(file="participant_group_rating_differences_confidence.png", plot=participant_group_differences_plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="participant_group_rating_differences_preference.png", plot=participant_group_differences_plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
+
+fit_info_participant_group_differences <- rbind(fit_info_participant_group_differences_confidence, fit_info_participant_group_differences_preference)
+write.csv(fit_info_participant_group_differences,"../plot_data/comparisons/user_response/participant_group_rating_differences.csv", row.names = FALSE)
 
 ```
