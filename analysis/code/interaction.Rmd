@@ -115,15 +115,14 @@ write.csv(
 
 ### Differences between factors
 ```{r}
-predictive_data_interacted_var_sets <- interacted_var_sets_data %>%
-    add_predicted_draws(model_interacted_var_sets, seed = seed, re_formula = NA)
+   predictive_data_interacted_var_sets <- interacted_var_sets_data %>% add_fitted_draws(model_interacted_var_sets, seed = seed, re_formula = NA)
 ```
 
 Difference in search
 ```{r}
 diff_in_search_prediction <- predictive_data_interacted_var_sets %>%
     group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = search) %>%
     rename(diff = value)
 
@@ -133,7 +132,7 @@ diff_in_search_prediction_plot <- diff_in_search_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in interacted_var_sets (",
+        "Difference in average interacted_var_sets (",
         diff_in_search_prediction[1, 'search'],
         ")"
       )
@@ -166,7 +165,7 @@ Difference in oracle
 ```{r}
 diff_in_oracle_prediction <- predictive_data_interacted_var_sets %>%
     group_by(oracle, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = oracle) %>%
     rename(diff = value)
 
@@ -176,7 +175,7 @@ diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in interacted_var_sets (",
+        "Difference in average interacted_var_sets (",
         diff_in_oracle_prediction[1, 'oracle'],
         ")"
       )
@@ -213,7 +212,7 @@ predictive_data_interacted_var_sets$participant_group<- gsub('professional', 'Pr
 
 diff_in_group_prediction <- predictive_data_interacted_var_sets %>%
     group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = participant_group) %>%
     rename(diff = value)
 
@@ -223,7 +222,7 @@ diff_in_group_prediction_plot <- diff_in_group_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in interacted_var_sets (",
+        "Difference in average interacted_var_sets (",
         diff_in_group_prediction[1, 'participant_group'],
         ")"
       )
@@ -349,13 +348,13 @@ write.csv(
 ### Differences between factors
 ```{r}
 predictive_data_interacted_visual_design <- interacted_visual_design_data %>%
-    add_predicted_draws(model_interacted_visual_design, seed = seed, re_formula = NA)
+    add_fitted_draws(model_interacted_visual_design, seed = seed, re_formula = NA)
 ```
 Difference in search
 ```{r}
 diff_in_search_prediction <- predictive_data_interacted_visual_design %>%
     group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = search) %>%
     rename(diff = value)
 
@@ -365,7 +364,7 @@ diff_in_search_prediction_plot <- diff_in_search_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in interacted_visual_design (",
+        "Difference in average interacted_visual_design (",
         diff_in_search_prediction[1, 'search'],
         ")"
       )
@@ -398,7 +397,7 @@ Difference in oracle
 ```{r}
 diff_in_oracle_prediction <- predictive_data_interacted_visual_design %>%
     group_by(oracle, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = oracle) %>%
     rename(diff = value)
 
@@ -408,7 +407,7 @@ diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in interacted_visual_design (",
+        "Difference in average interacted_visual_design (",
         diff_in_oracle_prediction[1, 'oracle'],
         ")"
       )
@@ -443,7 +442,7 @@ Difference in groups
 ```{r}
 diff_in_group_prediction <- predictive_data_interacted_visual_design %>%
     group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = participant_group) %>%
     rename(diff = value)
 
@@ -453,7 +452,7 @@ diff_in_group_prediction_plot <- diff_in_group_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in interacted_visual_design (",
+        "Difference in average interacted_visual_design (",
         diff_in_group_prediction[1, 'participant_group'],
         ")"
       )
@@ -578,13 +577,13 @@ write.csv(
 ### Differences between factors
 ```{r}
 predictive_data_exposed_variable_set <- exposed_variable_set_data %>%
-    add_predicted_draws(model_exposed_variable_set, seed = seed, re_formula = NA)
+    add_fitted_draws(model_exposed_variable_set, seed = seed, re_formula = NA)
 ```
 Difference in search
 ```{r}
 diff_in_search_prediction <- predictive_data_exposed_variable_set %>%
     group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = search) %>%
     rename(diff = value)
 
@@ -594,7 +593,7 @@ diff_in_search_prediction_plot <- diff_in_search_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in exposed_variable_set (",
+        "Difference in average exposed_variable_set (",
         diff_in_search_prediction[1, 'search'],
         ")"
       )
@@ -627,7 +626,7 @@ Difference in oracle
 ```{r}
 diff_in_oracle_prediction <- predictive_data_exposed_variable_set %>%
     group_by(oracle, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = oracle) %>%
     rename(diff = value)
 
@@ -637,7 +636,7 @@ diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in exposed_variable_set (",
+        "Difference in average exposed_variable_set (",
         diff_in_oracle_prediction[1, 'oracle'],
         ")"
       )
@@ -677,7 +676,7 @@ predictive_data_exposed_variable_set$Dataset<- predictive_data_exposed_variable_
 
 diff_in_group_prediction <- predictive_data_exposed_variable_set %>%
     group_by(search, task, Dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = participant_group) %>%
     rename(diff = value)
 
@@ -689,7 +688,7 @@ diff_in_group_prediction_plot <- diff_in_group_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in Exposed Variable Set (",
+        "Difference in average Exposed Variable Set (",
         diff_in_group_prediction[1, 'participant_group'],
         ")"
       )
@@ -816,13 +815,13 @@ write.csv(
 ### Differences between factors
 ```{r}
 predictive_data_exposed_visual_design <- exposed_visual_design_data %>%
-    add_predicted_draws(model_exposed_visual_design, seed = seed, re_formula = NA)
+    add_fitted_draws(model_exposed_visual_design, seed = seed, re_formula = NA)
 ```
 Difference in search
 ```{r}
 diff_in_search_prediction <- predictive_data_exposed_visual_design %>%
     group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = search) %>%
     rename(diff = value)
 
@@ -832,7 +831,7 @@ diff_in_search_prediction_plot <- diff_in_search_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in exposed_visual_design (",
+        "Difference in average exposed_visual_design (",
         diff_in_search_prediction[1, 'search'],
         ")"
       )
@@ -865,7 +864,7 @@ Difference in oracle
 ```{r}
 diff_in_oracle_prediction <- predictive_data_exposed_visual_design %>%
     group_by(oracle, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = oracle) %>%
     rename(diff = value)
 
@@ -875,7 +874,7 @@ diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in exposed_visual_design (",
+        "Difference in average exposed_visual_design (",
         diff_in_oracle_prediction[1, 'oracle'],
         ")"
       )
@@ -908,7 +907,7 @@ Difference in groups
 ```{r}
 diff_in_group_prediction <- predictive_data_exposed_visual_design %>%
     group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.prediction)) %>%
+    summarize(value = weighted.mean(.value)) %>%
     compare_levels(value, by = participant_group) %>%
     rename(diff = value)
 
@@ -918,7 +917,7 @@ diff_in_group_prediction_plot <- diff_in_group_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in exposed_visual_design (",
+        "Difference in average exposed_visual_design (",
         diff_in_group_prediction[1, 'participant_group'],
         ")"
       )
@@ -1003,7 +1002,7 @@ plot_exposed <- data_conbined %>% ggplot(aes(x = oracle, y = .value, fill = type
       stat_eye(.width = c(.95, .5)) +
       theme_minimal() +
       facet_grid(task ~ search) + 
-      ylab("Average Number of Elements") + xlab("Oracle/Search Combination") + scale_alpha(guide = 'none')
+      ylab("average  Number of Elements") + xlab("Oracle/Search Combination") + scale_alpha(guide = 'none')
     
 plot_exposed
 
@@ -1031,7 +1030,7 @@ plot_interacted <- data_conbined %>% ggplot(aes(x = oracle, y = .value, fill = t
       stat_eye(.width = c(.95, .5)) +
       theme_minimal() +
       facet_grid(task ~ search) + 
-      ylab("Average Number of Elements") + xlab("Oracle/Search Combination")  + scale_alpha(guide = 'none')
+      ylab("average  Number of Elements") + xlab("Oracle/Search Combination")  + scale_alpha(guide = 'none')
     
 plot_interacted
 
