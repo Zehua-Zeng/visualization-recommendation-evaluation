@@ -27,7 +27,7 @@ source('helper_functions.R')
 
 In our experiment, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then asked the user to evaluate the tool on a variety of metrics (confidence in understanding data, confidence in answer, efficiency, ease of use, utility, and overall).
 
-Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict a user's average score for a given metric.  In addition, we would like to know if the choice of search algorithm and oracle has any meaningful impact on a user's ratong for these metrics.
+Given a search algorithm (bfs or dfs), an oracle (CompassQL or dziban), and a dataset (birdstrikes or movies), we would like to predict a user's score for a given metric.  In addition, we would like to know if the choice of search algorithm and oracle has any meaningful impact on a user's ratong for these metrics.
 
 ### Read in and clean data
 
@@ -38,6 +38,13 @@ preference_metrics = c("efficiency", "ease.of.use", "utility", "overall")
 
 user_response_data <- read.csv('split_by_participant_groups/ptask_responses.csv')
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
+
+user_response_data$oracle<- gsub('compassql', 'CompassQL', user_response_data$oracle)
+user_response_data$oracle<- gsub('dziban', 'Dziban', user_response_data$oracle)
+
+user_response_data$search<- gsub('bfs', 'BFS', user_response_data$search)
+user_response_data$search<- gsub('dfs', 'DFS', user_response_data$search)
+
 user_response_data[,analyses] <- lapply(user_response_data[,analyses],ordered)
 user_response_data <- user_response_data %>%
   mutate(
@@ -63,7 +70,7 @@ seed = 12
 
 ```{r}
 models$confidence_udata <- brm(
-    formula = bf(confidence.udata ~ dataset + oracle * search + task + (1 | participant_id)),
+    formula = bf(confidence.udata ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
     prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -85,7 +92,7 @@ summary(models$confidence_udata)
 
 Trace plots help us check whether there is evidence of non-convergence for our model.
 ```{r}
-plot(models$confidence_udata)
+# plot(models$confidence_udata)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
@@ -114,7 +121,7 @@ pairs(
 
 ```
 
-We now look at a average response for confidence in understanding the data using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+We now look at a response for confidence in understanding the data using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 confidence_udata_plot <- user_response_posterior_draws_plot(user_response_data, models$confidence_udata, NULL, "Oracle/Search Combination", "Rating")
 confidence_udata_plot$plot
@@ -131,31 +138,31 @@ confidence_udata_plot$intervals
 ```
 
 ### Confidence in Understanding Data: Differences Between Conditions
-Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and CompassQL).
 
 ``` {r}
-confidence_udata_predictive_data <- user_response_data %>% add_predicted_draws(models$confidence_udata, seed = seed, re_formula = NA) 
+confidence_udata_predictive_data <- user_response_data %>% add_predicted_draws(models$confidence_udata, seed = seed, re_formula = NA)
 confidence_udata_predictive_data$alg <- paste(confidence_udata_predictive_data$search, confidence_udata_predictive_data$oracle)
 ```
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$confidence_udata <- user_response_expected_diff_in_mean_plot(confidence_udata_predictive_data, "search", "confidence.udata", "Difference in Average Confidence in Understanding Data (Rating)", "Task", NULL)
+search_differences$confidence_udata <- user_response_diff_plot(confidence_udata_predictive_data, "search", "confidence.udata", "Difference in Confidence in Understanding Data Rating", "Task", NULL)
 search_differences$confidence_udata$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$confidence_udata <- user_response_expected_diff_in_mean_plot(confidence_udata_predictive_data, "oracle", "confidence.udata", "Difference in Average Confidence in Understanding Data (Rating)", "Task", NULL)
+oracle_differences$confidence_udata <- user_response_diff_plot(confidence_udata_predictive_data, "oracle", "confidence.udata", "Difference in Confidence in Understanding Data Rating", "Task", NULL)
 oracle_differences$confidence_udata$plot
 ```
 
 
-Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
+Differences in user score by search and oracle combination (DFS CompassQL vs BFS Dziban only)
 ``` {r}
-confidence_udata_predictive_data_subset <- subset(confidence_udata_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
+confidence_udata_predictive_data_subset <- subset(confidence_udata_predictive_data, alg %in% c("DFS CompassQL", "BFS Dziban"))
 
-alg_differences$confidence_udata <- user_response_expected_diff_in_mean_plot(confidence_udata_predictive_data_subset, "alg", "confidence.udata", "Difference in Average Confidence in Understanding Data (Rating)", "Task", NULL)
+alg_differences$confidence_udata <- user_response_diff_plot(confidence_udata_predictive_data_subset, "alg", "confidence.udata", "Difference in Confidence in Understanding Data Rating", "Task", NULL)
 alg_differences$confidence_udata$plot
 ```
 
@@ -163,7 +170,7 @@ alg_differences$confidence_udata$plot
 
 Differences in user score by participant group
 ``` {r}
-participant_group_differences$confidence_udata <- user_response_expected_diff_in_mean_plot(confidence_udata_predictive_data, "participant_group", "confidence.udata", "Difference in Average Confidence in Understanding Data (Rating)", "Task", NULL)
+participant_group_differences$confidence_udata <- user_response_diff_plot(confidence_udata_predictive_data, "participant_group", "confidence.udata", "Difference in Confidence in Understanding Data Rating", "Task", NULL)
 participant_group_differences$confidence_udata$plot
 ```
 
@@ -172,7 +179,7 @@ participant_group_differences$confidence_udata$plot
 
 ```{r}
 models$confidence_ans <- brm(
-    formula = bf(confidence.ans ~ dataset + oracle * search + task + (1 | participant_id)),
+    formula = bf(confidence.ans ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
     prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -193,7 +200,7 @@ summary(models$confidence_ans)
 
 Trace plots help us check whether there is evidence of non-convergence for our model.
 ```{r}
-plot(models$confidence_ans)
+# plot(models$confidence_ans)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
@@ -222,7 +229,7 @@ pairs(
 
 ```
 
-We now look at a average response for confidence in answer using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+We now look at a response for confidence in answer using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 confidence_ans_plot <- user_response_posterior_draws_plot(user_response_data, models$confidence_ans, NULL, "Oracle/Search Combination", "Rating")
 confidence_ans_plot$plot
@@ -239,7 +246,7 @@ confidence_ans_plot$intervals
 ```
 
 ### Confidence in Answer: Differences Between Conditions
-Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and CompassQL).
 
 ``` {r}
 confidence_ans_predictive_data <- user_response_data %>% add_predicted_draws(models$confidence_ans, seed = seed, re_formula = NA) 
@@ -248,27 +255,27 @@ confidence_ans_predictive_data$alg <- paste(confidence_ans_predictive_data$searc
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$confidence_ans <- user_response_expected_diff_in_mean_plot(confidence_ans_predictive_data, "search", "confidence.ans", "Difference in Average Confidence in Answer (Rating)", "Task", NULL)
+search_differences$confidence_ans <- user_response_diff_plot(confidence_ans_predictive_data, "search", "confidence.ans", "Difference in Confidence in Answer Rating", "Task", NULL)
 search_differences$confidence_ans$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$confidence_ans <- user_response_expected_diff_in_mean_plot(confidence_ans_predictive_data, "oracle", "confidence.ans", "Difference in Average Confidence in Answer (Rating)", "Task", NULL)
+oracle_differences$confidence_ans <- user_response_diff_plot(confidence_ans_predictive_data, "oracle", "confidence.ans", "Difference in Confidence in Answer Rating", "Task", NULL)
 oracle_differences$confidence_ans$plot
 ```
 
 
-Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
+Differences in user score by search and oracle combination (DFS CompassQL vs BFS Dziban only)
 ``` {r}
-confidence_ans_predictive_data_subset <- subset(confidence_ans_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
-alg_differences$confidence_ans <- user_response_expected_diff_in_mean_plot(confidence_ans_predictive_data_subset, "alg", "confidence.ans", "Difference in Average Confidence in Answer (Rating)", "Task", NULL)
+confidence_ans_predictive_data_subset <- subset(confidence_ans_predictive_data, alg %in% c("DFS CompassQL", "BFS Dziban"))
+alg_differences$confidence_ans <- user_response_diff_plot(confidence_ans_predictive_data_subset, "alg", "confidence.ans", "Difference in Confidence in Answer Rating", "Task", NULL)
 alg_differences$confidence_ans$plot
 ```
 
 Differences in user score by participant group
 ``` {r}
-participant_group_differences$confidence_ans <- user_response_expected_diff_in_mean_plot(confidence_ans_predictive_data, "participant_group", "confidence.ans", "Difference in Average Confidence in Answer (Rating)", "Task", NULL)
+participant_group_differences$confidence_ans <- user_response_diff_plot(confidence_ans_predictive_data, "participant_group", "confidence.ans", "Difference in Confidence in Answer Rating", "Task", NULL)
 participant_group_differences$confidence_ans$plot
 ```
 
@@ -279,7 +286,7 @@ participant_group_differences$confidence_ans$plot
 ```{r}
 filename = "efficiency"
 models$efficiency <- brm(
-    formula = bf(efficiency ~ dataset + oracle * search + task + (1 | participant_id)),
+    formula = bf(efficiency ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -300,7 +307,7 @@ summary(models$efficiency)
 
 Trace plots help us check whether there is evidence of non-convergence for our model.
 ```{r}
-plot(models$efficiency)
+# plot(models$efficiency)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
@@ -329,7 +336,7 @@ pairs(
 
 ```
 
-We now look at a average response for efficiency using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+We now look at a response for efficiency using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 efficiency_plot <- user_response_posterior_draws_plot(user_response_data, models$efficiency, NULL, "Oracle/Search Combination", "Rating")
 efficiency_plot$plot
@@ -347,7 +354,7 @@ efficiency_plot$intervals
 ```
 
 ### Efficiency: Differences Between Conditions
-Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and CompassQL).
 
 ``` {r}
 efficiency_predictive_data <- user_response_data %>% add_predicted_draws(models$efficiency, seed = seed, re_formula = NA) 
@@ -356,26 +363,26 @@ efficiency_predictive_data$alg <- paste(efficiency_predictive_data$search, effic
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$efficiency <- user_response_expected_diff_in_mean_plot(efficiency_predictive_data, "search", "efficiency", "Difference in Average Efficiency (Rating)", "Task", NULL)
+search_differences$efficiency <- user_response_diff_plot(efficiency_predictive_data, "search", "efficiency", "Difference in Efficiency Rating", "Task", NULL)
 search_differences$efficiency$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$efficiency <- user_response_expected_diff_in_mean_plot(efficiency_predictive_data, "oracle", "efficiency", "Difference in Average Efficiency (Rating)", "Task", NULL)
+oracle_differences$efficiency <- user_response_diff_plot(efficiency_predictive_data, "oracle", "efficiency", "Difference in Efficiency Rating", "Task", NULL)
 oracle_differences$efficiency$plot
 ```
 
 
-Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
+Differences in user score by search and oracle combination (DFS CompassQL vs BFS Dziban only)
 ``` {r}
-efficiency_predictive_data_data_subset <- subset(efficiency_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
-alg_differences$efficiency <- user_response_expected_diff_in_mean_plot(efficiency_predictive_data_data_subset, "alg", "efficiency", "Difference in Average Efficiency (Rating)", "Task", NULL)
+efficiency_predictive_data_data_subset <- subset(efficiency_predictive_data, alg %in% c("DFS CompassQL", "BFS Dziban"))
+alg_differences$efficiency <- user_response_diff_plot(efficiency_predictive_data_data_subset, "alg", "efficiency", "Difference in Efficiency Rating", "Task", NULL)
 alg_differences$efficiency$plot
 ```
 Differences in user score by participant group
 ``` {r}
-participant_group_differences$efficiency <- user_response_expected_diff_in_mean_plot(efficiency_predictive_data, "participant_group", "efficiency", "Difference in Average Efficiency (Rating)", "Task", NULL)
+participant_group_differences$efficiency <- user_response_diff_plot(efficiency_predictive_data, "participant_group", "efficiency", "Difference in Efficiency Rating", "Task", NULL)
 participant_group_differences$efficiency$plot
 ```
 
@@ -386,7 +393,7 @@ participant_group_differences$efficiency$plot
 
 ```{r}
 models$ease_of_use <- brm(
-    formula = bf(ease.of.use ~ dataset + oracle * search + task + (1 | participant_id)),
+    formula = bf(ease.of.use ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -407,7 +414,7 @@ summary(models$ease_of_use)
 
 Trace plots help us check whether there is evidence of non-convergence for our model.
 ```{r}
-plot(models$ease_of_use)
+# plot(models$ease_of_use)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
@@ -436,7 +443,7 @@ pairs(
 
 ```
 
-We now look at a average response for ease of use using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+We now look at a response for ease of use using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 ease_of_use_plot <- user_response_posterior_draws_plot(user_response_data, models$ease_of_use, NULL, "Oracle/Search Combination", "Rating")
 ease_of_use_plot$plot
@@ -453,7 +460,7 @@ ease_of_use_plot$intervals
 ```
 
 ### Ease of Use: Differences Between Conditions
-Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and CompassQL).
 
 ``` {r}
 ease_of_use_predictive_data <- user_response_data %>% add_predicted_draws(models$ease_of_use, seed = seed, re_formula = NA) 
@@ -462,28 +469,28 @@ ease_of_use_predictive_data$alg <- paste(ease_of_use_predictive_data$search, eas
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$ease_of_use <- user_response_expected_diff_in_mean_plot(ease_of_use_predictive_data, "search", "ease.of.use", "Difference in Average Ease of Use (Rating)", "Task", NULL)
+search_differences$ease_of_use <- user_response_diff_plot(ease_of_use_predictive_data, "search", "ease.of.use", "Difference in Ease of Use Rating", "Task", NULL)
 search_differences$ease_of_use$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$ease_of_use <- user_response_expected_diff_in_mean_plot(ease_of_use_predictive_data, "oracle", "ease.of.use", "Difference in Average Ease of Use (Rating)", "Task", NULL)
+oracle_differences$ease_of_use <- user_response_diff_plot(ease_of_use_predictive_data, "oracle", "ease.of.use", "Difference in Ease of Use Rating", "Task", NULL)
 oracle_differences$ease_of_use$plot
 ```
 
 
-Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
+Differences in user score by search and oracle combination (DFS CompassQL vs BFS Dziban only)
 ``` {r}
-ease_of_use_predictive_data_subset <- subset(ease_of_use_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
+ease_of_use_predictive_data_subset <- subset(ease_of_use_predictive_data, alg %in% c("DFS CompassQL", "BFS Dziban"))
 
-alg_differences$ease_of_use <- user_response_expected_diff_in_mean_plot(ease_of_use_predictive_data_subset, "alg", "ease.of.use", "Difference in Average Ease of Use (Rating)", "Task", NULL)
+alg_differences$ease_of_use <- user_response_diff_plot(ease_of_use_predictive_data_subset, "alg", "ease.of.use", "Difference in Ease of Use Rating", "Task", NULL)
 alg_differences$ease_of_use$plot
 ```
 
 Differences in user score by participant group
 ``` {r}
-participant_group_differences$ease_of_use <- user_response_expected_diff_in_mean_plot(ease_of_use_predictive_data, "participant_group", "ease.of.use", "Difference in Average Ease of Use (Rating)", "Task", NULL)
+participant_group_differences$ease_of_use <- user_response_diff_plot(ease_of_use_predictive_data, "participant_group", "ease.of.use", "Difference in Ease of Use Rating", "Task", NULL)
 participant_group_differences$ease_of_use$plot
 ```
 
@@ -493,7 +500,7 @@ participant_group_differences$ease_of_use$plot
 
 ```{r}
 models$utility <- brm(
-    formula = bf(utility ~ dataset + oracle * search + task + (1 | participant_id)),
+    formula = bf(utility ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -514,7 +521,7 @@ summary(models$utility)
 
 Trace plots help us check whether there is evidence of non-convergence for our model.
 ```{r}
-plot(models$utility)
+# plot(models$utility)
 ```
 
 s plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
@@ -543,7 +550,7 @@ pairs(
 
 ```
 
-We now look at a average response for Utility using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+We now look at a response for Utility using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 utility_plot <- user_response_posterior_draws_plot(user_response_data, models$utility, NULL, "Oracle/Search Combination", "Rating")
 utility_plot$plot
@@ -561,7 +568,7 @@ utility_plot$intervals
 ```
 
 ### Utility: Differences Between Conditions
-Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and CompassQL).
 
 ``` {r}
 utility_predictive_data <- user_response_data %>% add_predicted_draws(models$utility, seed = seed, re_formula = NA) 
@@ -570,28 +577,28 @@ utility_predictive_data$alg <- paste(utility_predictive_data$search, utility_pre
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$utility <- user_response_expected_diff_in_mean_plot(utility_predictive_data, "search", "utility", "Difference in Average Utility (Rating)", "Task", NULL)
+search_differences$utility <- user_response_diff_plot(utility_predictive_data, "search", "utility", "Difference in Utility Rating", "Task", NULL)
 search_differences$utility$plot
 ```
 
 Differences in user score by oracle.
 ``` {r}
-oracle_differences$utility <- user_response_expected_diff_in_mean_plot(utility_predictive_data, "oracle", "utility", "Difference in Average Utility (Rating)", "Task", NULL)
+oracle_differences$utility <- user_response_diff_plot(utility_predictive_data, "oracle", "utility", "Difference in Utility Rating", "Task", NULL)
 oracle_differences$utility$plot
 ```
 
 
-Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
+Differences in user score by search and oracle combination (DFS CompassQL vs BFS Dziban only)
 ``` {r}
-utility_predictive_data_subset <- subset(utility_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
-alg_differences$utility <- user_response_expected_diff_in_mean_plot(utility_predictive_data_subset, "alg", "utility", "Difference in Average Utility (Rating)", "Task", NULL)
+utility_predictive_data_subset <- subset(utility_predictive_data, alg %in% c("DFS CompassQL", "BFS Dziban"))
+alg_differences$utility <- user_response_diff_plot(utility_predictive_data_subset, "alg", "utility", "Difference in Utility Rating", "Task", NULL)
 alg_differences$utility$plot
 
 ```
 
 Differences in user score by participant group
 ``` {r}
-participant_group_differences$utility <- user_response_expected_diff_in_mean_plot(utility_predictive_data, "participant_group", "utility", "Difference in Average Utility (Rating)", "Task", NULL)
+participant_group_differences$utility <- user_response_diff_plot(utility_predictive_data, "participant_group", "utility", "Difference in Utility Rating", "Task", NULL)
 participant_group_differences$utility$plot
 ```
 
@@ -601,7 +608,7 @@ participant_group_differences$utility$plot
 
 ```{r}
 models$overall <- brm(
-    formula = bf(overall ~ dataset + oracle * search + task + (1 | participant_id)),
+    formula = bf(overall ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -622,7 +629,7 @@ summary(models$overall)
 
 Trace plots help us check whether there is evidence of non-convergence for our model.
 ```{r}
-plot(models$overall)
+# plot(models$overall)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
@@ -651,7 +658,7 @@ pairs(
 
 ```
 
-We now look at a average response for Overall using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+We now look at a response for Overall using different combinations of search and oracle via draws from the model posterior.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 overall_plot <- user_response_posterior_draws_plot(user_response_data, models$overall, NULL, "Oracle/Search Combination", "Rating")
 overall_plot$plot
@@ -669,7 +676,7 @@ overall_plot$intervals
 ```
 
 ### Overall: Differences Between Conditions
-Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and CompassQL).
 
 ``` {r}
 overall_predictive_data <- user_response_data %>% add_predicted_draws(models$overall, seed = seed, re_formula = NA) 
@@ -678,7 +685,7 @@ overall_predictive_data$alg <- paste(overall_predictive_data$search, overall_pre
 
 Differences in user score by search algorithm.
 ``` {r}
-search_differences$overall <- user_response_expected_diff_in_mean_plot(overall_predictive_data, "search", "overall", "Difference in Average Overall (Rating)", "Task", NULL)
+search_differences$overall <- user_response_diff_plot(overall_predictive_data, "search", "overall", "Difference in Overall Rating", "Task", NULL)
 search_differences$overall$plot
 ```
 
@@ -700,22 +707,22 @@ oracle_differences$overall %>%
       geom_vline(xintercept = 0, linetype = "longdash") +
       theme_minimal()
 
-oracle_differences$overall <- user_response_expected_diff_in_mean_plot(overall_predictive_data, "oracle", "overall", "Difference in Average Overall (Rating)", "Task", NULL)
+oracle_differences$overall <- user_response_diff_plot(overall_predictive_data, "oracle", "overall", "Difference in Overall Rating", "Task", NULL)
 oracle_differences$overall$plot
 ```
 
 
-Differences in user score by search and oracle combination (dfs compassql vs bfs dziban only)
+Differences in user score by search and oracle combination (DFS CompassQL vs BFS Dziban only)
 ``` {r}
-overall_predictive_data_subset <- subset(overall_predictive_data, alg %in% c("dfs compassql", "bfs dziban"))
-alg_differences$overall <- user_response_expected_diff_in_mean_plot(overall_predictive_data_subset, "alg", "overall", "Difference in Average Overall (Rating)", "Task", NULL)
+overall_predictive_data_subset <- subset(overall_predictive_data, alg %in% c("DFS CompassQL", "BFS Dziban"))
+alg_differences$overall <- user_response_diff_plot(overall_predictive_data_subset, "alg", "overall", "Difference in Overall Rating", "Task", NULL)
 alg_differences$overall$plot
 ```
 
 
 Differences in user score by participant group
 ``` {r}
-participant_group_differences$overall <- user_response_expected_diff_in_mean_plot(overall_predictive_data, "participant_group", "overall", "Difference in Average Overall (Rating)", "Task", NULL)
+participant_group_differences$overall <- user_response_diff_plot(overall_predictive_data, "participant_group", "overall", "Difference in Overall Rating", "Task", NULL)
 participant_group_differences$overall$plot
 ```
 
@@ -732,53 +739,33 @@ combined_search_differences <- rbind(
   search_differences$ease_of_use$differences, 
   search_differences$utility$differences, 
   search_differences$overall$differences)
-
-combined_search_differences$metric <- factor(combined_search_differences$metric, levels=rev(analyses))
 ```
 
-```{r}
-combined_search_differences_confidence <- subset(combined_search_differences, metric %in% confidence_metrics)
-search_differences_plot_confidence <- combined_search_differences_confidence %>%
-      ggplot(aes(x = difference, y = metric)) +
-      ylab("Confidence") +
-      xlab(paste0("Expected Difference in Rating (",combined_search_differences_confidence[1,'search'],")")) +
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
 
-search_differences_plot_confidence
+```{r}
+search_difference_plots_intervals <- user_response_diff_summary(combined_search_differences, 'search')
+search_difference_plots_intervals$plot_confidence
 ```
 
 View intervals
 ```{r}
-fit_info_search_differences_confidence <- combined_search_differences_confidence %>% group_by(search, metric) %>% mean_qi(difference, .width = c(.95, .5))
-fit_info_search_differences_confidence
+search_difference_plots_intervals$intervals_confidence
 ```
 
 ```{r}
-combined_search_differences_preference <- subset(combined_search_differences, metric %in% preference_metrics)
-search_differences_plot_preference <- combined_search_differences_preference %>%
-      ggplot(aes(x = difference, y = metric)) +
-      ylab("Confidence") +
-      xlab(paste0("Expected Difference in Rating (",combined_search_differences_preference[1,'search'],")")) +
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
-search_differences_plot_preference
-
+search_difference_plots_intervals$plot_preference
 ```
 
 View intervals
 ```{r}
-fit_info_search_differences_preference <- combined_search_differences_preference %>% group_by(search, metric) %>% mean_qi(difference, .width = c(.95, .5))
-fit_info_search_differences_preference
+search_difference_plots_intervals$intervals_preference
 ```
 
 ```{r echo=FALSE}
-ggsave(file="search_rating_differences_confidence.png", plot=search_differences_plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
-ggsave(file="search_rating_differences_preference.png", plot=search_differences_plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="search_rating_differences_confidence.png", plot=search_difference_plots_intervals$plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="search_rating_differences_preference.png", plot=search_difference_plots_intervals$plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
 
-fit_info_search_differences <- rbind(fit_info_search_differences_confidence, fit_info_search_differences_preference)
+fit_info_search_differences <- rbind(search_difference_plots_intervals$intervals_confidence, search_difference_plots_intervals$intervals_preference)
 write.csv(fit_info_search_differences,"../plot_data/comparisons/user_response/search_rating_differences.csv", row.names = FALSE)
 
 ```
@@ -794,58 +781,37 @@ combined_oracle_differences <- rbind(
   oracle_differences$ease_of_use$differences, 
   oracle_differences$utility$differences, 
   oracle_differences$overall$differences)
-
-combined_oracle_differences$metric <- factor(combined_oracle_differences$metric, levels=rev(analyses))
 ```
 
 ```{r}
-combined_oracle_differences_confidence <- subset(combined_oracle_differences, metric %in% confidence_metrics)
-oracle_differences_plot_confidence <- combined_oracle_differences_confidence %>%
-      ggplot(aes(x = difference, y = metric)) +
-      ylab("Confidence") +
-      xlab(paste0("Expected Difference in Rating (",combined_oracle_differences_confidence[1,'oracle'],")")) +
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
-
-oracle_differences_plot_confidence
+oracle_difference_plots_intervals <- user_response_diff_summary(combined_oracle_differences, 'oracle')
+oracle_difference_plots_intervals$plot_confidence
 ```
 
 View intervals
 ```{r}
-fit_info_oracle_differences_confidence <- combined_oracle_differences_confidence %>% group_by(oracle, metric) %>% mean_qi(difference, .width = c(.95, .5))
-fit_info_oracle_differences_confidence
+oracle_difference_plots_intervals$intervals_confidence
 ```
 
 ```{r}
-combined_oracle_differences_preference <- subset(combined_oracle_differences, metric %in% preference_metrics)
-oracle_differences_plot_preference <- combined_oracle_differences_preference %>%
-      ggplot(aes(x = difference, y = metric)) +
-      ylab("Confidence") +
-      xlab(paste0("Expected Difference in Rating (",combined_oracle_differences_preference[1,'oracle'],")")) +
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
-oracle_differences_plot_preference
-
+oracle_difference_plots_intervals$plot_preference
 ```
 
 View intervals
 ```{r}
-fit_info_oracle_differences_preference <- combined_oracle_differences_preference %>% group_by(oracle, metric) %>% mean_qi(difference, .width = c(.95, .5))
-fit_info_oracle_differences_preference
+oracle_difference_plots_intervals$intervals_preference
 ```
 
 ```{r echo=FALSE}
-ggsave(file="oracle_rating_differences_confidence.png", plot=oracle_differences_plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
-ggsave(file="oracle_rating_differences_preference.png", plot=oracle_differences_plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="oracle_rating_differences_confidence.png", plot=oracle_difference_plots_intervals$plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="oracle_rating_differences_preference.png", plot=oracle_difference_plots_intervals$plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
 
-fit_info_oracle_differences <- rbind(fit_info_oracle_differences_confidence, fit_info_oracle_differences_preference)
+fit_info_oracle_differences <- rbind(oracle_difference_plots_intervals$intervals_confidence, oracle_difference_plots_intervals$intervals_preference)
 write.csv(fit_info_oracle_differences,"../plot_data/comparisons/user_response/oracle_rating_differences.csv", row.names = FALSE)
 
 ```
 
-### dfs compassql vs bfs dziban
+### DFS CompassQL vs BFS Dziban
 ```{r}
 combined_alg_differences <- rbind(
   alg_differences$confidence_udata$differences, 
@@ -854,53 +820,32 @@ combined_alg_differences <- rbind(
   alg_differences$ease_of_use$differences, 
   alg_differences$utility$differences, 
   alg_differences$overall$differences)
-
-combined_alg_differences$metric <- factor(combined_alg_differences$metric, levels=rev(analyses))
 ```
 
 ```{r}
-combined_alg_differences_confidence <- subset(combined_alg_differences, metric %in% confidence_metrics)
-alg_differences_plot_confidence <- combined_alg_differences_confidence %>%
-      ggplot(aes(x = difference, y = metric)) +
-      ylab("Confidence") +
-      xlab(paste0("Expected Difference in Rating (",combined_alg_differences_confidence[1,'alg'],")")) +
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
-
-alg_differences_plot_confidence
+alg_difference_plots_intervals <- user_response_diff_summary(combined_alg_differences, 'alg')
+alg_difference_plots_intervals$plot_confidence
 ```
 
 View intervals
 ```{r}
-fit_info_alg_differences_confidence <- combined_alg_differences_confidence %>% group_by(alg, metric) %>% mean_qi(difference, .width = c(.95, .5))
-fit_info_alg_differences_confidence
+alg_difference_plots_intervals$intervals_confidence
 ```
 
 ```{r}
-combined_alg_differences_preference <- subset(combined_alg_differences, metric %in% preference_metrics)
-alg_differences_plot_preference <- combined_alg_differences_preference %>%
-      ggplot(aes(x = difference, y = metric)) +
-      ylab("Confidence") +
-      xlab(paste0("Expected Difference in Rating (",combined_alg_differences_preference[1,'alg'],")")) +
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
-alg_differences_plot_preference
-
+alg_difference_plots_intervals$plot_preference
 ```
 
 View intervals
 ```{r}
-fit_info_alg_differences_preference <- combined_alg_differences_preference %>% group_by(alg, metric) %>% mean_qi(difference, .width = c(.95, .5))
-fit_info_alg_differences_preference
+alg_difference_plots_intervals$intervals_preference
 ```
 
 ```{r echo=FALSE}
-ggsave(file="alg_rating_differences_confidence.png", plot=alg_differences_plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
-ggsave(file="alg_rating_differences_preference.png", plot=alg_differences_plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="alg_rating_differences_confidence.png", plot=alg_difference_plots_intervals$plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="alg_rating_differences_preference.png", plot=alg_difference_plots_intervals$plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
 
-fit_info_alg_differences <- rbind(fit_info_alg_differences_confidence, fit_info_alg_differences_preference)
+fit_info_alg_differences <- rbind(alg_difference_plots_intervals$intervals_confidence, alg_difference_plots_intervals$intervals_preference)
 write.csv(fit_info_alg_differences,"../plot_data/comparisons/user_response/alg_rating_differences.csv", row.names = FALSE)
 
 ```
@@ -915,53 +860,32 @@ combined_participant_group_differences <- rbind(
   participant_group_differences$ease_of_use$differences, 
   participant_group_differences$utility$differences, 
   participant_group_differences$overall$differences)
-
-combined_participant_group_differences$metric <- factor(combined_participant_group_differences$metric, levels=rev(analyses))
 ```
 
 ```{r}
-combined_participant_group_differences_confidence <- subset(combined_participant_group_differences, metric %in% confidence_metrics)
-participant_group_differences_plot_confidence <- combined_participant_group_differences_confidence %>%
-      ggplot(aes(x = difference, y = metric)) +
-      ylab("Confidence") +
-      xlab(paste0("Expected Difference in Rating (",combined_participant_group_differences_confidence[1,'participant_group'],")")) +
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
-
-participant_group_differences_plot_confidence
+participant_group_difference_plots_intervals <- user_response_diff_summary(combined_participant_group_differences, 'participant_group')
+participant_group_difference_plots_intervals$plot_confidence
 ```
 
 View intervals
 ```{r}
-fit_info_participant_group_differences_confidence <- combined_participant_group_differences_confidence %>% group_by(participant_group, metric) %>% mean_qi(difference, .width = c(.95, .5))
-fit_info_participant_group_differences_confidence
+participant_group_difference_plots_intervals$intervals_confidence
 ```
 
 ```{r}
-combined_participant_group_differences_preference <- subset(combined_participant_group_differences, metric %in% preference_metrics)
-participant_group_differences_plot_preference <- combined_participant_group_differences_preference %>%
-      ggplot(aes(x = difference, y = metric)) +
-      ylab("Confidence") +
-      xlab(paste0("Expected Difference in Rating (",combined_participant_group_differences_preference[1,'participant_group'],")")) +
-      stat_halfeye(.width = c(.95, .5)) +
-      geom_vline(xintercept = 0, linetype = "longdash") +
-      theme_minimal()
-participant_group_differences_plot_preference
-
+participant_group_difference_plots_intervals$plot_preference
 ```
 
 View intervals
 ```{r}
-fit_info_participant_group_differences_preference <- combined_participant_group_differences_preference %>% group_by(participant_group, metric) %>% mean_qi(difference, .width = c(.95, .5))
-fit_info_participant_group_differences_preference
+participant_group_difference_plots_intervals$intervals_preference
 ```
 
 ```{r echo=FALSE}
-ggsave(file="participant_group_rating_differences_confidence.png", plot=participant_group_differences_plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
-ggsave(file="participant_group_rating_differences_preference.png", plot=participant_group_differences_plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="participant_group_rating_differences_confidence.png", plot=participant_group_difference_plots_intervals$plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
+ggsave(file="participant_group_rating_differences_preference.png", plot=participant_group_difference_plots_intervals$plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
 
-fit_info_participant_group_differences <- rbind(fit_info_participant_group_differences_confidence, fit_info_participant_group_differences_preference)
+fit_info_participant_group_differences <- rbind(participant_group_difference_plots_intervals$intervals_confidence, participant_group_difference_plots_intervals$intervals_preference)
 write.csv(fit_info_participant_group_differences,"../plot_data/comparisons/user_response/participant_group_rating_differences.csv", row.names = FALSE)
 
 ```
