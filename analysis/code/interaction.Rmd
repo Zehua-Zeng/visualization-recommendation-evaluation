@@ -21,6 +21,7 @@ theme_set(theme_light())
 task_list <- c("3. Prediction", "4. Exploration")
 seed = 12
 ```
+
 ## Number of Interacted Variable Sets
 Read in and format data
 ```{r}
@@ -42,7 +43,7 @@ prior_sd = 25.33
 
 stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
 model_interacted_var_sets <- brm(
-    formula = num_interacted_variable_set ~ oracle * search + dataset + task + participant_group + (1 | participant_id),
+    formula = num_interacted_variable_set ~ oracle * search * dataset + task + participant_group + (1 | participant_id),
     prior = prior(normal(prior_mean, prior_sd), class = Intercept),
     chains = 2,
     cores = 2,
@@ -56,7 +57,7 @@ model_interacted_var_sets <- brm(
 ```
 Plot
 ```{r}
-plot(model_interacted_var_sets)
+# plot(model_interacted_var_sets)
 ```
 
 Summary
@@ -207,6 +208,9 @@ ggsave(
 
 Difference in groups
 ```{r}
+predictive_data_interacted_var_sets$participant_group<- gsub('student', 'Student', predictive_data_interacted_var_sets$participant_group)
+predictive_data_interacted_var_sets$participant_group<- gsub('professional', 'Professional', predictive_data_interacted_var_sets$participant_group)
+
 diff_in_group_prediction <- predictive_data_interacted_var_sets %>%
     group_by(search, task, dataset, participant_group, .draw) %>%
     summarize(value = weighted.mean(.prediction)) %>%
@@ -227,7 +231,7 @@ diff_in_group_prediction_plot <- diff_in_group_prediction %>%
     ylab("Task") +
     stat_halfeye(.width = c(.95, .5)) +
     geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task)))
+    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task))) + scale_alpha(guide = 'none')
 
 diff_in_group_prediction_plot
 
@@ -285,7 +289,7 @@ model_interacted_visual_design <- brm(
 ```
 Plot
 ```{r}
-plot(model_interacted_visual_design)
+# plot(model_interacted_visual_design)
 ```
 
 Summary
@@ -515,7 +519,7 @@ model_exposed_variable_set <- brm(
 ```
 Plot
 ```{r}
-plot(model_exposed_variable_set)
+# plot(model_exposed_variable_set)
 ```
 
 Summary
@@ -664,19 +668,28 @@ ggsave(
 ```
 Difference in groups
 ```{r}
+
+predictive_data_exposed_variable_set$participant_group<- gsub('student', 'Student', predictive_data_exposed_variable_set$participant_group)
+predictive_data_exposed_variable_set$participant_group<- gsub('professional', 'Professional', predictive_data_exposed_variable_set$participant_group)
+predictive_data_exposed_variable_set$dataset<- gsub('birdstrikes', 'Birdstrikes', predictive_data_exposed_variable_set$dataset)
+predictive_data_exposed_variable_set$dataset<- gsub('movies', 'Movies', predictive_data_exposed_variable_set$dataset)
+predictive_data_exposed_variable_set$Dataset<- predictive_data_exposed_variable_set$dataset
+
 diff_in_group_prediction <- predictive_data_exposed_variable_set %>%
-    group_by(search, task, dataset, participant_group, .draw) %>%
+    group_by(search, task, Dataset, participant_group, .draw) %>%
     summarize(value = weighted.mean(.prediction)) %>%
     compare_levels(value, by = participant_group) %>%
     rename(diff = value)
 
 ```
 ```{r}
+
+
 diff_in_group_prediction_plot <- diff_in_group_prediction %>%
     ggplot(aes(x = diff, y = task)) +
     xlab(
       paste0(
-        "Difference in exposed_variable_set (",
+        "Difference in Exposed Variable Set (",
         diff_in_group_prediction[1, 'participant_group'],
         ")"
       )
@@ -695,7 +708,7 @@ ggsave(
     )
 ```
 ```{r}
-diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = dataset, alpha = 0.5)
+diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = Dataset, alpha = 0.5) + scale_alpha(guide = 'none')
 
 diff_in_group_prediction_plot_split_by_dataset
 
@@ -744,7 +757,7 @@ model_exposed_visual_design <- brm(
 ```
 Plot
 ```{r}
-plot(model_exposed_visual_design)
+# plot(model_exposed_visual_design)
 ```
 
 Summary
@@ -974,15 +987,23 @@ ggsave(
     )
 ```
 ```{r}
-draw_data_exposed_variable_set$type <- "variable_sets"
-draw_data_exposed_visual_design$type <- "visual_design"
+draw_data_exposed_variable_set$type <- "Variable Sets"
+draw_data_exposed_visual_design$type <- "Visual Design"
 
 data_conbined <- rbind(draw_data_exposed_variable_set, draw_data_exposed_visual_design)
+data_conbined$oracle<- gsub('compassql', 'CompassQL', data_conbined$oracle)
+data_conbined$oracle<- gsub('dziban', 'Dziban', data_conbined$oracle)
+data_conbined$search<- gsub('bfs', 'BFS', data_conbined$search)
+data_conbined$search<- gsub('dfs', 'DFS', data_conbined$search)
+data_conbined$Type<- data_conbined$type
+
+data_conbined$condition <- paste(data_conbined$oracle, data_conbined$search, sep="\n")
+
 plot_exposed <- data_conbined %>% ggplot(aes(x = oracle, y = .value, fill = type, alpha = 0.5)) +
       stat_eye(.width = c(.95, .5)) +
       theme_minimal() +
       facet_grid(task ~ search) + 
-      ylab("Number of Elements") 
+      ylab("Average Number of Elements") + xlab("Oracle/Search Combination") + scale_alpha(guide = 'none')
     
 plot_exposed
 
@@ -995,15 +1016,22 @@ ggsave(
 
 ```{r}
 
-draw_data_interacted_var_sets$type <- "variable_sets"
-draw_data_interacted_visual_design$type <- "visual_design"
+draw_data_interacted_var_sets$type <- "Variable Sets"
+draw_data_interacted_visual_design$type <- "Visual Design"
 
 data_conbined <- rbind(draw_data_interacted_var_sets, draw_data_interacted_visual_design)
+
+data_conbined$oracle<- gsub('compassql', 'CompassQL', data_conbined$oracle)
+data_conbined$oracle<- gsub('dziban', 'Dziban', data_conbined$oracle)
+data_conbined$search<- gsub('bfs', 'BFS', data_conbined$search)
+data_conbined$search<- gsub('dfs', 'DFS', data_conbined$search)
+data_conbined$Type<- data_conbined$type
+
 plot_interacted <- data_conbined %>% ggplot(aes(x = oracle, y = .value, fill = type, alpha = 0.5)) +
       stat_eye(.width = c(.95, .5)) +
       theme_minimal() +
       facet_grid(task ~ search) + 
-      ylab("Number of Elements") 
+      ylab("Average Number of Elements") + xlab("Oracle/Search Combination")  + scale_alpha(guide = 'none')
     
 plot_interacted
 
