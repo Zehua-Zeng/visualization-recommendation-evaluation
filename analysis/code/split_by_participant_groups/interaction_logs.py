@@ -49,7 +49,7 @@ def get_fields_from_vglstr(vglstr):
 ## mouseover a related chart - mouseout a related chart
 ## mouseover on the specified chart - mouseout on the specified chart
 
-## calculate how many unique variable set participants interact with
+## 1. calculate how many unique variable set participants interact with
 
 # jsons_data = pd.DataFrame(columns=['participant_id',
 #                                    'participant_group',
@@ -111,7 +111,7 @@ def get_fields_from_vglstr(vglstr):
 # jsons_data.to_csv('num_of_interacted_variable_set.csv', index=False)
 
 
-## calculating how many unqiue visual designs participants interacted with
+## 2. calculating how many unqiue visual designs participants interacted with
 
 # jsons_data = pd.DataFrame(columns=['participant_id',
 #                                    'participant_group',
@@ -178,7 +178,7 @@ def get_fields_from_vglstr(vglstr):
 ## clicked load more button (doesnt have value, need to know what is the current main view)
 # specified chart
 
-## calculating how many unqiue varibale sets were exposed to participants
+## 3. calculating how many unqiue varibale sets were exposed to participants
 # jsons_data = pd.DataFrame(columns=['participant_id',
 #                                    'participant_group',
 #                                    'dataset',
@@ -338,7 +338,7 @@ def get_fields_from_vglstr(vglstr):
 
 # jsons_data.to_csv('num_of_exposed_variable_set.csv', index=False)
 
-## calculating how many unqiue varibale sets were exposed to participants
+## 4. calculating how many unqiue varibale sets were exposed to participants
 jsons_data = pd.DataFrame(columns=['participant_id',
                                    'participant_group',
                                    'dataset',

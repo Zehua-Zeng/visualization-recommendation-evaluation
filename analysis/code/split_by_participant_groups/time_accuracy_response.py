@@ -34,40 +34,40 @@ response_to_score_dict = {
 path_to_json = '../../logs/'
 
 ## completion time
-# jsons_data = pd.DataFrame(columns=['participant_id',
-#                                    'participant_group',
-#                                    'dataset',
-#                                    'oracle',
-#                                    'search',
-#                                    'task',
-#                                    'completion_time'])
+jsons_data = pd.DataFrame(columns=['participant_id',
+                                   'participant_group',
+                                   'dataset',
+                                   'oracle',
+                                   'search',
+                                   'task',
+                                   'completion_time'])
 
-# json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('_logs.json')]
+json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('_logs.json')]
 
-# for index, js in enumerate(json_files):
-#     with open(os.path.join(path_to_json, js)) as json_file:
-#         json_text = json.load(json_file)
+for index, js in enumerate(json_files):
+    with open(os.path.join(path_to_json, js)) as json_file:
+        json_text = json.load(json_file)
 
-#         split_filename = js.split('_')
+        split_filename = js.split('_')
 
-#         participant_id = split_filename[0]
-#         participant_group = ''
-#         if participant_id.startswith('pro'):
-#             participant_group = 'professional'
-#         elif participant_id.startswith('stu'):
-#             participant_group = 'student'
-#         experimental_setup = split_filename[1]
-#         dataset = dataset_dict[experimental_setup[0]]
-#         oracle = oracle_dict[experimental_setup[1]]
-#         search = search_algorithm_dict[experimental_setup[2]]
-#         task = task_dict[split_filename[2]]
+        participant_id = split_filename[0]
+        participant_group = ''
+        if participant_id.startswith('pro'):
+            participant_group = 'professional'
+        elif participant_id.startswith('stu'):
+            participant_group = 'student'
+        experimental_setup = split_filename[1]
+        dataset = dataset_dict[experimental_setup[0]]
+        oracle = oracle_dict[experimental_setup[1]]
+        search = search_algorithm_dict[experimental_setup[2]]
+        task = task_dict[split_filename[2]]
 
-#         completion_time = (json_text[-1]["Time"] - json_text[0]["Time"]) / 1000
+        completion_time = (json_text[-1]["Time"] - json_text[0]["Time"]) / 1000
 
-#         row = [participant_id, participant_group, dataset, oracle, search, task, completion_time]
-#         jsons_data.loc[index] = row
+        row = [participant_id, participant_group, dataset, oracle, search, task, completion_time]
+        jsons_data.loc[index] = row
     
-# jsons_data.to_csv('completion_time.csv', index=False)
+jsons_data.to_csv('completion_time.csv', index=False)
 
 
 ## accuracy
@@ -131,48 +131,48 @@ path_to_json = '../../logs/'
 # jsons_data.to_csv('accuracy.csv', index=False)
 
 ## user response
-jsons_data = pd.DataFrame(columns=['participant_id',
-                                   'participant_group',
-                                   'dataset',
-                                   'oracle',
-                                   'search',
-                                   'task',
-                                   'confidence-udata', 
-                                   'confidence-ans', 
-                                   'efficiency',
-                                   'ease-of-use', 
-                                   'utility', 
-                                   'overall'])
+# jsons_data = pd.DataFrame(columns=['participant_id',
+#                                    'participant_group',
+#                                    'dataset',
+#                                    'oracle',
+#                                    'search',
+#                                    'task',
+#                                    'confidence-udata', 
+#                                    'confidence-ans', 
+#                                    'efficiency',
+#                                    'ease-of-use', 
+#                                    'utility', 
+#                                    'overall'])
 
-json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('_ptask.json')]
+# json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('_ptask.json')]
 
-for index, js in enumerate(json_files):
-    with open(os.path.join(path_to_json, js)) as json_file:
-        json_text = json.load(json_file)
+# for index, js in enumerate(json_files):
+#     with open(os.path.join(path_to_json, js)) as json_file:
+#         json_text = json.load(json_file)
         
-        split_filename = js.split('_')
+#         split_filename = js.split('_')
         
-        participant_id = split_filename[0]
-        participant_group = ''
-        if participant_id.startswith('pro'):
-            participant_group = 'professional'
-        elif participant_id.startswith('stu'):
-            participant_group = 'student'
+#         participant_id = split_filename[0]
+#         participant_group = ''
+#         if participant_id.startswith('pro'):
+#             participant_group = 'professional'
+#         elif participant_id.startswith('stu'):
+#             participant_group = 'student'
         
-        experimental_setup = split_filename[1]
-        dataset = dataset_dict[experimental_setup[0]]
-        oracle = oracle_dict[experimental_setup[1]]
-        search = search_algorithm_dict[experimental_setup[2]]
-        task = task_dict[split_filename[2]]
+#         experimental_setup = split_filename[1]
+#         dataset = dataset_dict[experimental_setup[0]]
+#         oracle = oracle_dict[experimental_setup[1]]
+#         search = search_algorithm_dict[experimental_setup[2]]
+#         task = task_dict[split_filename[2]]
             
-        confidence_udata = response_to_score_dict[json_text['confidence-udata']]
-        confidence_ans = response_to_score_dict[json_text['confidence-ans']]
-        efficiency = response_to_score_dict[json_text['efficiency']]
-        ease_of_use = response_to_score_dict[json_text['ease-of-use']]
-        utility = response_to_score_dict[json_text['utility']]
-        overall = response_to_score_dict[json_text['overall']]
+#         confidence_udata = response_to_score_dict[json_text['confidence-udata']]
+#         confidence_ans = response_to_score_dict[json_text['confidence-ans']]
+#         efficiency = response_to_score_dict[json_text['efficiency']]
+#         ease_of_use = response_to_score_dict[json_text['ease-of-use']]
+#         utility = response_to_score_dict[json_text['utility']]
+#         overall = response_to_score_dict[json_text['overall']]
         
-        row = [participant_id, participant_group, dataset, oracle, search, task, confidence_udata, confidence_ans, efficiency, ease_of_use, utility, overall]
-        jsons_data.loc[index] = row
+#         row = [participant_id, participant_group, dataset, oracle, search, task, confidence_udata, confidence_ans, efficiency, ease_of_use, utility, overall]
+#         jsons_data.loc[index] = row
 
-jsons_data.to_csv('ptask_responses.csv', index=False)
+# jsons_data.to_csv('ptask_responses.csv', index=False)

@@ -19,7 +19,11 @@ pro25,professional,movies,compassql,dfs,3. Prediction,17
 pro26,professional,birdstrikes,dziban,bfs,3. Prediction,21
 pro27,professional,birdstrikes,compassql,dfs,3. Prediction,25
 pro28,professional,birdstrikes,compassql,bfs,3. Prediction,25
+pro29,professional,movies,compassql,bfs,3. Prediction,15
 pro2,professional,birdstrikes,compassql,bfs,3. Prediction,27
+pro30,professional,birdstrikes,dziban,bfs,3. Prediction,10
+pro31,professional,movies,dziban,dfs,3. Prediction,10
+pro32,professional,birdstrikes,dziban,dfs,3. Prediction,15
 pro3,professional,movies,compassql,bfs,3. Prediction,14
 pro4,professional,birdstrikes,compassql,bfs,3. Prediction,33
 pro5,professional,movies,dziban,dfs,3. Prediction,20
@@ -87,7 +91,11 @@ pro25,professional,movies,compassql,dfs,4. Exploration,21
 pro26,professional,birdstrikes,dziban,bfs,4. Exploration,29
 pro27,professional,birdstrikes,compassql,dfs,4. Exploration,21
 pro28,professional,birdstrikes,compassql,bfs,4. Exploration,20
+pro29,professional,movies,compassql,bfs,4. Exploration,18
 pro2,professional,birdstrikes,compassql,bfs,4. Exploration,37
+pro30,professional,birdstrikes,dziban,bfs,4. Exploration,42
+pro31,professional,movies,dziban,dfs,4. Exploration,37
+pro32,professional,birdstrikes,dziban,dfs,4. Exploration,61
 pro3,professional,movies,compassql,bfs,4. Exploration,29
 pro4,professional,birdstrikes,compassql,bfs,4. Exploration,11
 pro5,professional,movies,dziban,dfs,4. Exploration,17
