@@ -22,7 +22,7 @@ posterior_draws_plot = function(data, col_to_color_by, facet_by_task, xLab, yLab
 }
 
 interaction_posterior_draws_plot = function(data, col_to_color_by){
-  plot <- data %>% ggplot(aes(x = dataset, fill = participant_group, alpha = 0.5)) +
+  plot <- data %>% ggplot(aes(x = dataset, fill = !!sym(col_to_color_by), alpha = 0.5)) +
     stat_eye(.width = c(.95, .5)) +
     theme_minimal() +
     facet_grid(task ~ condition)
