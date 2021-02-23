@@ -91,11 +91,7 @@ draw_data_interacted_var_sets$condition <- paste(draw_data_interacted_var_sets$o
 ```
 
 ```{r}
-plot_interacted_var_sets <- draw_data_interacted_var_sets %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
-      stat_eye(.width = c(.95, .5)) +
-      theme_minimal() +
-      facet_grid(task ~ condition)
-    
+plot_interacted_var_sets <- interaction_posterior_draws_plot(draw_data_interacted_var_sets, 'participant_group')
 plot_interacted_var_sets
 
 ggsave(
@@ -125,47 +121,23 @@ predictive_data_interacted_var_sets <- interacted_var_sets_data %>%
 
 Difference in search
 ```{r}
-diff_in_search_prediction <- predictive_data_interacted_var_sets %>%
-    group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = search) %>%
-    rename(diff = value)
-
-```
-```{r}
-diff_in_search_prediction_plot <- diff_in_search_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  interacted_var_sets (",
-        diff_in_search_prediction[1, 'search'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_search_prediction$task)))
-
-diff_in_search_prediction_plot
-
-search_differences <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "search", "",  "", NULL)
+search_differences <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "search", "Difference in Average Number Interacted Variable Set",  "Task", NULL)
 search_differences$plot
 ggsave(
       file = "search_differences.png",
-      plot = diff_in_search_prediction_plot,
-      path = paste0("../plots/comparisons/num_interacted_variable_set")
+      plot = search_differences$plot,
+      path = "../plots/comparisons/num_interacted_variable_set"
     )
 ```
-```{r}
-diff_in_search_prediction_plot_split_by_dataset <- diff_in_search_prediction_plot + aes(fill = dataset, alpha = 0.5)
 
-diff_in_search_prediction_plot_split_by_dataset
+```{r}
+search_difference_split_by_dataset <- search_differences$plot + aes(fill = dataset, alpha = 0.5)
+search_difference_split_by_dataset
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = diff_in_search_prediction_plot_split_by_dataset,
-      path = paste0("../plots/comparisons/num_interacted_variable_set")
+      plot = search_difference_split_by_dataset,
+      path = "../plots/comparisons/num_interacted_variable_set"
     )
 ```
 Difference in oracle
@@ -178,40 +150,23 @@ diff_in_oracle_prediction <- predictive_data_interacted_var_sets %>%
 
 ```
 ```{r}
-diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  interacted_var_sets (",
-        diff_in_oracle_prediction[1, 'oracle'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction$task)))
-
-diff_in_oracle_prediction_plot
-
-oracle_differences <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "oracle", "",  "", NULL)
+oracle_differences <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "oracle", "Difference in Average Number Interacted Variable Set",  "Task", NULL)
 oracle_differences$plot
 
 ggsave(
       file = "oracle_differences.png",
-      plot = diff_in_oracle_prediction_plot,
-      path = paste0("../plots/comparisons/num_interacted_variable_set")
+      plot = oracle_differences$plot,
+      path = "../plots/comparisons/num_interacted_variable_set"
     )
 ```
 ```{r}
-diff_in_oracle_prediction_plot_split_by_dataset <- diff_in_oracle_prediction_plot + aes(fill = dataset, alpha = 0.5)
-
-diff_in_oracle_prediction_plot_split_by_dataset
+oracle_differences_split_by_dataset <- oracle_differences$plot + aes(fill = dataset, alpha = 0.5)
+oracle_differences_split_by_dataset
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = diff_in_oracle_prediction_plot_split_by_dataset,
-      path = paste0("../plots/comparisons/num_interacted_variable_set")
+      plot = oracle_differences_split_by_dataset,
+      path = "../plots/comparisons/num_interacted_variable_set"
     )
 ```
 
@@ -219,46 +174,25 @@ Difference in groups
 ```{r}
 predictive_data_interacted_var_sets$participant_group<- gsub('student', 'Student', predictive_data_interacted_var_sets$participant_group)
 predictive_data_interacted_var_sets$participant_group<- gsub('professional', 'Professional', predictive_data_interacted_var_sets$participant_group)
-
-diff_in_group_prediction <- predictive_data_interacted_var_sets %>%
-    group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = participant_group) %>%
-    rename(diff = value)
-
 ```
 ```{r}
-diff_in_group_prediction_plot <- diff_in_group_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  interacted_var_sets (",
-        diff_in_group_prediction[1, 'participant_group'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task))) + scale_alpha(guide = 'none')
-
-diff_in_group_prediction_plot
+participant_group_differences <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "participant_group", "Difference in Average Number Interacted Variable Set",  "Task", NULL)
+participant_group_differences$plot
 
 ggsave(
       file = "group_differences.png",
-      plot = diff_in_group_prediction_plot,
+      plot = participant_group_differences$plot,
       path = paste0("../plots/comparisons/pariticpant_groups/num_interacted_variable_set")
     )
 ```
 ```{r}
-diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = dataset, alpha = 0.5)
-
-diff_in_group_prediction_plot_split_by_dataset
+group_differences_split_by_dataset <- participant_group_differences$plot + aes(fill = dataset, alpha = 0.5)
+group_differences_split_by_dataset
 
 ggsave(
       file = "group_differences_split_by_dataset.png",
-      plot = diff_in_group_prediction_plot_split_by_dataset,
-      path = paste0("../plots/comparisons/pariticpant_groups/num_interacted_variable_set")
+      plot = group_differences_split_by_dataset,
+      path = "../plots/comparisons/pariticpant_groups/num_interacted_variable_set"
     )
 ```
 
@@ -330,11 +264,7 @@ draw_data_interacted_visual_design$condition <- paste(draw_data_interacted_visua
 ```
 
 ```{r}
-plot_interacted_visual_design <- draw_data_interacted_visual_design %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
-      stat_eye(.width = c(.95, .5)) +
-      theme_minimal() +
-      facet_grid(task ~ condition)
-    
+plot_interacted_visual_design <- interaction_posterior_draws_plot(draw_data_interacted_visual_design, 'participant_group')
 plot_interacted_visual_design
 
 ggsave(
@@ -363,132 +293,72 @@ predictive_data_interacted_visual_design <- interacted_visual_design_data %>%
 ```
 Difference in search
 ```{r}
-diff_in_search_prediction <- predictive_data_interacted_visual_design %>%
-    group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = search) %>%
-    rename(diff = value)
-
-```
-```{r}
-diff_in_search_prediction_plot <- diff_in_search_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  interacted_visual_design (",
-        diff_in_search_prediction[1, 'search'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_search_prediction$task)))
-
-diff_in_search_prediction_plot
+search_differences <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "search", "Difference in Average Number Interacted Visual Design",  "Task", NULL)
+search_differences$plot
 
 ggsave(
       file = "search_differences.png",
-      plot = diff_in_search_prediction_plot,
+      plot = search_differences$plot,
       path = "../plots/comparisons/num_interacted_visual_design"
     )
 ```
 ```{r}
-diff_in_search_prediction_plot_split_by_dataset <- diff_in_search_prediction_plot + aes(fill = dataset, alpha = 0.5)
+search_differences_split_by_dataset <- search_differences$plot + aes(fill = dataset, alpha = 0.5)
 
-diff_in_search_prediction_plot_split_by_dataset
+search_differences_split_by_dataset
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = diff_in_search_prediction_plot_split_by_dataset,
+      plot = search_differences_split_by_dataset,
       path = "../plots/comparisons/num_interacted_visual_design"
     )
 ```
 Difference in oracle
 ```{r}
-diff_in_oracle_prediction <- predictive_data_interacted_visual_design %>%
-    group_by(oracle, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = oracle) %>%
-    rename(diff = value)
-
-```
-```{r}
-diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  interacted_visual_design (",
-        diff_in_oracle_prediction[1, 'oracle'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction$task)))
-
-diff_in_oracle_prediction_plot
+oracle_differences <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "oracle", "Difference in Average Number Interacted Visual Design",  "Task", NULL)
+oracle_differences$plot
 
 ggsave(
       file = "oracle_differences.png",
-      plot = diff_in_oracle_prediction_plot,
-      path = paste0("../plots/comparisons/num_interacted_visual_design")
+      plot = oracle_differences$plot,
+      path = "../plots/comparisons/num_interacted_visual_design"
     )
 ```
 ```{r}
-diff_in_oracle_prediction_plot_split_by_dataset <- diff_in_oracle_prediction_plot + aes(fill = dataset, alpha = 0.5)
+oracle_differences_split_by_dataset <- oracle_differences$plot + aes(fill = dataset, alpha = 0.5)
 
-diff_in_oracle_prediction_plot_split_by_dataset
+oracle_differences_split_by_dataset
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = diff_in_oracle_prediction_plot_split_by_dataset,
-      path = paste0("../plots/comparisons/num_interacted_visual_design")
+      plot = oracle_differences_split_by_dataset,
+      path = "../plots/comparisons/num_interacted_visual_design"
     )
 ```
 
 
 Difference in groups
 ```{r}
-diff_in_group_prediction <- predictive_data_interacted_visual_design %>%
-    group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = participant_group) %>%
-    rename(diff = value)
+predictive_data_interacted_visual_design$participant_group<- gsub('student', 'Student', predictive_data_interacted_visual_design$participant_group)
+predictive_data_interacted_visual_design$participant_group<- gsub('professional', 'Professional', predictive_data_interacted_visual_design$participant_group)
 
-```
-```{r}
-diff_in_group_prediction_plot <- diff_in_group_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  interacted_visual_design (",
-        diff_in_group_prediction[1, 'participant_group'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task)))
-
-diff_in_group_prediction_plot
+participant_group_differences <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "participant_group", "Difference in Average Number Interacted Visual Design",  "Task", NULL)
+participant_group_differences$plot
 
 ggsave(
       file = "group_differences.png",
-      plot = diff_in_group_prediction_plot,
+      plot = participant_group_differences$plot,
       path = "../plots/comparisons/pariticpant_groups/num_interacted_visual_design"
     )
 ```
 ```{r}
-diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = dataset, alpha = 0.5)
+group_differences_split_by_dataset <- participant_group_differences$plot + aes(fill = dataset, alpha = 0.5)
 
-diff_in_group_prediction_plot_split_by_dataset
+group_differences_split_by_dataset
 
 ggsave(
       file = "group_differences_split_by_dataset.png",
-      plot = diff_in_group_prediction_plot_split_by_dataset,
+      plot = group_differences_split_by_dataset,
       path = "../plots/comparisons/pariticpant_groups/num_interacted_visual_design"
     )
 ```
@@ -560,11 +430,7 @@ draw_data_exposed_variable_set$condition <- paste(draw_data_exposed_variable_set
 ```
 
 ```{r}
-plot_exposed_variable_set <- draw_data_exposed_variable_set %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
-      stat_eye(.width = c(.95, .5)) +
-      theme_minimal() +
-      facet_grid(task ~ condition)
-    
+plot_exposed_variable_set <- interaction_posterior_draws_plot(draw_data_exposed_variable_set, 'participant_group')
 plot_exposed_variable_set
 
 ggsave(
@@ -593,147 +459,81 @@ predictive_data_exposed_variable_set <- exposed_variable_set_data %>%
 ```
 Difference in search
 ```{r}
-diff_in_search_prediction <- predictive_data_exposed_variable_set %>%
-    group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = search) %>%
-    rename(diff = value)
-
-```
-```{r}
-diff_in_search_prediction_plot <- diff_in_search_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  exposed_variable_set (",
-        diff_in_search_prediction[1, 'search'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_search_prediction$task)))
-
-diff_in_search_prediction_plot
+search_differences <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "search", "Difference in Average Number Exposed Variable Set",  "Task", NULL)
+search_differences$plot
 
 ggsave(
       file = "search_differences.png",
-      plot = diff_in_search_prediction_plot,
+      plot = search_differences$plot,
       path = "../plots/comparisons/num_exposed_variable_set"
     )
 ```
-```{r}
-diff_in_search_prediction_plot_split_by_dataset <- diff_in_search_prediction_plot + aes(fill = dataset, alpha = 0.5)
 
-diff_in_search_prediction_plot_split_by_dataset
+```{r}
+search_differences_split_by_dataset <- search_differences$plot + aes(fill = dataset, alpha = 0.5)
+
+search_differences_split_by_dataset
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = diff_in_search_prediction_plot_split_by_dataset,
+      plot = search_differences_split_by_dataset,
       path = "../plots/comparisons/num_exposed_variable_set"
     )
 ```
 Difference in oracle
 ```{r}
-diff_in_oracle_prediction <- predictive_data_exposed_variable_set %>%
-    group_by(oracle, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = oracle) %>%
-    rename(diff = value)
-
-```
-```{r}
-diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  exposed_variable_set (",
-        diff_in_oracle_prediction[1, 'oracle'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction$task)))
-
-diff_in_oracle_prediction_plot
+oracle_differences <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "oracle", "Difference in Average Number Exposed Variable Set",  "Task", NULL)
+oracle_differences$plot
 
 ggsave(
       file = "oracle_differences.png",
-      plot = diff_in_oracle_prediction_plot,
+      plot = oracle_differences$plot,
       path = paste0("../plots/comparisons/num_exposed_variable_set")
     )
 ```
 ```{r}
-diff_in_oracle_prediction_plot_split_by_dataset <- diff_in_oracle_prediction_plot + aes(fill = dataset, alpha = 0.5)
+oracle_differences_split_by_dataset <- oracle_differences$plot + aes(fill = dataset, alpha = 0.5)
 
-diff_in_oracle_prediction_plot_split_by_dataset
+oracle_differences_split_by_dataset
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = diff_in_oracle_prediction_plot_split_by_dataset,
+      plot = oracle_differences_split_by_dataset,
       path = "../plots/comparisons/num_exposed_variable_set"
     )
 ```
 Difference in groups
 ```{r}
-
 predictive_data_exposed_variable_set$participant_group<- gsub('student', 'Student', predictive_data_exposed_variable_set$participant_group)
 predictive_data_exposed_variable_set$participant_group<- gsub('professional', 'Professional', predictive_data_exposed_variable_set$participant_group)
 predictive_data_exposed_variable_set$dataset<- gsub('birdstrikes', 'Birdstrikes', predictive_data_exposed_variable_set$dataset)
 predictive_data_exposed_variable_set$dataset<- gsub('movies', 'Movies', predictive_data_exposed_variable_set$dataset)
 predictive_data_exposed_variable_set$Dataset<- predictive_data_exposed_variable_set$dataset
-
-diff_in_group_prediction <- predictive_data_exposed_variable_set %>%
-    group_by(search, task, Dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = participant_group) %>%
-    rename(diff = value)
-
 ```
+
 ```{r}
-
-
-diff_in_group_prediction_plot <- diff_in_group_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  Exposed Variable Set (",
-        diff_in_group_prediction[1, 'participant_group'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task)))
-
-diff_in_group_prediction_plot
+participant_group_differences <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "participant_group", "Difference in Average Number Exposed Variable Set",  "Task", NULL)
+participant_group_differences$plot
 
 ggsave(
       file = "group_differences.png",
-      plot = diff_in_group_prediction_plot,
+      plot = participant_group_differences$plot,
       path = "../plots/comparisons/pariticpant_groups/num_exposed_variable_set"
     )
 ```
 ```{r}
-diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = Dataset, alpha = 0.5) + scale_alpha(guide = 'none')
-
-diff_in_group_prediction_plot_split_by_dataset
+group_differences_split_by_dataset <- participant_group_differences$plot + aes(fill = dataset, alpha = 0.5) + scale_alpha(guide = 'none')
+group_differences_split_by_dataset
 
 ggsave(
       file = "group_differences_split_by_dataset.png",
-      plot = diff_in_group_prediction_plot_split_by_dataset,
+      plot = group_differences_split_by_dataset,
       path = "../plots/comparisons/pariticpant_groups/num_exposed_variable_set"
     )
 ```
 
 
 ## Number of Exposed Visual Designs
-
-
 Read in and format data
 ```{r}
 exposed_visual_design_data <- read.csv("split_by_participant_groups/num_of_exposed_visual_design.csv")
@@ -799,11 +599,7 @@ draw_data_exposed_visual_design$condition <- paste(draw_data_exposed_visual_desi
 ```
 
 ```{r}
-plot_exposed_visual_design <- draw_data_exposed_visual_design %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
-      stat_eye(.width = c(.95, .5)) +
-      theme_minimal() +
-      facet_grid(task ~ condition)
-    
+plot_exposed_visual_design <- interaction_posterior_draws_plot(draw_data_exposed_visual_design, 'participant_group')
 plot_exposed_visual_design
 
 ggsave(
@@ -832,130 +628,66 @@ predictive_data_exposed_visual_design <- exposed_visual_design_data %>%
 ```
 Difference in search
 ```{r}
-diff_in_search_prediction <- predictive_data_exposed_visual_design %>%
-    group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = search) %>%
-    rename(diff = value)
-
-```
-```{r}
-diff_in_search_prediction_plot <- diff_in_search_prediction %>%
-    ggplot(aes(x = diff, y = participant_group)) +
-    xlab(
-      paste0(
-        "Difference in average exposed_visual_design (",
-        diff_in_search_prediction[1, 'task'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() 
-
-diff_in_search_prediction_plot
+search_differences <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "search", "Difference in Average Number Exposed Visual Design",  "Task", NULL)
+search_differences$plot
 
 ggsave(
       file = "search_differences.png",
-      plot = diff_in_search_prediction_plot,
+      plot = search_differences$plot,
       path = "../plots/comparisons/num_exposed_visual_design"
     )
 ```
 ```{r}
-diff_in_search_prediction_plot_split_by_dataset <- diff_in_search_prediction_plot + aes(fill = dataset, alpha = 0.5)
-
-diff_in_search_prediction_plot_split_by_dataset
+search_differences_split_by_dataset <- search_differences$plot + aes(fill = dataset, alpha = 0.5)
+search_differences_split_by_dataset
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = diff_in_search_prediction_plot_split_by_dataset,
+      plot = search_differences_split_by_dataset,
       path = "../plots/comparisons/num_exposed_visual_design"
     )
 ```
 Difference in oracle
 ```{r}
-diff_in_oracle_prediction <- predictive_data_exposed_visual_design %>%
-    group_by(oracle, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = oracle) %>%
-    rename(diff = value)
-
-```
-```{r}
-diff_in_oracle_prediction_plot <- diff_in_oracle_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  exposed_visual_design (",
-        diff_in_oracle_prediction[1, 'oracle'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_oracle_prediction$task)))
-
-diff_in_oracle_prediction_plot
+oracle_differences <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "oracle", "Difference in Average Number Exposed Visual Design",  "Task", NULL)
+oracle_differences$plot
 
 ggsave(
       file = "oracle_differences.png",
-      plot = diff_in_oracle_prediction_plot,
+      plot = oracle_differences$plot,
       path = paste0("../plots/comparisons/num_exposed_visual_design")
     )
 ```
 ```{r}
-diff_in_oracle_prediction_plot_split_by_dataset <- diff_in_oracle_prediction_plot + aes(fill = dataset, alpha = 0.5)
+oracle_differences_split_by_dataset <- oracle_differences$plot + aes(fill = dataset, alpha = 0.5)
 
-diff_in_oracle_prediction_plot_split_by_dataset
+oracle_differences_split_by_dataset
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = diff_in_oracle_prediction_plot_split_by_dataset,
-      path = paste0("../plots/comparisons/num_exposed_visual_design")
+      plot = oracle_differences_split_by_dataset,
+      path = "../plots/comparisons/num_exposed_visual_design"
     )
 ```
 Difference in groups
 ```{r}
-diff_in_group_prediction <- predictive_data_exposed_visual_design %>%
-    group_by(search, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = participant_group) %>%
-    rename(diff = value)
-
-```
-```{r}
-diff_in_group_prediction_plot <- diff_in_group_prediction %>%
-    ggplot(aes(x = diff, y = task)) +
-    xlab(
-      paste0(
-        "Difference in average  exposed_visual_design (",
-        diff_in_group_prediction[1, 'participant_group'],
-        ")"
-      )
-    ) +
-    ylab("Task") +
-    stat_halfeye(.width = c(.95, .5)) +
-    geom_vline(xintercept = 0, linetype = "longdash") +
-    theme_minimal() + scale_y_discrete(limits = rev(levels(diff_in_group_prediction$task)))
-
-diff_in_group_prediction_plot
+participant_group_differences <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "participant_group", "Difference in Average Number Exposed Visual Design",  "Task", NULL)
+participant_group_differences$plot
 
 ggsave(
       file = "group_differences.png",
-      plot = diff_in_group_prediction_plot,
-      path = paste0("../plots/comparisons/pariticpant_groups/num_exposed_visual_design")
+      plot = participant_group_differences$plot,
+      path = "../plots/comparisons/pariticpant_groups/num_exposed_visual_design"
     )
 ```
 ```{r}
-diff_in_group_prediction_plot_split_by_dataset <- diff_in_group_prediction_plot + aes(fill = dataset, alpha = 0.5)
+group_differences_split_by_dataset <- participant_group_differences$plot + aes(fill = dataset, alpha = 0.5)
 
-diff_in_group_prediction_plot_split_by_dataset
+group_differences_split_by_dataset
 
 ggsave(
       file = "group_differences_split_by_dataset.png",
-      plot = diff_in_group_prediction_plot_split_by_dataset,
+      plot = group_differences_split_by_dataset,
       path = "../plots/comparisons/pariticpant_groups/num_exposed_visual_design"
     )
 ```
