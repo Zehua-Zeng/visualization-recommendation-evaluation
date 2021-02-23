@@ -21,11 +21,11 @@ posterior_draws_plot = function(data, col_to_color_by, facet_by_task, xLab, yLab
   return(plot)
 }
 
-interaction_posterior_draws_plot = function(data, col_to_color_by, xLab, yLab){
-  plot <- data %>% ggplot(aes(x = dataset, y = .value, fill = participant_group, alpha = 0.5)) +
+interaction_posterior_draws_plot = function(data, col_to_color_by){
+  plot <- data %>% ggplot(aes(x = dataset, fill = participant_group, alpha = 0.5)) +
     stat_eye(.width = c(.95, .5)) +
     theme_minimal() +
-    facet_grid(task ~ condition) + labs(x = xLab, y = yLab)
+    facet_grid(task ~ condition)
 
   if(".value" %in% colnames(data)){
     plot <- plot + aes(y=.value)

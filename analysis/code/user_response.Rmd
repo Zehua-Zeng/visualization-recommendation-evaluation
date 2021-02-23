@@ -70,7 +70,7 @@ seed = 12
 
 ```{r}
 models$confidence_udata <- brm(
-    formula = bf(confidence.udata ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
+    formula = bf(confidence.udata ~ oracle * search + dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
     prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -179,7 +179,7 @@ participant_group_differences$confidence_udata$plot
 
 ```{r}
 models$confidence_ans <- brm(
-    formula = bf(confidence.ans ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
+    formula = bf(confidence.ans ~ oracle * search + dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
     prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -286,7 +286,7 @@ participant_group_differences$confidence_ans$plot
 ```{r}
 filename = "efficiency"
 models$efficiency <- brm(
-    formula = bf(efficiency ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
+    formula = bf(efficiency ~ oracle * search + dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -393,7 +393,7 @@ participant_group_differences$efficiency$plot
 
 ```{r}
 models$ease_of_use <- brm(
-    formula = bf(ease.of.use ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
+    formula = bf(ease.of.use ~ oracle * search + dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -500,7 +500,7 @@ participant_group_differences$ease_of_use$plot
 
 ```{r}
 models$utility <- brm(
-    formula = bf(utility ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
+    formula = bf(utility ~ oracle * search + dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,
@@ -608,7 +608,7 @@ participant_group_differences$utility$plot
 
 ```{r}
 models$overall <- brm(
-    formula = bf(overall ~ oracle * search * dataset + task + participant_group + (1 | participant_id)),
+    formula = bf(overall ~ oracle * search + dataset + task + participant_group + (1 | participant_id)),
     family = cumulative("probit"),
    prior = prior(normal(0.26, 1.26), class = Intercept),
     chains = 2,

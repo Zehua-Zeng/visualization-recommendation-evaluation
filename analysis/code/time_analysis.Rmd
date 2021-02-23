@@ -59,7 +59,7 @@ The prior was derived from pilot studies.  It describes the distribution of time
 ```{r}
 model <- brm(
     formula = bf(
-    completion_time ~ oracle * search * dataset + task + participant_group + (1 | participant_id)
+    completion_time ~ oracle * search + dataset + task + participant_group + (1 | participant_id)
   ),
     prior = prior(normal(360.48, 224.40), class = "Intercept"),
     chains = 2,
@@ -67,10 +67,11 @@ model <- brm(
     iter = 2500,
     warmup = 1000,
     data = time_data,
-    file = "models/time",
     family = lognormal(),
+    file="models/time",
     seed = seed
-  )
+  )   
+
 ```
 
 ### Diagnostics + Model Evaluation
@@ -81,7 +82,7 @@ summary(model)
 
 Trace plots help us check whether there is evidence of non-convergence for model.
 ```{r}
-plot(model)
+# plot(model)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
@@ -137,9 +138,12 @@ plot_data$oracle<- gsub('compassql', 'CompassQL', plot_data$oracle)
 plot_data$oracle<- gsub('dziban', 'Dziban', plot_data$oracle)
 plot_data$search<- gsub('bfs', 'BFS', plot_data$search)
 plot_data$search<- gsub('dfs', 'DFS', plot_data$search)
+plot_data$dataset<- gsub('birdstrikes', 'Birdstrikes', plot_data$dataset)
+plot_data$dataset<- gsub('movies', 'Movies', plot_data$dataset)
+plot_data$Dataset<- plot_data$dataset
 
-plot_data$condition <- paste(plot_data$oracle, plot_data$search, sep=" + ")
-draw_plot <- posterior_draws_plot(plot_data, "dataset", TRUE, "Predicted Mean Completion Time (seconds)", "Oracle/Search Combination") + theme(axis.text.y=element_text(size=12))
+plot_data$condition <- paste(plot_data$oracle, plot_data$search, sep='\n')
+draw_plot <- posterior_draws_plot(plot_data, "Dataset", TRUE, "Predicted Mean Completion Time (seconds)", "Oracle/Search Combination") + theme(axis.text.y=element_text(size=12) )+ scale_alpha(guide = 'none')  + xlab("Predicted Mean Completion Time (seconds)")
 
 draw_plot
 ```
