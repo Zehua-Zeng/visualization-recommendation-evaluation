@@ -169,7 +169,7 @@ write.csv(search_differences$intervals, "../plot_data/comparisons/accuracy/searc
 
 Differences in oracle:
 ``` {r}
-oracle_differences <- expected_diff_in_mean_plot(predictive_data, "oracle", "Difference in Mean Accuracy (p_correct)",  "Task", "dataset")
+oracle_differences <- expected_diff_in_mean_plot(predictive_data, "oracle", "Difference in Mean Accuracy (p_correct)",  "Task", "dataset") 
 
 oracle_differences$plot
   
