@@ -81,11 +81,21 @@ expected_diff_in_mean_plot = function(draw_data, col_to_compare_by, xlab, ylab, 
   } else {
     diff_col = ".prediction"
   }
+  differences <- data.frame()
+  if(!is.null(color_by)){
+      differences <- draw_data %>%
+      group_by(!!sym(col_to_compare_by), task, !!sym(color_by), .draw) %>%
+      summarize(difference = weighted.mean(as.numeric(!!sym(diff_col)))) %>%
+      compare_levels(difference, by = !!sym(col_to_compare_by))
+  }
+  else{
+      differences <- draw_data %>%
+      group_by(!!sym(col_to_compare_by), task, .draw) %>%
+      summarize(difference = weighted.mean(as.numeric(!!sym(diff_col)))) %>%
+      compare_levels(difference, by = !!sym(col_to_compare_by))
+  }
 
-  differences <- draw_data %>%
-    group_by(!!sym(col_to_compare_by), task, dataset, .draw) %>%
-    summarize(difference = weighted.mean(as.numeric(!!sym(diff_col)))) %>%
-    compare_levels(difference, by = !!sym(col_to_compare_by))
+  differences$task = as.factor(differences$task)
 
   if(col_to_compare_by=="search" || col_to_compare_by == "alg"){
     split = strsplit(differences[[col_to_compare_by]][1], " - ")
@@ -102,7 +112,6 @@ expected_diff_in_mean_plot = function(draw_data, col_to_compare_by, xlab, ylab, 
     stat_halfeye(.width = c(.95, .5)) +
     geom_vline(xintercept = 0, linetype = "longdash") +
     theme_minimal() + scale_y_discrete(limits = rev(levels(differences$task)))
-
 
   if(!is.null(color_by)){
     differences_plot <- differences_plot + aes(fill=!!sym(color_by), alpha = 0.5)

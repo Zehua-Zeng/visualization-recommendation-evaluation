@@ -97,7 +97,7 @@ plot_interacted_var_sets
 ggsave(
       file = paste("interacted_var_sets_split_group.png", sep = ""),
       plot = plot_interacted_var_sets,
-      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_variable_set")
+      path = paste0("../plots/posterior_draws/num_interacted_variable_set")
     )
 ```
 
@@ -128,17 +128,20 @@ ggsave(
       plot = search_differences$plot,
       path = "../plots/comparisons/num_interacted_variable_set"
     )
+
+write.csv(search_differences$intervals, "../plot_data/comparisons/num_interacted_variable_set/search_differences.csv", row.names = FALSE)
 ```
 
 ```{r}
-search_difference_split_by_dataset <- search_differences$plot + aes(fill = dataset, alpha = 0.5)
-search_difference_split_by_dataset
+search_difference_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "search", "Difference in Average Number Interacted Variable Set",  "Task", "dataset")
+search_difference_split_by_dataset$plot
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = search_difference_split_by_dataset,
+      plot = search_difference_split_by_dataset$plot,
       path = "../plots/comparisons/num_interacted_variable_set"
     )
+write.csv(search_difference_split_by_dataset$intervals, "../plot_data/comparisons/num_interacted_variable_set/search_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 Difference in oracle
 ```{r}
@@ -158,16 +161,18 @@ ggsave(
       plot = oracle_differences$plot,
       path = "../plots/comparisons/num_interacted_variable_set"
     )
+write.csv(oracle_differences$intervals, "../plot_data/comparisons/num_interacted_variable_set/oracle_differences.csv", row.names = FALSE)
 ```
 ```{r}
-oracle_differences_split_by_dataset <- oracle_differences$plot + aes(fill = dataset, alpha = 0.5)
-oracle_differences_split_by_dataset
+oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "oracle", "Difference in Average Number Interacted Variable Set","Task", "dataset")
+oracle_differences_split_by_dataset$plot
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = oracle_differences_split_by_dataset,
+      plot = oracle_differences_split_by_dataset$plot,
       path = "../plots/comparisons/num_interacted_variable_set"
     )
+write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_interacted_variable_set/oracle_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 
 Difference in groups
@@ -182,18 +187,20 @@ participant_group_differences$plot
 ggsave(
       file = "group_differences.png",
       plot = participant_group_differences$plot,
-      path = paste0("../plots/comparisons/pariticpant_groups/num_interacted_variable_set")
+      path = "../plots/comparisons/num_interacted_variable_set"
     )
+write.csv(participant_group_differences$intervals, "../plot_data/comparisons/num_interacted_variable_set/group_differences.csv", row.names = FALSE)
 ```
 ```{r}
-group_differences_split_by_dataset <- participant_group_differences$plot + aes(fill = dataset, alpha = 0.5)
-group_differences_split_by_dataset
+group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "participant_group", "Difference in Average Number Interacted Variable Set",  "Task", NULL)
+group_differences_split_by_dataset$plot
 
 ggsave(
       file = "group_differences_split_by_dataset.png",
-      plot = group_differences_split_by_dataset,
-      path = "../plots/comparisons/pariticpant_groups/num_interacted_variable_set"
+      plot = group_differences_split_by_dataset$plot,
+      path = "../plots/comparisons/num_interacted_variable_set"
     )
+write.csv(group_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_interacted_variable_set/group_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 
 ## Number of Interacted Visual Designs
@@ -268,9 +275,9 @@ plot_interacted_visual_design <- interaction_posterior_draws_plot(draw_data_inte
 plot_interacted_visual_design
 
 ggsave(
-      file = paste("interacted_visual_design_split_group.png", sep = ""),
+      file = "interacted_visual_design_split_group.png",
       plot = plot_interacted_visual_design,
-      path = paste0("../plots/posterior_draws/pariticpant_groups/num_interacted_visual_design")
+      path = paste0("../plots/posterior_draws/num_interacted_visual_design")
     )
 ```
 
@@ -301,17 +308,22 @@ ggsave(
       plot = search_differences$plot,
       path = "../plots/comparisons/num_interacted_visual_design"
     )
+
+
+write.csv(search_differences$intervals, "../plot_data/comparisons/num_interacted_visual_design/search_differences.csv", row.names = FALSE)
 ```
 ```{r}
-search_differences_split_by_dataset <- search_differences$plot + aes(fill = dataset, alpha = 0.5)
+search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "search", "Difference in Average Number Interacted Visual Design",  "Task", "dataset")
 
-search_differences_split_by_dataset
+search_differences_split_by_dataset$plot
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = search_differences_split_by_dataset,
+      plot = search_differences_split_by_dataset$plot,
       path = "../plots/comparisons/num_interacted_visual_design"
     )
+
+write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_interacted_visual_design/search_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 Difference in oracle
 ```{r}
@@ -323,17 +335,21 @@ ggsave(
       plot = oracle_differences$plot,
       path = "../plots/comparisons/num_interacted_visual_design"
     )
+
+write.csv(oracle_differences$intervals, "../plot_data/comparisons/num_interacted_visual_design/oracle_differences.csv", row.names = FALSE)
 ```
 ```{r}
-oracle_differences_split_by_dataset <- oracle_differences$plot + aes(fill = dataset, alpha = 0.5)
+oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "oracle", "Difference in Average Number Interacted Visual Design",  "Task", "dataset")
 
-oracle_differences_split_by_dataset
+oracle_differences_split_by_dataset$plot
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = oracle_differences_split_by_dataset,
+      plot = oracle_differences_split_by_dataset$plot,
       path = "../plots/comparisons/num_interacted_visual_design"
     )
+
+write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_interacted_visual_design/oracle_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 
 
@@ -348,19 +364,23 @@ participant_group_differences$plot
 ggsave(
       file = "group_differences.png",
       plot = participant_group_differences$plot,
-      path = "../plots/comparisons/pariticpant_groups/num_interacted_visual_design"
+      path = "../plots/comparisons/num_interacted_visual_design"
     )
+
+
+write.csv(participant_group_differences$intervals, "../plot_data/comparisons/num_interacted_visual_design/group_differences.csv", row.names = FALSE)
 ```
 ```{r}
-group_differences_split_by_dataset <- participant_group_differences$plot + aes(fill = dataset, alpha = 0.5)
+group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "participant_group", "Difference in Average Number Interacted Visual Design",  "Task", "dataset")
 
-group_differences_split_by_dataset
+group_differences_split_by_dataset$plot
 
 ggsave(
       file = "group_differences_split_by_dataset.png",
-      plot = group_differences_split_by_dataset,
-      path = "../plots/comparisons/pariticpant_groups/num_interacted_visual_design"
+      plot = group_differences_split_by_dataset$plot,
+      path = "../plots/comparisons/num_interacted_visual_design"
     )
+write.csv(group_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_interacted_visual_design/group_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 
 ## Number of Exposed Variable Sets
@@ -434,9 +454,9 @@ plot_exposed_variable_set <- interaction_posterior_draws_plot(draw_data_exposed_
 plot_exposed_variable_set
 
 ggsave(
-      file = paste("exposed_variable_set_split_group.png", sep = ""),
+      file = "exposed_variable_set_split_group.png",
       plot = plot_exposed_variable_set,
-      path = "../plots/posterior_draws/pariticpant_groups/num_exposed_variable_set"
+      path = "../plots/posterior_draws/num_exposed_variable_set"
     )
 ```
 
@@ -467,18 +487,20 @@ ggsave(
       plot = search_differences$plot,
       path = "../plots/comparisons/num_exposed_variable_set"
     )
+write.csv(search_differences$intervals, "../plot_data/comparisons/num_exposed_variable_set/search_differences.csv", row.names = FALSE)
 ```
 
 ```{r}
-search_differences_split_by_dataset <- search_differences$plot + aes(fill = dataset, alpha = 0.5)
+search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "search", "Difference in Average Number Exposed Variable Set",  "Task", "dataset")
 
-search_differences_split_by_dataset
+search_differences_split_by_dataset$plot
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = search_differences_split_by_dataset,
+      plot = search_differences_split_by_dataset$plot,
       path = "../plots/comparisons/num_exposed_variable_set"
     )
+write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_variable_set/search_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 Difference in oracle
 ```{r}
@@ -490,17 +512,19 @@ ggsave(
       plot = oracle_differences$plot,
       path = paste0("../plots/comparisons/num_exposed_variable_set")
     )
+write.csv(oracle_differences$intervals, "../plot_data/comparisons/num_exposed_variable_set/oracle_differences.csv", row.names = FALSE)
 ```
 ```{r}
-oracle_differences_split_by_dataset <- oracle_differences$plot + aes(fill = dataset, alpha = 0.5)
+oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "oracle", "Difference in Average Number Exposed Variable Set",  "Task", "dataset")
 
-oracle_differences_split_by_dataset
+oracle_differences_split_by_dataset$plot
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = oracle_differences_split_by_dataset,
+      plot = oracle_differences_split_by_dataset$plot,
       path = "../plots/comparisons/num_exposed_variable_set"
     )
+write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_variable_set/oracle_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 Difference in groups
 ```{r}
@@ -518,18 +542,21 @@ participant_group_differences$plot
 ggsave(
       file = "group_differences.png",
       plot = participant_group_differences$plot,
-      path = "../plots/comparisons/pariticpant_groups/num_exposed_variable_set"
+      path = "../plots/comparisons/num_exposed_variable_set"
     )
+write.csv(participant_group_differences$intervals, "../plot_data/comparisons/num_exposed_variable_set/group_differences.csv", row.names = FALSE)
 ```
 ```{r}
-group_differences_split_by_dataset <- participant_group_differences$plot + aes(fill = dataset, alpha = 0.5) + scale_alpha(guide = 'none')
-group_differences_split_by_dataset
+group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "participant_group", "Difference in Average Number Exposed Variable Set",  "Task", "dataset")
+group_differences_split_by_dataset$plot
 
 ggsave(
       file = "group_differences_split_by_dataset.png",
-      plot = group_differences_split_by_dataset,
-      path = "../plots/comparisons/pariticpant_groups/num_exposed_variable_set"
+      plot = group_differences_split_by_dataset$plot,
+      path = "../plots/comparisons/num_exposed_variable_set"
     )
+
+write.csv(group_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_variable_set/group_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 
 
@@ -605,7 +632,7 @@ plot_exposed_visual_design
 ggsave(
       file = paste("exposed_visual_design_split_group.png", sep = ""),
       plot = plot_exposed_visual_design,
-      path = "../plots/posterior_draws/pariticpant_groups/num_exposed_visual_design"
+      path = "../plots/posterior_draws/num_exposed_visual_design"
     )
 ```
 
@@ -636,16 +663,18 @@ ggsave(
       plot = search_differences$plot,
       path = "../plots/comparisons/num_exposed_visual_design"
     )
+write.csv(search_differences$intervals, "../plot_data/comparisons/num_exposed_visual_design/search_differences.csv", row.names = FALSE)
 ```
 ```{r}
-search_differences_split_by_dataset <- search_differences$plot + aes(fill = dataset, alpha = 0.5)
-search_differences_split_by_dataset
+search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "search", "Difference in Average Number Exposed Visual Design",  "Task", "dataset")
+search_differences_split_by_dataset$plot
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = search_differences_split_by_dataset,
+      plot = search_differences_split_by_dataset$plot,
       path = "../plots/comparisons/num_exposed_visual_design"
     )
+write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_visual_design/search_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 Difference in oracle
 ```{r}
@@ -657,17 +686,19 @@ ggsave(
       plot = oracle_differences$plot,
       path = paste0("../plots/comparisons/num_exposed_visual_design")
     )
+write.csv(oracle_differences$intervals, "../plot_data/comparisons/num_exposed_visual_design/oracle_differences.csv", row.names = FALSE)
 ```
 ```{r}
-oracle_differences_split_by_dataset <- oracle_differences$plot + aes(fill = dataset, alpha = 0.5)
+oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "oracle", "Difference in Average Number Exposed Visual Design",  "Task", "dataset")
 
-oracle_differences_split_by_dataset
+oracle_differences_split_by_dataset$plot
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = oracle_differences_split_by_dataset,
+      plot = oracle_differences_split_by_dataset$plot,
       path = "../plots/comparisons/num_exposed_visual_design"
     )
+write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_visual_design/oracle_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 Difference in groups
 ```{r}
@@ -677,19 +708,21 @@ participant_group_differences$plot
 ggsave(
       file = "group_differences.png",
       plot = participant_group_differences$plot,
-      path = "../plots/comparisons/pariticpant_groups/num_exposed_visual_design"
+      path = "../plots/comparisons/num_exposed_visual_design"
     )
+write.csv(participant_group_differences$intervals, "../plot_data/comparisons/num_exposed_visual_design/participant_group_differences.csv", row.names = FALSE)
 ```
 ```{r}
-group_differences_split_by_dataset <- participant_group_differences$plot + aes(fill = dataset, alpha = 0.5)
+group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "participant_group", "Difference in Average Number Exposed Visual Design",  "Task", "dataset")
 
-group_differences_split_by_dataset
+group_differences_split_by_dataset$plot
 
 ggsave(
       file = "group_differences_split_by_dataset.png",
-      plot = group_differences_split_by_dataset,
-      path = "../plots/comparisons/pariticpant_groups/num_exposed_visual_design"
+      plot = group_differences_split_by_dataset$plot,
+      path = "../plots/comparisons/num_exposed_visual_design"
     )
+write.csv(group_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_visual_design/group_differences_split_by_dataset.csv", row.names = FALSE)
 ```
 ```{r}
 draw_data_exposed_variable_set$category <- "exposed"
@@ -747,6 +780,7 @@ plot_exposed <- data_conbined %>% ggplot(aes(x = oracle, y = .value, fill = type
       stat_eye(.width = c(.95, .5)) +
       theme_minimal() +
       facet_grid(task ~ search) + 
+      scale_y_continuous(breaks = seq(0, 180, by = 30), limits=c(0,180))+
       ylab("Average Number of Elements") + xlab("Oracle/Search Combination") + scale_alpha(guide = 'none')
     
 plot_exposed
@@ -756,7 +790,24 @@ ggsave(
       plot = plot_exposed,
       path = "../plots/posterior_draws"
     )
+
+plot_exposed_search_only <- data_conbined %>% ggplot(aes(x = search, y = .value, fill = type, alpha = 0.5)) +
+      stat_eye(.width = c(.95, .5)) +
+      theme_minimal() +
+      facet_grid(task ~ .) + 
+      scale_y_continuous(breaks = seq(0, 180, by = 30), limits=c(0,180))+
+      ylab("Average Number of Elements") + xlab("Oracle/Search Combination") + scale_alpha(guide = 'none')
+    
+plot_exposed_search_only
+
+ggsave(
+      file = "exposed_search_only.png",
+      plot = plot_exposed_search_only,
+      path = "../plots/posterior_draws"
+    )
+
 ```
+
 
 ```{r}
 

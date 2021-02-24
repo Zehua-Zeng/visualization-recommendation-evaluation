@@ -1,0 +1,5 @@
+"participant_group","task","difference",".lower",".upper",".width",".point",".interval"
+"student - professional","3. Prediction",4.81105722993159,-6.76949751518811,16.5455785396623,0.95,"mean","qi"
+"student - professional","4. Exploration",5.79682789360624,-8.12487422605657,19.9879365716803,0.95,"mean","qi"
+"student - professional","3. Prediction",4.81105722993159,0.902053173136643,8.67493091447469,0.5,"mean","qi"
+"student - professional","4. Exploration",5.79682789360624,1.05772824577076,10.502627529645,0.5,"mean","qi"
