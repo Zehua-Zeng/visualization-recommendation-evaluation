@@ -25,7 +25,7 @@ source('helper_functions.R')
 
 In our experiment, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the user's accuracy on two tasks: Find Extremum and Retrieve Value.
 
-Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict a user's chance of answering the Find Extremum task and the Retrieve Value tasks correctly.  In addition, we would like to know if the choice of search algorithm and oracle has any meaningful impact on a user's accuracy for these two tasks.
+Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict a user's chance of answering the Find Extremum task and the Retrieve Value tasks correctly.  In addition, we would like to know if the choice of search algorithm and oracle has any meaningful impact on a user's accuracy for these two tasks, and if the participant's group (student or professional) is associated with a difference in performance.
 
 ### Read in and clean data
 ```{r}
@@ -45,7 +45,7 @@ seed = 12
 ```
 
 ## Building a Model for Accuracy Analysis
-We derived a very weakly informative prior from our pilot studies
+We derived a very weakly informative prior on accuracy from our pilot studies.
 ```{r}
 model <- brm(
   bf(
@@ -68,6 +68,18 @@ model <- brm(
 ```
 
 ### Diagnostics + Model Evaluation
+We can check our priors to make sure the model looks reasonable by pulling from our prior predictive distribution.
+
+```{r}
+accuracy_data %>%
+  select(-accuracy) %>%
+  add_predicted_draws(model, prediction = "accuracy", seed = seed) %>%
+  ggplot(aes(x = accuracy)) +
+  geom_density(fill = "gray", size = 0) +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(subtitle = "Prior predictive distribution for task accuracy") +
+  theme(panel.grid = element_blank())
+```
 
 In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ``` {r}
@@ -76,7 +88,7 @@ summary(model)
 
 Trace plots help us check whether there is evidence of non-convergence for model.
 ```{r}
-#  plot(model)
+plot(model)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
@@ -87,11 +99,13 @@ pairs(
             "b_datasetmovies",
            "b_oracledziban",
            "b_searchdfs",
-           "b_task2.RetrieveValue"),
+           "b_task2.RetrieveValue",
+           "b_participant_groupstudent"),
   fixed = TRUE
 )
 ```
 
+A quick check of our posterior using posterior predictive checks.
 ```{r}
 pp_check(model, type = "dens_overlay", nsamples = 100)
 ```
@@ -121,7 +135,7 @@ plot_data$Dataset<- plot_data$dataset
 
 plot_data$condition <- paste(plot_data$oracle, plot_data$search, sep="\n")
 
-draw_plot <- posterior_draws_plot(plot_data, "Dataset", TRUE, "Predicted Average Accuracy (p_correct)", "Oracle/Search Combination") + scale_alpha(guide = 'none') +  coord_cartesian(xlim = c(0.4, 1))
+draw_plot <- posterior_draws_plot(plot_data, "Dataset", TRUE, "Predicted Average Accuracy (p_correct)", "Oracle/Search Combination") + scale_alpha(guide = 'none') +  coord_cartesian(xlim = c(0.4, 1)) +xlab("Predicted Average Accuracy (p_correct)")
 draw_plot
 ```
 Since the credible intervals on our plot overlap, we can use mean_qi to get the numeric boundaries for the different intervals.
@@ -143,7 +157,7 @@ fit_info
 ```
 
 ### Differences Between Conditions
-
+We'd now like to see the difference in average accuracy between levels of search, oracle, and participant group for each task.
 ```{r}
 predictive_data  <- accuracy_data %>%
     add_fitted_draws(model, seed = seed, re_formula = NA, scale = "response")
@@ -156,7 +170,7 @@ search_differences <- expected_diff_in_mean_plot(predictive_data, "search", "Dif
 search_differences$plot
 
 ```
-We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.  If the 95% credible interval does not contain zero, we are 95% confident that there is a nonzero difference in mean accuracy between these two conditions.
 ```{r}
 search_differences$intervals
 ```

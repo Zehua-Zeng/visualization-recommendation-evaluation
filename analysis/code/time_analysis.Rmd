@@ -29,7 +29,7 @@ In our experiment, we used a visualization recommendation algorithm (composed of
   3. Prediction
   4. Exploration
 
-Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict the time it takes the average user to complete each task.  In addition, we would like to know if the choice of search algorithm and oracle has any meaningful impact on a user's completion time for each of these four tasks,
+Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), we would like to predict the time it takes the average user to complete each task.  In addition, we would like to know if the choice of search algorithm and oracle has any meaningful impact on a user's completion time for each of these four tasks, and if the participant's group (student or professional) is associated with a difference in performance.
 
 ### Read in and clean data
 ```{r}
@@ -54,7 +54,7 @@ seed = 12
 ```
 
 ## Building a Model for Time Analysis
-The prior was derived from pilot studies.  It describes the distribution of time (in seconds) needed to complete any given task.  The lognormal family was selected to prevent our model from predicting completion times of less than zero seconds. 
+The prior (normal(360.48, 224.40)) was derived from pilot studies.  It describes the distribution of time (in seconds) needed to complete any given task.  The lognormal family was selected to prevent our model from predicting completion times of less than zero seconds. 
 
 ```{r}
 model <- brm(
@@ -75,6 +75,19 @@ model <- brm(
 ```
 
 ### Diagnostics + Model Evaluation
+We can check our priors to make sure the model looks reasonable by pulling from our prior predictive distribution.
+```{r}
+time_data %>%
+  select(-completion_time) %>%
+  add_predicted_draws(model, prediction = "completion_time", seed = seed) %>%
+  ggplot(aes(x = completion_time)) +
+  geom_density(fill = "gray", size = 0) +
+  scale_y_continuous(NULL, breaks = NULL) +
+  facet_grid(task~.) +
+  labs(subtitle = "Prior predictive distribution for task completion time") +
+   coord_cartesian(xlim = c(0, 2000)) 
+```
+
 In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ```{r}
 summary(model)
@@ -269,7 +282,7 @@ plot <- draw_data %>% ggplot(aes(
     fill = search,
     alpha = 0.5
   )) + stat_halfeye(.width = c(.95, .5)) +
-    labs(x = "Time (Seconds)", y = "Task") +  facet_grid(. ~ dataset)
+    labs(x = "Average Completion Time (Seconds)", y = "Task") +  facet_grid(. ~ dataset)
 plot
 
 ```
