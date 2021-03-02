@@ -24,6 +24,20 @@ seed = 12
 source('helper_functions.R')
 ```
 
+In our experiment, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then measured the the number of exposed visual designs and variable sets, as well as the number of interacted visual designs and variable sets.
+
+Given a search algorithm (bfs or dfs), an oracle (compassql or dziban), and a dataset (birdstrikes or movies), the number of number of visual designs and variable sets the user will be exposed to and interact with.  In addition, we would like to know if the choice of search algorithm and oracle, as well as the participant's group (student or professional) has any meaningful impact these metrics for a user.
+
+Our weakly-informative prior (normal(35.24, 25.33)) was derived from pilot studies, and it summarizes the number of elements (either visual design or variable set) that the user will either be exposed to or interact with.  Because our pilot study was small, we chose to aggregate our data (rather than deriving separate priors for each combination of exposed/interacted variable set/visual design) to minimize the effect of biases.
+
+The lognormal family was selected for our model to prevent our model from predicting number of iexposed/interacted elements less than zero.
+```{r}
+prior_mean = 35.24
+prior_sd = 25.33
+
+stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
+```
+
 ## Number of Interacted Variable Sets
 Read in and format data
 ```{r}
@@ -40,11 +54,6 @@ interacted_var_sets_data <- interacted_var_sets_data %>%
 
 Train model
 ```{r}
-prior_mean = 35.24
-prior_sd = 25.33
-
-stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
-
 model_interacted_var_sets <- brm(
     formula = bf(num_interacted_variable_set ~ oracle * search + dataset + task + participant_group + (1 | participant_id)),
     prior = prior(normal(prior_mean, prior_sd), class = "Intercept"),
@@ -59,16 +68,18 @@ model_interacted_var_sets <- brm(
     file = "models/interacted_var_sets_group"
   )
 ```
-Plot
+
+Trace plots help us check whether there is evidence of non-convergence for model.
 ```{r}
-# plot(model_interacted_var_sets)
+plot(model_interacted_var_sets)
 ```
 
-Summary
+In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ```{r}
 summary(model_interacted_var_sets)
 ```
 
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
 ```{r}
 pairs(
     model_interacted_var_sets,
@@ -83,6 +94,8 @@ pairs(
     fixed = TRUE
   )
 ```
+
+Visualization of parameter effects via draws from our model posterior.  The thicker line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 
 ```{r}
 draw_data_interacted_var_sets <- interacted_var_sets_data %>%
@@ -100,7 +113,7 @@ ggsave(
       path = paste0("../plots/posterior_draws/num_interacted_variable_set")
     )
 ```
-
+Since the credible intervals on our plot overlap, we can use mean_qi to get the numeric boundaries for the different intervals.
 ```{r}
 fit_info_interacted_var_sets <-
       draw_data_interacted_var_sets %>% group_by(search, oracle, task, participant_group) %>% mean_qi(.value, .width = c(.95, .5))
@@ -114,6 +127,9 @@ write.csv(
 ```
 
 ### Differences between factors
+
+We'd now like to see the difference in average interacted_var_sets_data between levels of search, oracle, and participant group for each task.
+
 ```{r}
 predictive_data_interacted_var_sets <- interacted_var_sets_data %>%
     add_fitted_draws(model_interacted_var_sets, seed = seed, re_formula = NA)
@@ -132,6 +148,7 @@ ggsave(
 write.csv(search_differences$intervals, "../plot_data/comparisons/num_interacted_variable_set/search_differences.csv", row.names = FALSE)
 ```
 
+Let's split by dataset.
 ```{r}
 search_difference_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "search", "Difference in Average Number Interacted Variable Set",  "Task", "dataset")
 search_difference_split_by_dataset$plot
@@ -143,15 +160,8 @@ ggsave(
     )
 write.csv(search_difference_split_by_dataset$intervals, "../plot_data/comparisons/num_interacted_variable_set/search_differences_split_by_dataset.csv", row.names = FALSE)
 ```
-Difference in oracle
-```{r}
-diff_in_oracle_prediction <- predictive_data_interacted_var_sets %>%
-    group_by(oracle, task, dataset, participant_group, .draw) %>%
-    summarize(value = weighted.mean(.value)) %>%
-    compare_levels(value, by = oracle) %>%
-    rename(diff = value)
 
-```
+Difference in oracle
 ```{r}
 oracle_differences <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "oracle", "Difference in Average Number Interacted Variable Set",  "Task", NULL)
 oracle_differences$plot
@@ -163,6 +173,8 @@ ggsave(
     )
 write.csv(oracle_differences$intervals, "../plot_data/comparisons/num_interacted_variable_set/oracle_differences.csv", row.names = FALSE)
 ```
+
+Let's split it by dataset
 ```{r}
 oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "oracle", "Difference in Average Number Interacted Variable Set","Task", "dataset")
 oracle_differences_split_by_dataset$plot
@@ -176,10 +188,12 @@ write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/compariso
 ```
 
 Difference in groups
+(Some reformatting of strings first)
 ```{r}
 predictive_data_interacted_var_sets$participant_group<- gsub('student', 'Student', predictive_data_interacted_var_sets$participant_group)
 predictive_data_interacted_var_sets$participant_group<- gsub('professional', 'Professional', predictive_data_interacted_var_sets$participant_group)
 ```
+
 ```{r}
 participant_group_differences <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "participant_group", "Difference in Average Number Interacted Variable Set",  "Task", NULL)
 participant_group_differences$plot
@@ -191,6 +205,8 @@ ggsave(
     )
 write.csv(participant_group_differences$intervals, "../plot_data/comparisons/num_interacted_variable_set/group_differences.csv", row.names = FALSE)
 ```
+
+Let's split by dataset
 ```{r}
 group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_var_sets, "participant_group", "Difference in Average Number Interacted Variable Set",  "Task", NULL)
 group_differences_split_by_dataset$plot
@@ -220,10 +236,6 @@ interacted_visual_design_data <- interacted_visual_design_data %>%
 
 Train model
 ```{r}
-prior_mean = 35.24
-prior_sd = 25.33
-
-stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
 model_interacted_visual_design <- brm(
     formula = num_interacted_visual_design ~ oracle * search + dataset + task + participant_group + (1 | participant_id),
     prior = prior(normal(prior_mean, prior_sd), class = Intercept),
@@ -238,16 +250,18 @@ model_interacted_visual_design <- brm(
     file = "models/interacted_visual_design_group"
   )
 ```
-Plot
+
+Trace plots help us check whether there is evidence of non-convergence for model.
 ```{r}
-# plot(model_interacted_visual_design)
+plot(model_interacted_visual_design)
 ```
 
-Summary
+In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ```{r}
 summary(model_interacted_visual_design)
 ```
 
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
 ```{r}
 pairs(
     model_interacted_visual_design,
@@ -263,6 +277,7 @@ pairs(
   )
 ```
 
+Visualization of parameter effects via draws from our model posterior.  The thicker line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 draw_data_interacted_visual_design <- interacted_visual_design_data %>%
   add_fitted_draws(model_interacted_visual_design, seed = seed, re_formula = NA)
@@ -281,6 +296,7 @@ ggsave(
     )
 ```
 
+Since the credible intervals on our plot overlap, we can use mean_qi to get the numeric boundaries for the different intervals.
 ```{r}
 fit_info_interacted_visual_design <-
       draw_data_interacted_visual_design %>% group_by(search, oracle, task, participant_group) %>% mean_qi(.value, .width = c(.95, .5))
@@ -294,10 +310,12 @@ write.csv(
 ```
 
 ### Differences between factors
+We'd now like to see the difference in average interacted_visual_design between levels of search, oracle, and participant group for each task.
 ```{r}
 predictive_data_interacted_visual_design <- interacted_visual_design_data %>%
     add_fitted_draws(model_interacted_visual_design, seed = seed, re_formula = NA)
 ```
+
 Difference in search
 ```{r}
 search_differences <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "search", "Difference in Average Number Interacted Visual Design",  "Task", NULL)
@@ -312,6 +330,8 @@ ggsave(
 
 write.csv(search_differences$intervals, "../plot_data/comparisons/num_interacted_visual_design/search_differences.csv", row.names = FALSE)
 ```
+
+Let's split the above by dataset
 ```{r}
 search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "search", "Difference in Average Number Interacted Visual Design",  "Task", "dataset")
 
@@ -325,6 +345,7 @@ ggsave(
 
 write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_interacted_visual_design/search_differences_split_by_dataset.csv", row.names = FALSE)
 ```
+
 Difference in oracle
 ```{r}
 oracle_differences <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "oracle", "Difference in Average Number Interacted Visual Design",  "Task", NULL)
@@ -338,6 +359,8 @@ ggsave(
 
 write.csv(oracle_differences$intervals, "../plot_data/comparisons/num_interacted_visual_design/oracle_differences.csv", row.names = FALSE)
 ```
+
+Let's split the above by dataset
 ```{r}
 oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "oracle", "Difference in Average Number Interacted Visual Design",  "Task", "dataset")
 
@@ -354,6 +377,7 @@ write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/compariso
 
 
 Difference in groups
+(with a little string reformatting first)
 ```{r}
 predictive_data_interacted_visual_design$participant_group<- gsub('student', 'Student', predictive_data_interacted_visual_design$participant_group)
 predictive_data_interacted_visual_design$participant_group<- gsub('professional', 'Professional', predictive_data_interacted_visual_design$participant_group)
@@ -370,6 +394,8 @@ ggsave(
 
 write.csv(participant_group_differences$intervals, "../plot_data/comparisons/num_interacted_visual_design/group_differences.csv", row.names = FALSE)
 ```
+
+Let's split the above by dataset
 ```{r}
 group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_interacted_visual_design, "participant_group", "Difference in Average Number Interacted Visual Design",  "Task", "dataset")
 
@@ -400,10 +426,6 @@ exposed_variable_set_data <- exposed_variable_set_data %>%
 
 Train model
 ```{r}
-prior_mean = 35.24
-prior_sd = 25.33
-
-stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
 model_exposed_variable_set <- brm(
     formula = num_exposed_variable_set ~ oracle * search + dataset + task + participant_group + (1 | participant_id),
     prior = prior(normal(prior_mean, prior_sd), class = Intercept),
@@ -418,16 +440,18 @@ model_exposed_variable_set <- brm(
     file = "models/exposed_variable_set_group"
   )
 ```
-Plot
+
+Trace plots help us check whether there is evidence of non-convergence for model.
 ```{r}
-# plot(model_exposed_variable_set)
+plot(model_exposed_variable_set)
 ```
 
-Summary
+In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ```{r}
 summary(model_exposed_variable_set)
 ```
 
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
 ```{r}
 pairs(
     model_exposed_variable_set,
@@ -443,6 +467,7 @@ pairs(
   )
 ```
 
+Visualization of parameter effects via draws from our model posterior.  The thicker line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 draw_data_exposed_variable_set <- exposed_variable_set_data %>%
   add_fitted_draws(model_exposed_variable_set, seed = seed, re_formula = NA)
@@ -460,6 +485,7 @@ ggsave(
     )
 ```
 
+Since the credible intervals on our plot overlap, we can use mean_qi to get the numeric boundaries for the different intervals.
 ```{r}
 fit_info_exposed_variable_set <-
       draw_data_exposed_variable_set %>% group_by(search, oracle, task, participant_group) %>% mean_qi(.value, .width = c(.95, .5))
@@ -473,6 +499,7 @@ write.csv(
 ```
 
 ### Differences between factors
+We'd now like to see the difference in average accuracy between levels of search, oracle, and participant group for each task.
 ```{r}
 predictive_data_exposed_variable_set <- exposed_variable_set_data %>%
     add_fitted_draws(model_exposed_variable_set, seed = seed, re_formula = NA)
@@ -490,6 +517,7 @@ ggsave(
 write.csv(search_differences$intervals, "../plot_data/comparisons/num_exposed_variable_set/search_differences.csv", row.names = FALSE)
 ```
 
+Let's split the above by dataset
 ```{r}
 search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "search", "Difference in Average Number Exposed Variable Set",  "Task", "dataset")
 
@@ -502,6 +530,7 @@ ggsave(
     )
 write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_variable_set/search_differences_split_by_dataset.csv", row.names = FALSE)
 ```
+
 Difference in oracle
 ```{r}
 oracle_differences <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "oracle", "Difference in Average Number Exposed Variable Set",  "Task", NULL)
@@ -514,6 +543,8 @@ ggsave(
     )
 write.csv(oracle_differences$intervals, "../plot_data/comparisons/num_exposed_variable_set/oracle_differences.csv", row.names = FALSE)
 ```
+
+Let's split the above by dataset
 ```{r}
 oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "oracle", "Difference in Average Number Exposed Variable Set",  "Task", "dataset")
 
@@ -526,7 +557,9 @@ ggsave(
     )
 write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_variable_set/oracle_differences_split_by_dataset.csv", row.names = FALSE)
 ```
+
 Difference in groups
+(with some string reformatting)
 ```{r}
 predictive_data_exposed_variable_set$participant_group<- gsub('student', 'Student', predictive_data_exposed_variable_set$participant_group)
 predictive_data_exposed_variable_set$participant_group<- gsub('professional', 'Professional', predictive_data_exposed_variable_set$participant_group)
@@ -546,6 +579,8 @@ ggsave(
     )
 write.csv(participant_group_differences$intervals, "../plot_data/comparisons/num_exposed_variable_set/group_differences.csv", row.names = FALSE)
 ```
+
+Let's split the above by dataset
 ```{r}
 group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "participant_group", "Difference in Average Number Exposed Variable Set",  "Task", "dataset")
 group_differences_split_by_dataset$plot
@@ -576,10 +611,6 @@ exposed_visual_design_data <- exposed_visual_design_data %>%
 
 Train model
 ```{r}
-prior_mean = 35.24
-prior_sd = 25.33
-
-stanvars <- stanvar(prior_mean, name='prior_mean') + stanvar(prior_sd, name='prior_sd')
 model_exposed_visual_design <- brm(
     formula = num_exposed_visual_design ~ oracle * search + dataset + task + participant_group + (1 | participant_id),
     prior = prior(normal(prior_mean, prior_sd), class = Intercept),
@@ -594,16 +625,18 @@ model_exposed_visual_design <- brm(
     file = "models/exposed_visual_design_group"
   )
 ```
-Plot
+
+Trace plots help us check whether there is evidence of non-convergence for model.
 ```{r}
-# plot(model_exposed_visual_design)
+plot(model_exposed_visual_design)
 ```
 
-Summary
+In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ```{r}
 summary(model_exposed_visual_design)
 ```
 
+In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
 ```{r}
 pairs(
     model_exposed_visual_design,
@@ -619,6 +652,7 @@ pairs(
   )
 ```
 
+Visualization of parameter effects via draws from our model posterior.  The thicker line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
 ```{r}
 draw_data_exposed_visual_design <- exposed_visual_design_data %>%
   add_fitted_draws(model_exposed_visual_design, seed = seed, re_formula = NA)
@@ -636,6 +670,7 @@ ggsave(
     )
 ```
 
+Since the credible intervals on our plot overlap, we can use mean_qi to get the numeric boundaries for the different intervals.
 ```{r}
 fit_info_exposed_visual_design <-
       draw_data_exposed_visual_design %>% group_by(search, oracle, task, participant_group) %>% mean_qi(.value, .width = c(.95, .5))
@@ -649,10 +684,12 @@ write.csv(
 ```
 
 ### Differences between factors
+We'd now like to see the difference in average accuracy between levels of search, oracle, and participant group for each task.
 ```{r}
 predictive_data_exposed_visual_design <- exposed_visual_design_data %>%
     add_fitted_draws(model_exposed_visual_design, seed = seed, re_formula = NA)
 ```
+
 Difference in search
 ```{r}
 search_differences <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "search", "Difference in Average Number Exposed Visual Design",  "Task", NULL)
@@ -665,6 +702,8 @@ ggsave(
     )
 write.csv(search_differences$intervals, "../plot_data/comparisons/num_exposed_visual_design/search_differences.csv", row.names = FALSE)
 ```
+
+The above but split by datasets
 ```{r}
 search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "search", "Difference in Average Number Exposed Visual Design",  "Task", "dataset")
 search_differences_split_by_dataset$plot
@@ -676,6 +715,7 @@ ggsave(
     )
 write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_visual_design/search_differences_split_by_dataset.csv", row.names = FALSE)
 ```
+
 Difference in oracle
 ```{r}
 oracle_differences <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "oracle", "Difference in Average Number Exposed Visual Design",  "Task", NULL)
@@ -688,6 +728,8 @@ ggsave(
     )
 write.csv(oracle_differences$intervals, "../plot_data/comparisons/num_exposed_visual_design/oracle_differences.csv", row.names = FALSE)
 ```
+
+The above but split by datasets
 ```{r}
 oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "oracle", "Difference in Average Number Exposed Visual Design",  "Task", "dataset")
 
@@ -700,6 +742,7 @@ ggsave(
     )
 write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_visual_design/oracle_differences_split_by_dataset.csv", row.names = FALSE)
 ```
+
 Difference in groups
 ```{r}
 participant_group_differences <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "participant_group", "Difference in Average Number Exposed Visual Design",  "Task", NULL)
@@ -712,6 +755,8 @@ ggsave(
     )
 write.csv(participant_group_differences$intervals, "../plot_data/comparisons/num_exposed_visual_design/participant_group_differences.csv", row.names = FALSE)
 ```
+
+The above but split by datasets
 ```{r}
 group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "participant_group", "Difference in Average Number Exposed Visual Design",  "Task", "dataset")
 
@@ -724,6 +769,10 @@ ggsave(
     )
 write.csv(group_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_visual_design/group_differences_split_by_dataset.csv", row.names = FALSE)
 ```
+
+## Summary Plots
+
+Draws from the posterior, comparing the number of exposed and interacted variable sets.
 ```{r}
 draw_data_exposed_variable_set$category <- "exposed"
 draw_data_interacted_var_sets$category <- "interacted"
@@ -744,6 +793,7 @@ ggsave(
     )
 ```
 
+Draws from the posterior, comparing the number of exposed and interacted visual designs.
 ```{r}
 draw_data_exposed_visual_design$category <- "exposed"
 draw_data_interacted_visual_design$category <- "interacted"
@@ -763,6 +813,8 @@ ggsave(
       path = "../plots/posterior_draws"
     )
 ```
+
+Draws from the posterior, comparing the number of exposed visual sets and variable designs.
 ```{r}
 draw_data_exposed_variable_set$type <- "Variable Sets"
 draw_data_exposed_visual_design$type <- "Visual Design"
@@ -808,7 +860,7 @@ ggsave(
 
 ```
 
-
+Draws from the posterior, comparing the number of interacted visual sets and variable designs.
 ```{r}
 
 draw_data_interacted_var_sets$type <- "Variable Sets"

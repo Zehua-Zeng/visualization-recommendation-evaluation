@@ -45,7 +45,41 @@ seed = 12
 ```
 
 ## Building a Model for Accuracy Analysis
-We derived a very weakly informative prior on accuracy from our pilot studies.
+
+The prior (normal(0.8, .1)) was derived from pilot studies.  It describes the distribution of probability of a correct answer for aany given task.  Because our pilot study was small, we chose to aggregate these measurements (rather than deriving separate priors for each task) to minimize the effect of biases.  We perform logistic regression in order to determine the probability of a correct answer under different conditions.  
+
+We can check our priors to make sure the model looks reasonable by pulling from our prior predictive distribution.
+
+The lognormal family was selected to prevent our model from predicting less than zero elements exposed/interacted with.   
+```{r}
+prior <- brm(
+  bf(
+    accuracy ~ 0 + Intercept + oracle * search + dataset + task + participant_group + (1 | participant_id)
+  ),
+  data = accuracy_data,
+  prior = c(prior(normal(0.8, .1), class = "b", coef = "Intercept"),
+            prior(normal(0, 2.5), class = "b")),
+  family = bernoulli(link = "logit"),
+  warmup = 500,
+  iter = 3000,
+  chains = 2,
+  cores = 2, 
+  control = list(adapt_delta = 0.9),
+  seed = seed,
+  sample_prior = "only",
+  file = "models/prior_accuracy"
+)
+
+accuracy_data %>%
+  select(-accuracy) %>%
+  add_predicted_draws(prior, prediction = "accuracy", seed = seed) %>%
+  ggplot(aes(x = accuracy)) +
+  geom_density(fill = "gray", size = 0) +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(subtitle = "Prior predictive distribution for task accuracy")
+```
+
+Now let's make our actual model.
 ```{r}
 model <- brm(
   bf(
@@ -63,24 +97,9 @@ model <- brm(
   seed = seed,
   file = "models/accuracy"
 )
-
-
 ```
 
 ### Diagnostics + Model Evaluation
-We can check our priors to make sure the model looks reasonable by pulling from our prior predictive distribution.
-
-```{r}
-accuracy_data %>%
-  select(-accuracy) %>%
-  add_predicted_draws(model, prediction = "accuracy", seed = seed) %>%
-  ggplot(aes(x = accuracy)) +
-  geom_density(fill = "gray", size = 0) +
-  scale_y_continuous(NULL, breaks = NULL) +
-  labs(subtitle = "Prior predictive distribution for task accuracy") +
-  theme(panel.grid = element_blank())
-```
-
 In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ``` {r}
 summary(model)
@@ -138,6 +157,7 @@ plot_data$condition <- paste(plot_data$oracle, plot_data$search, sep="\n")
 draw_plot <- posterior_draws_plot(plot_data, "Dataset", TRUE, "Predicted Average Accuracy (p_correct)", "Oracle/Search Combination") + scale_alpha(guide = 'none') +  coord_cartesian(xlim = c(0.4, 1)) +xlab("Predicted Average Accuracy (p_correct)")
 draw_plot
 ```
+
 Since the credible intervals on our plot overlap, we can use mean_qi to get the numeric boundaries for the different intervals.
 ```{r}
 fit_info <-  draw_data %>% group_by(search, oracle, dataset, task) %>% mean_qi(.value, .width = c(.95, .5))
@@ -188,7 +208,7 @@ oracle_differences <- expected_diff_in_mean_plot(predictive_data, "oracle", "Dif
 oracle_differences$plot
   
 ```
-We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.  If the 95% credible interval does not contain zero, we are 95% confident that there is a nonzero difference in mean accuracy between these two conditions.
 ```{r}
 oracle_differences$intervals
 ```
@@ -206,7 +226,7 @@ participant_group_differences$plot
   
 ```
 
-We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
+We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.  If the 95% credible interval does not contain zero, we are 95% confident that there is a nonzero difference in mean accuracy between these two conditions.
 ```{r}
 participant_group_differences$intervals
 ```

@@ -27,7 +27,11 @@ source('helper_functions.R')
 
 In our experiment, we used a visualization recommendation algorithm (composed of one search algorithm and one oracle algorithm) to generate visualizations for the user on one of two datasets.  We then asked the user to evaluate the tool on a variety of metrics (confidence in understanding data, confidence in answer, efficiency, ease of use, utility, and overall).
 
-Given a search algorithm (bfs or dfs), an oracle (CompassQL or dziban), and a dataset (birdstrikes or movies), we would like to predict a user's score for a given metric.  In addition, we would like to know if the choice of search algorithm and oracle has any meaningful impact on a user's ratong for these metrics.
+Given a search algorithm (bfs or dfs), an oracle (CompassQL or dziban), and a dataset (birdstrikes or movies), we would like to predict a user's score for a given metric.  In addition, we would like to know if the choice of search algorithm and oracle, as well as participant group (student or professional) has any meaningful impact on a user's rating for these metrics.
+
+Our weakly-informative prior (normal(0.26, 1.26)) was derived from pilot studies, and it summarizes the user rating for each metric.  Because our pilot study was small, we chose to aggregate our data (rather than deriving separate priors for each metric) to minimize the effect of biases.
+
+Since ratings can have values between -2 and 2 inclusive, we perform ordinal regression.
 
 ### Read in and clean data
 
@@ -96,16 +100,6 @@ Trace plots help us check whether there is evidence of non-convergence for our m
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
-```{r}
-pairs(
-  models$confidence_udata,
-  pars = c("b_Intercept[1]",
-           "b_Intercept[2]",
-           "b_Intercept[3]",
-           "b_Intercept[4]"),
-  fixed = TRUE
-)
-```
 
 ```{r}
 pairs(
@@ -167,7 +161,6 @@ alg_differences$confidence_udata$plot
 ```
 
 
-
 Differences in user score by participant group
 ``` {r}
 participant_group_differences$confidence_udata <- user_response_diff_plot(confidence_udata_predictive_data, "participant_group", "confidence.udata", "Difference in Confidence in Understanding Data Rating", "Task", NULL)
@@ -204,16 +197,6 @@ Trace plots help us check whether there is evidence of non-convergence for our m
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
-```{r}
-pairs(
-  models$confidence_ans,
-  pars = c("b_Intercept[1]",
-           "b_Intercept[2]",
-           "b_Intercept[3]",
-           "b_Intercept[4]"),
-  fixed = TRUE
-)
-```
 
 ```{r}
 pairs(
@@ -280,7 +263,6 @@ participant_group_differences$confidence_ans$plot
 ```
 
 
-
 ### Efficiency:  Building a Model
 
 ```{r}
@@ -311,17 +293,6 @@ Trace plots help us check whether there is evidence of non-convergence for our m
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
-```{r}
-pairs(
-  models$efficiency,
-  pars = c("b_Intercept[1]",
-           "b_Intercept[2]",
-           "b_Intercept[3]",
-           "b_Intercept[4]"),
-  fixed = TRUE
-)
-```
-
 ```{r}
 pairs(
   models$efficiency,
@@ -387,8 +358,6 @@ participant_group_differences$efficiency$plot
 ```
 
 
-
-
 ### Ease of Use:  Building a Model
 
 ```{r}
@@ -418,16 +387,6 @@ Trace plots help us check whether there is evidence of non-convergence for our m
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
-```{r}
-pairs(
-  models$ease_of_use,
-  pars = c("b_Intercept[1]",
-           "b_Intercept[2]",
-           "b_Intercept[3]",
-           "b_Intercept[4]"),
-  fixed = TRUE
-)
-```
 
 ```{r}
 pairs(
@@ -528,17 +487,6 @@ s plots, we want to make sure we don't have highly correlated parameters (highly
 ```{r}
 pairs(
   models$utility,
-  pars = c("b_Intercept[1]",
-           "b_Intercept[2]",
-           "b_Intercept[3]",
-           "b_Intercept[4]"),
-  fixed = TRUE
-)
-```
-
-```{r}
-pairs(
-  models$utility,
    pars = c("b_datasetmovies",
            "b_oracledziban",
            "b_searchdfs",
@@ -633,16 +581,6 @@ Trace plots help us check whether there is evidence of non-convergence for our m
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
-```{r}
-pairs(
-  models$overall,
-  pars = c("b_Intercept[1]",
-           "b_Intercept[2]",
-           "b_Intercept[3]",
-           "b_Intercept[4]"),
-  fixed = TRUE
-)
-```
 
 ```{r}
 pairs(
@@ -882,7 +820,6 @@ participant_group_difference_plots_intervals$intervals_preference
 ```
 
 ```{r echo=FALSE}
-ggsave(file="participant_group_rating_differences_confidence.png", plot=participant_group_difference_plots_intervals$plot_confidence, path = "../plots/comparisons/user_response", width = 7, height = 7)
 ggsave(file="participant_group_rating_differences_preference.png", plot=participant_group_difference_plots_intervals$plot_preference, path = "../plots/comparisons/user_response", width = 7, height = 7)
 
 fit_info_participant_group_differences <- rbind(participant_group_difference_plots_intervals$intervals_confidence, participant_group_difference_plots_intervals$intervals_preference)

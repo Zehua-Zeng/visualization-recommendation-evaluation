@@ -44,7 +44,6 @@ time_data <- time_data %>%
   )
 time_data$condition <- paste(time_data$oracle, time_data$search)
 
-
 task_list = c("1. Find Extremum",
               "2. Retrieve Value",
               "3. Prediction",
@@ -54,7 +53,9 @@ seed = 12
 ```
 
 ## Building a Model for Time Analysis
-The prior (normal(360.48, 224.40)) was derived from pilot studies.  It describes the distribution of time (in seconds) needed to complete any given task.  The lognormal family was selected to prevent our model from predicting completion times of less than zero seconds. 
+The weakly informative prior (normal(360.48, 224.40)) was derived from pilot studies and describes the distribution of time (in seconds) needed to complete any given task under any condition.  Because our pilot study was small, we chose to aggregate these measurements (rather than deriving separate priors for each task) to minimize the effect of biases.
+
+The lognormal family was selected to prevent our model from predicting completion times of less than zero seconds. 
 
 ```{r}
 model <- brm(
@@ -75,19 +76,6 @@ model <- brm(
 ```
 
 ### Diagnostics + Model Evaluation
-We can check our priors to make sure the model looks reasonable by pulling from our prior predictive distribution.
-```{r}
-time_data %>%
-  select(-completion_time) %>%
-  add_predicted_draws(model, prediction = "completion_time", seed = seed) %>%
-  ggplot(aes(x = completion_time)) +
-  geom_density(fill = "gray", size = 0) +
-  scale_y_continuous(NULL, breaks = NULL) +
-  facet_grid(task~.) +
-  labs(subtitle = "Prior predictive distribution for task completion time") +
-   coord_cartesian(xlim = c(0, 2000)) 
-```
-
 In the summary table, we want to see Rhat values close to 1.0 and Bulk_ESS in the thousands.
 ```{r}
 summary(model)
@@ -95,11 +83,10 @@ summary(model)
 
 Trace plots help us check whether there is evidence of non-convergence for model.
 ```{r}
-# plot(model)
+plot(model)
 ```
 
 In our pairs plots, we want to make sure we don't have highly correlated parameters (highly correlated parameters means that our model has difficulty differentiating the effect of such parameters).
-
 ```{r}
 pairs(
   model,
@@ -114,7 +101,10 @@ pairs(
 )
 
 ```
-Using draws from the posterior, we can visualize parameter effects and average response.  Be sure to apply an exponential transform to our log-transformed times to make it interpretable!  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+
+Using draws from the posterior, we can visualize parameter effects and average response.  The thicker, shorter line represents the 95% credible interval, while the thinner, longer line represents the 50% credible interval.
+
+(These won't be outputted in this analysis document, but the files will be saved to the "../plot_data/posterior_draws/time/" directory)
 ```{r}
 draw_data <- time_data %>%
   add_fitted_draws(model, seed = seed, re_formula = NA)
@@ -142,7 +132,7 @@ for (task_name in task_list) {
 }
 ```
 
-
+Now let's make a summary plot for the two tasks we care about (1. Find Extremum and 2. Retrieve Value) with predicted mean completion times for each oracle/search combination.
 ```{r}
 plot_data <- draw_data
 plot_data <- plot_data[plot_data$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
@@ -174,7 +164,7 @@ write.csv(fit_info,
 ```
 
 ## Differences Between Conditions
-Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs) and the two oracles (dzbian and compassql).
+Next, we want to see if there is any significant difference in completion time between the two search algorithms (bfs and dfs), the two oracles (dzbian and compassql), and the two participant groups (student and professional)
 
 ```{r}
 predictive_data <- time_data %>%
@@ -188,7 +178,6 @@ search_differences <- expected_diff_in_mean_plot(predictive_data, "search", "Dif
 ggsave(file="search_time_differences.png", plot=search_differences$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
 search_differences$plot
-
 ```
 
 We can double-check the boundaries of the credible intervals to be sure whether or not the interval contains zero.
@@ -198,7 +187,7 @@ write.csv(search_differences$intervals, "../plot_data/comparisons/time/search_ti
 search_differences$intervals
 ```
 
-Let's do the above, but split it by datasets
+Let's do the above, but split it by datasets.
 ```{r}
 search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "search", "Difference in Mean Completion Time (Seconds)",  "Task", "dataset")
 
@@ -207,8 +196,7 @@ ggsave(file="split_by_dataset_search_time_differences.png", plot=search_differen
 search_differences_split_by_dataset$plot
 ```
 
-
-Check intervals
+Check intervals for search differences split by dataset.
 ```{r}
 write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/time/search_time_differences_split_by_dataset.csv", row.names = FALSE)
 
@@ -216,7 +204,7 @@ search_differences_split_by_dataset$intervals
 
 ```
 
-### Differences Between oracle
+### Differences Between Oracle
 ```{r}
 oracle_differences <- expected_diff_in_mean_plot(predictive_data, "oracle", "Difference in Mean Completion Time (Seconds)",  "Task", NULL)
 
@@ -234,7 +222,7 @@ write.csv(oracle_differences$intervals, "../plot_data/comparisons/time/oracle_ti
 oracle_differences$intervals
 ```
 
-Let's do the above, but split it by datasets
+Let's do the above, but split it by datasets.
 ```{r}
 oracle_differences_subset_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "oracle", "Difference in Mean Completion Time (Seconds)",  "Task", "dataset")
 ggsave(file="split_by_dataset_oracle_time_differences.png", plot=oracle_differences_subset_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
@@ -242,7 +230,7 @@ ggsave(file="split_by_dataset_oracle_time_differences.png", plot=oracle_differen
 oracle_differences_subset_split_by_dataset$plot
 ```
 
-Check intervals
+Check intervals for search differences split by dataset.
 ```{r}
 write.csv(oracle_differences_subset_split_by_dataset$intervals, "../plot_data/comparisons/time/oracle_time_differences_split_by_dataset.csv", row.names = FALSE)
 oracle_differences_subset_split_by_dataset$intervals
@@ -256,9 +244,9 @@ participant_group_differences <- expected_diff_in_mean_plot(predictive_data, "pa
 ggsave(file="participant_group_time_differences.png", plot=participant_group_differences$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
 participant_group_differences$plot
-
 ```
-Let's do the above, but split it by datasets
+
+Let's do the above, but split it by datasets.
 ```{r}
 participant_group_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data, "participant_group", "Difference in Mean Completion Time (Seconds)",  "Task", "dataset")
 ggsave(file="split_by_dataset_participant_group_time_differences.png", plot=participant_group_differences_split_by_dataset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
@@ -274,7 +262,7 @@ participant_group_differences$intervals
 ```
 
 ## Summary Plots
-Plot all of the posterior draws on one plot
+Plot all of the posterior draws on one plot.
 ```{r}
 plot <- draw_data %>% ggplot(aes(
     x = .value,
@@ -300,7 +288,7 @@ ggsave(
 predictive_data_subset <- predictive_data[predictive_data$task %in% c("1. Find Extremum", "2. Retrieve Value"),]
 predictive_data_subset$task <- factor(predictive_data_subset$task)
 
-search_differences_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Expected Time Difference (Seconds)",  "Task", NULL)
+search_differences_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Difference in Mean Completion Time (Seconds)",  "Task", NULL)
 
 ggsave(file="search_time_differences_subset.png", plot=search_differences_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
@@ -308,21 +296,21 @@ search_differences_subset$plot
 ```
 
 ```{r}
-diff_in_search_prediction_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Expected Time Difference (Seconds)",  "Task", "dataset")
+diff_in_search_prediction_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "search", "Difference in Mean Completion Time (Seconds)",  "Task", "dataset")
 ggsave(file="split_by_dataset_search_time_differences_subset.png", plot=diff_in_search_prediction_split_by_dataset_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
 diff_in_search_prediction_split_by_dataset_subset$plot
 ```
 
 ```{r}
-oracle_differences_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Expected Time Difference (Seconds)",  "Task", NULL)
+oracle_differences_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Difference in Mean Completion Time (Seconds)",  "Task", NULL)
 
 ggsave(file="oracle_time_differences_subset.png", plot=oracle_differences_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
 oracle_differences_subset$plot
 ```
 ```{r}
-oracle_differences_subset_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Expected Time Difference (Seconds)",  "Task", "dataset")
+oracle_differences_subset_split_by_dataset_subset <- expected_diff_in_mean_plot(predictive_data_subset, "oracle", "Difference in Mean Completion Time (Seconds)",  "Task", "dataset")
 ggsave(file="split_by_dataset_oracle_time_differences_subset.png", plot=oracle_differences_subset_split_by_dataset_subset$plot, path = "../plots/comparisons/time", width = 7, height = 7)
 
 oracle_differences_subset_split_by_dataset_subset$plot
