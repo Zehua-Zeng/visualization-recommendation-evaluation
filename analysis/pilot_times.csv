@@ -1,0 +1,13 @@
+participant_id,dataset,oracle,search,task,time
+pilot3,movies,compassql,dfs,1. Find Extremum,163.058
+pilot3,movies,compassql,dfs,2. Retrieve Value,407.044
+pilot3,movies,compassql,dfs,3. Prediction,636.623
+pilot3,movies,compassql,dfs,4. Exploration,387.846
+pilot4,movies,dziban,dfs,1. Find Extremum,110.347
+pilot4,movies,dziban,dfs,2. Retrieve Value,301.887
+pilot4,movies,dziban,dfs,3. Prediction,847.152
+pilot4,movies,dziban,dfs,4. Exploration,543.307
+pilot5,birdstrikes,dziban,bfs,1. Find Extremum,297.622
+pilot5,birdstrikes,dziban,bfs,2. Retrieve Value,231.168
+pilot5,birdstrikes,dziban,bfs,3. Prediction,83.174
+pilot5,birdstrikes,dziban,bfs,4. Exploration,316.487
