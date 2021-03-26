@@ -548,11 +548,11 @@ Let's split the above by dataset
 ```{r}
 oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_variable_set, "oracle", "Difference in Average Number Exposed Variable Set",  "Task", "dataset")
 
-oracle_differences_split_by_dataset$plot
+oracle_differences_split_by_dataset$plot + coord_cartesian(xlim = c(-15, 60))
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = oracle_differences_split_by_dataset$plot,
+      plot = oracle_differences_split_by_dataset$plot + coord_cartesian(xlim = c(-15, 60)),
       path = "../plots/comparisons/num_exposed_variable_set"
     )
 write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_variable_set/oracle_differences_split_by_dataset.csv", row.names = FALSE)
@@ -706,11 +706,11 @@ write.csv(search_differences$intervals, "../plot_data/comparisons/num_exposed_vi
 The above but split by datasets
 ```{r}
 search_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "search", "Difference in Average Number Exposed Visual Design",  "Task", "dataset")
-search_differences_split_by_dataset$plot
+search_differences_split_by_dataset$plot + coord_cartesian(xlim = c(-15, 60))
 
 ggsave(
       file = "search_differences_split_by_dataset.png",
-      plot = search_differences_split_by_dataset$plot,
+      plot = search_differences_split_by_dataset$plot + coord_cartesian(xlim = c(-15, 60)),
       path = "../plots/comparisons/num_exposed_visual_design"
     )
 write.csv(search_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_visual_design/search_differences_split_by_dataset.csv", row.names = FALSE)
@@ -733,11 +733,11 @@ The above but split by datasets
 ```{r}
 oracle_differences_split_by_dataset <- expected_diff_in_mean_plot(predictive_data_exposed_visual_design, "oracle", "Difference in Average Number Exposed Visual Design",  "Task", "dataset")
 
-oracle_differences_split_by_dataset$plot
+oracle_differences_split_by_dataset$plot + coord_cartesian(xlim = c(-15, 60))
 
 ggsave(
       file = "oracle_differences_split_by_dataset.png",
-      plot = oracle_differences_split_by_dataset$plot,
+      plot = oracle_differences_split_by_dataset$plot + coord_cartesian(xlim = c(-15, 60)),
       path = "../plots/comparisons/num_exposed_visual_design"
     )
 write.csv(oracle_differences_split_by_dataset$intervals, "../plot_data/comparisons/num_exposed_visual_design/oracle_differences_split_by_dataset.csv", row.names = FALSE)
@@ -831,7 +831,7 @@ data_conbined$condition <- paste(data_conbined$oracle, data_conbined$search, sep
 plot_exposed <- data_conbined %>% ggplot(aes(x = .value, y = reorder(condition, desc(condition)), fill = type, alpha = 0.5)) +
       stat_halfeye(.width = c(.95, .5)) +
       facet_grid(. ~ task) + 
-      xlab("Predicted Average Number of Elements") + ylab("Oracle/Search Combination") + scale_alpha(guide = 'none')
+      xlab("Predicted Average Number of Elements") + ylab("Oracle/Search Combination") + scale_alpha(guide = 'none') +  scale_fill_manual(values=c("#e69f00", "#009e73"))
     
 plot_exposed
 
@@ -875,7 +875,7 @@ data_conbined$Type<- data_conbined$type
 plot_interacted <- data_conbined %>% ggplot(aes(x = .value, y = reorder(condition, desc(condition)), fill = type, alpha = 0.5)) +
       stat_halfeye(.width = c(.95, .5)) +
       facet_grid(. ~ task) + 
-      xlab("Predicted Average Number of Elements") + ylab("Oracle/Search Combination") + scale_alpha(guide = 'none')
+      xlab("Predicted Average Number of Elements") + ylab("Oracle/Search Combination") + scale_alpha(guide = 'none') +  scale_fill_manual(values=c("#e69f00", "#009e73"))
     
 plot_interacted
 
