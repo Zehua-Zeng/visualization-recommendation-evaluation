@@ -831,7 +831,7 @@ data_conbined$condition <- paste(data_conbined$oracle, data_conbined$search, sep
 plot_exposed <- data_conbined %>% ggplot(aes(x = .value, y = reorder(condition, desc(condition)), fill = type, alpha = 0.5)) +
       stat_halfeye(.width = c(.95, .5)) +
       facet_grid(. ~ task) + 
-      xlab("Predicted Average Number of Elements") + ylab("Oracle/Search Combination") + scale_alpha(guide = 'none') +  scale_fill_manual(values=c("#e69f00", "#009e73"))
+      xlab("Predicted Average Number of Elements") + ylab("Oracle/Search Combination") + scale_alpha(guide = 'none') +  scale_fill_manual(values=c("#FFA33F", "#B6EE56"))
     
 plot_exposed
 
@@ -875,7 +875,7 @@ data_conbined$Type<- data_conbined$type
 plot_interacted <- data_conbined %>% ggplot(aes(x = .value, y = reorder(condition, desc(condition)), fill = type, alpha = 0.5)) +
       stat_halfeye(.width = c(.95, .5)) +
       facet_grid(. ~ task) + 
-      xlab("Predicted Average Number of Elements") + ylab("Oracle/Search Combination") + scale_alpha(guide = 'none') +  scale_fill_manual(values=c("#e69f00", "#009e73"))
+      xlab("Predicted Average Number of Elements") + ylab("Oracle/Search Combination") + scale_alpha(guide = 'none') +  scale_fill_manual(values=c("#FFA33F", "#B6EE56"))
     
 plot_interacted
 
