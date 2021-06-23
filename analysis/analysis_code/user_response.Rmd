@@ -40,7 +40,7 @@ analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", 
 confidence_metrics = c("confidence.udata", "confidence.ans")
 preference_metrics = c("efficiency", "ease.of.use", "utility", "overall")
 
-user_response_data <- read.csv('split_by_participant_groups/ptask_responses.csv')
+user_response_data <- read.csv('data/ptask_responses.csv')
 analyses = c("confidence.udata", "confidence.ans", "efficiency", "ease.of.use", "utility", "overall")
 
 user_response_data$oracle<- gsub('compassql', 'CompassQL', user_response_data$oracle)
@@ -825,4 +825,54 @@ ggsave(file="participant_group_rating_differences_preference.png", plot=particip
 fit_info_participant_group_differences <- rbind(participant_group_difference_plots_intervals$intervals_confidence, participant_group_difference_plots_intervals$intervals_preference)
 write.csv(fit_info_participant_group_differences,"../plot_data/comparisons/user_response/participant_group_rating_differences.csv", row.names = FALSE)
 
+```
+
+
+##Histograms for Response Distributions
+Here we plot out the number of responses for each rating (-2 to 2 inclusive) across all of our user metrics (Confidence in Understanding Data, Confidence in Answer, Efficiency, Ease of Use, Utility, and Overall).  Because each user completed 4 tasks, the total number of responses in these graphs is four times the total number of users in our study.
+``` {r}
+user_response_data$dataset<- gsub('birdstrikes', 'Birdstrikes', user_response_data$dataset)
+user_response_data$dataset<- gsub('movies', 'Movies', user_response_data$dataset)
+
+user_response_data %>%
+  ggplot(aes(x=confidence.udata)) +
+    geom_bar() +
+    xlab("Confidence in Understanding Data Rating") +
+    ylab("Number of Responses") +
+    facet_grid(dataset ~ search+oracle)
+
+user_response_data %>%
+  ggplot(aes(x=confidence.ans)) +
+    geom_bar() +
+    xlab("Confidence in Answer Rating") +
+    ylab("Number of Responses") +
+    facet_grid(dataset ~ search+oracle)
+
+user_response_data %>%
+  ggplot(aes(x=efficiency)) +
+    geom_bar() +
+    xlab("Efficiency Rating") +
+    ylab("Number of Responses") +
+    facet_grid(dataset ~ search+oracle)
+
+user_response_data %>%
+  ggplot(aes(x=ease.of.use)) +
+    geom_bar() +
+    xlab("Ease of Use Rating") +
+    ylab("Number of Responses") +
+    facet_grid(dataset ~ search+oracle)
+
+user_response_data %>%
+  ggplot(aes(x=utility)) +
+    geom_bar() +
+    xlab("Utility Rating") +
+    ylab("Number of Responses") +
+    facet_grid(dataset ~ search+oracle)
+
+user_response_data %>%
+  ggplot(aes(x=overall)) +
+    geom_bar() +
+    xlab("Overall Rating") +
+    ylab("Number of Responses") +
+    facet_grid(dataset ~ search+oracle)
 ```
