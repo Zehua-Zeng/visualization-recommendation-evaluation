@@ -828,7 +828,7 @@ write.csv(fit_info_participant_group_differences,"../plot_data/comparisons/user_
 ```
 
 
-##Histograms for Response Distributions
+### Histograms for Response Distributions
 Here we plot out the number of responses for each rating (-2 to 2 inclusive) across all of our user metrics (Confidence in Understanding Data, Confidence in Answer, Efficiency, Ease of Use, Utility, and Overall).  Because each user completed 4 tasks, the total number of responses in these graphs is four times the total number of users in our study.
 ``` {r}
 user_response_data$dataset<- gsub('birdstrikes', 'Birdstrikes', user_response_data$dataset)
