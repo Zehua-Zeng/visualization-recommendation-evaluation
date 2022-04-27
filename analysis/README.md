@@ -3,7 +3,7 @@
 ## Names
 
 - Of 72 participants for the user study, 40 were students and 32 were professional participants.
-- We name experiment results with "_participant***conditions***task_\__type_.json".
+- We name experiment results with "participant_condition_task_type.json".
 - _Conditions_ are:
   - a: movie
   - b: birdstrikes
